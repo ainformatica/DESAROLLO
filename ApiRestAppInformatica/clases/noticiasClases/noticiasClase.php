@@ -22,13 +22,15 @@
                 
                 print_r($respuesta);
                 if(mysqli_num_rows($respuesta) > 0)
-                {     
+                {     echo " entro a la validación de rows,";
                     //Preparacion del array para el json
                     while($datosbd = mysqli_fetch_assoc($respuesta))
                     {         
+                        echo " entro al while,";
                         //Validar si una noticia tiene mas de un recurso para no mandar datos de la noticia repetidos
                         if($idNoticia != $datosbd['id'])
-                        {                                 
+                        {      
+                            echo " entro al if de agregar nueva noticia,";                           
                             //Insertar en array si solo hay una imagen en la noticia
                             if($push == true) array_push($datos, $datosArray);
 
@@ -43,11 +45,14 @@
                                 'urlRecurso' => $datosbd['url']                          
                             );     
                             
+                            print_r($datosArray);
+                            
                             //array_push($datos, $datosArray);
                             $push = true;
                             $i = 1;
                         }else
                         {    
+                            echo " entro a la validación de agregar otra imagen, ";
                             //Recursos extras de las noticias
                             $recursos = array(                           
                                 'urlRecurso '.$i => $datosbd['url']
@@ -66,18 +71,20 @@
                                 
                     //Insertar ultimo registro
                     if($i >= 1) array_push($datos, $datosArray);
-
+print_r($datos);
                     //Datos para el consumidor
                     return json_encode($datos); 
                 }
                 else
                 {
+                    echo " entro a la validación de ningun dato encontrado";
                     //No se encontraron datos
                     return false;
                 }    
             } catch (Exception $e) {
+                echo " entro al catch ".$e->getMessage;
                 return "Error:".$e->getMessage;
-            }            
+            }             
         }
     }
     
