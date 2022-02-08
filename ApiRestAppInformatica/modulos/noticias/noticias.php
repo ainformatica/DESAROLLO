@@ -27,7 +27,7 @@
                 if($_GET['token'] != null)
                 {
                     $respuestaApi = $news->getNewsByToken($_GET['token']);
-
+print_r($respuestaApi);
                     if($respuestaApi != false)
                     {   
                         //Datos encontrados  
