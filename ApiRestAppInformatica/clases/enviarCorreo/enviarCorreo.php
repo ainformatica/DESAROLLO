@@ -61,11 +61,13 @@ class SendEmail
                 return true;
             }else
             {
+                echo $mail->ErrorInfo;
                 return false;
             }
              //'El correo se envió correctamente';
         } catch (Exception $e) {
-            //echo $mail->ErrorInfo;
+            echo $mail->ErrorInfo;
+            echo "Error catch: ".$e;
             return false;
             //echo "Error al enviar el correo. Mailer Error: {$mail->ErrorInfo}";
         }
