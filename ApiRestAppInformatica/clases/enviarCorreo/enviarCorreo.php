@@ -19,7 +19,7 @@ class SendEmail
         try {
             //Usar metodo de automatizacion
             $send = new Email("Informática Administrativa", "jnstreel@gmail.com", "Jnoestreel-15");          
-            $respuesta = $send->enviarCorreo($asunto, $this->estructuraCorreo($mensaje));
+            $respuesta = $send->enviar($asunto, $this->estructuraCorreo($mensaje));
 
             if($respuesta)
             {
