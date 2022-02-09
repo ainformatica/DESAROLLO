@@ -27,19 +27,19 @@
                 if($_GET['token'] != null)
                 {
                     $respuestaApi = $news->getNewsByToken($_GET['token']);
-echo "   Vista noticia ". $respuestaApi;
-                    if($respuestaApi === false)//$respuestaApi != false)
-                    {                           
+
+                    if($respuestaApi != false)
+                    {            
+                        //Datos encontrados  
+                        http_response_code(200);           
+                        echo $respuestaApi;          
+                        
+                    }else
+                    {  
                         //No se encontraron datos
                         http_response_code(404);
                         $mensaje = "No se encontraron noticias, no se ha publicado ningúna noticia";
                         echo json_encode($httpResponseCode->notFound($mensaje));
-                        
-                    }else
-                    {  
-                        //Datos encontrados  
-                        http_response_code(200);           
-                        echo $respuestaApi;
                     }
                 }else
                 {

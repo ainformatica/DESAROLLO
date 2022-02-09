@@ -23,7 +23,7 @@
         if($_SERVER['REQUEST_METHOD'] == 'GET')
         {    
             $respuestaApi = $nacionality->getNacionality();
-            echo "   Vista nacionalidad: ".$respuestaApi;
+            
             if($respuestaApi != false)
             {   
                 //Datos encontrados  
