@@ -30,7 +30,7 @@ class Consultas
         $query = "CALL sp_get_noticias('$token');";
         
         $respuesta = mysqli_query($bd, $query);
-echo mysqli_errno($bd)." error ";
+
         mysqli_close($bd);
         return $respuesta;
     }
