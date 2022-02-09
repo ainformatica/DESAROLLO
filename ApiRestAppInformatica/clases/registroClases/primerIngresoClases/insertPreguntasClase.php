@@ -3,8 +3,8 @@
     ob_start(); 
 
     require_once "../../../bd/consultas.php";
-    //require_once ('../../clases/encriptar_desencriptar.php');
-    require_once "../../../clases/encriptarPassword/encriptar_desencriptar.php";
+    require_once "../../../clases/encriptar_desencriptar.php";
+    //require_once "../../../clases/encriptarPassword/encriptar_desencriptar.php";
 
     //Clase para insertar las preguntas cuando sean usuarios que fueron registrados en el portal
     class ApiRestInsertQuestions

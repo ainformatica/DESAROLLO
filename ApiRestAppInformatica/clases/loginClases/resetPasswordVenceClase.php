@@ -4,8 +4,8 @@
 
     require_once "../../bd/consultas.php";    
     require_once "../../clases/enviarCorreo/enviarCorreo.php";
-    //require_once ('../../clases/encriptar_desencriptar.php');
-    require_once "../../clases/encriptarPassword/encriptar_desencriptar.php";
+    require_once "../../../clases/encriptar_desencriptar.php";
+    //require_once "../../clases/encriptarPassword/encriptar_desencriptar.php";
 
     //Clase para resetear la contrasena
     class ApiRestResetPasswordVence
