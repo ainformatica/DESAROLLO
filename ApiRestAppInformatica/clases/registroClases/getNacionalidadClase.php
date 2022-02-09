@@ -30,7 +30,7 @@
                          );
                          array_push($datos, $nacionalidad);
                      }   
-                     //print_r($datos);
+                     print_r($datos);
                      return json_encode($datos);//, JSON_INVALID_UTF8_IGNORE);
                  }else
                  { 
