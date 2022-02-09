@@ -3,7 +3,7 @@
     ob_start(); 
 
     require_once "../../bd/consultas.php";
-    require_once dirname(dirname(__DIR__))."/clases/encriptar_desencriptar.php";
+    require_once "../../../clases/encriptar_desencriptar.php";
     //require_once "../../clases/encriptarPassword/encriptar_desencriptar.php";
 
     //Clase para insertar el token
