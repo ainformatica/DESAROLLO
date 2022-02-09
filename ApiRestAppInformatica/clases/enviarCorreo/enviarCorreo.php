@@ -2,20 +2,41 @@
 
 ob_start(); 
 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
+require_once "../../../clases/envioCorreo.php";
+//use PHPMailer\PHPMailer\PHPMailer;
+//use PHPMailer\PHPMailer\Exception;
 
-require 'PHPMailer/Exception.php';
-require 'PHPMailer/PHPMailer.php';
-require 'PHPMailer/SMTP.php';
+//require 'PHPMailer/Exception.php';
+//require 'PHPMailer/PHPMailer.php';
+//require 'PHPMailer/SMTP.php';
 
 class SendEmail
  {
 
     public function enviarCorreo($correo, $asunto, $mensaje, $mensajeAlternativo)
     {
+
+        try {
+            //Usar metodo de automatizacion
+            $send = new Email("Informática Administrativa", "jnstreel@gmail.com", "Jnoestreel-15");          
+            $respuesta = $send->enviarCorreo($asunto, $this->estructuraCorreo($mensaje));
+
+            if($respuesta)
+            {
+                return true; 
+            }else
+            {
+                return false;
+            }
+
+        } catch (Exception $e) {
+            echo "Error catch: ".$e;
+            return false;
+        }
+        
+        
         //Create an instance; passing `true` enables exceptions
-        $mail = new PHPMailer(true);
+        /*$mail = new PHPMailer(true);
 
         try {
 
@@ -70,7 +91,7 @@ class SendEmail
             echo "Error catch: ".$e;
             return false;
             //echo "Error al enviar el correo. Mailer Error: {$mail->ErrorInfo}";
-        }
+        }*/
     }
 
     //Diseño del correo
