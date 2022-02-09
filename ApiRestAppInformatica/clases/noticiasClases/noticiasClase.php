@@ -82,7 +82,6 @@ print_r($datos);
                     return false;
                 }    
             } catch (Exception $e) {
-                echo " entro al catch ".$e->getMessage;
                 return "Error:".$e->getMessage;
             }             
         }
