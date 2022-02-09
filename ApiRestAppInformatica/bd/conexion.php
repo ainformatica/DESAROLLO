@@ -13,6 +13,7 @@ class Conexion{
         $port = 3306;
 
         $conexion = @mysqli_connect($server, $user, $password, $dataBase, $port);
+        mysqli_set_charset($conexion, "utf8"); //Cambiar caracteres, para que se obtengan bien los acentos,ñ, etc
 
         if(!empty($conexion))
         {
