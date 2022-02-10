@@ -183,7 +183,7 @@ if (permiso_ver('10') == '1') {
             <div class="col-12 col-sm-6 col-md-4">
               <div class="small-box bg-primary">
                 <div class="inner">
-                  <h4>Gestión Usuarios </h4>
+                  <h4>Gestión Personas </h4>
                   <p><?php echo $_SESSION['gestion_personas_menu']; ?></p>
                 </div>
                 <div class="icon">
