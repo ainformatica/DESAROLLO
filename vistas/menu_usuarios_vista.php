@@ -12,6 +12,14 @@ if (permiso_ver('3') == '1') {
   tiene permisos para visualizar";
 }
 
+if (permiso_ver('16017') == '1') {
+
+  $_SESSION['gestion_persona_menu'] = "...";
+} else {
+  $_SESSION['gestion_persona_menu'] = "No 
+  tiene permisos para visualizar";
+}
+
 if (permiso_ver('4') == '1') {
 
   $_SESSION['gestion_usuario_menu'] = "...";
@@ -138,6 +146,7 @@ if (permiso_ver('10') == '1') {
               </div>
             </div>
 
+
             <!-- /.row -->
           </div>
           <!--/. container-fluid -->
@@ -175,7 +184,20 @@ if (permiso_ver('10') == '1') {
 
 
 
-
+            <div class="col-12 col-sm-6 col-md-4">
+              <div class="small-box bg-primary">
+                <div class="inner">
+                  <h4>Gestión Personas </h4>
+                  <p><?php echo $_SESSION['gestion_persona_menu']; ?></p>
+                </div>
+                <div class="icon">
+                  <i class="fas fa-user-edit"></i>
+                </div>
+                <a href="../vistas/gestion_personas_vista.php" class="small-box-footer">
+                  Ir <i class="fas fa-arrow-circle-right"></i>
+                </a>
+              </div>
+            </div>
 
 
 

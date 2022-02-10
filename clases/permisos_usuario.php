@@ -126,7 +126,7 @@ function  permisos_a_roles_visualizar($pantalla, $confirmacion)
       }
    }
 
-   if ($_SESSION['pantalla'] == '3' or $_SESSION['pantalla'] == '4') {
+   if ($_SESSION['pantalla'] == '3' or $_SESSION['pantalla'] == '4'or $_SESSION['pantalla'] == '16017') {
       if ($_SESSION['confirmacion'] == 'block') {
          $_SESSION['usuarios_vista'] = "block";
       }
