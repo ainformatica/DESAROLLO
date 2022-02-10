@@ -189,7 +189,7 @@ if (permiso_ver('10') == '1') {
                 <div class="icon">
                   <i class="fas fa-user-edit"></i>
                 </div>
-                <a href="../vistas/gestion_usuarios_vista.php" class="small-box-footer">
+                <a href="../vistas/gestion_personas_vista.php" class="small-box-footer">
                   Ir <i class="fas fa-arrow-circle-right"></i>
                 </a>
               </div>
