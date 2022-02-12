@@ -514,7 +514,26 @@ class modelo_plan{
 
         return $consulta;
     }
-  
+    function listar_personas()
+    {
+        global $instancia_conexion;
+        $sql = "call sel_gestion_personas()";
+        $arreglo = array();
+        if ($consulta = $instancia_conexion->ejecutarConsulta($sql)) {
+            while ($consulta_VU = mysqli_fetch_assoc($consulta)) {
+                $arreglo["data"][] = $consulta_VU;
+            }
+            return $arreglo;
+        }
+    }
+
+    function tipo_plan_sel()
+    {
+        global $instancia_conexion;
+        $consulta = $instancia_conexion->ejecutarConsulta('SELECT * FROM tbl_tipo_plan');
+
+        return $consulta;
+    }
 }
 
 
