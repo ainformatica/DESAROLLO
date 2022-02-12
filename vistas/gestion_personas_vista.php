@@ -27,13 +27,11 @@ if ($visualizacion == 0) {
     bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'INGRESO', 'A GESTIÓN DE PERSONAS.');
 
 
-    //  if (permisos::permiso_insertar($Id_objeto) == '1') {
-    //  $_SESSION['btn_guardar_cambio_plan'] = "";
-    //  } else {
-    //  $_SESSION['btn_guardar_cambio_plan'] = "disabled";
-    //  }
-
-
+    if (permisos::permiso_insertar($Id_objeto) == '1') {
+        $_SESSION['btn_guardar_persona'] = "";
+    } else {
+        $_SESSION['btn_guardar_persona'] = "disabled";
+    }
 }
 
 
@@ -181,10 +179,9 @@ ob_end_flush();
                             <div class="col-md-4">
                                 <div class="form-group">
 
-                                    <label>NACIONALIDAD:</label>
-                                    <td><select class="form-control" style="width: 100%;" name="cbm_nacionalidad" id="cbm_nacionalidad">
-                                        </select></td>
 
+                                    <label>NACIONALIDAD</label>
+                                    <input class="form-control" type="text" id="nacionalidad" name="nacionalidad" maxlength="150" value="" onkeyup="DobleEspacio(this, event); " onkeypress="return sololetras(event)" required readonly>
 
                                 </div>
                             </div>
@@ -192,7 +189,7 @@ ob_end_flush();
                                 <div class="form-group">
 
                                     <label>IDENTIDAD</label>
-                                    <input class="form-control" type="text" id="identidad" name="identidad" maxlength="150" value="" onkeyup="DobleEspacio(this, event); " onkeypress="return sololetras(event)" required>
+                                    <input class="form-control" type="text" id="identidad" name="identidad" maxlength="150" value="" onkeyup="DobleEspacio(this, event); " onkeypress="return sololetras(event)" required readonly>
                                 </div>
                             </div>
                             <div class="col-md-4">
@@ -218,22 +215,24 @@ ob_end_flush();
                             <div class="col-md-4">
                                 <div class="form-group">
 
-                                    <label>FECHA_NACIMIENTO:</label>
-                                    <td><select class="form-control" style="width: 100%;" name="nacimiento" id="nacimiento">
-                                        </select></td>
 
+                                    <label>FECHA_NACIMIENTO</label>
+                                    <input class="form-control" type="text" id="fecha" name="fecha" maxlength="150" value="" onkeyup="DobleEspacio(this, event); " onkeypress="return sololetras(event)" required readonly>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
 
-                                    <label>ESTADO:</label>
-                                    <td><select class="form-control" style="width: 100%;" name="cbm_estado" id="cbm_estado">
-                                        </select></td>
 
+                                    <label>ESTADO</label>
+                                    <input class="form-control" type="text" id="estado1" name="estado" maxlength="20" value="" onkeyup="DobleEspacio(this, event); " onkeypress="return sololetras(event)" required readonly>
 
                                 </div>
+
+                                <button class="btn btn-warning" id="cambiar" name="cambiar" onclick="cambiar();">CAMBIAR ESTADO</button>
                             </div>
+
+
 
 
                         </div>
@@ -244,7 +243,7 @@ ob_end_flush();
 
                     <div class="modal-footer">
                         <!-- <button class="btn btn-danger" name="cambiar_vigencia1" id="cambiar_vigencia1">Guardar Vigencia</button> -->
-                        <button class="btn btn-primary" id="guardar" name="guardar" <?php echo $_SESSION['btn_guardar_cambio_plan']; ?>>Guardar</button>
+                        <button class="btn btn-primary" id="guardar_persona" name="guardar_persona" <?php echo $_SESSION['btn_guardar_persona']; ?>>Guardar</button>
                         <button class="btn btn-secondary" data-dismiss="modal">Close</button>
                     </div>
                 </div>

@@ -105,8 +105,6 @@ function TablaPersonas() {
             { data: "tipo_persona" },
             { data: "estado" },
         ],
-
-
     });
 }
 
@@ -122,13 +120,13 @@ $("#tabla_persona").on("click", ".editar", function() {
     $("#id_persona").val(data.id_persona);
     $("#nombres").val(data.nombres);
     $("#apellidos").val(data.apellidos);
-    $("#cbm_genero").val(data.sexo).trigger("change");
+    $("#cbm_genero").val(data.id_genero).trigger("change");
     $("#identidad").val(data.identidad);
-    $("#cbm_nacionalidad").val(data.nacionalidad).trigger("change");
-    $("#cbm_estado_civil").val(data.estado_civil).trigger("change");
-    $("#nacimiento").val(data.fecha_nacimiento);
-    $("#cbm_estado").val(data.estado).trigger("change");
-    $("#cbm_tipo_persona").val(data.tipo_persona).trigger("change");
+    $("#nacionalidad").val(data.nacionalidad);
+    $("#cbm_estado_civil").val(data.id_estado_civil).trigger("change");
+    $("#fecha").val(data.fecha_nacimiento);
+    $("#estado").val(data.estado);
+    $("#cbm_tipo_persona").val(data.id_tipo_persona).trigger("change");
 
 });
 
@@ -149,3 +147,112 @@ function genero() {
     });
 }
 genero();
+
+function estado_civil() {
+    var cadena = "&activar=activar";
+    $.ajax({
+        url: "../Controlador/perfil_docente_controlador.php?op=estado_civil",
+        type: "POST",
+        data: cadena,
+        success: function(r) {
+            $("#cbm_estado_civil").html(r).fadeIn();
+            var o = new Option("SELECCIONE", 0);
+
+            $("#cbm_estado_civil").append(o);
+            $("#cbm_estado_civil").val(0);
+        },
+    });
+}
+estado_civil();
+
+function tipo_persona() {
+    var cadena = "&activar=activar";
+    $.ajax({
+        url: "../Controlador/gestion_personas_controlador.php?op=tipo_persona",
+        type: "POST",
+        data: cadena,
+        success: function(r) {
+            $("#cbm_tipo_persona").html(r).fadeIn();
+            var o = new Option("SELECCIONE", 0);
+
+            $("#cbm_tipo_persona").append(o);
+            $("#cbm_tipo_persona").val(0);
+        },
+    });
+}
+tipo_persona();
+
+
+$("#guardar_persona").click(function() {
+    var nombres = $("#nombres").val();
+    var apellidos = $("#apellidos").val();
+    var cbm_genero = $("#cbm_genero").val();
+    var cbm_estado_civil = $("#cbm_estado_civil").val();
+    var cbm_tipo_persona = $("#cbm_tipo_persona").val();
+
+    if (
+        nombres.length == 0 ||
+        apellidos.length == 0
+    ) {
+        swal({
+            title: "alerta",
+            text: "Llene o seleccione los campos vacios correctamente",
+            type: "warning",
+            showConfirmButton: true,
+            timer: 15000,
+        });
+    } else if (cbm_genero == 0 || cbm_estado_civil == 0 || cbm_tipo_persona == 0) {
+        swal(
+            "Alerta!",
+            "Seleccione una opción válida",
+            "warning"
+        );
+    } else {
+
+        $.ajax({
+            url: "../Controlador/modificar_plan_estudio_controlador.php",
+            type: "POST",
+            data: {
+                nombres: nombres,
+                apelidos: txt_codigo_plan,
+                genero: cbm_genero,
+                estado_civil: cbm_estado_civil,
+                tipo_persona: cbm_tipo_persona
+            },
+        }).done(function(resp) {
+            if (resp > 0) {
+                swal(
+                    "Buen trabajo!",
+                    "datos actualizados correctamente!",
+                    "success"
+                );
+                $("#modal_editar").modal("hide");
+                table.ajax.reload();
+            } else {
+                swal("Alerta!", "No se pudo completar la actualización", "warning");
+            }
+        });
+
+    }
+
+    /* } */
+});
+
+
+function cambiar() {
+
+    var estado = $("#estado").val();
+
+    if (estado = "ACTIVO") {
+
+
+        alert('activo');
+        // $("#estado").val('INACTIVO');
+
+    } else {
+        alert("no");
+
+        // $("#estado").val('ACTIVO');
+    }
+
+}

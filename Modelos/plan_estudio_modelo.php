@@ -526,14 +526,23 @@ class modelo_plan{
             return $arreglo;
         }
     }
-
-    function tipo_plan_sel()
+    function genero()
     {
         global $instancia_conexion;
-        $consulta = $instancia_conexion->ejecutarConsulta('SELECT * FROM tbl_tipo_plan');
+        $consulta = $instancia_conexion->ejecutarConsulta('SELECT * FROM tbl_genero');
 
         return $consulta;
     }
+
+    function tipo_persona()
+    {
+        global $instancia_conexion;
+        $consulta = $instancia_conexion->ejecutarConsulta('SELECT * FROM tbl_tipos_persona');
+
+        return $consulta;
+    }
+    
+
 }
 
 
