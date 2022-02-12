@@ -43,21 +43,21 @@ class SendEmail
             //Server settings
             $mail->SMTPDebug = false;                                   //Enable verbose debug output
             $mail->isSMTP();                                            //Send using SMTP
-            $mail->SMTPOptions = array(
+            /*$mail->SMTPOptions = array(
                 'ssl' => array(
                     'verify_peer' => false,
                     'verify_peer_name' => false,
                     'allow_self_signed' => true
                 )
-            );                                                          //Para error de smtp
+            );*/                                                          //Para error de smtp
             $mail->Encoding = 'base64';                                 //Para los caracteres y acentos
             $mail->CharSet = 'UTF-8';                                   //Para los caracteres y acentos
             $mail->Host       = 'smtp.gmail.com';                       //Set the SMTP server to send through
             $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
             $mail->Username   = 'jnstreel@gmail.com';                   //SMTP username
             $mail->Password   = 'Jnoestreel-15';                        //SMTP password
-            $mail->SMTPSecure = 'tls';                                  //Enable implicit TLS encryption
-            $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+            $mail->SMTPSecure = 'ssl';//'tls';                                  //Enable implicit TLS encryption
+            $mail->Port       = 465;//587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
             //Recipients
             $mail->setFrom('jnstreel@gmail.com', 'Informática Administrativa');
