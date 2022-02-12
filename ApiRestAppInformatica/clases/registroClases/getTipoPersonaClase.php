@@ -23,7 +23,7 @@
                  {
                     while($datosbd = mysqli_fetch_assoc($respuesta))
                     {
-                        if($datosbd['tipo_persona'] == "ESTUDIANTE") $idUsuario = $datosbd['id_tipo_persona'];
+                        //if($datosbd['tipo_persona'] == "ESTUDIANTE") $idUsuario = $datosbd['id_tipo_persona'];
 
                         //Formar array para el json
                         $estados = array(
@@ -34,11 +34,11 @@
                     }  
                      
                     //Agregar tipo de persona egresado
-                    $estados = array(
+                    /*$estados = array(
                         'idTipoPersona' => $idUsuario,
                         'tipoPersona' => "EGRESADO"
                     );
-                    array_push($datos, $estados);
+                    array_push($datos, $estados);*/
  
                      return json_encode($datos);
                  }else

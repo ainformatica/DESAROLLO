@@ -50,7 +50,7 @@
                     //Validaciones para saber que rol y a que segmento pertencen
                     switch ($datosArray['tipoPersona']) {//Validar en base de datos como quedaria
                         case 'INVITADO':
-                            $rol = 1;
+                            $rol = 79;
                             $segmento = 1;
                             break;     
                         case 'ESTUDIANTE':
@@ -58,11 +58,11 @@
                             $segmento = 2;
                             break;     
                         case 'EGRESADO':
-                            $rol = 49;
+                            $rol = 78;
                             $segmento = 4;
                             break;                                       
                         default: //permisos de invitado por defecto
-                            $rol = 1;
+                            $rol = 79;
                             $segmento = 1;
                             break;
                     } 
