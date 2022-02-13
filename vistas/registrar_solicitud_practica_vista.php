@@ -86,10 +86,22 @@ ob_end_flush();
 <body>
 
 
-<div class="container ">
 
+
+
+
+
+
+
+<div class="container ">
+<ul class="navbar-nav">
+        <li class="nav-item">
+          <a id="ocultar" class="nav-link" data-widget="pushmenu"  href="#" role="button"><i class="fas fa-bars"></i></a>
+        </li>
+      </ul>
 
 <div class="tabset">
+  
   <!-- Tab 1 -->
   <input type="radio" name="tabset" id="tab1" aria-controls="marzen" checked>
   <label for="tab1">Información del Estudiante</label>
@@ -100,12 +112,24 @@ ob_end_flush();
   <input type="radio" name="tabset" id="tab3" aria-controls="dunkles">
   <label for="tab3">Información de Práctica Profesional </label>
 
+
+
+  
   <!-- <input type="radio" name="tabset" id="tab4" aria-controls="wilder">
   <label for="tab4">Documentos</label> -->
   
-  <div class="tab-panels container">
+
+
+
+
+
+
+
+  <div class="tab-panels ">
+
+  
         <!-- INFORMACION PERSONAL -->
-    <section id="marzen" class="tab-panel">
+    <section id="marzen" class="tab-panel ">
       <form action="#">
         
       <div class="row">
@@ -515,7 +539,7 @@ ob_end_flush();
 
     $("#trabaja").val(id_tipo_periodo);
   });
-
+document.getElementById('ocultar').click();
     </script>
 
 
