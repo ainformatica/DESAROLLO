@@ -45,6 +45,7 @@ ob_end_flush();
 <head>
     <script src="../js/autologout.js"></script>
 
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title></title>
 </head>
 
@@ -169,9 +170,8 @@ ob_end_flush();
                             <div class="col-md-4">
                                 <div class="form-group">
 
-                                    <label>GENERO:</label>
-                                    <td><select class="form-control" style="width: 100%;" name="cbm_genero" id="cbm_genero">
-                                        </select></td>
+                                    <label>GENERO</label>
+                                    <input class="form-control" type="text" id="genero" name="genero" maxlength="150">
 
 
                                 </div>
@@ -195,18 +195,17 @@ ob_end_flush();
                             <div class="col-md-4">
                                 <div class="form-group">
 
+
+
                                     <label>ESTADO CIVIL:</label>
-                                    <td><select class="form-control" style="width: 100%;" name="cbm_estado_civil" id="cbm_estado_civil">
-                                        </select></td>
-
-
+                                    <input class="form-control" type="text" id="civil" name="civil" maxlength="150" readonly>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
 
                                     <label>TIPO_PERSONA:</label>
-                                    <td><select class="form-control" style="width: 100%;" name="cbm_tipo_persona" id="cbm_tipo_persona">
+                                    <td><select class="form-control select2" style="width: 100%;" name="cbm_tipo_persona" id="cbm_tipo_persona">
                                         </select></td>
 
 
@@ -225,11 +224,11 @@ ob_end_flush();
 
 
                                     <label>ESTADO</label>
-                                    <input class="form-control" type="text" id="estado1" name="estado" maxlength="20" value="" onkeyup="DobleEspacio(this, event); " onkeypress="return sololetras(event)" required readonly>
+                                    <input class="form-control" type="text" id="estado1" name="estado" maxlength="20" readonly>
 
                                 </div>
 
-                                <button class="btn btn-warning" id="cambiar" name="cambiar" onclick="cambiar();">CAMBIAR ESTADO</button>
+                                <button class="btn btn-warning" id="cambiar" name="cambiar">CAMBIAR ESTADO</button>
                             </div>
 
 

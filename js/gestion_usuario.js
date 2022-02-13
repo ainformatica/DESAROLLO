@@ -109,61 +109,32 @@ function TablaPersonas() {
 }
 
 $("#tabla_persona").on("click", ".editar", function() {
+    $("#modal_editar").modal({ backdrop: "static", keyboard: false });
+    $("#modal_editar").modal("show");
+
     var data = table.row($(this).parents("tr")).data();
     if (table.row(this).child.isShown()) {
         var data = table.row(this).data();
     }
 
-    $("#modal_editar").modal({ backdrop: "static", keyboard: false });
-    $("#modal_editar").modal("show");
 
+
+    $("#cbm_tipo_persona").val(data.id_tipo_persona).trigger("change");
     $("#id_persona").val(data.id_persona);
     $("#nombres").val(data.nombres);
     $("#apellidos").val(data.apellidos);
-    $("#cbm_genero").val(data.id_genero).trigger("change");
+    $("#genero").val(data.sexo);
     $("#identidad").val(data.identidad);
     $("#nacionalidad").val(data.nacionalidad);
-    $("#cbm_estado_civil").val(data.id_estado_civil).trigger("change");
+    $("#civil").val(data.estado_civil);
     $("#fecha").val(data.fecha_nacimiento);
-    $("#estado").val(data.estado);
-    $("#cbm_tipo_persona").val(data.id_tipo_persona).trigger("change");
+    $("#estado1").val(data.estado);
+
 
 });
 
 
-function genero() {
-    var cadena = "&activar=activar";
-    $.ajax({
-        url: "../Controlador/gestion_personas_controlador.php?op=genero",
-        type: "POST",
-        data: cadena,
-        success: function(r) {
-            $("#cbm_genero").html(r).fadeIn();
-            var o = new Option("SELECCIONE", 0);
 
-            $("#cbm_genero").append(o);
-            $("#cbm_genero").val(0);
-        },
-    });
-}
-genero();
-
-function estado_civil() {
-    var cadena = "&activar=activar";
-    $.ajax({
-        url: "../Controlador/perfil_docente_controlador.php?op=estado_civil",
-        type: "POST",
-        data: cadena,
-        success: function(r) {
-            $("#cbm_estado_civil").html(r).fadeIn();
-            var o = new Option("SELECCIONE", 0);
-
-            $("#cbm_estado_civil").append(o);
-            $("#cbm_estado_civil").val(0);
-        },
-    });
-}
-estado_civil();
 
 function tipo_persona() {
     var cadena = "&activar=activar";
@@ -239,20 +210,62 @@ $("#guardar_persona").click(function() {
 });
 
 
-function cambiar() {
 
-    var estado = $("#estado").val();
+$("#cambiar").click(function() {
+    var estado = $("#estado1").val();
 
-    if (estado = "ACTIVO") {
+    var activo = "ACTIVO";
+    var inactivo = "INACTIVO";
 
 
-        alert('activo');
-        // $("#estado").val('INACTIVO');
+    var id = $("#id_persona").val();
 
-    } else {
-        alert("no");
+    swal({
+        title: "Estas seguro?",
+        text: "Se cambiará el estado de la persona!",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+    }).then((willDelete) => {
+        if (willDelete) {
 
-        // $("#estado").val('ACTIVO');
-    }
+            if (estado == "ACTIVO") {
+                cambiar(id, inactivo);
+            } else {
+                cambiar(id, activo);
+            }
+
+
+
+        }
+
+    });
+
+
+
+});
+
+
+function cambiar(id, estado) {
+
+
+    $.ajax({
+        url: "../Controlador/actualizar_estado_persona.php",
+        type: "POST",
+        data: {
+            id_persona: id,
+            Estado: estado
+        },
+    }).done(function(resp) {
+
+        if (resp > 0) {
+            $("#modal_editar").modal("hide");
+            //  document.getElementById("txt_registro").value = "";
+            table.ajax.reload();
+        } else {
+            swal("Alerta!", "No se pudo completar la actualización", "warning");
+            //document.getElementById("txt_registro").value = "";
+        }
+    });
 
 }
