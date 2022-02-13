@@ -248,13 +248,14 @@ $("#cambiar").click(function() {
 
 function cambiar(id, estado) {
 
-
+    var nom = $("#nombres").val();
     $.ajax({
         url: "../Controlador/actualizar_estado_persona.php",
         type: "POST",
         data: {
             id_persona: id,
-            Estado: estado
+            Estado: estado,
+            nombres: nom
         },
     }).done(function(resp) {
 

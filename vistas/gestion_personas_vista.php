@@ -143,8 +143,8 @@ ob_end_flush();
 
 
                     <div class="modal-body">
-                        <!-- <input type="text" id="id_sesion" name="id_sesion" value="<?php echo $nombre; ?>" hidden readonly>
-                        <input type="text" id="id_sesion_usuario" name="id_sesion_usuario" value="<?php echo $id_usuario; ?>" hidden readonly> -->
+                        <input type="text" id="id_sesion" name="id_sesion" value="<?php echo $nombre; ?>" readonly hidden>
+                        <input type="text" id="id_sesion_usuario" name="id_sesion_usuario" value="<?php echo $id_usuario; ?>" readonly hidden>
                         <input class="form-control" type="text" id="id_persona" name="id_persona" readonly hidden>
 
                         <div class="row">
@@ -228,7 +228,7 @@ ob_end_flush();
 
                                 </div>
 
-                                <button class="btn btn-warning" id="cambiar" name="cambiar">CAMBIAR ESTADO</button>
+                                <button class="btn btn-danger" id="cambiar" name="cambiar">CAMBIAR ESTADO</button>
                             </div>
 
 
