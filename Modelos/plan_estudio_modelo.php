@@ -548,6 +548,55 @@ class modelo_plan
 
         return $instancia_conexion->ejecutarConsulta($sql);
     }
+
+    public function CargarDatos($id_persona)
+    {
+        global $instancia_conexion;
+        $sql = "SELECT PER.nombres  nombre, CON.valor,TCON.descripcion, PER.id_persona
+
+FROM tbl_personas AS PER 
+   JOIN tbl_contactos AS CON ON CON.id_persona=PER.id_persona
+   JOIN tbl_tipo_contactos AS TCON ON TCON.id_tipo_contacto=CON.id_tipo_contacto
+  
+WHERE PER.id_persona= $id_persona AND descripcion='TELEFONO CELULAR'
+";
+        $result = $instancia_conexion->ejecutarConsulta($sql);
+
+        $userData = array();
+
+        while ($row = $result->fetch_assoc()) {
+
+            $userData['all'][] = $row;
+        }
+
+        //echo '<pre>';print_r($userData);echo'</pre>';
+        return $userData;
+    }
+
+
+    public function CargarDatosC($id_persona)
+    {
+        global $instancia_conexion;
+        $sql = "SELECT PER.nombres  nombre, CON.valor,TCON.descripcion, PER.id_persona
+
+FROM tbl_personas AS PER 
+   JOIN tbl_contactos AS CON ON CON.id_persona=PER.id_persona
+   JOIN tbl_tipo_contactos AS TCON ON TCON.id_tipo_contacto=CON.id_tipo_contacto
+  
+WHERE PER.id_persona= $id_persona AND descripcion='CORREO'
+";
+        $result = $instancia_conexion->ejecutarConsulta($sql);
+
+        $userData = array();
+
+        while ($row = $result->fetch_assoc()) {
+
+            $userData['all'][] = $row;
+        }
+
+        //echo '<pre>';print_r($userData);echo'</pre>';
+        return $userData;
+    }
 }
 
 

@@ -131,13 +131,14 @@ ob_end_flush();
         </div>
 
         <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="modal_editar">
+
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
 
                     <div class="modal-header">
                         <h5 class="modal-title">Editar Persona</h5>
-                        <button class="close" data-dismiss="modal">
-                            &times;
+                        <button class="close" data-dismiss="modal" onclick="limpiar()">
+                            &times; 
                         </button>
                     </div>
 
@@ -228,40 +229,86 @@ ob_end_flush();
 
                                 </div>
 
-                                <button class="btn btn-danger" id="cambiar" name="cambiar">CAMBIAR ESTADO</button>
                             </div>
-
 
 
 
                         </div>
 
-                    </div>
+                        <div class="d-flex justify-content-around flex-row bd-highlight row">
+                            <div class="card " style="width:300px;border-color:gray;" id="card_telefono">
+                                <div class="card-body">
+                                    <h4 class="card-title">Contactos</h4>
+                                    <div class="form-group card-text">
+                                        <!-- TABLA CONTACTOS -->
+                                        <button type="button" name="add1" id="add1" class="btn btn-info card-title" data-toggle="modal" data-target="#ModalTel">Agregar Teléfono</button>
+
+                                        <table class="table table-bordered table-striped m-0">
+                                            <thead>
+                                                <tr>
+
+                                                    <th>Teléfono</th>
+                                                    <th id="eliminar_telefono_tabla">Eliminar</th>
+
+                                                </tr>
+                                            </thead>
+                                            <tbody id="tbData2"></tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card " style="width:400px;border-color:gray;">
+                                <div class="card-body">
+                                    <h4 class="card-title">Correo</h4>
+                                    <div class="form-group card-text">
+                                        <!-- TABLA CORREO -->
+                                        <button type="button" name="add_correo1" id="add_correo1" class="btn btn-info card-title" data-toggle="modal" data-target="#ModalCorreo">Agregar Correo</button>
+
+                                        <table class="table table-bordered table-striped m-0">
+                                            <thead>
+                                                <tr>
+
+                                                    <th>Correo</th>
+                                                    <th id="eliminar_correo_tabla">Eliminar</th>
+
+                                                </tr>
+                                            </thead>
+                                            <tbody id="tbDataCorreo1"></tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
 
 
-                    <div class="modal-footer">
-                        <!-- <button class="btn btn-danger" name="cambiar_vigencia1" id="cambiar_vigencia1">Guardar Vigencia</button> -->
-                        <button class="btn btn-primary" id="guardar_persona" name="guardar_persona" <?php echo $_SESSION['btn_guardar_persona']; ?>>Guardar</button>
-                        <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                        <div class="modal-footer">
+
+                            <button class="btn btn-danger" id="cambiar" name="cambiar">CAMBIAR ESTADO</button>
+                            <!-- <button class="btn btn-danger" name="cambiar_vigencia1" id="cambiar_vigencia1">Guardar Vigencia</button> -->
+                            <button class="btn btn-primary" id="guardar_persona" name="guardar_persona" <?php echo $_SESSION['btn_guardar_persona']; ?> onclick="limpiar();">Guardar</button>
+                            <button class="btn btn-secondary" data-dismiss="modal" onclick="limpiar();">Close</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
 
 
 
 
-        <script src="../js/gestion_usuario.js"></script>
+
+            <script src="../js/gestion_usuario.js"></script>
 
 
-        <script>
-            $(document).ready(function() {
-                TablaPersonas();
+            <script>
+                $(document).ready(function() {
+                    TablaPersonas();
 
-            });
-        </script>
+                });
+            </script>
 
 </body>
 

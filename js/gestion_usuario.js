@@ -3,6 +3,21 @@ function abrirmodalusuario() {
     $("#modalReset").modal("show");
 }
 
+
+$("#telefono").click(function() {
+    $("#modal_telefono").modal({ backdrop: "static", keyboard: false });
+    $("#modal_telefono").modal("show");
+});
+
+$("#correo").click(function() {
+    $("#modal_correo").modal({ backdrop: "static", keyboard: false });
+    $("#modal_correo").modal("show");
+});
+
+
+
+
+
 function usuario() {
     var cadena = "&activar=activar";
     $.ajax({
@@ -130,7 +145,9 @@ $("#tabla_persona").on("click", ".editar", function() {
     $("#fecha").val(data.fecha_nacimiento);
     $("#estado1").val(data.estado);
 
+    traerTel();
 
+    traerCorreo();
 });
 
 
@@ -269,4 +286,77 @@ function cambiar(id, estado) {
         }
     });
 
+}
+
+function traerTel() {
+    var id_persona = $("#id_persona").val();
+    $.post(
+        "../Controlador/gestion_personas_controlador.php?op=CargarDatos", { id_persona: id_persona },
+        function(data, status) {
+            //////console.log(data);
+            data = JSON.parse(data);
+            ////console.log(data);
+            for (var i = 0; i < data.all.length; ++i) {
+                // j = ContarTel();
+
+                let n = 1 + i;
+
+                $("#tbData2").append(
+                    '<tr id="row' +
+                    n +
+                    '">' +
+                    '<td id="celda' +
+                    n +
+                    '"><input maxlength="9"    onkeyup="javascript:mascara()" id="tel1' +
+                    n +
+                    '"  type="tel1" name="tel1" class="form-control name_list" value="' +
+                    data["all"][i].valor +
+                    '" placeholder="___-___"/></td>' +
+                    '<td><button type="button" name="remove" id="' +
+                    n +
+                    '" class="btn btn-danger btn_remove">X</button></td>' +
+                    "</tr>"
+                );
+            }
+        }
+    )
+}
+
+function traerCorreo() {
+    var id_persona = $("#id_persona").val();
+    $.post(
+        "../Controlador/gestion_personas_controlador.php?op=CargarDatosC", { id_persona: id_persona },
+        function(data, status) {
+            //////console.log(data);
+            data = JSON.parse(data);
+            ////console.log(data);
+            for (var i = 0; i < data.all.length; ++i) {
+                // j = ContarTel();
+
+                let m = 1 + i;
+
+                $("#tbDataCorreo1").append(
+                    '<tr id="row2' +
+                    m +
+                    '">' +
+                    '<td id="celda2' +
+                    m +
+                    '"><input maxlength="9"  id="correo' +
+                    m +
+                    '"  type="correo" name="correo" class="form-control name_list" value="' +
+                    data["all"][i].valor +
+                    '"/></td>' +
+                    '<td><button type="button" name="eliminar_correo" id="' +
+                    m +
+                    '" class="btn btn-danger btn_eliminar_correo">X</button></td>' +
+                    "</tr>"
+                );
+            }
+        }
+    );
+}
+
+function limpiar() {
+    $("#tbDataCorreo1").empty();
+    $("#tbData2").empty();
 }
