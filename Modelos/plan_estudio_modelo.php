@@ -7,9 +7,10 @@ require_once('../clases/conexion_mantenimientos.php');
 
 $instancia_conexion = new conexion();
 
-class modelo_plan{
+class modelo_plan
+{
 
- 
+
 
     function tipo_plan_sel()
     {
@@ -18,7 +19,7 @@ class modelo_plan{
 
         return $consulta;
     }
-  
+
     function verificarPlanNombre($nombre)
     {
         global $instancia_conexion;
@@ -27,7 +28,7 @@ class modelo_plan{
         return $instancia_conexion->ejecutarConsultaSimpleFila($sql4);
     }
 
-    function crear_plan_estudio($nombre, $num_clases, $fecha_creacion, $codigo_plan, $plan_vigente, $id_tipo_plan,$creado_por, $numero_acta, $fecha_acta, $fecha_emision,$creditos,$activo)
+    function crear_plan_estudio($nombre, $num_clases, $fecha_creacion, $codigo_plan, $plan_vigente, $id_tipo_plan, $creado_por, $numero_acta, $fecha_acta, $fecha_emision, $creditos, $activo)
     {
 
         global $instancia_conexion;
@@ -36,12 +37,11 @@ class modelo_plan{
 
         if ($consulta = $instancia_conexion->ejecutarConsulta($sql)) {
             return 1;
-            
         } else {
             return 0;
         }
     }
-   
+
     function listar_planes_estudio()
     {
         global $instancia_conexion;
@@ -68,7 +68,7 @@ class modelo_plan{
         }
     }
     //buscar el plan en historial 
-    function buscar_historial_plan($nombre,$codigo)
+    function buscar_historial_plan($nombre, $codigo)
     {
         global $instancia_conexion;
         $sql = "call sel_busca_historial_plan('$nombre','$codigo')";
@@ -103,13 +103,11 @@ class modelo_plan{
 
         if ($consulta = $instancia_conexion->ejecutarConsulta($sql)) {
             return 1;
-          
-
         } else {
             return 0;
         }
     }
-   
+
     function plan_sel()
     {
         global $instancia_conexion;
@@ -202,13 +200,13 @@ class modelo_plan{
 
         return $consulta;
     }
-    
+
     function UVplan($id_plan_estudio)
     {
 
         global $instancia_conexion;
         $sql6 =
-        "SELECT creditos_plan,num_clases FROM tbl_plan_estudio where id_plan_estudio= $id_plan_estudio";
+            "SELECT creditos_plan,num_clases FROM tbl_plan_estudio where id_plan_estudio= $id_plan_estudio";
         return $instancia_conexion->ejecutarConsultaSimpleFila($sql6);
     }
 
@@ -218,7 +216,7 @@ class modelo_plan{
 
         global $instancia_conexion;
         $sql6 =
-        "SELECT COUNT(Id_asignatura) as suma FROM tbl_asignaturas where id_plan_estudio= '$id_plan_estudio'";
+            "SELECT COUNT(Id_asignatura) as suma FROM tbl_asignaturas where id_plan_estudio= '$id_plan_estudio'";
         return $instancia_conexion->ejecutarConsultaSimpleFila($sql6);
     }
     function contarCreditosPlan($id_plan_estudio)
@@ -226,7 +224,7 @@ class modelo_plan{
 
         global $instancia_conexion;
         $sql6 =
-        "SELECT SUM(uv) as suma FROM tbl_asignaturas where id_plan_estudio= '$id_plan_estudio'";
+            "SELECT SUM(uv) as suma FROM tbl_asignaturas where id_plan_estudio= '$id_plan_estudio'";
         return $instancia_conexion->ejecutarConsultaSimpleFila($sql6);
     }
     function tabla_equivalencias()
@@ -245,43 +243,43 @@ class modelo_plan{
     {
         global $instancia_conexion;
         $consulta = $instancia_conexion->ejecutarConsulta(" call sel_busca_equivalencias_plan($id_asignatura)");
-      
+
         $equivalencias = array();
-        
-    
+
+
         while ($row = $consulta->fetch_assoc()) {
-    
-          $equivalencias['equivalencias'][] = $row;
+
+            $equivalencias['equivalencias'][] = $row;
         }
-    
+
         //echo '<pre>';print_r($actividades);echo'</pre>';
         return $equivalencias;
-       
     }
-    function existe_equivalencia($id_asignatura, $id_equivalencia){
-    global $instancia_conexion;
-    $sql5 = "CALL sel_existe_equivalencia_plan('$id_asignatura','$id_equivalencia')";
-    return $instancia_conexion->ejecutarConsultaSimpleFila($sql5);
-  }
-  function insertar_equivalencias($id_asignatura, $id_equivalencia)
-  {
-    global $instancia_conexion;
-    $sql = "CALL proc_insertar_equivalencias_plan($id_asignatura, $id_equivalencia);";
-
-    if ($consulta = $instancia_conexion->ejecutarConsulta($sql)) {
-      return 1;
-    } else {
-      return 0;
+    function existe_equivalencia($id_asignatura, $id_equivalencia)
+    {
+        global $instancia_conexion;
+        $sql5 = "CALL sel_existe_equivalencia_plan('$id_asignatura','$id_equivalencia')";
+        return $instancia_conexion->ejecutarConsultaSimpleFila($sql5);
     }
-  }
-  
-  function eliminar_equivalencias($eliminar_equivalencia)
-  {
-    global $instancia_conexion;
-    $consulta = $instancia_conexion->ejecutarConsulta("DELETE FROM tbl_equivalencias_plan WHERE id_equivalencias_plan='$eliminar_equivalencia';");
+    function insertar_equivalencias($id_asignatura, $id_equivalencia)
+    {
+        global $instancia_conexion;
+        $sql = "CALL proc_insertar_equivalencias_plan($id_asignatura, $id_equivalencia);";
 
-    return $consulta;
-  }
+        if ($consulta = $instancia_conexion->ejecutarConsulta($sql)) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+
+    function eliminar_equivalencias($eliminar_equivalencia)
+    {
+        global $instancia_conexion;
+        $consulta = $instancia_conexion->ejecutarConsulta("DELETE FROM tbl_equivalencias_plan WHERE id_equivalencias_plan='$eliminar_equivalencia';");
+
+        return $consulta;
+    }
     function listar_asignaturas_vigentes()
     {
         global $instancia_conexion;
@@ -312,7 +310,7 @@ class modelo_plan{
         return $instancia_conexion->ejecutarConsulta($sql);
     }
     //Insertar registros
-    function registrarAsignatura($id_plan_estudio, $id_periodo_plan, $id_area, $uv, $codigo, $estado, $asignatura, $reposicion, $suficiencia,$carga, $id_tipo_asignatura)
+    function registrarAsignatura($id_plan_estudio, $id_periodo_plan, $id_area, $uv, $codigo, $estado, $asignatura, $reposicion, $suficiencia, $carga, $id_tipo_asignatura)
     {
         global $instancia_conexion;
         $sql = "call proc_insertar_asignatura('$id_plan_estudio', '$id_periodo_plan', '$id_area', '$uv', '$codigo', '$estado', '$asignatura', '$reposicion', '$suficiencia','$carga', '$id_tipo_asignatura')";
@@ -322,7 +320,7 @@ class modelo_plan{
     }
 
     function
-    ActualizarAsignatura($id_area, $uv, $codigo, $asignatura, $reposicion, $suficiencia, $id_asignatura, $id_periodo_plan,$carga, $id_plan_estudio)
+    ActualizarAsignatura($id_area, $uv, $codigo, $asignatura, $reposicion, $suficiencia, $id_asignatura, $id_periodo_plan, $carga, $id_plan_estudio)
     {
         global $instancia_conexion;
         $sql = "call proc_actualizar_asignatura( '$id_area', '$uv', '$codigo','$asignatura', '$reposicion', '$suficiencia','$id_asignatura', '$id_periodo_plan','$carga','$id_plan_estudio')";
@@ -332,7 +330,7 @@ class modelo_plan{
     }
 
 
-    function Actualizar_silabo_asignatura($nombrearchivo2,$Id_asignatura)
+    function Actualizar_silabo_asignatura($nombrearchivo2, $Id_asignatura)
     {
         global $instancia_conexion;
         $sql = "CALL proc_actualizar_silabo('$nombrearchivo2','$Id_asignatura')";
@@ -365,42 +363,42 @@ class modelo_plan{
     {
         global $instancia_conexion;
         $consulta = $instancia_conexion->ejecutarConsulta(" call sel_busca_requisitos_plan($id_asignatura)");
-      
+
         $requisitos = array();
-        
-    
+
+
         while ($row = $consulta->fetch_assoc()) {
-    
-          $requisitos['requisitos'][] = $row;
+
+            $requisitos['requisitos'][] = $row;
         }
-    
+
         //echo '<pre>';print_r($actividades);echo'</pre>';
         return $requisitos;
-       
     }
-    function existe_requisito($id_asignatura, $id_equivalencia){
+    function existe_requisito($id_asignatura, $id_equivalencia)
+    {
         global $instancia_conexion;
         $sql5 = "CALL sel_existe_requisito_plan('$id_asignatura','$id_equivalencia')";
         return $instancia_conexion->ejecutarConsultaSimpleFila($sql5);
-      }
-      function insertar_requisitos($id_asignatura, $id_equivalencia)
-      {
+    }
+    function insertar_requisitos($id_asignatura, $id_equivalencia)
+    {
         global $instancia_conexion;
         $sql = "CALL proc_insertar_requisitos_plan($id_asignatura, $id_equivalencia);";
-    
-        if ($consulta = $instancia_conexion->ejecutarConsulta($sql)) {
-          return 1;
-        } else {
-          return 0;
-        }
-      }
-      function eliminar_requisitos($eliminar_requisito)
-  {
-    global $instancia_conexion;
-    $consulta = $instancia_conexion->ejecutarConsulta("DELETE FROM tbl_requisito_asignatura WHERE id_requisito_asig='$eliminar_requisito';");
 
-    return $consulta;
-  }
+        if ($consulta = $instancia_conexion->ejecutarConsulta($sql)) {
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+    function eliminar_requisitos($eliminar_requisito)
+    {
+        global $instancia_conexion;
+        $consulta = $instancia_conexion->ejecutarConsulta("DELETE FROM tbl_requisito_asignatura WHERE id_requisito_asig='$eliminar_requisito';");
+
+        return $consulta;
+    }
 
     function consAsig($id_asignatura, $id_equivalencias)
     {
@@ -457,20 +455,20 @@ class modelo_plan{
             return $arreglo;
         }
     }
-     //selecccionar plan vigente docentes
-     function consultar_plan_vigente_docentes()
-     {
-         global $instancia_conexion;
-         $sql = "call sel_plan_vigente_docentes()";
-         $arreglo = array();
-         if ($consulta = $instancia_conexion->ejecutarConsulta($sql)) {
-             while ($consulta_VU = mysqli_fetch_assoc($consulta)) {
-                 $arreglo["data"][] = $consulta_VU;
-             }
-             return $arreglo;
-         }
-     }
-     function datos_plan($id_plan_estudio)
+    //selecccionar plan vigente docentes
+    function consultar_plan_vigente_docentes()
+    {
+        global $instancia_conexion;
+        $sql = "call sel_plan_vigente_docentes()";
+        $arreglo = array();
+        if ($consulta = $instancia_conexion->ejecutarConsulta($sql)) {
+            while ($consulta_VU = mysqli_fetch_assoc($consulta)) {
+                $arreglo["data"][] = $consulta_VU;
+            }
+            return $arreglo;
+        }
+    }
+    function datos_plan($id_plan_estudio)
     {
 
         global $instancia_conexion;
@@ -526,15 +524,81 @@ class modelo_plan{
             return $arreglo;
         }
     }
-
-    function tipo_plan_sel()
+    function genero()
     {
         global $instancia_conexion;
-        $consulta = $instancia_conexion->ejecutarConsulta('SELECT * FROM tbl_tipo_plan');
+        $consulta = $instancia_conexion->ejecutarConsulta('SELECT * FROM tbl_genero');
 
         return $consulta;
     }
+
+    function tipo_persona()
+    {
+        global $instancia_conexion;
+        $consulta = $instancia_conexion->ejecutarConsulta('SELECT * FROM tbl_tipos_persona');
+
+        return $consulta;
+    }
+
+    function estado($estado, $id)
+    {
+        global $instancia_conexion;
+        $sql = "call  proc_actualizar_estado_persona('$estado','$id')";
+
+
+        return $instancia_conexion->ejecutarConsulta($sql);
+    }
+
+    public function CargarDatos($id_persona)
+    {
+        global $instancia_conexion;
+        $sql = "SELECT PER.nombres  nombre, CON.valor,TCON.descripcion, PER.id_persona
+
+FROM tbl_personas AS PER 
+   JOIN tbl_contactos AS CON ON CON.id_persona=PER.id_persona
+   JOIN tbl_tipo_contactos AS TCON ON TCON.id_tipo_contacto=CON.id_tipo_contacto
+  
+WHERE PER.id_persona= $id_persona AND descripcion='TELEFONO CELULAR'
+";
+        $result = $instancia_conexion->ejecutarConsulta($sql);
+
+        $userData = array();
+
+        while ($row = $result->fetch_assoc()) {
+
+            $userData['all'][] = $row;
+        }
+
+        //echo '<pre>';print_r($userData);echo'</pre>';
+        return $userData;
+    }
+
+
+    public function CargarDatosC($id_persona)
+    {
+        global $instancia_conexion;
+        $sql = "SELECT PER.nombres  nombre, CON.valor,TCON.descripcion, PER.id_persona
+
+FROM tbl_personas AS PER 
+   JOIN tbl_contactos AS CON ON CON.id_persona=PER.id_persona
+   JOIN tbl_tipo_contactos AS TCON ON TCON.id_tipo_contacto=CON.id_tipo_contacto
+  
+WHERE PER.id_persona= $id_persona AND descripcion='CORREO'
+";
+        $result = $instancia_conexion->ejecutarConsulta($sql);
+
+        $userData = array();
+
+        while ($row = $result->fetch_assoc()) {
+
+            $userData['all'][] = $row;
+        }
+
+        //echo '<pre>';print_r($userData);echo'</pre>';
+        return $userData;
+    }
 }
+
 
 
 

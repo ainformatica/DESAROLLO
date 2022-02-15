@@ -171,7 +171,7 @@ ob_end_flush();
                 <div class="col-sm-2">
                   <div class="form-group">
                     <label>Cupos</label>
-                    <input class="form-control" type="text" maxlength="2" id="txt_cupos" name="txt_cupos" required onkeyup="Espacio(this, event)" onkeypress="return Numeros(event)">
+                    <input class="form-control" type="text" maxlength="2" id="txt_cupos" name="txt_cupos" required onkeyup="espacio(this, event)" onkeypress="return numeros(event)">
                   </div>
                 </div>
 
@@ -194,14 +194,14 @@ ob_end_flush();
                 <div class="col-sm-6">
                   <div class="form-group">
                     <label>Nombre de la charla</label>
-                    <input class="form-control" type="text" maxlength="100" id="txt_nombre_charla" name="txt_nombre_charla">
+                    <input class="form-control" type="text" maxlength="100" id="txt_nombre_charla" name="txt_nombre_charla" onkeyup="mayus(this);">
                   </div>
                 </div>
 
                 <div class="col-sm-2">
                   <div class="form-group">
                     <label>Periodo académico</label>
-                    <input class="form-control" type="text" maxlength="2" id="txt_periodo" name="txt_periodo" required onkeyup="Espacio(this, event)" onkeypress="return Numeros(event)">
+                    <input class="form-control" type="text" maxlength="2" id="txt_periodo" name="txt_periodo" required onkeyup="espacio(this, event)" onkeypress="return numeros(event)">
                   </div>
                 </div>
 
@@ -313,6 +313,47 @@ ob_end_flush();
   }
 }
 </script>
+
+<script>
+  function mayus(e) {
+    e.value = e.value.toUpperCase();
+}
+</script>
+
+<script>
+function numeros(e){
+    key = e.keyCode || e.which;
+    tecla = String.fromCharCode(key).toLowerCase();
+    letras = " 0123456789";
+    especiales = [8];
+ 
+    tecla_especial = false
+    for(var i in especiales){
+ if(key == especiales[i]){
+     tecla_especial = true;
+     break;
+        } 
+    }
+ 
+    if(letras.indexOf(tecla)==-1 && !tecla_especial)
+        return false;
+}
+</script>
+
+<script language="javascript">
+
+function espacio(campo, event) {
+
+CadenaaReemplazar = " ";
+CadenaReemplazo = "";
+CadenaTexto = campo.value;
+CadenaTextoNueva = CadenaTexto.split(CadenaaReemplazar).join(CadenaReemplazo);
+campo.value = CadenaTextoNueva;
+
+}
+
+</script>
+
 <script type="text/javascript">
 
 

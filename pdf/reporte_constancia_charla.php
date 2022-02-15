@@ -109,6 +109,7 @@ if (isset($_POST['id_persona']) ) {
     $row= mysqli_fetch_assoc($mysqli->query($sqltabla));
 $fecha_charla=$row['fecha_charla'];
 $fecha_valida=$row['fecha_valida'];
+ 
 $pdf = new PDF('P','mm','letter',true);
 $pdf->AliasNbPages();
 $pdf->AddPage();
@@ -120,7 +121,7 @@ $pdf->ln(2);
 $pdf->cell(0,6,utf8_decode('UVIA-'.$row['periodo'].'-'.$row['no_constancia'].' '),0,1,'C');
 $pdf->ln(10);
 
-$pdf->SetFillColor(255, 255, 255);
+$pdf->SetFillColor(232,232,232);
 $pdf->SetFont('Arial','I',12);
 
 $pdf->Image('../dist/img/cuadro.png',20,70,160);
@@ -133,28 +134,15 @@ $pdf->SetY(81);
 $pdf->Cell(165, 10, utf8_decode(''.$row['valor'].''), 0, 1, 'C');
 $pdf->ln(5);
 
-$pdf->SetX(20);    
-$pdf->cell(0,6,utf8_decode('El Departamento de Informática de la Facultad de Ciencias Económicas,'),0,1,'C');
-$pdf->SetX(25); 
-$pdf->cell(0,6,utf8_decode('Administrativas y Contables de la Universidad Nacional Autónoma de Honduras'),0,1,'C');
-$pdf->SetX(25); 
-$pdf->cell(0,6,utf8_decode('(UNAH) a través de su Unidad de Vinculación Universidad - Sociedad, hace'),0,1,'C');
-$pdf->SetX(25); 
-$pdf->cell(0,6,utf8_decode('constar la participación del referido estudiante en el proceso de INDUCCIÓN'),0,1,'C');
-$pdf->SetX(25); 
-$pdf->cell(0,6,utf8_decode('SOBRE PRÁCTICA PROFESIONAL, realizada el '.fechaCastellano($fecha_charla).' e'),0,1,'C');
-$pdf->SetX(25); 
-$pdf->cell(0,6,utf8_decode('impartida por '.$row['expo1'].' y '.$row['expo2'].'.'),0,1,'C');
-$pdf->SetX(25); 
-$pdf->cell(0,6,utf8_decode('La presente constancia es válida hasta el '.fechaCastellano($fecha_valida).'.'),0,1,'C');
-$pdf->ln(10);
-$pdf->SetX(25);  
-$pdf->cell(0,6,utf8_decode('Se extiende la presente constancia en Ciudad Universitaria, Tegucigalpa,'),0,1,'C');
-$pdf->SetX(25);  
-$pdf->cell(0,6,utf8_decode('Honduras, el '.fechaCastellano($fecha).'.'),0,1,'C');
+$pdf->SetFillColor(232,232,232);
+$pdf->SetX(20);
+$pdf->multicell(170,7,utf8_decode('El Departamento de Informática de la Facultad de Ciencias Económicas, Administrativas y Contables de la Universidad Nacional Autónoma de Honduras (UNAH) a través de su Unidad de Vinculación Universidad - Sociedad, hace constar la participación del referido estudiante en el proceso de INDUCCIÓN SOBRE PRÁCTICA PROFESIONAL, realizada el '.fechaCastellano($fecha_charla).' e impartida por '.$row['expo1'].' y '.$row['expo2'].'.La presente constancia es válida hasta el '.fechaCastellano($fecha_valida).'.'),0);    
+$pdf->ln(5);
+$pdf->SetX(20); 
+$pdf->multicell(170,7,utf8_decode('Se extiende la presente constancia en Ciudad Universitaria, Tegucigalpa, Honduras, el '.fechaCastellano($fecha).'.'),0);
 $pdf->ln(32);
-$pdf->Image('../dist/img/Sello.png',55,175,25);
-$pdf->Image('../dist/img/firma.png',82,175,40);
+$pdf->Image('../dist/img/Sello.png',55,181,25);
+$pdf->Image('../dist/img/firma.png',82,182,40);
 $pdf->SetFont('Times','BI',14);
 $pdf->cell(0,6,utf8_decode('Cristian Josué Rivera Ramírez'),0,1,'C');
 $pdf->ln(2);
@@ -167,4 +155,59 @@ $pdf->SetTitle('CONSTANCIA CHARLA '.$row['nombre'].'');
 
 $pdf->Output('I','CONSTANCIA_CHARLA_PPS.pdf');
 }
+
+$carpeta='../Documentacion_practica/'.$row['valor'].'/';
+if(!file_exists($carpeta)){
+  mkdir($carpeta,0777,true);
+ 
+}
+
+  $pdf = new PDF('P','mm','letter',true);
+  $pdf->AliasNbPages();
+  $pdf->AddPage();
+  $pdf->SetFont('Arial','B',16);
+  $pdf->Image('../dist/img/fondo.png',1,70,217);
+  $pdf->cell(0,6,utf8_decode('CONSTANCIA'),0,1,'C');
+  $pdf->SetFont('Arial','B',12);
+  $pdf->ln(2);
+  $pdf->cell(0,6,utf8_decode('UVIA-'.$row['periodo'].'-'.$row['no_constancia'].' '),0,1,'C');
+  $pdf->ln(10);
+  
+  $pdf->SetFillColor(255, 255, 255);
+  $pdf->SetFont('Arial','I',12);
+  
+  $pdf->Image('../dist/img/cuadro.png',20,70,160);
+  $pdf->SetX(210);
+  $pdf->SetY(71);
+  $pdf->Cell(200, 10, ''.$row['nombre'].'', 0, 1, 'C');
+  $pdf->ln(-3);
+  $pdf->SetX(80);
+  $pdf->SetY(81);
+  $pdf->Cell(165, 10, utf8_decode(''.$row['valor'].''), 0, 1, 'C');
+  $pdf->ln(5);
+  
+  $pdf->SetFillColor(232,232,232);
+  $pdf->SetX(20);
+  $pdf->multicell(170,7,utf8_decode('El Departamento de Informática de la Facultad de Ciencias Económicas, Administrativas y Contables de la Universidad Nacional Autónoma de Honduras (UNAH) a través de su Unidad de Vinculación Universidad - Sociedad, hace constar la participación del referido estudiante en el proceso de INDUCCIÓN SOBRE PRÁCTICA PROFESIONAL, realizada el '.fechaCastellano($fecha_charla).' e impartida por '.$row['expo1'].' y '.$row['expo2'].'.La presente constancia es válida hasta el '.fechaCastellano($fecha_valida).'.'),0);    
+  $pdf->ln(5);
+  $pdf->SetX(20); 
+  $pdf->multicell(170,7,utf8_decode('Se extiende la presente constancia en Ciudad Universitaria, Tegucigalpa, Honduras, el '.fechaCastellano($fecha).'.'),0);
+  $pdf->ln(32);
+  $pdf->Image('../dist/img/Sello.png',55,181,25);
+  $pdf->Image('../dist/img/firma.png',82,182,40);
+  $pdf->SetFont('Times','BI',14);
+  $pdf->cell(0,6,utf8_decode('Cristian Josué Rivera Ramírez'),0,1,'C');
+  $pdf->ln(2);
+  $pdf->SetFont('Times','I',14);
+  $pdf->cell(0,6,utf8_decode('Coordinador de Comité de Vinculación Universidad - Sociedad'),0,1,'C');
+  $pdf->ln(2);
+  $pdf->cell(0,6,utf8_decode('Departamento de Informática'),0,1,'C');
+  
+  $pdf->SetTitle('CONSTANCIA CHARLA '.$row['nombre'].'');
+  
+  $pdf->Output('F','../Documentacion_practica/'.$row['valor'].'/01_CONSTANCIA_CHARLA_PPS.pdf');
+
+
+
+
 ?>

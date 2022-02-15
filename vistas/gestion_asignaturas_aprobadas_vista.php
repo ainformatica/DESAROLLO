@@ -217,6 +217,7 @@ $resultadotabla_modal = $mysqli->query($sql_tabla__modal_clases_aprobadas);
             AND cp.id_verificacion = verif.id_verificacion AND verif.id_verificacion != 3";
               
               $datos = $mysqli->query($sql);
+              // $id_estudiante=['id_persona'];
             ?>
       <div class="card-body">
         <table id="tabla" class="table table-bordered table-striped">
@@ -247,9 +248,10 @@ $resultadotabla_modal = $mysqli->query($sql_tabla__modal_clases_aprobadas);
                           <td>'.$row['clases_aprobadas'].'</td>
                           <td>'.$row['porcentaje_clases'].'</td>
                           <td>'.$row['descripcion'].'</td>
-                          <td>
-                            <a href="../pdf/reporte_constancia_clases.php?id_persona_=<?php echo $sql_tabla_clases_aprobadas["ROWS"][$counter]["id_persona"]; ?>
-                              <i class="far fa-edit" target="_blank" class="btn btn-primary btn-raised btn-xs"></i>
+                          <td style="text-align: center;">
+
+                            <a href="../pdf/reporte_constancia_clases.php?id_persona='.$row['id_persona'].'" target="_blank" class="btn btn-primary btn-raised btn-xs">
+                              <i class="far fa-edit"></i>
                             </a>
                           </td>
                           </tr>

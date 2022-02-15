@@ -27,13 +27,11 @@ if ($visualizacion == 0) {
     bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'INGRESO', 'A GESTIÓN DE PERSONAS.');
 
 
-    //  if (permisos::permiso_insertar($Id_objeto) == '1') {
-    //  $_SESSION['btn_guardar_cambio_plan'] = "";
-    //  } else {
-    //  $_SESSION['btn_guardar_cambio_plan'] = "disabled";
-    //  }
-
-
+    if (permisos::permiso_insertar($Id_objeto) == '1') {
+        $_SESSION['btn_guardar_persona'] = "";
+    } else {
+        $_SESSION['btn_guardar_persona'] = "disabled";
+    }
 }
 
 
@@ -47,6 +45,7 @@ ob_end_flush();
 <head>
     <script src="../js/autologout.js"></script>
 
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title></title>
 </head>
 
@@ -132,20 +131,21 @@ ob_end_flush();
         </div>
 
         <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="modal_editar">
+
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
 
                     <div class="modal-header">
                         <h5 class="modal-title">Editar Persona</h5>
-                        <button class="close" data-dismiss="modal">
-                            &times;
+                        <button class="close" data-dismiss="modal" onclick="limpiar()">
+                            &times; 
                         </button>
                     </div>
 
 
                     <div class="modal-body">
-                        <!-- <input type="text" id="id_sesion" name="id_sesion" value="<?php echo $nombre; ?>" hidden readonly>
-                        <input type="text" id="id_sesion_usuario" name="id_sesion_usuario" value="<?php echo $id_usuario; ?>" hidden readonly> -->
+                        <input type="text" id="id_sesion" name="id_sesion" value="<?php echo $nombre; ?>" readonly hidden>
+                        <input type="text" id="id_sesion_usuario" name="id_sesion_usuario" value="<?php echo $id_usuario; ?>" readonly hidden>
                         <input class="form-control" type="text" id="id_persona" name="id_persona" readonly hidden>
 
                         <div class="row">
@@ -171,9 +171,8 @@ ob_end_flush();
                             <div class="col-md-4">
                                 <div class="form-group">
 
-                                    <label>GENERO:</label>
-                                    <td><select class="form-control" style="width: 100%;" name="cbm_genero" id="cbm_genero">
-                                        </select></td>
+                                    <label>GENERO</label>
+                                    <input class="form-control" type="text" id="genero" name="genero" maxlength="150">
 
 
                                 </div>
@@ -181,10 +180,9 @@ ob_end_flush();
                             <div class="col-md-4">
                                 <div class="form-group">
 
-                                    <label>NACIONALIDAD:</label>
-                                    <td><select class="form-control" style="width: 100%;" name="cbm_nacionalidad" id="cbm_nacionalidad">
-                                        </select></td>
 
+                                    <label>NACIONALIDAD</label>
+                                    <input class="form-control" type="text" id="nacionalidad" name="nacionalidad" maxlength="150" value="" onkeyup="DobleEspacio(this, event); " onkeypress="return sololetras(event)" required readonly>
 
                                 </div>
                             </div>
@@ -192,24 +190,23 @@ ob_end_flush();
                                 <div class="form-group">
 
                                     <label>IDENTIDAD</label>
-                                    <input class="form-control" type="text" id="identidad" name="identidad" maxlength="150" value="" onkeyup="DobleEspacio(this, event); " onkeypress="return sololetras(event)" required>
+                                    <input class="form-control" type="text" id="identidad" name="identidad" maxlength="150" value="" onkeyup="DobleEspacio(this, event); " onkeypress="return sololetras(event)" required readonly>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
 
+
+
                                     <label>ESTADO CIVIL:</label>
-                                    <td><select class="form-control" style="width: 100%;" name="cbm_estado_civil" id="cbm_estado_civil">
-                                        </select></td>
-
-
+                                    <input class="form-control" type="text" id="civil" name="civil" maxlength="150" readonly>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
 
                                     <label>TIPO_PERSONA:</label>
-                                    <td><select class="form-control" style="width: 100%;" name="cbm_tipo_persona" id="cbm_tipo_persona">
+                                    <td><select class="form-control select2" style="width: 100%;" name="cbm_tipo_persona" id="cbm_tipo_persona">
                                         </select></td>
 
 
@@ -218,52 +215,100 @@ ob_end_flush();
                             <div class="col-md-4">
                                 <div class="form-group">
 
-                                    <label>FECHA_NACIMIENTO:</label>
-                                    <td><select class="form-control" style="width: 100%;" name="nacimiento" id="nacimiento">
-                                        </select></td>
 
+                                    <label>FECHA_NACIMIENTO</label>
+                                    <input class="form-control" type="text" id="fecha" name="fecha" maxlength="150" value="" onkeyup="DobleEspacio(this, event); " onkeypress="return sololetras(event)" required readonly>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-group">
 
-                                    <label>ESTADO:</label>
-                                    <td><select class="form-control" style="width: 100%;" name="cbm_estado" id="cbm_estado">
-                                        </select></td>
 
+                                    <label>ESTADO</label>
+                                    <input class="form-control" type="text" id="estado1" name="estado" maxlength="20" readonly>
 
                                 </div>
+
                             </div>
+
 
 
                         </div>
 
-                    </div>
+                        <div class="d-flex justify-content-around flex-row bd-highlight row">
+                            <div class="card " style="width:300px;border-color:gray;" id="card_telefono">
+                                <div class="card-body">
+                                    <h4 class="card-title">Contactos</h4>
+                                    <div class="form-group card-text">
+                                        <!-- TABLA CONTACTOS -->
+                                        <button type="button" name="add1" id="add1" class="btn btn-info card-title" data-toggle="modal" data-target="#ModalTel">Agregar Teléfono</button>
+
+                                        <table class="table table-bordered table-striped m-0">
+                                            <thead>
+                                                <tr>
+
+                                                    <th>Teléfono</th>
+                                                    <th id="eliminar_telefono_tabla">Eliminar</th>
+
+                                                </tr>
+                                            </thead>
+                                            <tbody id="tbData2"></tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card " style="width:400px;border-color:gray;">
+                                <div class="card-body">
+                                    <h4 class="card-title">Correo</h4>
+                                    <div class="form-group card-text">
+                                        <!-- TABLA CORREO -->
+                                        <button type="button" name="add_correo1" id="add_correo1" class="btn btn-info card-title" data-toggle="modal" data-target="#ModalCorreo">Agregar Correo</button>
+
+                                        <table class="table table-bordered table-striped m-0">
+                                            <thead>
+                                                <tr>
+
+                                                    <th>Correo</th>
+                                                    <th id="eliminar_correo_tabla">Eliminar</th>
+
+                                                </tr>
+                                            </thead>
+                                            <tbody id="tbDataCorreo1"></tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
 
 
-                    <div class="modal-footer">
-                        <!-- <button class="btn btn-danger" name="cambiar_vigencia1" id="cambiar_vigencia1">Guardar Vigencia</button> -->
-                        <button class="btn btn-primary" id="guardar" name="guardar" <?php echo $_SESSION['btn_guardar_cambio_plan']; ?>>Guardar</button>
-                        <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                        <div class="modal-footer">
+
+                            <button class="btn btn-danger" id="cambiar" name="cambiar">CAMBIAR ESTADO</button>
+                            <!-- <button class="btn btn-danger" name="cambiar_vigencia1" id="cambiar_vigencia1">Guardar Vigencia</button> -->
+                            <button class="btn btn-primary" id="guardar_persona" name="guardar_persona" <?php echo $_SESSION['btn_guardar_persona']; ?> onclick="limpiar();">Guardar</button>
+                            <button class="btn btn-secondary" data-dismiss="modal" onclick="limpiar();">Close</button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
 
 
 
 
-        <script src="../js/gestion_usuario.js"></script>
+
+            <script src="../js/gestion_usuario.js"></script>
 
 
-        <script>
-            $(document).ready(function() {
-                TablaPersonas();
+            <script>
+                $(document).ready(function() {
+                    TablaPersonas();
 
-            });
-        </script>
+                });
+            </script>
 
 </body>
 

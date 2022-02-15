@@ -175,13 +175,26 @@ ob_end_flush();
             </div>
 
 
-            <div class="col-sm-6">
+            <div class="col-sm-4">
               <div class="form-group">
-                <label> Documento</label>
-                <input class="form-control" type="file" class="form-control" id="txt_documentos[]" name="txt_documentos[]" multiple="">
+                <label> Copia de la Cédula</label>
+                <input class="form-control" type="file" class="form-control" id="txt_documentos[]" name="txt_cedula" multiple="">
               </div>
             </div>
-
+            <div class="col-sm-4">
+              <div class="form-group">
+                <label> Certificado de Bioseguridad</label>
+                <input class="form-control" type="file" class="form-control" id="txt_documentos" name="txt_bioseguridad" multiple="">
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <div class="form-group">
+                  <label for="">Mis Documentos </label>
+                  <button id="btn-documentos" type="button" class="form-control btn btn-success" data-toggle="modal" data-target="#documentacion">
+                        Ver
+                  </button>    
+                </div>
+            </div>
 
 
 
@@ -202,8 +215,104 @@ ob_end_flush();
       </div>
     </div>
 
+    <!-- Modal de documentacion -->
+    <div class="modal fade" id="documentacion">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Documentos</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <!--Cuerpo del modal-->
+        <div class="modal-body">
 
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <label class="control-label">Nombre Completo</label>
+                  <input class="form-control" type="text" maxlength="60" id="txt_nombre_alumno" name="txt_nombre_alumno" value="<?php echo $_SESSION['nombre_estudiante'] ?>" readonly>
+                  <?php
+                  $cuenta =  $datos['valor'];
+                  $listar = null;
+                  $directorio=opendir("../Documentacion_practica/$cuenta/");
+                  $n=0;
+                  while ($elemento = readdir($directorio)) {
+                    if ($elemento != '.' and $elemento != '..') {
+
+
+                      if (is_dir("../Documentacion_practica/$cuenta/".$elemento)) {
+                        $listar .= "<div class='list-group'>
+                                        <a href='../Documentacion_practica/$cuenta/$elemento' 
+                                        target='_blank'' 
+                                        class='list-group-item list-group-item-action list-group-item-success' >
+                                        $elemento
+                                        </a>
+                                    </div>";
+                        
+                        
+                      } else {
+                        $listar .= "<div class='list-group'>
+                                      <a href='../Documentacion_practica/$cuenta/$elemento' 
+                                      target='_blank'' 
+                                      class='list-group-item list-group-item-action list-group-item-success' >
+                                      $elemento
+                                      </a>
+                                    </div>";
+                        //$listar .= "<li> <a href='../Documentacion_practica/$cuenta/$elemento' target='_blank' >$elemento</a></li>";
+                      }
+                    }
+                    $n++;
+                  }
+                  if ($n=1) {
+                    $faltan="<div class='list-group'>
+                                <a href='#' class='list-group-item list-group-item-action list-group-item-danger' >04_Certificado_de_Bioseguridad</a>
+                            </div>";
+                    $faltan.="<div class='list-group'>
+                                <a href='#' class='list-group-item list-group-item-action list-group-item-danger' >05_Foto_de_La_Cedula</a>
+                              </div>";
+                    
+                 
+                  }else{
+                     $faltan="<div class='list-group'>
+                                    <a href='#' class='list-group-item list-group-item-action list-group-item-primary' >Documentacion Completa</a>
+                                 </div>";
+                  }
+
+
+                  ?>
+                  <label class="control-label mt-3">Documentos que ya tengo (<strong>No subir </strong>)</label>
+                  <ul>
+                    <?php echo $listar;
+                   ?>
+                   
+                  </ul>
+                  <label class="control-label my-3">Documentos que me faltan (Subir) </label>
+                  <ul>
+                    <?php echo $faltan;
+                   ?>
+                   
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Footer del modal-->
+        <div class="modal-footer justify-content-between">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
 
 </body>
+<script>
+  document.getElementById('btn-documentos').click();
+</script>
 
 </html>

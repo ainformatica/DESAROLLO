@@ -160,7 +160,20 @@ $_SESSION['revision_doc_practica_menu']="No
 </div>
 </div>
 
-
+<div class="col-6 col-sm-6 col-md-4">
+   <div class="small-box bg-light">
+   <div class="inner">
+    <h5>Creación de charla</h5>
+   <p><?php echo $_SESSION['gestion_charla_menu']; ?></p> 
+  </div>
+  <div class="icon">
+    <i class="fas fa-user-edit"></i>
+  </div>
+  <a href="../vistas/gestion_charla_vista.php" class="small-box-footer">
+    Ir <i class="fas fa-arrow-circle-right"></i>
+  </a>
+</div>
+</div>
     
    <div class="col-6 col-sm-6 col-md-4">
    <div class="small-box bg-light">
@@ -181,7 +194,7 @@ $_SESSION['revision_doc_practica_menu']="No
 <div class="col-6 col-sm-6 col-md-4">
   <div class="small-box bg-light">
   <div class="inner">
-    <h5>Verificación de Asignaturas Aprobadas</h5>
+    <h5>Verificación de Asignaturas Aprobadas por Coordinación</h5>
    <p><?php echo $_SESSION['registrar_clases_aprobadas_menu'];?></p>
   </div>
   <div class="icon">
@@ -199,7 +212,7 @@ $_SESSION['revision_doc_practica_menu']="No
    <div class="col-6 col-sm-6 col-md-4">
    <div class="small-box bg-light">
    <div class="inner">
-    <h5>Gestión Asignaturas Aprobadas</h5>
+    <h5>Gestión Asignaturas Aprobadas por Vinculación</h5>
    <p><?php echo $_SESSION['gestion_clases_aprobadas_menu']; ?></p> 
   </div>
   <div class="icon">
@@ -215,7 +228,7 @@ $_SESSION['revision_doc_practica_menu']="No
      <div class="col-6 col-sm-6 col-md-4">
    <div class="small-box bg-light">
    <div class="inner">
-    <h5>Revisión  de Doc. de PPS</h5>
+    <h5>Revisión  de Documentación de PPS</h5>
    <p><?php echo $_SESSION['revision_doc_practica_menu']; ?></p> 
   </div>
   <div class="icon">
@@ -228,7 +241,7 @@ $_SESSION['revision_doc_practica_menu']="No
 </div>
 
 
-     <div class="col-6 col-sm-6 col-md-4">
+     <!-- <div class="col-6 col-sm-6 col-md-4">
    <div class="small-box bg-light">
    <div class="inner">
     <h5>Oficio</h5>
@@ -241,22 +254,8 @@ $_SESSION['revision_doc_practica_menu']="No
     Ir <i class="fas fa-arrow-circle-right"></i>
   </a>
 </div>
-</div>
+</div> -->
 
-<div class="col-6 col-sm-6 col-md-4">
-   <div class="small-box bg-light">
-   <div class="inner">
-    <h5>Gestión de charla</h5>
-   <p><?php echo $_SESSION['gestion_charla_menu']; ?></p> 
-  </div>
-  <div class="icon">
-    <i class="fas fa-user-edit"></i>
-  </div>
-  <a href="../vistas/gestion_charla_vista.php" class="small-box-footer">
-    Ir <i class="fas fa-arrow-circle-right"></i>
-  </a>
-</div>
-</div>
 
    <div class="col-6 col-sm-6 col-md-4">
   <div class="small-box bg-light">
