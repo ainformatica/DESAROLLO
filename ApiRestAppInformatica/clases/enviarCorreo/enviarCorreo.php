@@ -43,13 +43,13 @@ class SendEmail
             //Server settings
             $mail->SMTPDebug = false;                                   //Enable verbose debug output
             $mail->isSMTP();                                            //Send using SMTP
-            /*$mail->SMTPOptions = array(
+            $mail->SMTPOptions = array(
                 'ssl' => array(
                     'verify_peer' => false,
                     'verify_peer_name' => false,
                     'allow_self_signed' => true
                 )
-            );*/                                                          //Para error de smtp
+            );                                                          //Para error de smtp
             $mail->Encoding = 'base64';                                 //Para los caracteres y acentos
             $mail->CharSet = 'UTF-8';                                   //Para los caracteres y acentos
             $mail->Host       = 'smtp.gmail.com';                       //Set the SMTP server to send through
