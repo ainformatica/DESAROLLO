@@ -280,6 +280,7 @@ function cambiar(id, estado) {
             $("#modal_editar").modal("hide");
             //  document.getElementById("txt_registro").value = "";
             table.ajax.reload();
+            limpiar();
         } else {
             swal("Alerta!", "No se pudo completar la actualización", "warning");
             //document.getElementById("txt_registro").value = "";
