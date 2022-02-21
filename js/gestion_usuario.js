@@ -4,20 +4,6 @@ function abrirmodalusuario() {
 }
 
 
-$("#telefono").click(function() {
-    $("#modal_telefono").modal({ backdrop: "static", keyboard: false });
-    $("#modal_telefono").modal("show");
-});
-
-$("#correo").click(function() {
-    $("#modal_correo").modal({ backdrop: "static", keyboard: false });
-    $("#modal_correo").modal("show");
-});
-
-
-
-
-
 function usuario() {
     var cadena = "&activar=activar";
     $.ajax({
@@ -138,10 +124,10 @@ $("#tabla_persona").on("click", ".editar", function() {
     $("#id_persona").val(data.id_persona);
     $("#nombres").val(data.nombres);
     $("#apellidos").val(data.apellidos);
-    $("#genero").val(data.sexo);
+    $("#cbm_genero").val(data.sexo).trigger("change");
     $("#identidad").val(data.identidad);
     $("#nacionalidad").val(data.nacionalidad);
-    $("#civil").val(data.estado_civil);
+    $("#cmb_estado_civil").val(data.estado_civil).trigger("change");
     $("#fecha").val(data.fecha_nacimiento);
     $("#estado1").val(data.estado);
 
@@ -152,7 +138,7 @@ $("#tabla_persona").on("click", ".editar", function() {
 
 
 
-
+// select de tipo de persona
 function tipo_persona() {
     var cadena = "&activar=activar";
     $.ajax({
@@ -169,18 +155,55 @@ function tipo_persona() {
     });
 }
 tipo_persona();
+$('#cbm_tipo_persona').change(function() {
+    var tipo_persona = $(this).val();
+    console.log(tipo_persona);
+    $('#tipo_persona1').val(tipo_persona);
+    if (tipo_persona == 0) {
+        alert("Seleccione una opción válida");
+        document.getElementById("cbm_tipo_persona").value = "";
+    }
+});
 
+// select de genero
+function genero() {
+    var cadena = "&activar=activar";
+    $.ajax({
+        url: "../Controlador/gestion_personas_controlador.php?op=genero",
+        type: "POST",
+        data: cadena,
+        success: function(r) {
+            $("#cbm_genero").html(r).fadeIn();
+            var o = new Option("SELECCIONE", 0);
 
+            $("#cbm_genero").append(o);
+            $("#cbm_genero").val(0);
+        },
+    });
+}
+genero();
+$('#cbm_genero').change(function() {
+    var genero = $(this).val();
+    console.log(genero);
+    $('#genero1').val(genero);
+    if (genero == 0) {
+        alert("Seleccione una opción válida");
+        document.getElementById("cbm_genero").value = "";
+    }
+});
+
+// para modificar los datos con el boton editar y guardar lo del modal
 $("#guardar_persona").click(function() {
     var nombres = $("#nombres").val();
     var apellidos = $("#apellidos").val();
-    var cbm_genero = $("#cbm_genero").val();
-    var cbm_estado_civil = $("#cbm_estado_civil").val();
+    var cbm_genero = document.getElementById("cbm_genero");
+    var cbm_estado_civil = document.getElementById("cbm_estado_civil");
     var cbm_tipo_persona = $("#cbm_tipo_persona").val();
 
     if (
         nombres.length == 0 ||
-        apellidos.length == 0
+        apellidos.length == 0 
+
     ) {
         swal({
             title: "alerta",
@@ -313,9 +336,6 @@ function traerTel() {
                     '"  type="tel1" name="tel1" class="form-control name_list" value="' +
                     data["all"][i].valor +
                     '" placeholder="___-___"/></td>' +
-                    '<td><button type="button" name="remove" id="' +
-                    n +
-                    '" class="btn btn-danger btn_remove">X</button></td>' +
                     "</tr>"
                 );
             }
@@ -347,9 +367,6 @@ function traerCorreo() {
                     '"  type="correo" name="correo" class="form-control name_list" value="' +
                     data["all"][i].valor +
                     '"/></td>' +
-                    '<td><button type="button" name="eliminar_correo" id="' +
-                    m +
-                    '" class="btn btn-danger btn_eliminar_correo">X</button></td>' +
                     "</tr>"
                 );
             }
@@ -361,3 +378,6 @@ function limpiar() {
     $("#tbDataCorreo1").empty();
     $("#tbData2").empty();
 }
+
+// para modificar los datos con el boton editar y guardar lo del modal
+

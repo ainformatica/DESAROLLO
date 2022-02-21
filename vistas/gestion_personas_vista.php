@@ -138,7 +138,7 @@ ob_end_flush();
                     <div class="modal-header">
                         <h5 class="modal-title">Editar Persona</h5>
                         <button class="close" data-dismiss="modal" onclick="limpiar()">
-                            &times; 
+                            &times;
                         </button>
                     </div>
 
@@ -172,7 +172,9 @@ ob_end_flush();
                                 <div class="form-group">
 
                                     <label>GENERO</label>
-                                    <input class="form-control" type="text" id="genero" name="genero" maxlength="150">
+                                    <td><select class="form-control select2" style="width: 100%;" name="cbm_genero" id="cbm_genero">
+                                        </select></td>
+                                    <input hidden class="form-control" id="genero1" name="genero1" value="0" readonly>
 
 
                                 </div>
@@ -196,10 +198,9 @@ ob_end_flush();
                             <div class="col-md-4">
                                 <div class="form-group">
 
-
-
                                     <label>ESTADO CIVIL:</label>
-                                    <input class="form-control" type="text" id="civil" name="civil" maxlength="150" readonly>
+                                    <td><select class="form-control select2" style="width: 100%;" name="cbm_estado_civil" id="cbm_estado_civil">
+                                        </select></td>
                                 </div>
                             </div>
                             <div class="col-md-4">
@@ -208,6 +209,8 @@ ob_end_flush();
                                     <label>TIPO_PERSONA:</label>
                                     <td><select class="form-control select2" style="width: 100%;" name="cbm_tipo_persona" id="cbm_tipo_persona">
                                         </select></td>
+                                    <input hidden class="form-control" id="tipo_persona1" name="tipo_persona1" value="0" readonly>
+
 
 
                                 </div>
@@ -241,14 +244,13 @@ ob_end_flush();
                                     <h4 class="card-title">Contactos</h4>
                                     <div class="form-group card-text">
                                         <!-- TABLA CONTACTOS -->
-                                        <button type="button" name="add1" id="add1" class="btn btn-info card-title" data-toggle="modal" data-target="#ModalTel">Agregar Teléfono</button>
 
                                         <table class="table table-bordered table-striped m-0">
                                             <thead>
                                                 <tr>
 
                                                     <th>Teléfono</th>
-                                                    <th id="eliminar_telefono_tabla">Eliminar</th>
+
 
                                                 </tr>
                                             </thead>
@@ -263,14 +265,13 @@ ob_end_flush();
                                     <h4 class="card-title">Correo</h4>
                                     <div class="form-group card-text">
                                         <!-- TABLA CORREO -->
-                                        <button type="button" name="add_correo1" id="add_correo1" class="btn btn-info card-title" data-toggle="modal" data-target="#ModalCorreo">Agregar Correo</button>
 
                                         <table class="table table-bordered table-striped m-0">
                                             <thead>
                                                 <tr>
 
                                                     <th>Correo</th>
-                                                    <th id="eliminar_correo_tabla">Eliminar</th>
+
 
                                                 </tr>
                                             </thead>

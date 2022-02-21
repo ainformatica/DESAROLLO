@@ -20,6 +20,18 @@ switch ($_GET["op"]) {
             echo "<option value='" . $r2->id_tipo_persona . "'> " . $r2->tipo_persona . " </option>";
         }
         break;
+
+        case 'genero':
+
+            $data = array();
+            $respuesta2 = $instancia_modelo->genero();
+    
+            while ($r2 = $respuesta2->fetch_object()) {
+    
+                # code...
+                echo "<option value='" . $r2->id_genero . "'> " . $r2->genero . " </option>";
+            }
+            break;
     case 'CargarDatos':
         $rspta = $instancia_modelo->CargarDatos($id_persona);
         //echo '<pre>';print_r($rspta);echo'</pre>';
