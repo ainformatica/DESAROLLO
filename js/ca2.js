@@ -52,22 +52,26 @@ function mostrar_docente(id_persona_valor) {
       data = JSON.parse(data);
       console.log(data);
       // mostrarform(true);
-      $("#id").val(data.id_persona);
-      $("#input2").val(data.Categoria);
-      $("#input5").val(data.Hora_Salida);
-      $("#input6").val(data.Hora_Entrada);
-      $("#input7").val(data.Jornada);
-      $("#input8").val(data.nombre);
-      // $("#txt_num_doc").val(data.num_empleado);
-      var tr = "<tr>";
-      tr += "<th>" + data.formacion_academica + "</th>";
-      tr += "<th>" + data.pregunta1 + "</th>";
-      tr += "<th>" + data.pregunta2 + "</th>";
-      tr += "<th>" + data.pregunta3 + "</th>";
-      tr += "<th>" + data.pregunta4 + "</th>";
-      tr += "</tr>";
-      $("#id_profe").html(tr);
-      // console.log(tr);
+      if (data == null) {
+        alert("no hay datos");
+      } else {
+        $("#id").val(data.id_persona);
+        $("#input2").val(data.Categoria);
+        $("#input5").val(data.Hora_Salida);
+        $("#input6").val(data.Hora_Entrada);
+        $("#input7").val(data.Jornada);
+        $("#input8").val(data.nombre);
+        // $("#txt_num_doc").val(data.num_empleado);
+        var tr = "<tr>";
+        tr += "<th>" + data.formacion_academica + "</th>";
+        tr += "<th>" + data.pregunta1 + "</th>";
+        tr += "<th>" + data.pregunta2 + "</th>";
+        tr += "<th>" + data.pregunta3 + "</th>";
+        tr += "<th>" + data.pregunta4 + "</th>";
+        tr += "</tr>";
+        $("#id_profe").html(tr);
+        // console.log(tr);
+      }
     }
   );
 }
@@ -180,9 +184,9 @@ llenar_tipo_asignatura_crear();
 $("#cbm_tipo_asignatura").change(function () {
   var id_tipo_asig = $(this).val();
   console.log(id_tipo_asig);
-  
-      document.getElementById("txt_cod_asignatura").value = "";
-      document.getElementById("txt_unid_valora").value = "";
+
+  document.getElementById("txt_cod_asignatura").value = "";
+  document.getElementById("txt_unid_valora").value = "";
 
   if (id_tipo_asig == 1) {
     $.post(
@@ -197,24 +201,22 @@ $("#cbm_tipo_asignatura").change(function () {
       // console.log(respuesta);
     });
   } else if (id_tipo_asig == 2) {
-      $.post(
-        "../Controlador/reporte_carga_controlador.php?op=asig_servicio_carga",
-        {
-          id_tipo_asignatura: id_tipo_asig,
-        }
-      ).done(function (respuesta) {
-        $("#select2").html(respuesta);
+    $.post(
+      "../Controlador/reporte_carga_controlador.php?op=asig_servicio_carga",
+      {
+        id_tipo_asignatura: id_tipo_asig,
+      }
+    ).done(function (respuesta) {
+      $("#select2").html(respuesta);
 
-        // $("#cbm_requisito_asignaturas").html(respuesta);
-        // console.log(respuesta);
-      });
-  
+      // $("#cbm_requisito_asignaturas").html(respuesta);
+      // console.log(respuesta);
+    });
   } else {
     $("#select2").empty();
-      document.getElementById("txt_cod_asignatura").value = "";
-      document.getElementById("txt_unid_valora").value = "";
+    document.getElementById("txt_cod_asignatura").value = "";
+    document.getElementById("txt_unid_valora").value = "";
   }
-
 });
 
 function mostrar_modalidad(modalidad) {
