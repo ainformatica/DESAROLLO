@@ -147,7 +147,7 @@ if (isset($_REQUEST['msj'])) {
           <img src="dist/img/lOGO_OFICIAL.jpg" width="40%" height="40%" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
         </div>
 
-        <p class="login-box-msg"> Iniciar Sesión</p>
+        <p class="login-box-msg"> Iniciar a Sesión</p>
 
         <form action="Controlador/existe_usuario_controlador.php" method="post">
           <div class="input-group mb-3">
