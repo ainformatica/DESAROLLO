@@ -58,7 +58,7 @@ $("#tabla_consultar_plan_docente").on("click", ".ver1", function () {
   var id_asignatura=(data.id_asignatura);
   if (data.silabo==null) {
     
-    alert("No tiene silabo")
+    alert("No tiene sílabo")
     
   }else{
     $('#Modalsilabo').modal('show');

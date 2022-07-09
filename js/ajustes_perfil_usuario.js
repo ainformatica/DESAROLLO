@@ -100,7 +100,7 @@ function guardar_informacion() {
 
     ) {
         swal({
-            title: "alerta",
+            title: "¡Alerta!",
             text: "Por favor llene los campos vacios",
             type: "warning",
             showConfirmButton: true,
@@ -109,8 +109,8 @@ function guardar_informacion() {
 
     } else if (telefono == telefono_anterior && correo == correo_anterior) {
         swal({
-            title: "alerta",
-            text: "No se han modificado datos!",
+            title: "¡Alerta!",
+            text: "No se han modificado datos",
             type: "warning",
             showConfirmButton: true,
             timer: 15000,
@@ -133,15 +133,15 @@ function guardar_informacion() {
             if (resp > 0) {
                 $("#myModal").modal("hide");
                 swal(
-                    "Buen trabajo!",
-                    "datos actualizados correctamente!",
+                    "¡Buen trabajo!",
+                    "Datos actualizados correctamente",
                     "success"
                 );
                 location.reload();
 
 
             } else {
-                swal("Alerta!", "No se pudo completar la actualización", "warning");
+                swal("¡Alerta!", "No se pudo completar la actualización", "warning");
 
             }
         });
@@ -200,7 +200,7 @@ var uploadField = document.getElementById("imagen");
 uploadField.onchange = function() {
     if (this.files[0].size > 5242880) {
         //alert("Archivo muy grande!");
-        swal("Error", "Archivo muy grande!", "warning");
+        swal("¡Error!", "Archivo muy grande", "warning");
 
         this.value = "";
     }

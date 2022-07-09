@@ -7,8 +7,8 @@ $(document)
 
     if (unid_valorativas == "4" && checked == "5") {
       swal({
-        title: "Alerta!",
-        text: "Solo se permiten 4 días como máximo",
+        title: "¡Alerta!",
+        text: "Sólo se permiten 4 días como máximo",
         icon: "warning",
         buttons: {
           confirm: "Aceptar",
@@ -26,8 +26,8 @@ $(document)
     }
     if (unid_valorativas == "5" && checked == "6") {
       swal({
-        title: "Alerta!",
-        text: "Solo se permiten 5 días como máximo",
+        title: "¡Alerta!",
+        text: "Sólo se permiten 5 días como máximo",
         icon: "warning",
         buttons: {
           confirm: "Aceptar",
@@ -46,8 +46,8 @@ $(document)
 
     if (unid_valorativas == "3" && checked == "4") {
       swal({
-        title: "Alerta!",
-        text: "Solo se permiten 3 días como máximo",
+        title: "¡Alerta!",
+        text: "Sólo se permiten 3 días como máximo",
         icon: "warning",
         buttons: {
           confirm: "Aceptar",
@@ -66,8 +66,8 @@ $(document)
 
     if (unid_valorativas == "2" && checked == "3") {
       swal({
-        title: "Alerta!",
-        text: "Solo se permiten 2 dias como máximo",
+        title: "¡Alerta!",
+        text: "Sólo se permiten 2 días como máximo",
         icon: "warning",
         buttons: {
           confirm: "Aceptar",
@@ -147,7 +147,7 @@ function validaentrada_edita() {
   var nombre_doce = $("#txt_nombre_doc_edita").val();
   if (hora_inicial < hrEntrada) {
     swal({
-      title: "alerta",
+      title: "¡Alerta!",
       text:
         "Ha seleccionado una hora para la asignatura que no corresponde al horarario de entrada del docente: " +
         nombre_doce +
@@ -177,8 +177,8 @@ function validahoraperiodo_edita() {
     hora_final - hora_inicial > horas_validas * 100 != 4
   ) {
     swal({
-      title: "Alerta!",
-      text: "Sobrepasa el horario establecida para el tipo de periodo!",
+      title: "¡Alerta!",
+      text: "Sobrepasa el horario establecido para el tipo de período",
       icon: "warning",
       buttons: {
         cancel: "Cancelar",
@@ -193,9 +193,9 @@ function validahoraperiodo_edita() {
   }
   if (hora_final > hrSalida) {
     swal({
-      title: "Alerta",
+      title: "¡Alerta!",
       text:
-        "El horario de salida sobrepasa el establecido para el docente: " +
+        "El horario de salida sobrepasa al establecido para el docente: " +
         nombre_doce +
         ", hora salida: " +
         hrSalida +
@@ -310,8 +310,8 @@ function eliminarRegistro() {
   console.log(id);
 
   swal({
-    title: "Alerta",
-    text: "Por favor espera!",
+    title: "¡Alerta!",
+    text: "Por favor espera",
     type: "warning",
     showConfirmButton: false,
     timer: 20000,
@@ -327,11 +327,11 @@ function eliminarRegistro() {
 
     if (resp > 0) {
       if (resp == 1) {
-        swal("Buen trabajo!", "Se elimino correctamente!", "success");
+        swal("¡Buen trabajo!", "Se eliminó correctamente", "success");
         table.ajax.reload();
       }
     } else {
-      swal("Error!", "No se pudo eliminar!", "warning");
+      swal("¡Error!", "No se pudo eliminar", "warning");
     }
   });
 }
@@ -846,8 +846,8 @@ function valida_matriculados_edita() {
   var matriculados = document.getElementById("txt_matriculados_edita").value;
   if (matriculados > capacidad) {
     swal({
-      title: "Alerta!",
-      text: "Está excediendo la capacidad, desea continuar?",
+      title: "¡Alerta!",
+      text: "Está excediendo la capacidad ¿Desea continuar?",
       icon: "warning",
       buttons: {
         cancel: "Cancelar",
@@ -922,8 +922,8 @@ function modificar_carga_academica() {
       cb_modalidad == null
     ) {
       swal({
-        title: "Alerta!",
-        text: "Llene o seleccione los campos vacios",
+        title: "¡Alerta!",
+        text: "Llene o seleccione los campos vacíos",
         icon: "warning",
         buttons: {
           confirm: "Aceptar",
@@ -932,7 +932,7 @@ function modificar_carga_academica() {
     } else {
       if (hora_inicial > hora_final) {
         swal({
-          title: "Alerta!",
+          title: "¡Alerta!",
           text: "Hora inicial incorrecta",
           icon: "warning",
           buttons: {
@@ -943,7 +943,7 @@ function modificar_carga_academica() {
         document.getElementById("cbm_hf_edita").value = "";
       } else if (hora_inicial == hora_final) {
         swal({
-          title: "Alerta!",
+          title: "¡Alerta!",
           text: "Las horas son iguales",
           icon: "warning",
           buttons: {
@@ -984,7 +984,7 @@ function modificar_carga_academica() {
             cerrar();
             table.ajax.reload();
           } else {
-            swal("Alerta!", "No se pudo completar la actualización", "warning");
+            swal("¡Alerta!", "No se pudo completar la actualización", "warning");
             document.getElementById("txt_registro").value = "";
           }
         });
@@ -1008,8 +1008,8 @@ function modificar_carga_academica() {
       // control.length == 0
     ) {
       swal({
-        title: "Alerta!",
-        text: "Llene o seleccione los campos vacios",
+        title: "¡Alerta!",
+        text: "Llene o seleccione los campos vacíos",
         icon: "warning",
         buttons: {
           confirm: "Aceptar",
@@ -1017,8 +1017,8 @@ function modificar_carga_academica() {
       });
     } else {
       swal({
-        title: "Alerta!",
-        text: "Por favor, espere",
+        title: "¡Alerta!",
+        text: "Por favor espere",
         icon: "warning",
         buttons: {
           confirm: "Aceptar",
@@ -1031,7 +1031,7 @@ function modificar_carga_academica() {
 
       if (hora_inicial > hora_final) {
         swal({
-          title: "Alerta!",
+          title: "¡Alerta!",
           text: "Hora inicial incorrecta",
           icon: "warning",
           buttons: {
@@ -1042,7 +1042,7 @@ function modificar_carga_academica() {
         document.getElementById("cbm_hf_edita").value = "";
       } else if (hora_inicial == hora_final) {
         swal({
-          title: "Alerta!",
+          title: "¡Alerta!",
           text: "Las horas son iguales",
           icon: "warning",
           buttons: {
@@ -1085,7 +1085,7 @@ function modificar_carga_academica() {
                 //   "warning"
                 // );
                 swal({
-                  title: "Alerta",
+                  title: "¡Alerta!",
                   text:
                     "Ya hay una carga asignada a esa hora, Hora Inicial: " +
                     cb_hi +
@@ -1122,8 +1122,8 @@ function modificar_carga_academica() {
                   if (resp > 0) {
                     $("#modal_editar").modal("hide");
                     swal(
-                      "Buen trabajo!",
-                      "datos actualizados correctamente!",
+                      "¡Buen trabajo!",
+                      "Datos actualizados correctamente",
                       "success"
                     );
                     document.getElementById("txt_registro").value = "";
@@ -1132,7 +1132,7 @@ function modificar_carga_academica() {
                     table.ajax.reload();
                   } else {
                     swal(
-                      "Alerta!",
+                      "¡Alerta!",
                       "No se pudo completar la actualización",
                       "warning"
                     );
@@ -1164,8 +1164,8 @@ function modificar_carga_academica() {
             if (resp > 0) {
               $("#modal_editar").modal("hide");
               swal(
-                "Buen trabajo!",
-                "datos actualizados correctamente!",
+                "¡Buen trabajo!",
+                "Datos actualizados correctamente",
                 "success"
               );
               document.getElementById("txt_registro").value = "";
@@ -1174,7 +1174,7 @@ function modificar_carga_academica() {
               table.ajax.reload();
             } else {
               swal(
-                "Alerta!",
+                "¡Alerta!",
                 "No se pudo completar la actualización",
                 "warning"
               );
@@ -1209,8 +1209,8 @@ $("#cbm_modalidad_edita").change(function () {
 //
 function borraTodosDatos() {
   swal({
-    title: "Alerta",
-    text: "Al continuar se eliminarán los datos de carga en el periodo actual, desea continuar?",
+    title: "¡Alerta!",
+    text: "Al continuar se eliminarán los datos de carga en el período actual ¿Desea continuar?",
     icon: "warning",
     buttons: {
       cancel: "Cancelar",
@@ -1227,18 +1227,18 @@ function borraTodosDatos() {
         },
       }).done(function (resp) {
         if (resp > 0) {
-          swal("Bien!", "Se completó correctamente", "success");
+          swal("¡Bien!", "Se completó correctamente", "success");
           table.ajax.reload();
         } else {
           swal(
-            "Alerta!",
-            "No se pudo completar la intenta de nuevo",
+            "¡Alerta!",
+            "No se pudo completar la operación, intenta de nuevo",
             "warning"
           );
         }
       });
     } else {
-      swal("Advertencia!", "cancelado!", "Success");
+      swal("¡Advertencia!", "Cancelado", "Success");
     }
   });
 }

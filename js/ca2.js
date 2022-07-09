@@ -112,7 +112,7 @@ function valida_horario() {
     hora_final - hora_inicial > horas_validas * 100 &&
     hora_final - hora_inicial > horas_validas * 100 != 4
   ) {
-    alert("Sobrepasa el horario establecido por el tipo de periodo");
+    alert("Sobrepasa el horario establecido por el tipo de período");
     document.getElementById("hora_inicial").value = "";
     document.getElementById("hora_final").value = "";
   }
@@ -503,8 +503,8 @@ function crear_carga_academica() {
       $("#dias").val().length == 0
     ) {
       swal({
-        title: "Alerta!",
-        text: "Llene o seleccione los campos vacios",
+        title: "¡Alerta!",
+        text: "Llene o seleccione los campos vacíos",
         icon: "warning",
         buttons: {
           cancel: "Cancelar",
@@ -518,7 +518,7 @@ function crear_carga_academica() {
 
       if (hora_inicial > hora_final) {
         sswal({
-          title: "Alerta!",
+          title: "¡Alerta!",
           text: "Hora inicial incorrecta",
           icon: "warning",
           buttons: {
@@ -529,7 +529,7 @@ function crear_carga_academica() {
         document.getElementById("hora_final").value = "";
       } else if (hora_inicial == hora_final) {
         swal({
-          title: "Alerta!",
+          title: "¡Alerta!",
           text: "Las horas son iguales",
           icon: "warning",
           buttons: {
@@ -553,7 +553,7 @@ function crear_carga_academica() {
 
             if (contar >= 3) {
               swal({
-                title: "Alerta!",
+                title: "¡Alerta!",
                 text: "Este docente tiene 3 cargas asignadas, desea continuar?",
                 icon: "warning",
                 buttons: {
@@ -567,7 +567,7 @@ function crear_carga_academica() {
 
                   if (registro > 0) {
                     swal({
-                      title: "Alerta",
+                      title: "¡Alerta!",
                       text:
                         "Ya hay una carga asignada a esa hora, Hora Inicial: " +
                         hora_inicial +
@@ -597,8 +597,8 @@ function crear_carga_academica() {
                       if (resp > 0) {
                         $("#ModalTask").modal("hide");
                         swal(
-                          "Buen trabajo!",
-                          "datos actualizados correctamente!",
+                          "¡Buen trabajo!",
+                          "Datos actualizados correctamente",
                           "success"
                         );
                         document.getElementById("txt_registro_crear").value =
@@ -608,7 +608,7 @@ function crear_carga_academica() {
                         table.ajax.reload();
                       } else {
                         swal(
-                          "Alerta!",
+                          "¡Alerta!",
                           "No se pudo completar la actualización",
                           "warning"
                         );
@@ -618,7 +618,7 @@ function crear_carga_academica() {
                     });
                   }
                 } else {
-                  swal("Cancelado!");
+                  swal("¡Cancelado!");
                 }
               });
 
@@ -629,7 +629,7 @@ function crear_carga_academica() {
 
               if (registro > 0) {
                 swal({
-                  title: "Alerta",
+                  title: "¡Alerta!",
                   text:
                     "Ya hay una carga asignada a esa hora, Hora Inicial: " +
                     hora_inicial +
@@ -659,8 +659,8 @@ function crear_carga_academica() {
                   if (resp > 0) {
                     $("#ModalTask").modal("hide");
                     swal(
-                      "Buen trabajo!",
-                      "Datos actualizados correctamente!",
+                      "¡Buen trabajo!",
+                      "Datos actualizados correctamente",
                       "success"
                     );
                     document.getElementById("txt_registro_crear").value = "";
@@ -669,7 +669,7 @@ function crear_carga_academica() {
                     table.ajax.reload();
                   } else {
                     swal(
-                      "Alerta!",
+                      "¡Alerta!",
                       "No se pudo completar la actualización",
                       "warning"
                     );
@@ -696,8 +696,8 @@ function crear_carga_academica() {
       $("#edificio").val().length == 0
     ) {
       swal({
-        title: "Alerta!",
-        text: "Llene o seleccione los campos vacios",
+        title: "¡Alerta!",
+        text: "Llene o seleccione los campos vacíos",
         icon: "warning",
         buttons: {
           confirm: "Aceptar",
@@ -705,7 +705,7 @@ function crear_carga_academica() {
       });
     } else {
       swal({
-        title: "Alerta",
+        title: "¡Alerta!",
         text: "Por favor espere",
         type: "warning",
         showConfirmButton: false,
@@ -718,7 +718,7 @@ function crear_carga_academica() {
 
       if (hora_inicial > hora_final) {
         swal({
-          title: "Alerta!",
+          title: "¡Alerta!",
           text: "Hora inicial incorrecta",
           icon: "warning",
           buttons: {
@@ -729,7 +729,7 @@ function crear_carga_academica() {
         document.getElementById("hora_final").value = "";
       } else if (hora_inicial == hora_final) {
         swal({
-          title: "Alerta!",
+          title: "¡Alerta!",
           text: "Las horas son iguales",
           icon: "warning",
           buttons: {
@@ -754,8 +754,8 @@ function crear_carga_academica() {
 
             if (contar >= 3) {
               swal({
-                title: "Alerta!",
-                text: "Este docente tiene 3 cargas asignadas, desea continuar?",
+                title: "¡Alerta!",
+                text: "Este docente tiene 3 cargas asignadas ¿Desea continuar?",
                 icon: "warning",
                 buttons: {
                   cancel: "Cancelar",
@@ -781,7 +781,7 @@ function crear_carga_academica() {
 
                       if (registro > 0) {
                         swal({
-                          title: "Alerta",
+                          title: "¡Alerta!",
                           text:
                             "Ya hay una carga asignada a esa hora, Hora Inicial: " +
                             hora_inicial +
@@ -813,8 +813,8 @@ function crear_carga_academica() {
                           if (resp > 0) {
                             $("#ModalTask").modal("hide");
                             swal(
-                              "Buen trabajo!",
-                              "Se Guardó correctamente!",
+                              "¡Buen trabajo!",
+                              "Se guardó correctamente",
                               "success"
                             );
                             document.getElementById(
@@ -825,7 +825,7 @@ function crear_carga_academica() {
                             table.ajax.reload();
                           } else {
                             swal(
-                              "Alerta!",
+                              "¡Alerta!",
                               "No se pudo completar la acción",
                               "warning"
                             );
@@ -838,7 +838,7 @@ function crear_carga_academica() {
                     }
                   );
                 } else {
-                  swal("Cancelado!");
+                  swal("¡Cancelado!");
                 }
               });
 
@@ -862,7 +862,7 @@ function crear_carga_academica() {
 
                   if (registro > 0) {
                     swal({
-                      title: "Alerta",
+                      title: "¡Alerta!",
                       text:
                         "Ya hay una carga asignada a esa hora, Hora Inicial: " +
                         hora_inicial +
@@ -895,8 +895,8 @@ function crear_carga_academica() {
                       if (resp > 0) {
                         $("#ModalTask").modal("hide");
                         swal(
-                          "Buen trabajo!",
-                          "Datos actualizados correctamente!",
+                          "¡Buen trabajo!",
+                          "Datos actualizados correctamente",
                           "success"
                         );
                         document.getElementById("txt_registro_crear").value =
@@ -906,7 +906,7 @@ function crear_carga_academica() {
                         table.ajax.reload();
                       } else {
                         swal(
-                          "Alerta!",
+                          "¡Alerta!",
                           "No se pudo completar la actualización",
                           "warning"
                         );
@@ -1060,7 +1060,7 @@ function valida_entrada_crear() {
   var nombre_doc = $("#id_select option:selected").text();
   if (hora_inicial < hraEntrada) {
     swal({
-      title: "alerta",
+      title: "¡Alerta!",
       text:
         "Ha seleccionado una hora para la asignatura que no corresponde al horarario de entrada del docente: " +
         nombre_doc +
@@ -1098,8 +1098,8 @@ $(document)
 
     if (unid_valorativas == "5" && checked == "6") {
       swal({
-        title: "Alerta",
-        text: "Solo se permiten 5 dias como maximo ",
+        title: "¡Alerta!",
+        text: "Sólo se permiten 5 días como máximo ",
         icon: "warning",
         buttons: {
           cancel: "Cancelar",
@@ -1119,8 +1119,8 @@ $(document)
 
     if (unid_valorativas == "4" && checked == "5") {
       swal({
-        title: "Alerta",
-        text: "Solo se permiten 4 dias como maximo ",
+        title: "¡Alerta!",
+        text: "Sólo se permiten 4 días como máximo ",
         icon: "warning",
         buttons: {
           cancel: "Cancelar",
@@ -1140,8 +1140,8 @@ $(document)
 
     if (unid_valorativas == "3" && checked == "4") {
       swal({
-        title: "Alerta",
-        text: "Solo se permiten 3 dias como maximo ",
+        title: "¡Alerta!",
+        text: "Sólo se permiten 3 días como máximo ",
         icon: "warning",
         buttons: {
           cancel: "Cancelar",
@@ -1161,8 +1161,8 @@ $(document)
 
     if (unid_valorativas == "2" && checked == "3") {
       swal({
-        title: "Alerta",
-        text: "Solo se permiten 2 dias como maximo ",
+        title: "¡Alerta!",
+        text: "Sólo se permiten 2 días como máximo ",
         icon: "warning",
         buttons: {
           cancel: "Cancelar",
@@ -1195,8 +1195,8 @@ function valida_horario_crear() {
     hora_final - hora_inicial > horas_validas * 100 != 4
   ) {
     swal({
-      title: "Alerta",
-      text: "Sobrepasa el horario establecido para el tipo de periodo!",
+      title: "¡Alerta!",
+      text: "Sobrepasa el horario establecido para el tipo de período!",
       icon: "warning",
       buttons: {
         cancel: "Cancelar",
@@ -1212,8 +1212,8 @@ function valida_horario_crear() {
 
   if (hora_final > hra_salida) {
     swal({
-      title: "Alerta",
-      text: "El horario de salida sobrepasa el establecido para el docente!",
+      title: "¡Alerta!",
+      text: "El horario de salida sobrepasa al establecido para el docente",
       icon: "warning",
       buttons: {
         cancel: "Cancelar",
@@ -1234,8 +1234,8 @@ function valida_matriculados() {
   var selected_modalidad = modalidad.options[modalidad.selectedIndex].text;
   if (matriculados > capacidad && selected_modalidad != "Virtual") {
     swal({
-      title: "Alerta",
-      text: "Esta excediendo la capacidad, desea continuar?",
+      title: "¡Alerta!",
+      text: "Está excediendo la capacidad ¿Desea continuar?",
       icon: "warning",
       buttons: {
         cancel: "Cancelar",
@@ -1289,8 +1289,8 @@ function comprobar() {
 
 function cerrar_modal() {
   swal({
-    title: "Alerta",
-    text: "Desea cerrar esta ventana?",
+    title: "¡Alerta!",
+    text: "¿Desea cerrar esta ventana?",
     type: "warning",
     buttons: {
       cancel: "Cancelar",

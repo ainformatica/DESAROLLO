@@ -291,7 +291,7 @@ function denegar(id_actividad_voae)
 		
         title: "Alerta",
 		text:
-			"¿Está seguro de Denegar esta Actividad?",
+			"¿Está seguro de denegar esta actividad?",
 		icon: "warning",
 		buttons: true,
 		dangerMode: false,
@@ -327,7 +327,7 @@ function finalizar(id_actividad_voae)
 		
         title: "Alerta",
 		text:
-			"¿Está seguro de Finalizar esta Actividad?",
+			"¿Está seguro de finalizar esta actividad?",
 		icon: "warning",
 		buttons: true,
 		dangerMode: false,
@@ -361,7 +361,7 @@ function solicitado(id_actividad_voae)
 		
         title: "Alerta",
 		text:
-			"¿Está seguro de Enviar esta Actividad para Aprobacion?",
+			"¿Está seguro de enviar esta actividad para aprobación?",
 		icon: "warning",
 		buttons: true,
 		dangerMode: false,
@@ -396,7 +396,7 @@ function aprobar(id_actividad_voae)
 		
         title: "Alerta",
 		text:
-			"¿Está seguro de Aprobar esta Actividad?",
+			"¿Está seguro de aprobar esta actividad?",
 		icon: "warning",
 		buttons: true,
 		dangerMode: false,

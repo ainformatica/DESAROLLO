@@ -308,7 +308,7 @@ function aprobar(id_actividad_voae)
 		
         title: "Alerta",
 		text:
-			"¿Está seguro de Aprobar esta Actividad?",
+			"¿Está seguro de aprobar esta actividad?",
 		icon: "warning",
 		buttons: true,
 		dangerMode: false,

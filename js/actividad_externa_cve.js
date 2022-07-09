@@ -240,7 +240,7 @@ function eliminar(id_actividad_voae)
 	swal({
 		title: "Alerta",
 		text:
-			"¿Está seguro de eliminar la actividad?, Esto también eliminará el listado de asistencia",
+			"¿Está seguro de eliminar la actividad? Esto también eliminará el listado de asistencia",
 		icon: "warning",
 		buttons: true,
 		dangerMode: false,

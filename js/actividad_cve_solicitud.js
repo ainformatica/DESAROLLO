@@ -301,7 +301,7 @@ function solicitado(id_actividad_voae)
 		
         title: "Alerta",
 		text:
-			"¿Está seguro de Enviar esta Actividad para Aprobacion?",
+			"¿Está seguro de enviar esta actividad para aprobacion?",
 		icon: "warning",
 		buttons: true,
 		dangerMode: false,

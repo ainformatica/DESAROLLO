@@ -150,7 +150,7 @@ $(document).click(function() {
 
         if (checked == '2') {
             swal({
-                title: "Alerta",
+                title: "¡Alerta!",
                 text: "Solo puede seleccionar una opción ",
                 type: "warning",
                 showConfirmButton: true,
@@ -210,7 +210,7 @@ var table = document.getElementById('tbData');
 
 var addTask2 = () => {
     if ($('#especialidad').val().length == 0) {
-        swal('Ingrese la especialidad!', '', 'warning');
+        swal('¡Ingrese la especialidad!', '', 'warning');
 
         return false;
     } else {
@@ -294,7 +294,7 @@ var addTask = () => {
         if (list.length == 0) {
             if (valtel($('#tel').val()) == 0) {
                 //aqui debo validar que no se agregue a la tabla ...
-                swal('ingresar un numero valido');
+                swal('Ingrese un número válido');
 
                 limpiarTEL();
                 return false;
@@ -302,7 +302,7 @@ var addTask = () => {
         } else {
             if (valtel($('#tel').val()) == 0) {
                 //aqui debo validar que no se agregue a la tabla ...
-                swal('ingresar un numero valido');
+                swal('Ingrese un número válido');
 
                 limpiarTEL();
                 return false;
@@ -343,7 +343,7 @@ var viewlist = () => {
 
         if (list.length == 3) {
             desactivarboton1();
-            swal('Aviso', 'limite 3 telefonos', 'warning');
+            swal('¡Aviso!', 'límite 3 teléfonos', 'warning');
 
             $('#ModalTask1').modal('hide');
         }
@@ -412,7 +412,7 @@ function correovalido(correo1) {
 
 var addTask5 = () => {
     if ($('#email').val().length == 0) {
-        swal('Ingrese el correo!', '', 'warning');
+        swal('¡Ingrese el correo!', '', 'warning');
 
         return false;
     } else {
@@ -421,7 +421,7 @@ var addTask5 = () => {
             if (correoInstDet($('#email').val()) == 0) {
                 //aqui debo validar que no se agregue a la tabla ...
 
-                swal('Alerta', 'Primero Ingresar correo institucional', 'warning');
+                swal('¡Alerta!', 'Primero ingresar correo institucional', 'warning');
 
                 limpiarCOR();
                 return false;
@@ -431,14 +431,14 @@ var addTask5 = () => {
         } else {
             if (correovalido($('#email').val()) == 0) {
                 //aqui debo validar que no se agregue a la tabla ...
-                swal('ingresar un correo valido');
+                swal('Ingresar un correo válido');
 
                 limpiarCOR();
                 return false;
             } else {
                 desactivarboton();
 
-                swal('Aviso', 'limite 2 correos', 'warning');
+                swal('¡Aviso!', 'Límite 2 correos', 'warning');
 
                 $('#ModalTask5').modal('hide');
             }
@@ -484,7 +484,7 @@ var viewlist5 = () => {
 
         $('#ModalTask5').modal('hide');
     } else {
-        alert('solo puede ingresar 2 correos warning');
+        alert('Sólo puede ingresar 2 correos warning');
         return false;
     }
 };
@@ -624,8 +624,8 @@ function ValidarIdentidad(identidad) {
 
                 if (ver == true) {
                     swal(
-                        'Datos incorrectos',
-                        'Asegurese de Introducir los digitos correspondientes a su departamento y municipio',
+                        '¡Datos incorrectos!',
+                        'Asegúrese de introducir los dígitos correspondientes a su departamento y município',
                         'warning'
                     );
                     $('#contar_depto').val('');
@@ -661,7 +661,7 @@ function ValidarIdentidad(identidad) {
 
         }
         if (anio == '0000') {
-            swal('Aviso', 'Año invalido', 'warning');
+            swal('¡Aviso!', 'Año inválido', 'warning');
             $('#identidad').val('');
             $('#identidad').attr('placeholder', '____-____-_____');
             $('#Textomayor').attr('hidden', 'hidden');
@@ -672,7 +672,7 @@ function ValidarIdentidad(identidad) {
         var ultimo = identidad.substring(10, 15);
         // console.log(anio);
         if (ultimo == '00000') {
-            swal('Aviso', 'no se permiten 5 ceros', 'warning');
+            swal('¡Aviso!', 'No se permiten 5 ceros', 'warning');
             $('#identidad').val('');
             $('#identidad').attr('placeholder', '____-____-_____');
             $('#Textomayor').attr('hidden', 'hidden');
@@ -773,7 +773,7 @@ function MismaLetra(id_input) {
         var str3 = valor.substring(longitud - 1, longitud);
         nuevo_valor = valor.substring(0, longitud - 1);
         if (str1 == str2 && str1 == str3 && str2 == str3) {
-            swal('Error', 'No se permiten 3 letras consecutivamente', 'error');
+            swal('¡Error!', 'No se permiten 3 letras consecutivamente', 'error');
 
             $('#' + id_input).val(nuevo_valor);
         }
@@ -922,7 +922,7 @@ function valida_horario_edita() {
     if (hora_inicial > hora_final) {
         //alert("Hora inicial incorrecta");
         swal({
-            title: 'alerta',
+            title: '¡Alerta!',
             text: 'Hora incorrecta',
             type: 'warning',
             showConfirmButton: true,
@@ -933,7 +933,7 @@ function valida_horario_edita() {
     } else {
         if (hora_inicial == hora_final) {
             swal({
-                title: 'alerta',
+                title: '¡Alerta!',
                 text: 'Las horas son iguales',
                 type: 'warning',
                 showConfirmButton: true,
@@ -964,7 +964,7 @@ var uploadField = document.getElementById('seleccionararchivo');
 uploadField.onchange = function() {
     if (this.files[0].size > 5242880) {
         //alert("Archivo muy grande!");
-        swal('Error', 'Archivo muy grande!', 'warning');
+        swal('¡Error!', 'Archivo muy grande', 'warning');
 
         this.value = '';
     }
@@ -978,7 +978,7 @@ var uploadField = document.getElementById('curriculum');
 uploadField.onchange = function() {
     if (this.files[0].size > 15728640) {
         //alert("Archivo muy grande!");
-        swal('Error', 'Archivo muy grande!', 'warning');
+        swal('¡Error!', 'Archivo muy grande', 'warning');
 
         this.value = '';
     }
@@ -992,7 +992,7 @@ function valida_jornada_hora() {
 
     if (jornada == 'TIEMPO COMPLETO' && ((hora_salida - hora_entrada) < 600)) {
         swal({
-            title: 'Alerta',
+            title: '¡Alerta!',
             text: 'Deben ser al menos 6 horas laborales para jornada completa',
             type: 'warning',
             showConfirmButton: true,
@@ -1002,7 +1002,7 @@ function valida_jornada_hora() {
         document.getElementById('txt_hf').value = '';
     } else if (jornada == 'MEDIO TIEMPO' && ((hora_salida - hora_entrada) < 300)) {
         swal({
-            title: 'Alerta',
+            title: '¡Alerta!',
             text: 'Deben ser al menos 3 horas laborales para media jornada',
             type: 'warning',
             showConfirmButton: true,
@@ -1121,7 +1121,7 @@ function RegistarDocente(
 
     ) {
         swal({
-            title: 'alerta',
+            title: '¡Alerta!',
             text: 'Rellene o seleccione los campos vacíos de Datos Personales',
             type: 'warning',
             showConfirmButton: true,
@@ -1134,7 +1134,7 @@ function RegistarDocente(
         especialidadx.length == 0
     ) {
         swal({
-            title: 'alerta',
+            title: '¡Alerta!',
             text: 'Rellene o seleccione los campos vacíos de Contactos y Formación Académica',
             type: 'warning',
             showConfirmButton: true,
@@ -1154,7 +1154,7 @@ function RegistarDocente(
 
         ) {
             swal({
-                title: 'alerta',
+                title: '¡Alerta!',
                 text: 'Rellene o seleccione los campos vacíos de Información Docente',
                 type: 'warning',
                 showConfirmButton: true,
@@ -1205,7 +1205,7 @@ function RegistarDocente(
             //window.location.href = window.location.href;
 
             swal({
-                title: "alerta",
+                title: "¡Alerta!",
                 text: "Por favor espere un momento",
                 type: "warning",
                 showConfirmButton: false,
@@ -1259,7 +1259,7 @@ function RegistarDocente2(
 
     ) {
         swal({
-            title: 'alerta',
+            title: '¡Alerta!',
             text: 'Llene o seleccione los campos vacios de Datos Personales',
             type: 'warning',
             showConfirmButton: true,
@@ -1271,7 +1271,7 @@ function RegistarDocente2(
         especialidadx.length == 0
     ) {
         swal({
-            title: 'alerta',
+            title: '¡Alerta!',
             text: 'Rellene o seleccione los campos vacíos de Contactos y Formación Académica',
             type: 'warning',
             showConfirmButton: true,
@@ -1291,7 +1291,7 @@ function RegistarDocente2(
 
         ) {
             swal({
-                title: 'alerta',
+                title: '¡Alerta!',
                 text: 'Rellene o seleccione los campos vacíos de Información Docente',
                 type: 'warning',
                 showConfirmButton: true,
@@ -1335,7 +1335,7 @@ function RegistarDocente2(
 
             //window.location.href = window.location.href;
             swal({
-                title: "alerta",
+                title: "¡Alerta!",
                 text: "Por favor espere un momento",
                 type: "warning",
                 showConfirmButton: false,
@@ -1359,7 +1359,7 @@ function refrescar(tiempo) {
 
 function mensaje() {
     setTimeout(function() {
-        swal('Buen trabajo!', 'Los datos se insertaron correctamente!', 'success');
+        swal('¡Buen trabajo!', 'Los datos se insertaron correctamente', 'success');
     }, 14000);
 }
 

@@ -230,9 +230,9 @@ function desactivar(id_ambito)
 {
 	swal({
 		
-        title: "Alerta",
+        title: "¡Alerta!",
 		text:
-			"¿Está seguro de desactivar el ambito?",
+			"¿Está seguro de desactivar el ámbito?",
 		icon: "warning",
 		buttons: true,
 		dangerMode: false,
@@ -262,9 +262,9 @@ function desactivar(id_ambito)
 function activar(id_ambito)
 {
 	swal({
-		title: "Alerta",
+		title: "¡Alerta!",
 		text:
-			"¿Está seguro de activar el ambito?",
+			"¿Está seguro de activar el ámbito?",
 		icon: "warning",
 		buttons: true,
 		dangerMode: false,
@@ -291,7 +291,7 @@ function activar(id_ambito)
 function eliminar(id_ambito)
 {
 	swal({
-		title: "Alerta",
+		title: "¡Alerta!",
 		text:
 			"¿Está seguro de eliminar el ambito?",
 		icon: "warning",

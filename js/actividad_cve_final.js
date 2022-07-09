@@ -225,7 +225,7 @@ function finalizar(id_actividad_voae)
 		
         title: "Alerta",
 		text:
-			"¿Está seguro de Finalizar esta Actividad?",
+			"¿Está seguro de finalizar esta actividad?",
 		icon: "warning",
 		buttons: true,
 		dangerMode: false,
@@ -259,7 +259,7 @@ function cancelar(id_actividad_voae)
 		
         title: "Alerta",
 		text:
-			"¿Está seguro de cancelar esta Actividad?",
+			"¿Está seguro de cancelar esta actividad?",
 		icon: "warning",
 		buttons: true,
 		dangerMode: false,

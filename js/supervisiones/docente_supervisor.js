@@ -121,7 +121,7 @@ function mostrar(id_supervisor)
 function desactivar(idclase)
 {
 	console.log(' funcion activo');
-	bootbox.confirm("¿Está Seguro de desactivar la Asignatura?", function(result){
+	bootbox.confirm("¿Está seguro de desactivar la asignatura?", function(result){
 		if(result)
         {
         	$.post("../Controlador/crear_asignatura_controlador.php?op=desactivar", {id_asignatura : idclase}, function(e){
@@ -144,7 +144,7 @@ function desactivar(idclase)
 function activar(idclase)
 {
 	
-	bootbox.confirm("¿Está Seguro de activar la Asignatura?", function(result){
+	bootbox.confirm("¿Está seguro de activar la asignatura?", function(result){
 		if(result)
         {
         	$.post("../Controlador/crear_asignatura_controlador.php?op=activar", {id_asignatura : idclase}, function(e){

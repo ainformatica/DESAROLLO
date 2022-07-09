@@ -372,7 +372,7 @@ $("#cbm_plan1").change(function () {
 
 $(document).ready(function () {
   function eliminar() {
-    var confirmLeave = confirm("¿Desea eliminar está equivalencia?");
+    var confirmLeave = confirm("¿Desea eliminar esta equivalencia?");
     if (confirmLeave == true) {
       var id = $(this).attr("id");
       var eliminar_equivalencia = document.getElementById("tel" + id).value;
@@ -683,11 +683,11 @@ $("#guardar_nueva_equi").click(function () {
   if (cbm_asignaturas == null || cbm_equivalencias == null) {
     alert("Seleccione los campos correctamente");
   } else if (cbm_asignaturas == 0 ||plan==0) {
-    alert("seleccione una opcion valida");
+    alert("Seleccione una opción válida");
   } else {
     if (cbm_asignaturas==cbm_equivalencias) {
       
-      alert("la asignatura no puede equivaler a si misma!");
+      alert("La asignatura no puede equivaler a sí misma");
     } else {
         $.post(
           "../Controlador/plan_estudio_controlador.php?op=consAsigEqui",
@@ -699,7 +699,7 @@ $("#guardar_nueva_equi").click(function () {
             data = JSON.parse(data);
 
             if (data.suma > 0) {
-              alert("La asignatura ya cuenta con esa equivalencia!");
+              alert("La asignatura ya cuenta con esa equivalencia");
             } else {
               $.ajax({
                 url: "../Controlador/equivalencia_asignatura_plan_controlador.php",
@@ -711,8 +711,8 @@ $("#guardar_nueva_equi").click(function () {
               }).done(function (resp) {
                 if (resp > 0) {
                   swal(
-                    "Buen trabajo!",
-                    "datos insertados correctamente!",
+                    "¡Buen trabajo!",
+                    "Datos insertados correctamente",
                     "success"
                   );
                   $("#modal_nueva_equi").modal("hide");
@@ -720,7 +720,7 @@ $("#guardar_nueva_equi").click(function () {
                   //  document.getElementById("txt_registro").value = "";
                   table.ajax.reload();
                 } else {
-                  swal("Alerta!", "No se pudo completar", "warning");
+                  swal("¡Alerta!", "No se pudo completar", "warning");
                   //document.getElementById("txt_registro").value = "";
                 }
               });

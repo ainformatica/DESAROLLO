@@ -437,12 +437,12 @@ $("#tabladocentes").on("click", ".activar", function () {
     var data = table.row(this).data();
   }
   if (data.Estado == "ACTIVO") {
-    mensaje = "ya se encuentra activo";
+    mensaje = "Ya se encuentra activo";
     swal("Alert", "El usuario " + mensaje + "", "warning");
   } else {
     swal({
-      title: "Alerta!",
-      text: "Esta seguro de activar el docente ?",
+      title: "¡Alerta!",
+      text: "¿Está seguro de activar el docente?",
       icon: "warning",
       buttons: true,
       dangerMode: false,
@@ -461,12 +461,12 @@ $("#tabladocentes").on("click", ".desactivar", function () {
     var data = table.row(this).data();
   }
   if (data.Estado == "INACTIVO") {
-    mensaje = "ya se encuentra inactivo";
+    mensaje = "Ya se encuentra inactivo";
     swal("Alert", "El usuario " + mensaje + " ", "warning");
   } else {
     swal({
-      title: "Alerta!",
-      text: "Esta seguro de desactivar el docente ?",
+      title: "¡Alerta!",
+      text: "¿Está seguro de desactivar el docente?",
       icon: "warning",
       buttons: true,
       dangerMode: false,
@@ -496,13 +496,13 @@ function Modificar_Estatus(id_persona_, Estado) {
   }).done(function (resp) {
     if (resp > 0) {
       swal(
-        "Buen trabajo!",
+        "¡Buen trabajo!",
         "El usuario se " + mensaje + " con exito",
         "success"
       );
       table.ajax.reload();
     } else {
-      swal("Buen trabajo!", "ERROR TONTA", "success");
+      swal("¡Buen trabajo!", "ERROR TONTA", "success");
     }
   });
 }
@@ -588,7 +588,7 @@ function valida_horario_edita() {
   if (hora_inicial > hora_final) {
     //alert("Hora inicial incorrecta");
     swal({
-      title: "alerta",
+      title: "¡Alerta!",
       text: "Hora incorrecta",
       type: "warning",
       showConfirmButton: true,
@@ -599,7 +599,7 @@ function valida_horario_edita() {
   } else {
     if (hora_inicial == hora_final) {
       swal({
-        title: "alerta",
+        title: "¡Alerta!",
         text: "Las horas son iguales",
         type: "warning",
         showConfirmButton: true,
@@ -651,7 +651,7 @@ function valida_jornada_hora() {
 
   if (jornada == "TIEMPO COMPLETO" && hora_salida - hora_entrada < 600) {
     swal({
-      title: "Alerta",
+      title: "¡Alerta!",
       text: "Deben ser al menos 6 horas laborales para jornada completa",
       type: "warning",
       showConfirmButton: true,
@@ -661,7 +661,7 @@ function valida_jornada_hora() {
     document.getElementById("hr_final_edita").value = "";
   } else if (jornada == "MEDIO TIEMPO" && hora_salida - hora_entrada < 300) {
     swal({
-      title: "Alerta",
+      title: "¡Alerta!",
       text: "Deben ser al menos 3 horas laborales para media jornada",
       type: "warning",
       showConfirmButton: true,
@@ -725,8 +725,8 @@ function ValidarIdentidad(identidad) {
 
           if (ver == true) {
             swal(
-              "Datos incorrectos",
-              "Asegurese de Introducir los digitos correspondientes a su departamento y municipio",
+              "¡Datos incorrectos!",
+              "Asegurese de Introducir los dígitos correspondientes a su departamento y município",
               "warning"
             );
             //$('#contar_depto').val('');
@@ -745,7 +745,7 @@ function ValidarIdentidad(identidad) {
     //console.log(year-anio);
 
     if (anio == "0000") {
-      swal("Aviso", "Año invalido", "warning");
+      swal("¡Aviso!", "Año inválido", "warning");
       $("#identidad_edita").val("");
       $("#identidad_edita").attr("placeholder", "____-____-_____");
     } else {
@@ -756,7 +756,7 @@ function ValidarIdentidad(identidad) {
     var ultimo = identidad.substring(10, 15);
     // console.log(anio);
     if (ultimo == "00000") {
-      swal("Aviso", "no se permiten 5 ceros", "warning");
+      swal("¡Aviso!", "No se permiten 5 ceros", "warning");
       $("#identidad_edita").val("");
       $("#identidad_edita").attr("placeholder", "____-____-_____");
     } else {
@@ -815,8 +815,8 @@ $(document).ready(function () {
       );
 
       swal(
-        "Buen trabajo!",
-        "¡ Se eliminaron comisiones y actividades!",
+        "¡Buen trabajo!",
+        "Se eliminaron comisiones y actividades",
         "success"
       );
     }
@@ -929,8 +929,8 @@ function saveAll3() {
         insert_actividades();
       } else {
         swal({
-          title: "Alerta",
-          text: "El docente ya cuenta con esta actividad!",
+          title: "¡Alerta!",
+          text: "El docente ya cuenta con esta actividad",
           icon: "warning",
           showConfirmButton: true,
           timer: 20000,
@@ -956,8 +956,8 @@ function insert_actividades() {
       console.log(data);
       data = JSON.parse(data);
       swal(
-        "Buen trabajo!",
-        "¡ Se insertaron nuevas comisiones y actividades!",
+        "¡Buen trabajo!",
+        "Se insertaron nuevas comisiones y actividades",
         "success"
       );
       limpiar_arreglo();
@@ -969,7 +969,7 @@ function insert_actividades() {
 function eliminar() {
   // let i = ContarTel();
   var confirmLeave = confirm(
-    "¿Esta seguro de eliminar la actividad del docente?"
+    "¿Está seguro de eliminar la actividad del docente?"
   );
   if (confirmLeave == true) {
     var id = $(this).attr("id");
@@ -1063,15 +1063,15 @@ function modificar_gestion() {
     sued == null
   ) {
     swal({
-      title: "alerta",
-      text: "Llene o seleccione los campos vacios",
+      title: "¡Alerta!",
+      text: "Llene o seleccione los campos vacíos",
       type: "warning",
       showConfirmButton: true,
       timer: 15000,
     });
   } else {
     swal({
-      title: "alerta",
+      title: "¡Alerta!",
       text: "Por favor espere",
       type: "warning",
       showConfirmButton: false,
@@ -1095,7 +1095,7 @@ function modificar_gestion() {
     }).done(function (resp) {
       if (resp > 0) {
         $("#modal_editar").modal("hide");
-        swal("Buen trabajo!", "datos actualizados correctamente!", "success");
+        swal("¡Buen trabajo!", "Datos actualizados correctamente", "success");
         document.getElementById("hr_inicio_edita").value = "";
         document.getElementById("hr_final_edita").value = "";
         document.getElementById("jornada_edita").value = "";
@@ -1103,7 +1103,7 @@ function modificar_gestion() {
 
         table.ajax.reload();
       } else {
-        swal("Alerta!", "No se pudo completar la actualización", "warning");
+        swal("¡Alerta!", "No se pudo completar la actualización", "warning");
       }
     });
 
