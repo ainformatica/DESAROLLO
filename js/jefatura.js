@@ -19,14 +19,14 @@ $("#file_ca").on('change', function () {
             $("#enviar_archivos").prop("disabled", false);
             $("#message_alert").alert('dispose');
         } else {
-            $("#message_alert").html(showMEssage('danger', 'El archivo debe ser menor de un 4MB'));
+            $("#message_alert").html(showMEssage('danger', 'El archivo debe de ser menor a 4MB'));
             $("#enviar_archivos").prop("disabled", true);
             $("#message_alert").fadeTo(2000, 500).slideUp(500, function () {
                 $("#message_alert").slideUp(500);
             });
         }
     } else {
-        $("#message_alert").html(showMEssage('warning', 'Tipo de archivo no soportado! Solamente archivos de excel'));
+        $("#message_alert").html(showMEssage('warning', '¡Tipo de archivo no soportado! Solamente archivos de excel'));
         $("#enviar_archivos").prop("disabled", true);
         $("#message_alert").fadeTo(2000, 500).slideUp(500, function () {
             $("#message_alert").slideUp(500);
@@ -47,14 +47,14 @@ $("#file_cr").on('change', function () {
             $("#enviar_archivos").prop("disabled", false);
             $("#message_alert2").alert('dispose');
         } else {
-            $("#message_alert2").html(showMEssage('danger', 'El archivo debe ser menor de un 4MB'));
+            $("#message_alert2").html(showMEssage('danger', 'El archivo debe de ser menor a 4MB'));
             $("#enviar_archivos").prop("disabled", true);
             $("#message_alert2").fadeTo(2000, 500).slideUp(500, function () {
                 $("#message_alert2").slideUp(500);
             });
         }
     } else {
-        $("#message_alert2").html(showMEssage('warning', 'Tipo de archivo no soportado! Solamente archivos de excel'));
+        $("#message_alert2").html(showMEssage('warning', '¡Tipo de archivo no soportado! Solamente archivos de excel'));
         $("#enviar_archivos").prop("disabled", true);
         $("#message_alert2").fadeTo(2000, 500).slideUp(500, function () {
             $("#message_alert2").slideUp(500);
@@ -94,9 +94,9 @@ Btn_enviar.addEventListener('click', function (e) {
                 if (data == "exito") {
                     $('#modal').modal('toggle');
                     swal(
-                        'Exito!',
-                        '¡Datos subidos correctamente!',
-                        'success'
+                        '¡Exito!',
+                        'Datos subidos correctamente',
+                        'Success'
                     )
                     // var tabla = $('#tabla').dataTable();
                     // tabla.api().ajax.reload();
@@ -110,14 +110,14 @@ Btn_enviar.addEventListener('click', function (e) {
                 } else if (data == "cr_incorrecto") {
                     swal(
                         'Oops...',
-                        'Archivo de coordinacion académica no es el correcto!',
-                        'error'
+                        '¡Archivo de coordinación académica no es el correcto!',
+                        'Error'
                     )
                 } else if (data == "cread_invalido") {
                     swal(
                         'Oops...',
-                        'Archivo de coordinacion CREAD no es el correcto!',
-                        'error'
+                        '¡Archivo de coordinación CREAD no es el correcto!',
+                        'Error'
                     )
                 } 
             });

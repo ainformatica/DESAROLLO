@@ -6,7 +6,7 @@ function cargartablaabajo(anno,periodo) {
    // swal("Alerta!", "ingrese datos a buscar!", "warning");
     swal({
       title: "Alerta",
-      text: "Ingrese Periodo y año buscar!",
+      text: "¡Ingrese el período y año a buscar!",
       type: "error",
       showConfirmButton: true,
       timer: 20000,
@@ -129,23 +129,23 @@ function copiar_carga(anno2, periodo2) {
     // swal("Alerta!", "campos vacios", "warning");
     swal({
       title: "Alerta",
-      text: "campos  de busqueda vacios!",
+      text: "¡Campos  de búsqueda vacios!",
       icon: "warning",
       showConfirmButton: true,
       timer: 20000,
     });
   } else {
     swal({
-      title: "Estas seguro?",
-      text: "Una vez hecho, se copiará la carga al periodo actual!",
+      title: "¿Estás seguro de continuar?",
+      text: "Si lo haces ¡Se copiará la carga al período actual!",
       icon: "warning",
       buttons: true,
       dangerMode: true,
     }).then((willDelete) => {
       if (willDelete) {
         swal({
-          title: "alerta",
-          text: "verificando datos",
+          title: "¡Alerta!",
+          text: "Verificando datos",
           icon: "warning",
           showConfirmButton: true,
           timer: 20000,
@@ -162,8 +162,8 @@ function copiar_carga(anno2, periodo2) {
             if (data == null) {
               //   swal("Alerta!", "el periodo no existe!", "warning");
               swal({
-                title: "Alerta",
-                text: "El periodo que busca no existe!",
+                title: "¡Alerta!",
+                text: "El período que busca no existe",
                 icon: "warning",
                 showConfirmButton: true,
                 timer: 20000,
@@ -194,9 +194,9 @@ function copiar_carga(anno2, periodo2) {
                     //   "warning"
                     // );
                     swal({
-                      title: "Alerta",
+                      title: "¡Alerta!",
                       text:
-                        "el periodo actual contiene datos, registre un periodo nuevo para continuar la copia",
+                        "El período actual contiene datos, registre un nuevo período para continuar la copia",
                       icon: "warning",
                       showConfirmButton: true,
                       timer: 20000,
@@ -217,7 +217,7 @@ function copiar_carga(anno2, periodo2) {
           }
         );
       } else {
-        swal("Cancelado!");
+        swal("¡Cancelado!");
       }
     });
   }
@@ -236,9 +236,9 @@ function insertarCopia(periodobusca,periodonuevo) {
       if (resp == 1) {
         
          swal({
-           title: "Buen trabajo!",
+           title: "Buen trabajo",
            text:
-             "Los datos se insertaron correctamente! , deseas ir a la pantalla gestion de carga?",
+             "¡Los datos se insertaron correctamente! ¿Deseas ir a la pantalla Gestion de Carga?",
            icon: "success",
            buttons: true,
            dangerMode: false,
@@ -268,8 +268,8 @@ function insertarCopia(periodobusca,periodonuevo) {
     } else {
      
       swal({
-        title: "Alerta!",
-        text: "No se pudo insertar los datos intente de nuevo!",
+        title: "¡Alerta!",
+        text: "No se logró insertar los datos, intente de nuevo",
         type: "warning",
         showConfirmButton: true,
         timer: 20000,

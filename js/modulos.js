@@ -74,7 +74,7 @@ listar();
 				if (data == 1) {
 					swal({//alerta de datos insertados
 						title:"",
-						text:"Los datos  se almacenaron correctamente",
+						text:"Los datos se almacenaron correctamente",
 						type: "success",
 						showConfirmButton: true,
 						timer: 3000
@@ -82,7 +82,7 @@ listar();
 
 				} else {
 					console.log(data);
-					alert("ups algo sucedio");
+					alert("¡ups algo sucedió!");
 				}
 			}
 		})
@@ -113,7 +113,7 @@ $("#btn_modificar_modulo").on("click", function () {
             } else {
                 swal({
                     title:"",
-                    text:"Lo sentimos ha ocurrido un error",
+                    text:"¡Lo sentimos! Ha ocurrido un error",
                     type: "info",
                     showConfirmButton: false,
                     timer: 3000

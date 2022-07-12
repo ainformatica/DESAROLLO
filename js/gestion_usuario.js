@@ -26,10 +26,10 @@ function reiniciar() {
     console.log(usuario);
 
     if (usuario == 0) {
-        swal("Alerta!", "seleccione una opcion valida", "warning");
+        swal("¡Alerta!", "Seleccione una opción válida", "warning");
 
     } else {
-        var opcion = confirm("Estas seguro de continuar?");
+        var opcion = confirm("¿Estas seguro de continuar?");
         if (opcion == true) {
 
             $.ajax({
@@ -45,15 +45,15 @@ function reiniciar() {
                     if (resp == 1) {
                         //alert("si");
                         swal({
-                            title: "Bien",
+                            title: "¡Bien!",
                             text: "Se guardó correctamente",
-                            type: "success",
+                            type: "Success",
                             showConfirmButton: false,
                             timer: 11000,
                         });
                         location.reload();
                     } else {
-                        swal("Alerta!", "No se pudo completar la acción", "warning");
+                        swal("¡Alerta!", "No se pudo completar la acción", "warning");
                     }
                 }
             });
@@ -206,15 +206,15 @@ $("#guardar_persona").click(function() {
 
     ) {
         swal({
-            title: "alerta",
-            text: "Llene o seleccione los campos vacios correctamente",
+            title: "¡Alerta!",
+            text: "Llene o seleccione los campos vacíos correctamente",
             type: "warning",
             showConfirmButton: true,
             timer: 15000,
         });
     } else if (cbm_genero == 0 || cbm_estado_civil == 0 || cbm_tipo_persona == 0) {
         swal(
-            "Alerta!",
+            "¡Alerta!",
             "Seleccione una opción válida",
             "warning"
         );
@@ -233,14 +233,14 @@ $("#guardar_persona").click(function() {
         }).done(function(resp) {
             if (resp > 0) {
                 swal(
-                    "Buen trabajo!",
-                    "datos actualizados correctamente!",
+                    "¡Buen trabajo!",
+                    "Datos actualizados correctamente",
                     "success"
                 );
                 $("#modal_editar").modal("hide");
                 table.ajax.reload();
             } else {
-                swal("Alerta!", "No se pudo completar la actualización", "warning");
+                swal("¡Alerta!", "No se pudo completar la actualización", "warning");
             }
         });
 
@@ -261,8 +261,8 @@ $("#cambiar").click(function() {
     var id = $("#id_persona").val();
 
     swal({
-        title: "Estas seguro?",
-        text: "Se cambiará el estado de la persona!",
+        title: "¿Estás seguro?",
+        text: "Se cambiará el estado actual de la persona si decides continuar",
         icon: "warning",
         buttons: true,
         dangerMode: true,
@@ -305,7 +305,7 @@ function cambiar(id, estado) {
             table.ajax.reload();
             limpiar();
         } else {
-            swal("Alerta!", "No se pudo completar la actualización", "warning");
+            swal("¡Alerta!", "No se pudo completar la actualización", "warning");
             //document.getElementById("txt_registro").value = "";
         }
     });

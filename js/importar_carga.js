@@ -94,15 +94,15 @@ function registrar_excel() {
 
     if (contador == 0) {
         return swal(
-            "Advertencia!",
-            "La tabla tiene que tener como minimo 1 dato",
+            "¡Advertencia!",
+            "La tabla debe contener un dato como mínimo",
             "warning"
         );
     } else {
         var id_periodo = $("#txt_id_periodo").val();
         swal({
             title: "Alerta",
-            text: "Al continuar se eliminarán los datos de carga en el periodo actual, desea continuar?",
+            text: "Se eliminarán los datos de carga del período actual ¿Desea continuar?",
             icon: "warning",
             buttons: {
                 cancel: "Cancelar",
@@ -131,14 +131,14 @@ function registrar_excel() {
                         );
                     } else {
                         swal(
-                            "Alerta!",
-                            "No se pudo completar la intenta de nuevo",
+                            "¡Alerta!",
+                            "No se pudo completar la operación, intenta de nuevo",
                             "warning"
                         );
                     }
                 });
             } else {
-                swal("Advertencia!", "cancelado!", "Success");
+                swal("¡Advertencia!", "Cancelado", "Success");
             }
         });
 
@@ -215,15 +215,15 @@ function registrar_excel_preliminar() {
 
     if (contador == 0) {
         return swal(
-            "Advertencia!",
-            "La tabla tiene que tener como minimo 1 dato",
+            "¡Advertencia!",
+            "La tabla debe contener tener un dato como mínimo",
             "warning"
         );
     } else {
         var id_periodo = $("#txt_id_periodo").val();
         swal({
             title: "Alerta",
-            text: "Al continuar se eliminarán los datos de carga en el periodo actual, desea continuar?",
+            text: "Se eliminarán los datos de carga del período actual ¿Desea continuar?",
             icon: "warning",
             buttons: {
                 cancel: "Cancelar",
@@ -252,14 +252,14 @@ function registrar_excel_preliminar() {
                         );
                     } else {
                         swal(
-                            "Alerta!",
-                            "No se pudo completar la intenta de nuevo",
+                            "¡Alerta!",
+                            "No se pudo completar la operación, intenta de nuevo",
                             "warning"
                         );
                     }
                 });
             } else {
-                swal("Advertencia!", "cancelado!", "Success");
+                swal("¡Advertencia!", "Cancelado", "Success");
             }
         });
     }
@@ -293,11 +293,11 @@ function llamarregistrarPreliminar(
     }).done(function(resp) {
         // alert(resp);
         if (resp == 1) {
-            swal("Bien!", "Se guardo con exito!", "success");
+            swal("¡Bien!", "Se guardó con exito", "success");
 
             window.location = "../vistas/importar_carga_preliminar_vista.php";
         } else {
-            swal("Error!", "No se pudo completar, intente de nuevo!", "warning");
+            swal("¡Error!", "No se pudo completar la operación, intente de nuevo", "warning");
             //   window.location = "../vistas/importar_carga_final_vista.php";
         }
     });
@@ -332,11 +332,11 @@ function llamarregistrar(
     }).done(function(resp) {
         // alert(resp);
         if (resp == 1) {
-            swal("Bien!", "Se guardo con exito!", "success");
+            swal("¡Bien!", "Se guardó con éxito", "success");
 
             window.location = "../vistas/importar_carga_final_vista.php";
         } else {
-            swal("Error!", "No se pudo completar, intente de nuevo!", "warning");
+            swal("¡Error!", "No se pudo completar la operación, intente de nuevo", "warning");
             //   window.location = "../vistas/importar_carga_final_vista.php";
         }
     });

@@ -34,7 +34,7 @@ function readProducts() {
       'funcion': 'eliminar',
       'id': id
     }
-    var confirmacion = confirm('esta seguro de eliminar');
+    var confirmacion = confirm('¿Está seguro de eliminar?');
     if (confirmacion) {
       $.ajax({
         data: parametro, //datos que se envian a traves de ajax
@@ -46,20 +46,20 @@ function readProducts() {
             readProducts();
             datoseliminados();
           } else {
-            alert('no se pudo eliminar!!');
+            alert('¡No se pudo eliminar!');
           }
 
         }
       });
     } else {
-      console.log('decidio no eliminar');
+      console.log('Decidió no eliminar');
     }
   }
 
   function datoseliminados() {
     swal({
       title: "",
-      text: "los datos se eliminaron correctamente.",
+      text: "¡Los datos se eliminaron correctamente!",
       type: "success",
       showConfirmButton: true,
       timer: 3000
@@ -74,7 +74,7 @@ function readProducts() {
       'id_recurso':id_recurso
     }
     console.log(parametro);
-    var confirmacion = confirm('esta seguro de eliminar');
+    var confirmacion = confirm('¿Está seguro de eliminar?');
     if (confirmacion) {
       $.ajax({
         data: parametro, //datos que se envian a traves de ajax
@@ -88,6 +88,6 @@ function readProducts() {
         }
       });
     } else {
-      console.log('decidio no eliminar');
+      console.log('Decidió no eliminar');
     }
   }

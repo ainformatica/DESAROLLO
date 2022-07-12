@@ -14,7 +14,7 @@ $(document).ready(function(){
 	$('.btn-exit-system').on('click', function(e){
 		e.preventDefault();
 		swal({
-		  	title: 'Estás seguro?',
+		  	title: '¿Estás seguro?',
 		  	text: "La sesión actual se cerrará",
 		  	type: 'warning',
 		  	showCancelButton: true,
@@ -57,7 +57,7 @@ $(document).ready(function(){
 
         var textoAlerta;
         if(tipo==="save"){
-            textoAlerta="Los datos que enviaras edaran almacenados en el sistema";
+            textoAlerta="Los datos que enviarás quedaran almacenados en el sistema";
             
             
                 $.ajax({
@@ -92,7 +92,7 @@ $(document).ready(function(){
                
            
         }else if(tipo==="notificar"){
-            textoAlerta="Se guardo correctamente";
+            textoAlerta="Se guardó correctamente";
             
                 $.ajax({
                     type: metodo,

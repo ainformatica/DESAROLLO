@@ -14,8 +14,8 @@ $(document).ready(function(){
 	$('.btn-exit-system').on('click', function(e){
 		e.preventDefault();
 		swal({
-		  	title: 'Estás seguro?',
-		  	text: "La sesión actual se cerrará",
+		  	title: '¿Estás seguro?',
+		  	text: "La sesión actual se cerrará si decides continuar",
 		  	type: 'warning',
 		  	showCancelButton: true,
 		  	confirmButtonColor: '#03A9F4',
@@ -54,7 +54,7 @@ $(document).ready(function(){
 
         var textoAlerta;
         if(tipo==="save"){
-            textoAlerta="Los datos que enviaras quedaran almacenados en el sistema";
+            textoAlerta="Los datos que enviaras quedarán almacenados en el sistema";
         }else if(tipo==="delete"){
             textoAlerta="Los datos serán eliminados completamente del sistema";
         }else if(tipo==="update"){
@@ -62,7 +62,7 @@ $(document).ready(function(){
         }else if(tipo==="liquidar"){
             textoAlerta="Los datos seran liquidados completamente";
         }else{
-            textoAlerta="Quieres realizar la operación solicitada";
+            textoAlerta="¿Quieres realizar la operación solicitada?";
         }
 
 

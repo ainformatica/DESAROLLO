@@ -6,7 +6,7 @@ function cargartablaabajo(nombre_plan,codigo_plan) {
      // swal("Alerta!", "ingrese datos a buscar!", "warning");
       swal({
         title: "Alerta",
-        text: "Ingrese Nombre y Codigo!",
+        text: "¡Ingrese Nombre y Código!",
         type: "error",
         showConfirmButton: true,
         timer: 20000,
@@ -91,7 +91,7 @@ $("#tabla3_historial_plan").on("click", ".ver1", function () {
   var id_asignatura=(data.id_asignatura);
   if (data.silabo==null) {
     
-    alert("No tiene silabo")
+    alert("No tiene sílabo")
     
   }else{
     $('#Modalsilabo').modal('show');
@@ -269,7 +269,7 @@ function cargartabla4abajo(nombre_plann) {
    // swal("Alerta!", "ingrese datos a buscar!", "warning");
     swal({
       title: "Alerta",
-      text: "Seleccione el Nombre !",
+      text: "¡Seleccione el Nombre!",
       type: "error",
       showConfirmButton: true,
       timer: 20000,

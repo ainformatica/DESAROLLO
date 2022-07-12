@@ -35,8 +35,8 @@ button_objetivo.addEventListener('click', function (e) {
                 } else {
                     swal(
                         'Oops...',
-                        'algo ocurrio mal!',
-                        'error'
+                        '¡Algo ocurrió mal!',
+                        'Error'
                     )
                 }
             })
@@ -60,9 +60,9 @@ function actualizardataTable() {
             localStorage.setItem('data', JSON.stringify(data));
             updateTable();
             swal(
-                'Exito!',
+                '¡Éxito!',
                 '¡Datos subidos correctamente!',
-                'success'
+                'Success'
             );
             $('.obj_modal').modal('toggle');
             document.getElementById("form_objetivo").reset();
@@ -106,8 +106,8 @@ button_edit.addEventListener('click', function (e) {
                 } else {
                     swal(
                         'Oops!',
-                        '¡Algo ah salido mal!',
-                        'error'
+                        '¡Algo ha salido mal!',
+                        'Error'
                     );
                 }
             })

@@ -239,7 +239,7 @@ function mostrar(id_informe) {
 function eliminar(id_informe) {
     swal({
         title: "Alerta",
-        text: "¿Está seguro de eliminar el informe (Esto eliminará también la lista de asistencia)?",
+        text: "¿Está seguro de eliminar el informe? Esto también eliminará la lista de asistencia",
         icon: "warning",
         buttons: true,
         dangerMode: false,

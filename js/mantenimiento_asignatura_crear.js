@@ -260,7 +260,7 @@ $("#guardar_asig").click(function () {
     cbm_suficiencia == null||
     cbm_usada_carga == null 
   ) {
-    alert("no se permiten campos vacios");
+    alert("No se permiten campos vacíos");
   } else if (
     cbm_plan == 0 ||
     cbm_periodo == 0 ||
@@ -269,7 +269,7 @@ $("#guardar_asig").click(function () {
     cbm_suficiencia == 0 ||
     cbm_usada_carga == 0
   ) {
-    alert("seleccione una opcion valida");
+    alert("Seleccione una opción válida");
   } else {
     var clases_plan = $("#suma_clases_plan").val();
     var num_clases_plan = $("#num_clases_plan").val();
@@ -285,10 +285,10 @@ $("#guardar_asig").click(function () {
     // alert(suma);
 
     if (sum_clases > num_clases_plan) {
-      alert("La asignatura excede el numero de clases asignadas al plan!");
+      alert("¡La asignatura excede el número de clases asignadas al plan!");
     } else if (suma > txt_uv_plan) {
       alert(
-        "La uv de la asignatura excede el numero de unidades para el plan!"
+        "¡La uv de la asignatura excede el numero de unidades para el plan!"
       );
     } else {
       //  alert("no exce");
@@ -299,10 +299,10 @@ $("#guardar_asig").click(function () {
           data = JSON.parse(data);
 
           if (data.suma > 0) {
-            alert("Ya existe una asignatura con ese nombre!");
+            alert("¡Ya existe una asignatura con el mismo nombre!");
           } else {
             swal({
-              title: "alerta",
+              title: "¡Alerta!",
               text: "Por favor espere un momento",
               type: "warning",
               showConfirmButton: false,
@@ -331,7 +331,7 @@ $("#guardar_asig").click(function () {
                 if (resp == 1) {
                   //alert("si");
                   swal({
-                    title: "alerta",
+                    title: "¡Alerta!",
                     text: "Por favor espere un momento",
                     type: "warning",
                     showConfirmButton: false,
@@ -349,7 +349,7 @@ $("#guardar_asig").click(function () {
                   }
                   mensaje();
                 } else {
-                  swal("Alerta!", "No se pudo completar la acción", "warning");
+                  swal("¡Alerta!", "No se pudo completar esta acción", "warning");
                 }
               }
             });
@@ -367,7 +367,7 @@ function refrescar(tiempo) {
 
 function mensaje() {
   setTimeout(function () {
-    swal("Buen trabajo!", "Los datos se insertaron correctamente!", "success");
+    swal("¡Buen trabajo!", "Los datos se insertaron correctamente", "Success");
   }, 13000);
 }
 
@@ -395,14 +395,14 @@ $("#guardar_asig_servicio").click(function () {
     txt_silabo.length == 0 ||
     cbm_suficiencia == null
   ) {
-    alert("no se permiten campos vacios");
+    alert("No se permiten campos vacíos");
   } else if (
     
     
     cbm_reposicion == 0 ||
     cbm_suficiencia == 0
   ) {
-    alert("seleccione una opcion valida");
+    alert("Seleccione una opcion válida");
   } else {
     
 
@@ -413,10 +413,10 @@ $("#guardar_asig_servicio").click(function () {
         data = JSON.parse(data);
 
         if (data.suma > 0) {
-          alert("Ya existe una asignatura con ese nombre!");
+          alert("¡Ya existe una asignatura con el mismo nombre!");
         } else {
           swal({
-            title: "alerta",
+            title: "¡Alerta!",
             text: "Por favor espere un momento",
             type: "warning",
             showConfirmButton: false,
@@ -442,7 +442,7 @@ $("#guardar_asig_servicio").click(function () {
               if (resp == 1) {
                 // alert("si");
                 swal({
-                  title: "alerta",
+                  title: "¡Alerta!",
                   text: "Por favor espere un momento",
                   type: "warning",
                   showConfirmButton: false,
@@ -454,9 +454,9 @@ $("#guardar_asig_servicio").click(function () {
                RegistrarSilabo();
                   
                mensaje();
-                alert("se registro");
+                alert("¡se registró correctamente!");
               } else {
-                swal("Alerta!", "No se pudo completar la acción", "warning");
+                swal("¡Alerta!", "No se pudo completar esta acción", "warning");
               }
             }
           });

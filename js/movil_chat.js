@@ -66,7 +66,7 @@ function enviar(id_chat,id_usuario){
             }else{
                 swal({
                     title: "",
-                    text: "No se pueden enviar mensajes vacios!!",
+                    text: "¡No se pueden enviar mensajes vacios!",
                     type: "error",
                     showConfirmButton: false,
                     timer: 3000

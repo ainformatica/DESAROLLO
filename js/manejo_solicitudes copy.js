@@ -11,13 +11,13 @@ button_denegar.addEventListener('click', function (e) {
 
     swal({
         title: '¿Desea denegar la solicitud?',
-        text: "¡Se cancelara la solicitud de la persona seleccionada!",
+        text: "Se cancelará la solicitud de la persona seleccionada si decide continuar",
         type: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: '¡Si, Denegar!',
-        cancelButtonText: '¡No, cancelar!',
+        confirmButtonText: 'Sí ¡Denegar!',
+        cancelButtonText: 'No ¡Cancelar!',
         confirmButtonClass: 'btn btn-success',
         cancelButtonClass: 'btn btn-danger',
         buttonsStyling: false
@@ -36,8 +36,8 @@ button_denegar.addEventListener('click', function (e) {
                 console.log(data);
                 if (data == 'exito') {
                     swal(
-                        'Listo!',
-                        'La revisión fue realizada con exito!',
+                        '¡Listo!',
+                        'La revisión fue realizada con éxito',
                         'success'
                     )
                     $('#modal').modal('toggle');
@@ -45,8 +45,8 @@ button_denegar.addEventListener('click', function (e) {
                 } else {
                     swal(
                         '¡Error!',
-                        '¡Algo ha salido mal!',
-                        'error'
+                        'Algo ha salido mal',
+                        'Error'
                     )
                 }
             });
@@ -54,9 +54,9 @@ button_denegar.addEventListener('click', function (e) {
     }, function (dismiss) {
         if (dismiss === 'cancel') {
             swal(
-                '¡Cancelado!',
-                '¡Se ha cancelado el proceso!',
-                'error'
+                '¡Alerta!',
+                'Se ha cancelado el proceso',
+                'Error'
             )
         }
     })
@@ -71,13 +71,13 @@ button_aceptar.addEventListener('click', function (e) {
 
     swal({
         title: '¿Desea aceptar la solicitud?',
-        text: "¡Se aceptará la solicitud de la persona seleccionada!",
+        text: "Se aceptará la solicitud de la persona seleccionada si decide continuar",
         type: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: '¡Si, Aceptar!',
-        cancelButtonText: '¡No, cancelar!',
+        confirmButtonText: 'Sí ¡Aceptar!',
+        cancelButtonText: 'No ¡Cancelar!',
         confirmButtonClass: 'btn btn-success',
         cancelButtonClass: 'btn btn-danger',
         buttonsStyling: false
@@ -96,9 +96,9 @@ button_aceptar.addEventListener('click', function (e) {
                 console.log(data);
                 if (data == 'exito') {
                     swal(
-                        'Listo!',
-                        'La revisión fue realizada con exito!',
-                        'success'
+                        '¡Listo!',
+                        'La revisión fue realizada con éxito',
+                        'Success'
                     )
                     $('#modal').modal('toggle');
                     $('#tabla_solicitud').DataTable().ajax.reload();
@@ -106,8 +106,8 @@ button_aceptar.addEventListener('click', function (e) {
                 } else {
                     swal(
                         '¡Error!',
-                        '¡Algo ha salido mal!',
-                        'error'
+                        'Algo ha salido mal',
+                        'Error'
                     )
                 }
             });
@@ -115,9 +115,9 @@ button_aceptar.addEventListener('click', function (e) {
     }, function (dismiss) {
         if (dismiss === 'cancel') {
             swal(
-                '¡Cancelado!',
-                '¡Se ha cancelado el proceso!',
-                'error'
+                '¡Alerta!',
+                'Se ha cancelado el proceso',
+                'Error'
             )
         }
     })

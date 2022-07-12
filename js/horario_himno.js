@@ -38,9 +38,9 @@ function actualizaDatos_r() {
 
         if (r == 1) {
             $('#tabla').load('../Controlador/horario_himno_controlador.php');
-            alertify.success("Actualizado con exito ");
+            alertify.success("Actualizado con éxito");
         } else {
-            alertify.error("Fallo el servidor ");
+            alertify.error("Fallo del servidor");
         }
     }
    });
@@ -74,7 +74,7 @@ $(document).ready(function() {
         if (fecha.length == 0) {
             $('#actualizadatos').attr("disabled", true);
             $('#alertaModal1').show();
-            $('#alertaModal1').html("El campo  fecha debe llenarse");
+            $('#alertaModal1').html("El campo fecha debe llenarse");
 
         } else {
             $('#alertaModal1').hide();
@@ -90,7 +90,7 @@ $(document).ready(function() {
         if (horario.length == 0) {
             $('#actualizadatos').attr("disabled", true);
             $('#alertaModal2').show();
-            $('#alertaModal2').html("El campo  horario debe llenarse");
+            $('#alertaModal2').html("El campo horario debe llenarse");
 
         } else {
             $('#alertaModal2').hide();
@@ -106,7 +106,7 @@ $(document).ready(function() {
         if (jornada.length == 0) {
             $('#actualizadatos').attr("disabled", true);
             $('#alertaModal3').show();
-            $('#alertaModal3').html("El campo  jornada debe llenarse");
+            $('#alertaModal3').html("El campo jornada debe llenarse");
 
         } else {
             $('#alertaModal3').hide();

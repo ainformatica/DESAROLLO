@@ -48,8 +48,8 @@ function actualizardataTable_indicadores() {
             localStorage.setItem('datos', JSON.stringify(datos));
             updateTable();
             swal(
-                'Exito!',
-                '¡Datos subidos correctamente!',
+                '¡Éxito!',
+                'Datos subidos correctamente',
                 'success'
             );
             $('.ind_modal').modal('toggle');
@@ -123,12 +123,12 @@ guardar_responsable.addEventListener('click', function (e) {
                     document.getElementById('agregar_responsables').reset();
                     $('#tabla_responsables tbody').empty();
                     actualizr_responsables();
-                    $("#mensaje_responsable").html(showMEssage('success', 'Se agrego el registro a la tabla'));
+                    $("#mensaje_responsable").html(showMEssage('success', 'Se agregó el registro a la tabla'));
                     $("#mensaje_responsable").fadeTo(2000, 500).slideUp(500, function () {
                         $("#mensaje_responsable").slideUp(500);
                     });
                 } else {
-                    $("#mensaje_responsable").html(showMEssage('danger', 'Algo ocurrio mal'));
+                    $("#mensaje_responsable").html(showMEssage('Danger', 'Algo ocurrió mal'));
                     $("#mensaje_responsable").fadeTo(2000, 500).slideUp(500, function () {
                         $("#mensaje_responsable").slideUp(500);
                     });
@@ -206,13 +206,13 @@ guardar_actividad.addEventListener('click', function (e) {
                 if (data == 'exito') {
                     $('#tabla_actividades tbody').empty(); //limpiar la tabla despues de cada llamdo
                     update_actividades();
-                    $("#mensaje_actividades").html(showMEssage('success', 'Se agrego el registro a la tabla'));
+                    $("#mensaje_actividades").html(showMEssage('Success', 'Se agregó el registro a la tabla'));
                     $("#mensaje_actividades").fadeTo(2000, 500).slideUp(500, function () {
                         $("#mensaje_actividades").slideUp(500);
                     });
                     document.getElementById('agregar_actividades').reset();
                 } else {
-                    $("#mensaje_actividades").html(showMEssage('danger', 'Algo ocurrio mal'));
+                    $("#mensaje_actividades").html(showMEssage('Danger', 'Algo ocurrió mal'));
                     $("#mensaje_actividades").fadeTo(2000, 500).slideUp(500, function () {
                         $("#mensaje_actividades").slideUp(500);
                     });
@@ -285,7 +285,7 @@ save_metas.addEventListener('click', function (e) {
             //console.log(data);            
             if (data == 'exito') {
                 console.log(data);
-                $("#mensaje_meta").html(showMEssage('success', '¡Metas han sido agregadas!'));
+                $("#mensaje_meta").html(showMEssage('Success', '¡Metas han sido agregadas!'));
                 $("#mensaje_meta").fadeTo(2000, 500).slideUp(500, function () {
                     $("#mensaje_meta").slideUp(500);
                 });
@@ -294,17 +294,17 @@ save_metas.addEventListener('click', function (e) {
                 document.getElementById('agregar_metas').reset();
 
             } else if (data == 'cuenta_mayor') {
-                $("#mensaje_meta").html(showMEssage('danger', '¡Cantidades ingresadas suman mas de 100%, verifique los campos!'));
+                $("#mensaje_meta").html(showMEssage('Danger', '¡Cantidades ingresadas suman más del 100%, verifique los campos!'));
                 $("#mensaje_meta").fadeTo(2000, 500).slideUp(500, function () {
                     $("#mensaje_meta").slideUp(500);
                 });
             } else if (data == 'tiene_datos') {
-                $("#mensaje_meta").html(showMEssage('danger', '¡Este indicador ya tiene metas establecidas!'));
+                $("#mensaje_meta").html(showMEssage('Danger', '¡Este indicador ya tiene metas establecidas!'));
                 $("#mensaje_meta").fadeTo(2000, 500).slideUp(500, function () {
                     $("#mensaje_meta").slideUp(500);
                 });
             } else if (data == 'menor_cuenta') {
-                $("#mensaje_meta").html(showMEssage('danger', '¡Sus porcentaje de metas no suma el 100%!'));
+                $("#mensaje_meta").html(showMEssage('Danger', '¡Sus porcentajes de metas no suman el 100%!'));
                 $("#mensaje_meta").fadeTo(2000, 500).slideUp(500, function () {
                     $("#mensaje_meta").slideUp(500);
                 });
@@ -363,14 +363,14 @@ $('#tabla_actividades tbody').on('click', '#eliminar_act', function () {
     console.log(id_actividad);
 
     swal({
-        title: '¿Seguro que desea borrar este registro?',
-        text: "¡No podrá recuperar este registro!",
+        title: '¿Seguro que desea borrar este regístro?',
+        text: "¡Si continúa no podrá recuperarlo!",
         type: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Si, eliminar!',
-        cancelButtonText: 'No, cancelar!',
+        confirmButtonText: 'Sí ¡Eliminar!',
+        cancelButtonText: 'No ¡Cancelar!',
         confirmButtonClass: 'btn btn-success',
         cancelButtonClass: 'btn btn-danger',
         buttonsStyling: false
@@ -390,15 +390,15 @@ $('#tabla_actividades tbody').on('click', '#eliminar_act', function () {
                     $('#tabla_actividades tbody').empty();
                     update_actividades();
                     swal(
-                        'Eliminado!',
-                        'Su registro se a eliminado',
-                        'success'
+                        '¡Eliminado!',
+                        'Su registro ha sido eliminado',
+                        'Success'
                     )
                 } else {
                     swal(
-                        'Alto!',
-                        'Algo ocurrio mal.',
-                        'error'
+                        '¡Alto!',
+                        'Algo ocurrió mal',
+                        'Error'
                     )
                 }
             })
@@ -407,7 +407,7 @@ $('#tabla_actividades tbody').on('click', '#eliminar_act', function () {
         // 'close', and 'timer'
         if (dismiss === 'cancel') {
             swal(
-                'Cancelado!',
+                '¡Cancelado!',
                 'Su registro sigue en la base de datos',
                 'info'
             )
@@ -421,13 +421,13 @@ $('#tabla_metas tbody').on('click', '#eliminar_meta', function () {
     //console.log(id_meta);
     swal({
         title: '¿Seguro que desea borrar este registro?',
-        text: "¡No podrá recuperar este registro!",
-        type: 'warning',
+        text: "¡Si continúa no podrá recuperarlo!",
+        type: 'Warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Si, eliminar!',
-        cancelButtonText: 'No, cancelar!',
+        confirmButtonText: 'Sí ¡Eliminar!',
+        cancelButtonText: 'No ¡Cancelar!',
         confirmButtonClass: 'btn btn-success',
         cancelButtonClass: 'btn btn-danger',
         buttonsStyling: false
@@ -447,15 +447,15 @@ $('#tabla_metas tbody').on('click', '#eliminar_meta', function () {
                     $('#tabla_metas tbody').empty();
                     update_metas();
                     swal(
-                        'Eliminado!',
-                        'Su registro se a eliminado',
-                        'success'
+                        '¡Eliminado!',
+                        'Su registro ha sido eliminado',
+                        'Success'
                     )
                 } else {
                     swal(
-                        'Alto!',
-                        'Algo ocurrio mal.',
-                        'error'
+                        '¡lto!',
+                        'Algo ocurrió mal.',
+                        'Error'
                     )
                 }
             })
@@ -464,7 +464,7 @@ $('#tabla_metas tbody').on('click', '#eliminar_meta', function () {
         // 'close', and 'timer'
         if (dismiss === 'cancel') {
             swal(
-                'Cancelado!',
+                '¡Cancelado!',
                 'Su registro sigue en la base de datos',
                 'info'
             )

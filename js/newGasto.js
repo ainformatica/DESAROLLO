@@ -21,15 +21,15 @@ button.addEventListener('click', function (e) {
                 console.log(data);
                 if (data == 'exito') {
                     swal(
-                        'Agregado',
-                        'Su registro ha sido agregado!',
+                        //'Agregado',
+                        '¡Su registro ha sido agregado!',
                         'success'
                     );
                     document.getElementById('enviar_Datos').reset();
                 } else {
                     swal(
-                        'Error',
-                        'Ha ocurrido algo!',
+                        '¡Error!',
+                        'Ha ocurrido algo',
                         'error'
                     );
 
@@ -41,14 +41,14 @@ button.addEventListener('click', function (e) {
 
 function eliminar(id) {
     swal({
-        title: 'Seguro que quiere eliminar este gasto?',
+        title: '¿Seguro que quiere eliminar este gasto?',
         text: "!Este registro no podra ser recuperado!",
         type: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Si, Eliminarlo!',
-        cancelButtonText: 'No, Cancelar!',
+        confirmButtonText: 'Sí ¡Eliminarlo!',
+        cancelButtonText: 'No ¡Cancelar!',
         confirmButtonClass: 'btn btn-success',
         cancelButtonClass: 'btn btn-danger',
         buttonsStyling: false
@@ -66,15 +66,15 @@ function eliminar(id) {
             .then(data => {
                 if (data == 'exito') {
                     swal(
-                        'Eliminado!',
+                        //'¡Eliminado!',
                         '!Su registro ha sido eliminado!',
                         'success'
                     )
                     $('#tabla_gastos_tipo').DataTable().ajax.reload();
                 } else {
                     swal(
-                        'Error',
-                        'A ocurrido un error en la consulta!',
+                        '¡Alerta!',
+                        'A ocurrido un error en la consulta',
                         'error'
                     )
                 }
@@ -84,8 +84,8 @@ function eliminar(id) {
         // 'close', and 'timer'
         if (dismiss === 'cancel') {
             swal(
-                'Cancelado',
-                'Su registro esta en la base de datos!',
+                '¡Cancelado!',
+                'Su registro está en la base de datos',
                 'error'
             )
         }
@@ -94,14 +94,14 @@ function eliminar(id) {
 }
 function cambiarEstado(id, estado) {
     swal({
-        title: 'Seguro que quiere cambiar este gasto?',
-        text: "!Este registro podra ser cambiado!",
+        title: '¿Seguro que quiere cambiar este gasto?',
+        text: "!Este registro podrá ser cambiado!",
         type: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Si, Cambiarlo!',
-        cancelButtonText: 'No, Cancelar!',
+        confirmButtonText: 'Sí ¡Cambiarlo!',
+        cancelButtonText: 'No ¡Cancelar!',
         confirmButtonClass: 'btn btn-success',
         cancelButtonClass: 'btn btn-danger',
         buttonsStyling: false
@@ -120,15 +120,15 @@ function cambiarEstado(id, estado) {
             .then(data => {
                 if (data == 'exito') {
                     swal(
-                        'Cambiado!',
+                        //'Cambiado!',
                         '!Su registro ha sido cambiado!',
                         'success'
                     )
                     $('#tabla_gastos_tipo').DataTable().ajax.reload();
                 } else {
                     swal(
-                        'Error',
-                        'A ocurrido un error en la consulta!',
+                        //'Error',
+                        '¡Ha ocurrido un error en la consulta!',
                         'error'
                     )
                 }
@@ -138,8 +138,8 @@ function cambiarEstado(id, estado) {
         // 'close', and 'timer'
         if (dismiss === 'cancel') {
             swal(
-                'Cancelado',
-                'Su registro sigue intacto!',
+                '¡Cancelado!',
+                'Su registro sigue intacto',
                 'error'
             )
         }
@@ -171,7 +171,7 @@ buttonGuardar.addEventListener('click', function (e) {
             .then(data => {
                 if (data == 'exito') {
                     swal.queue([{
-                        title: 'Exito!',
+                        title: '¡Éxito!',
                         confirmButtonText: 'Regresar',
                         text:
                             'Los datos han sido agregados exitosamente',

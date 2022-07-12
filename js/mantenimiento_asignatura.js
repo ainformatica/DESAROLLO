@@ -518,7 +518,7 @@ $("#guardar").click(function () {
     cbm_suficiencia == null ||
     cbm_usada_carga == null
   ) {
-    alert("no se permiten campos vacios");
+    alert("No se permiten campos vacíos");
   } else if (
     cbm_plan == 0 ||
     cbm_periodo == 0 ||
@@ -527,7 +527,7 @@ $("#guardar").click(function () {
     cbm_suficiencia == 0 ||
     cbm_usada_carga == 0
   ) {
-    alert("seleccione una opcion valida");
+    alert("Seleccione una opción válida");
   } else {
     if (
       cbm_plan != cbm_plan1 ||
@@ -599,11 +599,11 @@ function actualizar_asignatura(
         if (resp == 1) {
           //  RegistrarSilabo();
 
-          swal("Bien!", "Se Guardó Correctamente!", "success");
+          swal("¡Bien!", "Se guardó Correctamente", "success");
           table.ajax.reload();
           $("#modal_editar").modal("hide");
         } else {
-          swal("Alerta!", "No se pudo completar la acción", "warning");
+          swal("¡Alerta!", "No se pudo completar esta acción", "warning");
           table.ajax.reload();
           $("#modal_editar").modal("hide");
         }
@@ -612,7 +612,7 @@ function actualizar_asignatura(
   } else {
     // alert("si trae");
     swal({
-      title: "alerta",
+      title: "¡Alerta!",
       text: "Por favor espere un momento",
       type: "warning",
       showConfirmButton: false,
@@ -644,7 +644,7 @@ function actualizar_asignatura(
 
           mensaje1();
         } else {
-          swal("Alerta!", "No se pudo completar la acción", "warning");
+          swal("¡Alerta!", "No se pudo completar esta acción", "warning");
           table.ajax.reload();
           $("#modal_editar").modal("hide");
         }
@@ -1030,9 +1030,9 @@ $("#guardar_servicio").click(function () {
     cbm_reposicion == null ||
     cbm_suficiencia == null
   ) {
-    alert("no se permiten campos vacios");
+    alert("No se permiten campos vacíos");
   } else if (cbm_reposicion == 0 || cbm_suficiencia == 0) {
-    alert("seleccione una opcion valida");
+    alert("Seleccione una opción válida");
   } else {
     if (
       txt_uv != txt_uv1 ||
@@ -1094,11 +1094,11 @@ function actualizar_asignatura_servicio(
         if (resp == 1) {
           //  RegistrarSilabo();
 
-          swal("Bien!", "Se Guardó correctamente", "success");
+          swal("¡Bien!", "Se guardó correctamente", "success");
           table.ajax.reload();
           $("#modal_editar").modal("hide");
         } else {
-          swal("Alerta!", "No se pudo completar la acción", "warning");
+          swal("¡Alerta!", "No se pudo completar esta acción", "warning");
           table.ajax.reload();
           $("#modal_editar").modal("hide");
         }
@@ -1124,7 +1124,7 @@ function actualizar_asignatura_servicio(
          if (resp == 1) {
            //  RegistrarSilabo();
            swal({
-             title: "alerta",
+             title: "¡Alerta!",
              text: "Por favor espere un momento",
              type: "warning",
              showConfirmButton: false,
@@ -1137,7 +1137,7 @@ function actualizar_asignatura_servicio(
            
            mensaje();
          } else {
-           swal("Alerta!", "No se pudo completar la acción", "warning");
+           swal("¡Alerta!", "No se pudo completar esta acción", "warning");
            table.ajax.reload();
            $("#modal_editar").modal("hide");
          }
@@ -1154,7 +1154,7 @@ function refrescar(tiempo) {
 //se muestra despues de insertar el silabo y actualiza la tabla
 function mensaje() {
   setTimeout(function () {
-    swal("Bien", "Se Guardó Correctamente!", "success");
+    swal("Bien", "¡Se guardó Correctamente!", "success");
     $("#modal_editar").modal("hide");
     table.ajax.reload();
     limpiarSilabo();
@@ -1162,7 +1162,7 @@ function mensaje() {
 }
 function mensaje1() {
   setTimeout(function () {
-    swal("Bien", "Se Guardó Correctamente!", "success");
+    swal("Bien", "¡Se guardó Correctamente!", "success");
     $("#modal_editar").modal("hide");
     table.ajax.reload();
     limpiarSilabo();
