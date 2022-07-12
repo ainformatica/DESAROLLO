@@ -40,8 +40,8 @@ $(document).ready(function () {
     let i = ContarTel();
 
     swal({
-      title: "Estas seguro?",
-      text: "¿Desea Eliminar el Número de teléfono del docente?",
+      title: "¿Estás seguro?",
+      text: "¿Deseas eliminar el número de teléfono del docente?",
       icon: "warning",
       buttons: true,
       dangerMode: true,
@@ -66,8 +66,8 @@ $(document).ready(function () {
     let i = ContarCorreo();
 
     swal({
-      title: "Estas seguro?",
-      text: "¿Desea Eliminar el correo del docente?",
+      title: "¿Estás seguro?",
+      text: "¿Deseas eliminar el correo del docente?",
       icon: "warning",
       buttons: true,
       dangerMode: true,
@@ -126,7 +126,7 @@ function EditarPerfil(nombre, apellido, identidad, nacionalidad, estado) {
     fecha == ""
   ) {
     swal({
-      title: "Campos Vacios!",
+      title: "¡Campos Vacíos!",
       text: "Tiene campos en blanco",
       type: "warning",
       showConfirmButton: true,
@@ -136,7 +136,7 @@ function EditarPerfil(nombre, apellido, identidad, nacionalidad, estado) {
     desabilitar();
 
     swal({
-      title: "alerta",
+      title: "Alerta",
       text: "Por favor espere un momento",
       type: "warning",
       showConfirmButton: false,
@@ -161,7 +161,7 @@ function EditarPerfil(nombre, apellido, identidad, nacionalidad, estado) {
       if (resp > 0) {
         if (resp == 1) {
           swal({
-            title: "Actualizado!",
+            title: "¡Actualizado!",
             text: "Datos actualizados correctamente",
             type: "success",
             showConfirmButton: true,
@@ -169,7 +169,7 @@ function EditarPerfil(nombre, apellido, identidad, nacionalidad, estado) {
           });
           window.location = "../vistas/perfil_docentes_vista.php";
         } else {
-          swal("Alerta!", "No se pudo completar la acción", "warning");
+          swal("¡Alerta!", "No se pudo completar esta acción", "warning");
         }
       }
     });
@@ -197,12 +197,12 @@ function AgregarEspecialidad(grado, especialidad) {
   }).done(function (resp) {
     if (resp > 0) {
       swal(
-        "Buen trabajo!", "Se agrego correctamente, asegurate de actualizar tu curriculum", "success" );
+        "¡Buen trabajo!", "Se agregó correctamente, asegúrate de actualizar tu curriculum", "success" );
       limpiartext();
       especialidad();
       // especialidad();
     } else {
-      swal("Alerta!", "No se pudo completar la acción", "warning");
+      swal("¡Alerta!", "No se pudo completar esta acción", "warning");
       // especialidad();
     }
   });
@@ -219,7 +219,7 @@ function AgregarTelefono(telefono) {
   var id_persona = $("#id_persona").val();
 
   if (n != -1 || telefono.length == 0) {
-    alert("Favor Completar el campo de identidad");
+    alert("Favor completar el campo de identidad");
   } else {
     $.post(
       "../Controlador/perfil_docente_controlador.php?op=AgregarTelefono",
@@ -346,7 +346,7 @@ $("#guardarFormacion").click(function () {
   var txt_especialidad = $("#especialidad").val().toUpperCase();
 
   if (grado == "SELECCIONAR" || txt_especialidad == "") {
-    alert("Debe Elegir Un grado y Su especialidad.");
+    alert("Debe elegir un grado y su especialidad");
   } else {
     AgregarEspecialidad(grado, txt_especialidad);
     agregarFormacion(txt_especialidad);
@@ -465,7 +465,7 @@ function addTel() {
     if (valtel($("#tel1").val()) == 0) {
       //aqui debo validar que no se agregue a la tabla ...
 
-      swal("Alerta", "ingresar un número válido", "warning");
+      swal("Alerta", "Ingresar un número válido", "warning");
 
       limpiarTEL();
       return false;
@@ -555,7 +555,7 @@ var uploadField = document.getElementById("imagen");
 uploadField.onchange = function () {
   if (this.files[0].size > 5242880) {
     //alert("Archivo muy grande!");
-    swal("Error", "Archivo muy grande!", "warning");
+    swal("Error", "¡Archivo muy grande!", "warning");
 
     this.value = "";
   }
@@ -569,7 +569,7 @@ var uploadField = document.getElementById("c_vitae");
 uploadField.onchange = function () {
   if (this.files[0].size > 15728640) {
     //alert("Archivo muy grande!");
-    swal("Error", "Archivo muy grande!", "warning");
+    swal("Error", "¡Archivo muy grande!", "warning");
 
     this.value = "";
   }
@@ -692,7 +692,7 @@ function ValidarIdentidad(identidad) {
           if (ver == true) {
             swal(
               "Datos incorrectos",
-              "Asegurese de Introducir los digitos correspondientes a su departamento y municipio",
+              "Asegúrese de introducir los dígitos correspondientes a su Departamento y Município",
               "warning"
             );
             $("#contar_depto").val("");
@@ -811,7 +811,7 @@ function MismaLetra(id_input) {
     if (str1 == str2 && str1 == str3 && str2 == str3) {
       swal({
         title: "Alerta",
-        text: "Letra escritas 3 veces consecutivas",
+        text: "Letra escrita 3 veces consecutivas",
         type: "warning",
         showConfirmButton: true,
         timer: 10000,
@@ -937,7 +937,7 @@ function Registrarcurriculum() {
       processData: false,
       success: function (respuesta) {
         if ((respuesta = 1)) {
-          swal("Actualizado!", "Datos actualizados correctamente!", "success");
+          swal("¡Actualizado!", "D¡atos actualizados correctamente!", "success");
 
           $("#btn_curriculu_cancelar").attr("hidden", "hidden");
           window.location = "../vistas/perfil_docentes_vista.php";
@@ -1012,12 +1012,12 @@ function addCorreo() {
   ////console.log(correo);
 
   if (correo.length == 0) {
-    alert("Completar El Campo correo Por Favor");
+    alert("Completar el campo correo por Favor");
   } else {
     if (correovalido($("#correo").val()) == 0) {
       //aqui debo validar que no se agregue a la tabla ...
 
-      swal("Alerta", "ingresar un correo válido", "warning");
+      swal("Alerta", "Ingresar un correo válido", "warning");
 
       limpiarCor();
       return false;
@@ -1239,7 +1239,7 @@ function desabilitar() {
     identidad == ""
   ) {
     swal({
-      title: "Campos Vacios!",
+      title: "¡Campos Vacios!",
       text: "Tiene campos en blanco",
       type: "warning",
       showConfirmButton: true,
@@ -1281,7 +1281,7 @@ function insertar_pregunta1() {
     //  data: { array: id_area}, //capturo array
     data: { array_prefe: JSON.stringify(id_area), id_persona: id_persona },
     success: function (data) {
-      swal("Ingresado!", "Datos ingresados correctamente!", "success");
+      swal("¡Ingresado!", "¡Datos ingresados correctamente!", "success");
 
       $("#modalencuesta").modal("hide");
     },
@@ -1304,7 +1304,7 @@ function insertar_pregunta2() {
     //  data: { array: id_area}, //capturo array
     data: { array_prefe1: JSON.stringify(id_area), id_persona: id_persona },
     success: function (data) {
-      swal("Ingresado!", "Datos ingresados correctamente!", "success");
+      swal("¡Ingresado!", "¡Datos ingresados correctamente!", "success");
       $("#modalencuesta2").modal("hide");
     },
   });
@@ -1329,7 +1329,7 @@ function insertar_pregunta3() {
       id_persona: id_persona,
     },
     success: function (data) {
-      swal("Ingresado!", "Datos ingresados correctamente!", "success");
+      swal("¡Ingresado!", "¡Datos ingresados correctamente!", "success");
       $("#modalencuesta3").modal("hide");
     },
   });
@@ -1354,7 +1354,7 @@ function insertar_pregunta4() {
       id_persona: id_persona,
     },
     success: function (data) {
-      swal("Ingresado!", "Datos ingresados correctamente!", "success");
+      swal("¡Ingresado!", "¡Datos ingresados correctamente!", "success");
       $("#modalencuesta4").modal("hide");
     },
   });
@@ -1395,7 +1395,7 @@ function enviarpregunta1() {
             if (resp > 0) {
               insertar_pregunta1();
             } else {
-              swal("Alerta!", "No se pudo completar la acción", "warning");
+              swal("¡Alerta!", "No se pudo completar la acción", "warning");
             }
           });
         }
@@ -1524,7 +1524,7 @@ function enviarpregunta4() {
             if (resp > 0) {
               insertar_pregunta4();
             } else {
-              swal("Alerta!", "No se pudo completar la acción", "warning");
+              swal("¡Alerta!", "No se pudo completar esta acción", "warning");
             }
           });
         }
@@ -1613,10 +1613,10 @@ $(document).ready(function () {
         },
       }).done(function (resp) {
         if (resp > 0) {
-          swal("Buen trabajo!", "¡ Se eliminaron !", "success");
+          swal("¡Buen trabajo!", "¡Se eliminaron!", "success");
           // especialidad();
         } else {
-          swal("Alerta!", "No se pudo completar la acción", "warning");
+          swal("¡Alerta!", "No se pudo completar esta acción", "warning");
           // especialidad();
         }
       });

@@ -118,7 +118,7 @@ $(document).ready(function () {
 
 				} else {
 					console.log(data);
-					alert("ups algo sucedio");
+					alert("ups algo sucedió");
 				}
 			}
 		})

@@ -21,15 +21,15 @@ button.addEventListener('click', function (e) {
                 console.log(data);
                 if (data == 'exito') {
                     swal(
-                        '¡Agregado!',
-                        '!Su registro ha sido agregado con exito!',
+                        //'¡Agregado!',
+                        '!Su registro ha sido agregado con éxito!',
                         'success'
                     );
                     document.getElementById("enviar_Datos").reset(); 
                 } else {
                     swal(
-                        'Error!',
-                        '!algo ocurrio mal!',
+                        '¡Error!',
+                        'Algo ocurrio mal',
                         'Error'
                     );
                 }
@@ -41,14 +41,14 @@ button.addEventListener('click', function (e) {
 
 function eliminar(id) {
     swal({
-        title: 'Seguro que quiere eliminar este Indicador de Gestión Academica?',
-        text: "!Este registro no podra ser recuperado!",
+        title: '¿Seguro de querer eliminar este indicador de Gestión Académica?',
+        text: "!Este registro no podra ser recuperado si decide continuar!",
         type: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Si, Eliminarlo!',
-        cancelButtonText: 'No, Cancelar!',
+        confirmButtonText: 'Sí ¡Eliminarlo!',
+        cancelButtonText: 'No ¡Cancelar!',
         confirmButtonClass: 'btn btn-success',
         cancelButtonClass: 'btn btn-danger',
         buttonsStyling: false
@@ -67,15 +67,15 @@ function eliminar(id) {
                 //console.log(data);
                 if (data == 'exito') {
                     swal(
-                        'Eliminado!',
+                        //'Eliminado!',
                         '!Su registro ha sido eliminado!',
                         'success'
                     )
                     $('#tabla_indicadores_tipo').DataTable().ajax.reload();
                 } else {
                     swal(
-                        'Error',
-                        'A ocurrido un error en la consulta!',
+                        '¡Error!',
+                        'Ha ocurrido un error en la consulta',
                         'error'
                     )
                 }
@@ -85,8 +85,8 @@ function eliminar(id) {
         // 'close', and 'timer'
         if (dismiss === 'cancel') {
             swal(
-                'Cancelado',
-                'Su registro esta en la base de datos!',
+                '¡Cancelado!',
+                'Su registro está en la base de datos',
                 'error'
             )
         }
@@ -95,14 +95,14 @@ function eliminar(id) {
 }
 function cambiarEstado(id, estado) {
     swal({
-        title: 'Seguro que quiere cambiar este Indicador de Gestión Academica?',
-        text: "!Este registro podra ser cambiado!",
+        title: '¿Seguro de querer cambiar este indicador de Gestión Academica?',
+        text: "!Este registro podrá ser cambiado si decide continuar!",
         type: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Si, Cambiarlo!',
-        cancelButtonText: 'No, Cancelar!',
+        confirmButtonText: 'Sí ¡Cambiarlo!',
+        cancelButtonText: 'No ¡Cancelar!',
         confirmButtonClass: 'btn btn-success',
         cancelButtonClass: 'btn btn-danger',
         buttonsStyling: false
@@ -122,15 +122,15 @@ function cambiarEstado(id, estado) {
                 //console.log(data);
                 if (data == 'exito') {
                     swal(
-                        'Cambiado!',
+                        //'Cambiado!',
                         '!Su registro ha sido cambiado!',
                         'success'
                     )
                     $('#tabla_indicadores_tipo').DataTable().ajax.reload();
                 } else {
                     swal(
-                        'Error',
-                        'A ocurrido un error en la consulta!',
+                        '¡Error!',
+                        'Ha ocurrido un error en la consulta',
                         'error'
                     )
                 }
@@ -140,8 +140,8 @@ function cambiarEstado(id, estado) {
         // 'close', and 'timer'
         if (dismiss === 'cancel') {
             swal(
-                'Cancelado',
-                'Su registro sigue intacto!',
+                '¡Cancelado!',
+                'Su registro sigue intacto',
                 'error'
             )
         }

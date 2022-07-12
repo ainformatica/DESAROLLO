@@ -23,8 +23,8 @@ if (isset($_REQUEST['msj'])) {
   if ($msj == 1) {
     echo '<script >
                             swal(
-                      "Alerta!",
-                      "Favor revisar su correo la contraseña ha sido enviada",
+                      "¡Alerta!",
+                      "Favor revisar su correo, la contraseña ha sido enviada",
                       "warning"
                     );
                             </script>';
@@ -34,7 +34,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script >
                 
            swal(
-                      "Alerta!",
+                      "¡Alerta!",
                       "Usuario/Contraseña incorrecta",
                       "warning"
                     );
@@ -57,8 +57,8 @@ if (isset($_REQUEST['msj'])) {
       echo '<script >
                 
                  swal(
-                      "Alerta!",
-                      "Lo sentimos este es tu ultimo intento.",
+                      "¡Alerta!",
+                      "Lo sentimos este es tu último intento.",
                       "warning"
                     );          
           
@@ -68,7 +68,7 @@ if (isset($_REQUEST['msj'])) {
                           
           
                  swal(
-                      "Alerta!",
+                      "¡Alerta!",
                       "Usuario/Contraseña incorrecta",
                       "warning"
                     );
@@ -96,8 +96,8 @@ if (isset($_REQUEST['msj'])) {
   if ($msj == 6) {
     echo '<script >
        swal(
-                      "Alerta!",
-                      "Su contraseña ha actualizada correctamente",
+                      "¡Alerta!",
+                      "Su contraseña ha sido actualizada correctamente",
                       "warning"
                     );  
 
@@ -106,7 +106,7 @@ if (isset($_REQUEST['msj'])) {
   if ($msj == 7) {
     echo '<script>
     swal(
-                      "Alerta!",
+                      "¡Alerta!",
                       "Número de cuenta o de empleado no cumple los requisitos de longitud",
                       "warning"
                     );  
@@ -147,7 +147,7 @@ if (isset($_REQUEST['msj'])) {
           <img src="dist/img/lOGO_OFICIAL.jpg" width="40%" height="40%" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
         </div>
 
-        <p class="login-box-msg"> Iniciar a Sesión</p>
+        <p class="login-box-msg"> Iniciar Sesión</p>
 
         <form action="Controlador/existe_usuario_controlador.php" method="post">
           <div class="input-group mb-3">
@@ -183,7 +183,7 @@ if (isset($_REQUEST['msj'])) {
           <a href="vistas/recuperar_clave_vista.php">Olvidaste tu contraseña?</a>
         </p>
         <p class="mb-0">
-          <a href="vistas/auto_registro_estudiante_vista.php" class="text-center">Registrate</a>
+          <a href="vistas/auto_registro_estudiante_vista.php" class="text-center">Regístrate</a>
         </p>
       </div>
       <!-- /.login-card-body -->
