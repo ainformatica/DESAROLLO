@@ -12,7 +12,7 @@ $(document).ready(function () {
             allowOutsideClick: false, //bloquear click fuera
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Si, Finalizarla!',
+            confirmButtonText: 'Sí ¡Finalizarla!',
             cancelButtonText: 'Cancelar'
         }).then(function () {
             $.ajax({
@@ -27,15 +27,15 @@ $(document).ready(function () {
                     if (resultado.respuesta == 'exito') {
                         swal({
                             title: "Correcto",
-                            text: "Se Finalizo con Exito!",
+                            text: "¡Se Finalizó con Exito!",
                             type: "success"
                         }).then(function () {
                             location.href = "../vistas/actas_pendientes_vista";
                         });
                     } else {
                         swal(
-                            'Error!',
-                            'No se pudo Finalizar faltan campos Importantes',
+                            '¡Error!',
+                            'No se pudo Finalizar, faltan campos Importantes',
                             'error'
                         )
                     }
@@ -62,7 +62,7 @@ $(document).ready(function () {
                 if (resultado.respuesta == 'exito') {
                     swal({
                         title: "Correcto",
-                        text: "Borrador guardado correctamente!",
+                        text: "¡Borrador guardado correctamente!",
                         type: "success",
                         confirmButtonText: "Ir a Actas Pendientes",
                         html: `<br>
@@ -76,7 +76,7 @@ $(document).ready(function () {
                 } else {
                     swal(
                         'Error',
-                        'Hubo un error!',
+                        '¡Hubo un error!',
                         'error'
                     )
                 }
@@ -102,7 +102,7 @@ $(document).ready(function () {
             if (resultado.respuesta == 'exito') {
                 swal({
                     title: "Correcto",
-                    text: "El acta se ha archivado correctamente!",
+                    text: "¡El acta se ha archivado correctamente!",
                     type: "success",
                     confirmButtonText: "Ir a Actas Archivadas",
                         html: `<br>
@@ -116,7 +116,7 @@ $(document).ready(function () {
             } else {
                 swal(
                     'Error',
-                    'Hubo un error!',
+                    '¡Hubo un error!',
                     'error'
                 )
             }
@@ -137,7 +137,7 @@ $(document).ready(function () {
                 var resultado = data;
                 if (resultado.respuesta == 'exito') {
                     swal({
-                        title: "Correcto", text: "Se editó correctamente!", type:
+                        title: "Correcto", text: "¡Se editó correctamente!", type:
                             "success"
                     }).then(function () {
                         location.href = "../vistas/reuniones_pendientes_vista";
@@ -146,7 +146,7 @@ $(document).ready(function () {
                 } else {
                     swal(
                         'Error',
-                        'Hubo un error!',
+                        '¡Hubo un error!',
                         'error'
                     )
                 }
@@ -167,7 +167,7 @@ $(document).ready(function () {
                 var resultado = data;
                 if (resultado.respuesta == 'exito') {
                     swal({
-                        title: "Correcto", text: "Se guardo correctamente!", type:
+                        title: "Correcto", text: "¡Se guardó correctamente!", type:
                             "success"
                     }).then(function () {
                         location.href = "../vistas/mantenimiento_estadoparticipante_vista";
@@ -176,7 +176,7 @@ $(document).ready(function () {
                 } else {
                     swal(
                         'Error',
-                        'Hubo un error!',
+                        '¡Hubo un error!',
                         'error'
                     )
                 }
@@ -197,7 +197,7 @@ $(document).ready(function () {
                 var resultado = data;
                 if (resultado.respuesta == 'exito') {
                     swal({
-                        title: "Correcto", text: "Se guardo correctamente!", type:
+                        title: "Correcto", text: "¡Se guardó correctamente!", type:
                             "success"
                     }).then(function () {
                         location.href = "../vistas/mantenimiento_estadonoti_vista";
@@ -206,7 +206,7 @@ $(document).ready(function () {
                 } else {
                     swal(
                         'Error',
-                        'Hubo un error!',
+                        '¡Hubo un error!',
                         'error'
                     )
                 }
@@ -228,7 +228,7 @@ $(document).ready(function () {
                 if (resultado.respuesta == 'exito') {
                     swal({
                         title: "Correcto",
-                        text: "Se guardo correctamente!",
+                        text: "¡Se guardó correctamente!",
                         type: "success"
                     }).then(function () {
                         location.href = "../vistas/mantenimiento_actareunion_vista";
@@ -237,7 +237,7 @@ $(document).ready(function () {
                 } else {
                     swal(
                         'Error',
-                        'Hubo un error!',
+                        '¡Hubo un error!',
                         'error'
                     )
                 }
@@ -258,7 +258,7 @@ $(document).ready(function () {
                 var resultado = data;
                 if (resultado.respuesta == 'exito') {
                     swal({
-                        title: "Correcto", text: "Se guardo correctamente!", type:
+                        title: "Correcto", text: "¡Se guardó correctamente!", type:
                             "success"
                     }).then(function () {
                         location.href = "../vistas/mantenimiento_estadoacta_vista";
@@ -267,7 +267,7 @@ $(document).ready(function () {
                 } else {
                     swal(
                         'Error',
-                        'Hubo un error!',
+                        '¡Hubo un error!',
                         'error'
                     )
                 }
@@ -288,7 +288,7 @@ $(document).ready(function () {
                 var resultado = data;
                 if (resultado.respuesta == 'exito') {
                     swal({
-                        title: "Correcto", text: "Se guardo correctamente!", type:
+                        title: "Correcto", text: "¡Se guardó correctamente!", type:
                             "success"
                     }).then(function () {
                         location.href = "../vistas/mantenimiento_estadoreunion_vista";
@@ -297,7 +297,7 @@ $(document).ready(function () {
                 } else {
                     swal(
                         'Error',
-                        'Hubo un error!',
+                        '¡Hubo un error!',
                         'error'
                     )
                 }
@@ -318,7 +318,7 @@ $(document).ready(function () {
                 var resultado = data;
                 if (resultado.respuesta == 'exito') {
                     swal({
-                        title: "Correcto", text: "Se guardo correctamente!", type:
+                        title: "Correcto", text: "¡Se guardó correctamente!", type:
                             "success"
                     }).then(function () {
                         location.href = "../vistas/mantenimiento_estadoacuerdo_vista";
@@ -327,7 +327,7 @@ $(document).ready(function () {
                 } else {
                     swal(
                         'Error',
-                        'Hubo un error!',
+                        '¡Hubo un error!',
                         'error'
                     )
                 }
@@ -341,13 +341,13 @@ $(document).ready(function () {
         var tipo = $(this).attr('data-tipo');
         swal({
             title: '¿Está Seguro?',
-            text: 'Si lo elimina no podra revertirlo!!',
+            text: '¡Si lo elimina no podra revertirlo!!',
             type: 'warning',
             showCancelButton: true,
             allowOutsideClick: false, //bloquear click fuera
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Si, Eliminarlo!',
+            confirmButtonText: 'Sí ¡Eliminarlo!',
             cancelButtonText: 'Cancelar'
         }).then(function () {
             $.ajax({
@@ -361,14 +361,14 @@ $(document).ready(function () {
                     var resultado = JSON.parse(data);
                     if (resultado.respuesta == 'exito') {
                         swal(
-                            'Eliminado!',
-                            'Eliminado con Exito!',
+                            '¡Eliminado!',
+                            'Eliminado con Exito',
                             'success'
                         )
                         jQuery('[data-id="' + resultado.id_eliminado + '"]').parents('tr').remove();
                     } else {
                         swal(
-                            'Error!',
+                            '¡Error!',
                             'No se pudo eliminar',
                             'error'
                         )
@@ -384,13 +384,13 @@ $(document).ready(function () {
         var tipo = $(this).attr('data-tipo');
         swal({
             title: '¿Está Seguro?',
-            text: 'Si la cancela no podra revertirlo!!',
+            text: '¡Si la cancela no podrá revertirlo!',
             type: 'warning',
             showCancelButton: true,
             allowOutsideClick: false, //bloquear click fuera
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Si, cancelarla!',
+            confirmButtonText: 'Sí ¡Cancelarla!',
             cancelButtonText: 'Cancelar'
         }).then(function () {
             $.ajax({
@@ -404,8 +404,8 @@ $(document).ready(function () {
                     var resultado = JSON.parse(data);
                     if (resultado.respuesta == 'exito') {
                         swal({
-                            title: "cancelado",
-                            text: "cancelada con Exito!",
+                            title: "Cancelado",
+                            text: "¡Cancelada con éxito!",
                             type: "success"
                         }).then(function () {
                             location.href = "../vistas/reuniones_pendientes_vista";
@@ -413,7 +413,7 @@ $(document).ready(function () {
                         );
                     } else {
                         swal(
-                            'Error!',
+                            '¡Error!',
                             'No se pudo cancelar',
                             'error'
                         )
@@ -429,13 +429,13 @@ $(document).ready(function () {
         var estado = $(this).attr('data-tipo');
         swal({
             title: '¿Está Seguro?',
-            text: 'Desea elimar el archivo',
+            text: '¿Desea elimar el archivo?',
             type: 'warning',
             showCancelButton: true,
             allowOutsideClick: false, //bloquear click fuera
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Si, Eliminarlo!',
+            confirmButtonText: 'Sí ¡Eliminarlo!',
             cancelButtonText: 'Cancelar'
         }).then(function () {
             $.ajax({
@@ -449,14 +449,14 @@ $(document).ready(function () {
                     var resultado = JSON.parse(data);
                     if (resultado.respuesta == 'exito') {
                         swal(
-                            'Eliminado!',
-                            'Eliminado con Exito!',
+                            '¡Eliminado!',
+                            '¡Eliminado con éxito!',
                             'success'
                         )
                         jQuery('[data-id="' + resultado.id_eliminado + '"]').parents('tr').remove();
                     } else {
                         swal(
-                            'Error!',
+                            '¡Error!',
                             'No se pudo eliminar',
                             'error'
                         )
@@ -472,13 +472,13 @@ $(document).ready(function () {
         var estado = $(this).attr('data-tipo');
         swal({
             title: '¿Está Seguro?',
-            text: 'Si lo elimina no podra revertirlo!!',
+            text: '¡Si lo elimina no podrá revertirlo!',
             type: 'warning',
             showCancelButton: true,
             allowOutsideClick: false, //bloquear click fuera
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Si, Eliminarlo!',
+            confirmButtonText: 'Sí ¡Eliminarlo!',
             cancelButtonText: 'Cancelar'
         }).then(function () {
             $.ajax({
@@ -492,14 +492,14 @@ $(document).ready(function () {
                     var resultado = JSON.parse(data);
                     if (resultado.respuesta == 'exito') {
                         swal(
-                            'Eliminado!',
-                            'Eliminado con Exito!',
+                            '¡Eliminado!',
+                            '¡Eliminado con éxito!',
                             'success'
                         )
                         jQuery('[data-id="' + resultado.id_eliminado + '"]').parents('tr').remove();
                     } else {
                         swal(
-                            'Error!',
+                            '¡Error!',
                             'No se pudo eliminar',
                             'error'
                         )
@@ -515,13 +515,13 @@ $(document).ready(function () {
         var estado = $(this).attr('data-tipo');
         swal({
             title: '¿Está Seguro?',
-            text: 'Si lo elimina no podra revertirlo!!',
+            text: '¡Si lo elimina no podrá revertirlo!',
             type: 'warning',
             showCancelButton: true,
             allowOutsideClick: false, //bloquear click fuera
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Si, Eliminarlo!',
+            confirmButtonText: 'Sí ¡Eliminarlo!',
             cancelButtonText: 'Cancelar'
         }).then(function () {
             $.ajax({
@@ -535,14 +535,14 @@ $(document).ready(function () {
                     var resultado = JSON.parse(data);
                     if (resultado.respuesta == 'exito') {
                         swal(
-                            'Eliminado!',
-                            'Eliminado con Exito!',
+                            '¡Eliminado!',
+                            '¡Eliminado con éxito!',
                             'success'
                         )
                         jQuery('[data-id="' + resultado.id_eliminado + '"]').parents('tr').remove();
                     } else {
                         swal(
-                            'Error!',
+                            '¡Error!',
                             'No se pudo eliminar',
                             'error'
                         )
@@ -558,13 +558,13 @@ $(document).ready(function () {
         var estado = $(this).attr('data-tipo');
         swal({
             title: '¿Está Seguro?',
-            text: 'Si lo elimina no podra revertirlo!!',
+            text: '¡Si lo elimina no podrá revertirlo!',
             type: 'warning',
             showCancelButton: true,
             allowOutsideClick: false, //bloquear click fuera
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Si, Eliminarlo!',
+            confirmButtonText: 'Sí ¡Eliminarlo!',
             cancelButtonText: 'Cancelar'
         }).then(function () {
             $.ajax({
@@ -578,14 +578,14 @@ $(document).ready(function () {
                     var resultado = JSON.parse(data);
                     if (resultado.respuesta == 'exito') {
                         swal(
-                            'Eliminado!',
-                            'Eliminado con Exito!',
+                            '¡Eliminado!',
+                            '¡Eliminado con éxito!',
                             'success'
                         )
                         jQuery('[data-id="' + resultado.id_eliminado + '"]').parents('tr').remove();
                     } else {
                         swal(
-                            'Error!',
+                            '¡Error!',
                             'No se pudo eliminar',
                             'error'
                         )
@@ -601,13 +601,13 @@ $(document).ready(function () {
         var estado = $(this).attr('data-tipo');
         swal({
             title: '¿Está Seguro?',
-            text: 'Si lo elimina no podra revertirlo!!',
+            text: '¡Si lo elimina no podrá revertirlo!',
             type: 'warning',
             showCancelButton: true,
             allowOutsideClick: false, //bloquear click fuera
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Si, Eliminarlo!',
+            confirmButtonText: 'Sí ¡Eliminarlo!',
             cancelButtonText: 'Cancelar'
         }).then(function () {
             $.ajax({
@@ -621,14 +621,14 @@ $(document).ready(function () {
                     var resultado = JSON.parse(data);
                     if (resultado.respuesta == 'exito') {
                         swal(
-                            'Eliminado!',
-                            'Eliminado con Exito!',
+                            '¡Eliminado!',
+                            '¡Eliminado con éxito!',
                             'success'
                         )
                         jQuery('[data-id="' + resultado.id_eliminado + '"]').parents('tr').remove();
                     } else {
                         swal(
-                            'Error!',
+                            '¡Error!',
                             'No se pudo eliminar',
                             'error'
                         )
@@ -644,13 +644,13 @@ $(document).ready(function () {
         var estado = $(this).attr('data-tipo');
         swal({
             title: '¿Está Seguro?',
-            text: 'Si lo elimina no podra revertirlo!!',
+            text: '¡Si lo elimina no podrá revertirlo!',
             type: 'warning',
             showCancelButton: true,
             allowOutsideClick: false, //bloquear click fuera
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Si, Eliminarlo!',
+            confirmButtonText: 'Sí ¡Eliminarlo!',
             cancelButtonText: 'Cancelar'
         }).then(function () {
             $.ajax({
@@ -664,14 +664,14 @@ $(document).ready(function () {
                     var resultado = JSON.parse(data);
                     if (resultado.respuesta == 'exito') {
                         swal(
-                            'Eliminado!',
-                            'Eliminado con Exito!',
+                            '¡Eliminado!',
+                            '¡Eliminado con éxito!',
                             'success'
                         )
                         jQuery('[data-id="' + resultado.id_eliminado + '"]').parents('tr').remove();
                     } else {
                         swal(
-                            'Error!',
+                            '¡Error!',
                             'No se pudo eliminar',
                             'error'
                         )
@@ -694,10 +694,10 @@ $(document).ready(function () {
                 var resultado = data;
                 if (resultado.respuesta == 'exito') {
                     swal({
-                        title: "Correcto", text: "Se guardo correctamente!",
+                        title: "Correcto", text: "¡Se guardó correctamente!",
                         type: "success",
                         confirmButtonText: "Ir a Acuerdos Pendientes",
-                        html: `<h3>El Acuerdo se guardo con Exito!</h3>
+                        html: `<h3>¡El acuerdo se guardó con éxito!</h3>
                                 <br>
                                 ¿Desea agregar otro acuerdo?
                                 <br>
@@ -709,7 +709,7 @@ $(document).ready(function () {
                 } else {
                     swal(
                         'Error',
-                        'Hubo un error el nombre del acuerdo ya existe o falta un campo por llenar!',
+                        '¡Hubo un error, el nombre del acuerdo ya existe o falta un campo por llenar!',
                         'error'
                     )
                 }
@@ -730,7 +730,7 @@ $(document).ready(function () {
                 var resultado = data;
                 if (resultado.respuesta == 'exito') {
                     swal({
-                        title: "Correcto", text: "Se guardo correctamente!",
+                        title: "Correcto", text: "¡Se guardó correctamente!",
                         type: "success",
                     }).then(function () {
                         location.href = "../vistas/acuerdos_pendientes_vista";
@@ -739,7 +739,7 @@ $(document).ready(function () {
                 } else {
                     swal(
                         'Error',
-                        'Hubo un error, no se modifico nada o falta un campo por llenar!',
+                        '¡Hubo un error, no se modificó nada o falta un campo por llenar!',
                         'error'
                     )
                 }
@@ -753,13 +753,13 @@ $(document).ready(function () {
         var estado = $(this).attr('data-tipo');
         swal({
             title: '¿Está Seguro?',
-            text: 'El responsable cumplio con la tarea asignada?',
+            text: '¿El responsable cumplió con la tarea asignada?',
             type: 'warning',
             showCancelButton: true,
             allowOutsideClick: false, //bloquear click fuera
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Si, Finalizar!',
+            confirmButtonText: 'Sí ¡Finalizar!',
             cancelButtonText: 'Cancelar'
         }).then(function () {
             $.ajax({
@@ -774,8 +774,8 @@ $(document).ready(function () {
                     var resultado = JSON.parse(data);
                     if (resultado.respuesta == 'exito') {
                         swal({
-                            title: 'Finalizada!',
-                            text: 'Finalizada con Exito!',
+                            title: '¡Finalizada!',
+                            text: '¡Finalizada con éxito!',
                             type: 'success'
                         }).then(function () {
                             location.href = "../vistas/acuerdos_pendientes_vista";
@@ -783,8 +783,8 @@ $(document).ready(function () {
                         );
                     } else {
                         swal(
-                            'Error!',
-                            'No se pudo Finalizada',
+                            '¡Error!',
+                            'No se pudo Finalizar',
                             'error'
                         )
                     }
@@ -820,15 +820,15 @@ $(document).ready(function () {
                 var resultado = JSON.parse(data);
                 if (resultado.respuesta == 'exito') {
                     swal({
-                        title: "cancelada",
-                        text: "<h5>¡Reunión cancelada con Éxito!</h5>",
+                        title: "Cancelada",
+                        text: "<h5>¡Reunión cancelada con éxito!</h5>",
                         type: "success"
                     }).then(function () {
                         location.href = "../vistas/reuniones_pendientes_vista";
                     });
                 } else {
                     swal(
-                        'Error!',
+                        '¡Error!',
                         'No se pudo cancelar',
                         'error'
                     )
@@ -844,13 +844,13 @@ $(document).ready(function () {
         var estado = $(this).attr('data-tipo');
         swal({
             title: '¿Está Seguro?',
-            text: 'Si lo cancelar no podra revertirlo y se notificará al responsable!!<br><br><b>Escriba el motivo por lo cual cancela el acuerdo</b><br><br><input class="form-control" onkeyup="mayus(this);" id="mensaje" style="width: 65%; margin-left: 17%;" required name="mensaje" type="text">',
+            text: '¡Si lo cancela no podrá revertirlo y se notificará al responsable!!<br><br><b>Escriba el motivo por lo cual cancela el acuerdo</b><br><br><input class="form-control" onkeyup="mayus(this);" id="mensaje" style="width: 65%; margin-left: 17%;" required name="mensaje" type="text">',
             type: 'warning',
             showCancelButton: true,
             allowOutsideClick: false, //bloquear click fuera
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Si, Cancelarlo!',
+            confirmButtonText: 'Sí ¡Cancelarlo!',
             cancelButtonText: 'Cancelar'
         }).then(function () {
             $.ajax({
@@ -865,8 +865,8 @@ $(document).ready(function () {
                     var resultado = JSON.parse(data);
                     if (resultado.respuesta == 'exito') {
                         swal({
-                            title: 'Cancelado!',
-                            text: 'acuerdo cancelado con Exito!',
+                            title: '¡Cancelado!',
+                            text: 'Acuerdo cancelado con éxito',
                             type: 'success'
                         }).then(function () {
                             location.href = "../vistas/acuerdos_pendientes_vista";
@@ -874,8 +874,8 @@ $(document).ready(function () {
                         );
                     } else {
                         swal(
-                            'Error!',
-                            'No se pudo Cancelar',
+                            '¡Error!',
+                            'No se pudo cancelar',
                             'error'
                         )
                     }

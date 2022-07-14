@@ -32,26 +32,26 @@ $(document).ready(function(){
             var closeAlert;
             if(type_form==="save"){
                 title_alert="¿Quieres almacenar los datos?";
-                text_alert="Los datos se almacenaran en el sistema";
+                text_alert="Los datos se almacenarán en el sistema";
                 type_alert="info";
                 confirmButtonColor_alert="#3598D9";
-                confirmButtonText_alert="Si, almacenar";
+                confirmButtonText_alert="Sí, almacenar";
                 closeAlert=false;
             }
             if(type_form==="saveLoan"){
                 title_alert="¿Quieres realizar el préstamo?";
-                text_alert="El préstamo quedara registrado en el sistema con los datos proporcionados";
+                text_alert="El préstamo quedará registrado en el sistema con los datos proporcionados";
                 type_alert="info";
                 confirmButtonColor_alert="#3598D9";
-                confirmButtonText_alert="Si, realizar";
+                confirmButtonText_alert="Sí, realizar";
                 closeAlert=false;
             }
             if(type_form==="saveReservation"){
                 title_alert="¿Quieres realizar la reservación?";
-                text_alert="La reservación quedara registrada en el sistema con tus datos";
+                text_alert="La reservación quedará registrada en el sistema con tus datos";
                 type_alert="info";
                 confirmButtonColor_alert="#3598D9";
-                confirmButtonText_alert="Si, realizar";
+                confirmButtonText_alert="Sí, realizar";
                 closeAlert=false;
             }
             if(type_form==="delete"){
@@ -59,23 +59,23 @@ $(document).ready(function(){
                 text_alert="Al eliminar estos datos no podrás recuperarlos después";
                 type_alert="warning";
                 confirmButtonColor_alert="#C9302C";
-                confirmButtonText_alert="Si, eliminar";
+                confirmButtonText_alert="Sí, eliminar";
                 closeAlert=false;
             }
             if(type_form==="deleteReservation"){
                 title_alert="¿Quieres eliminar la reservación?";
-                text_alert="La reservación se eliminara de forma permanente";
+                text_alert="La reservación se eliminará de forma permanente";
                 type_alert="warning";
                 confirmButtonColor_alert="#C9302C";
-                confirmButtonText_alert="Si, eliminar";
+                confirmButtonText_alert="Sí, eliminar";
                 closeAlert=false;
             }
             if(type_form==="update"){
                 title_alert="¿Quieres actualizar los datos?";
-                text_alert="Los datos se actualizaran y no podras recuperar los datos anteriores";
+                text_alert="Los datos se actualizarán y no podrás recuperar los anteriores";
                 type_alert="info";
                 confirmButtonColor_alert="#16a085";
-                confirmButtonText_alert="Si, actualizar";
+                confirmButtonText_alert="Sí, actualizar";
                 closeAlert=false;
             }
             if(type_form==="receiveLoan"){
@@ -83,15 +83,15 @@ $(document).ready(function(){
                 text_alert="El préstamo quedará como entregado y no podrás deshacer los cambios";
                 type_alert="info";
                 confirmButtonColor_alert="#16a085";
-                confirmButtonText_alert="Si, recibir";
+                confirmButtonText_alert="Sí, recibir";
                 closeAlert=false;
             }
             if(type_form==="approveReservation"){
                 title_alert="¿Quieres aprobar el préstamo?";
-                text_alert="La reservación será aprobada, y se cambiará a devoluciones pendientes";
+                text_alert="La reservación será aprobada y se cambiará a devoluciones pendientes";
                 type_alert="info";
                 confirmButtonColor_alert="#16a085";
-                confirmButtonText_alert="Si, aprobar";
+                confirmButtonText_alert="Sí, aprobar";
                 closeAlert=false;
             }
             if(type_form==="updateAccounAdmin"){
@@ -99,7 +99,7 @@ $(document).ready(function(){
                 text_alert="Puedes activar o desactivar la cuenta del administrador en cualquier momento";
                 type_alert="info";
                 confirmButtonColor_alert="#16a085";
-                confirmButtonText_alert="Si, realizar";
+                confirmButtonText_alert="Sí, realizar";
                 closeAlert=false;
             }
             if(type_form==="restorePoint"){
@@ -107,7 +107,7 @@ $(document).ready(function(){
                 text_alert="El sistema se restaurará al punto que has seleccionado. Ten en cuenta que se perderán todos los datos que no se hayan guardado en la copia de seguridad que has seleccionado";
                 type_alert="warning";
                 confirmButtonColor_alert="#286090";
-                confirmButtonText_alert="Si, restaurar";
+                confirmButtonText_alert="Sí, restaurar";
                 closeAlert=true;
             }
             if(type_form==="deleteBackup"){
@@ -115,7 +115,7 @@ $(document).ready(function(){
                 text_alert="Todas las copias de seguridad del sistema se eliminarán permanentemente y no podrás recuperarlas";
                 type_alert="warning";
                 confirmButtonColor_alert="#C9302C";
-                confirmButtonText_alert="Si, eliminar";
+                confirmButtonText_alert="Sí, eliminar";
                 closeAlert=false;
             }
             swal({

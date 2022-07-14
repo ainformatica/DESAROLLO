@@ -76,14 +76,14 @@ $("#guardar_usuario").click(function () {
     txt_confirmar_contrasena.length == 0
   ) {
     swal({
-      title: "alerta",
-      text: "Llene o seleccione los campos vacios correctamente",
+      title: "¡Alerta!",
+      text: "Llene o seleccione los campos vacíos correctamente",
       type: "warning",
       showConfirmButton: true,
       timer: 15000,
     });
   } else if (cbm_persona == 0 || cbm_rol == 0) {
-    swal("Alerta!", "Seleccione una opción válida", "warning");
+    swal("¡Alerta!", "Seleccione una opción válida", "warning");
   } else {
     
     $.post(
@@ -117,15 +117,15 @@ $("#guardar_usuario").click(function () {
           }).done(function (resp) {
             if (resp > 0) {
               swal(
-                "Buen trabajo!",
-                "datos ingresados correctamente!",
+                "¡Buen trabajo!",
+                "Datos ingresados correctamente",
                 "success"
               );
               location.reload();
             } else {
               swal(
-                "Alerta!",
-                "No se pudo completar intente de nuevo!",
+                "¡Alerta!",
+                "No se pudo completar la acción, intente de nuevo",
                 "warning"
               );
               //document.getElementById("txt_registro").value = "";

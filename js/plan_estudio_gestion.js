@@ -97,8 +97,8 @@ $("#tabla_plan_estudio").on("click", ".cambiar", function () {
 
   // alert("la vigencia cambio");
   swal({
-    title: "Estas seguro?",
-    text: "Cambiar la vigencia del " + nombre + "?",
+    title: "¿Estás seguro?",
+    text: "¿Deseas cambiar la vigencia del " + nombre + "?",
     icon: "warning",
     buttons: true,
     dangerMode: true,
@@ -136,7 +136,7 @@ function cambiarVigenciaPlan(id_plan, vigencia, activo, uv, nombre) {
           //validando la suma de uv de asignaturas del plan con los creditos del plan
           if (data.uv_asig != uv) {
             swal(
-              "Alerta!",
+              "¡Alerta!",
               "El " +
                 nombre +
                 " no cumple con el requisito de las UV necesarias para ponerse en vigencia.",
@@ -162,7 +162,7 @@ function cambiarVigenciaPlan(id_plan, vigencia, activo, uv, nombre) {
       );
     } else {
       swal(
-        "Alerta!",
+        "¡Alerta!",
         "El " +
           nombre +
           " ya estuvo activo, su vigencia no puede ser cambiada.",
@@ -205,11 +205,11 @@ function ponerVigentePlanNo(
     },
   }).done(function (resp) {
     if (resp > 0) {
-      swal("Buen trabajo!", "datos actualizados correctamente!", "success");
+      swal("¡Buen trabajo!", "Datos actualizados correctamente", "success");
       //  document.getElementById("txt_registro").value = "";
       table.ajax.reload();
     } else {
-      swal("Alerta!", "No se pudo completar la actualización", "warning");
+      swal("¡Alerta!", "No se pudo completar la actualización", "warning");
       //document.getElementById("txt_registro").value = "";
     }
   });
@@ -234,11 +234,11 @@ function ponerVigenciaPlanSi(vigencia_no, estado_inactivo_asig, id_plan,nombre) 
     },
   }).done(function (resp) {
     if (resp > 0) {
-      swal("Buen trabajo!", "datos actualizados correctamente!", "success");
+      swal("¡Buen trabajo!", "Datos actualizados correctamente", "success");
       //  document.getElementById("txt_registro").value = "";
       table.ajax.reload();
     } else {
-      swal("Alerta!", "No se pudo completar la actualización", "warning");
+      swal("¡Alerta!", "No se pudo completar la actualización", "warning");
       //document.getElementById("txt_registro").value = "";
     }
   });
@@ -335,14 +335,14 @@ $("#guardar").click(function () {
     txt_creditos_plan.length==0
   ) {
     swal({
-      title: "alerta",
-      text: "Llene o seleccione los campos vacios correctamente",
+      title: "¡Alerta!",
+      text: "Llene o seleccione los campos vacíos correctamente",
       type: "warning",
       showConfirmButton: true,
       timer: 15000,
     });
   } else if (cbm_tipo_plan == 0) {
-    swal("Alerta!", "Seleccione una opción válida de tipo de plan", "warning");
+    swal("¡Alerta!", "Seleccione una opción válida de tipo de plan", "warning");
    
 
   } else {
@@ -354,8 +354,8 @@ $("#guardar").click(function () {
     } else { */
        if (txt_creditos_plan < credito_min || txt_creditos_plan > credito_max) {
          swal(
-           "Alerta!",
-           "Los créditos del plan no puede ser menor o sobrepasar lo establecido para una licenciatura",
+           "¡Alerta!",
+           "Los créditos del plan no pueden ser menores o sobrepasar lo establecido para una licenciatura",
            "warning"
          );
        } else {
@@ -375,8 +375,8 @@ $("#guardar").click(function () {
          }).done(function (resp) {
            if (resp > 0) {
              swal(
-               "Buen trabajo!",
-               "datos actualizados correctamente!",
+               "¡Buen trabajo!",
+               "Datos actualizados correctamente",
                "success"
              );
              $("#modal_editar").modal("hide");
@@ -384,7 +384,7 @@ $("#guardar").click(function () {
              table.ajax.reload();
            } else {
              swal(
-               "Alerta!",
+               "¡Alerta!",
                "No se pudo completar la actualización",
                "warning"
              );

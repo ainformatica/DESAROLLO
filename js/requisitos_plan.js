@@ -698,10 +698,10 @@ $("#guardar_nueva_requi").click(function () {
   if (cbm_asignaturas == null || cbm_requisito ==null) {
     alert("Seleccione los campos correctamente");
   } else if (cbm_asignaturas == 0 ||plan ==0) {
-    alert("seleccione una opcion valida");
+    alert("Seleccione una opción válida");
   } else {
     if (cbm_asignaturas==cbm_requisito) {
-      alert("la asignatura no puedeser requisito de si misma!");
+      alert("La asignatura no puede ser requisito de sí misma");
     } else {
        $.post(
          "../Controlador/plan_estudio_controlador.php?op=consAsigRequ",
@@ -713,7 +713,7 @@ $("#guardar_nueva_requi").click(function () {
            data = JSON.parse(data);
 
            if (data.suma > 0) {
-             alert("La asignatura ya cuenta con ese requisito!");
+             alert("¡La asignatura ya cuenta con ese requisito!");
            } else {
              $.ajax({
                url: "../Controlador/requisito_asignatura_plan_controlador.php",
@@ -725,8 +725,8 @@ $("#guardar_nueva_requi").click(function () {
              }).done(function (resp) {
                if (resp > 0) {
                  swal(
-                   "Buen trabajo!",
-                   "datos insertados correctamente!",
+                   "¡Buen trabajo!",
+                   "Datos insertados correctamente",
                    "success"
                  );
                  $("#modal_nueva_requi").modal("hide");
@@ -734,7 +734,7 @@ $("#guardar_nueva_requi").click(function () {
                  //  document.getElementById("txt_registro").value = "";
                  table.ajax.reload();
                } else {
-                 swal("Alerta!", "No se pudo completar", "warning");
+                 swal("¡Alerta!", "No se pudo completar", "warning");
                  //document.getElementById("txt_registro").value = "";
                }
              });

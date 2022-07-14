@@ -139,7 +139,7 @@ function listar()
         exportOptions: {
             columns: [1, 2, 3],     
              },
-     title: 'Registro de Faltas Alumnos Historial ',
+     title: 'Registro de Faltas Alumnos Historial',
     messageTop: "FECHA: " + fecha + " HORA: " + hora,
 
      customize: function (doc) {

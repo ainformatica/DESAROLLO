@@ -25,15 +25,15 @@ button.addEventListener('click', function (e) {
                     $('#exampleModal').modal('toggle');
                     $('#tabla_poa').DataTable().ajax.reload();
                     swal(
-                        'Exito!',
+                        '¡Éxito!',
                         '¡Datos subidos correctamente!',
                         'success'
                     )
                     document.getElementById("poa_form").reset();
                 } else if (data == 'año_viejo') {
                     swal(
-                        '¡año incorrecto!',
-                        '¡Verifique que el año sea mayor o igual que el año actual!',
+                        '¡Año incorrecto!',
+                        '¡Verifique que el año sea mayor o igual que el actual!',
                         'info'
                     )
                 } else if (data == 'anio_existe') {
@@ -45,7 +45,7 @@ button.addEventListener('click', function (e) {
                 } else {
                     swal(
                         'Oops...',
-                        'algo ocurrio mal!',
+                        '¡Algo ocurrió mal!',
                         'error'
                     )
                 }
@@ -72,7 +72,7 @@ button_edit.addEventListener('click', function (e) {
                 $('#exampleModal').modal('toggle');
                 $('#tabla_poa').DataTable().ajax.reload();
                 swal(
-                    'Exito!',
+                    '¡Éxito!',
                     '¡Datos editados correctamente!',
                     'success'
                 )

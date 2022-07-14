@@ -110,8 +110,8 @@ $("#guardar_persona").click(function() {
         telefono_persona.length == 0
     ) {
         swal({
-            title: "alerta",
-            text: "Llene los campos vacios correctamente",
+            title: "¡Alerta!",
+            text: "Llene los campos vacíos correctamente",
             type: "warning",
             showConfirmButton: true,
             timer: 15000,
@@ -122,10 +122,10 @@ $("#guardar_persona").click(function() {
         estado_civil_persona == 0 ||
         nacionalidad_persona == 0
     ) {
-        swal("Alerta!", "Seleccione una opción válida", "warning");
+        swal("¡Alerta!", "Seleccione una opción válida", "warning");
     } else {
         if (foto == "") {
-            swal("Alerta!", "Seleccione una foto válida", "warning");
+            swal("¡Alerta!", "Seleccione una foto válida", "warning");
         } else {
             if (
                 selected_tipo_persona == "ESTUDIANTE" ||
@@ -195,7 +195,7 @@ function registrarEstudiante(
             data = JSON.parse(data);
 
             if (data.registro > 0) {
-                alert("Ya existe una persona con ese cuenta");
+                alert("Ya existe una persona con ese número de cuenta");
             } else {
                 bloquea();
                 $.ajax({
@@ -222,8 +222,8 @@ function registrarEstudiante(
                         Registrar();
                     } else {
                         swal(
-                            "Alerta!",
-                            "No se pudo completar intente de nuevo!",
+                            "¡Alerta!",
+                            "No se pudo completar la acción, intente de nuevo",
                             "warning"
                         );
                         //document.getElementById("txt_registro").value = "";
@@ -287,8 +287,8 @@ function registrarAdministrativo(
 
                     } else {
                         swal(
-                            "Alerta!",
-                            "No se pudo completar intente de nuevo!",
+                            "¡Alerta!",
+                            "No se pudo completar la acción, intente de nuevo",
                             "warning"
                         );
                         //document.getElementById("txt_registro").value = "";
@@ -329,14 +329,14 @@ function Registrar() {
             if (respuesta != 0) {
                 //Swal('Mensaje De Confirmacion', 'Se subio fotografia con exito', 'success');
                 swal(
-                    "Buen trabajo!",
-                    "datos ingresados correctamente!",
+                    "¡Buen trabajo!",
+                    "Datos ingresados correctamente",
                     "success"
                 );
 
                 location.reload();
             } else {
-                swal("Alerta!", "intenta de nuevo", "warning");
+                swal("¡Alerta!", "intenta de nuevo", "warning");
 
             }
         }

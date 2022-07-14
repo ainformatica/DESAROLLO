@@ -29,14 +29,14 @@ $("#guardar").click(function () {
   ) {
     alert("Llene todos los campos");
   } else if (cbm_tipo_plan == 0) {
-    alert("Seleccione tipo de plan valido")
+    alert("Seleccione tipo de plan válido")
   } else {
         
     
      if ( txt_creditos_plan != credito_max) {
       
       alert(
-        "Los créditos del plan no puede ser distinto a lo establecido para una licenciatura"
+        "Los créditos del plan no pueden ser distintos a los establecidos para una licenciatura"
       );
     } else {
       insertar(
@@ -80,7 +80,7 @@ function insertar(
 ) {
   swal({
     title: "Alerta",
-    text: "Porfavor espere!",
+    text: "¡Por favor espere!",
     type: "warning",
     showConfirmButton: false,
     timer: 15000,
@@ -119,15 +119,15 @@ function insertar(
           if (resp > 0) {
             
             swal(
-              "Buen trabajo!",
-              "datos insertados correctamente!",
+              "¡Buen trabajo!",
+              "Datos insertados correctamente",
               "success"
             );
             //  document.getElementById("txt_registro").value = "";
             limpiarInputs();
           
           } else {
-            swal("Alerta!", "No se pudo completar la actualización", "warning");
+            swal("¡Alerta!", "No se pudo completar la actualización", "warning");
             //document.getElementById("txt_registro").value = "";
           }
         });
