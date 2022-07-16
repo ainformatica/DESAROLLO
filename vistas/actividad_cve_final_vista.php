@@ -19,7 +19,7 @@ if($visualizacion==0){
   echo '<script type="text/javascript">
   swal({
     title:"",
-    text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+    text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
     type: "error",
     showConfirmButton: false,
     timer: 3000
@@ -83,11 +83,11 @@ if($visualizacion==0){
                  </div>
                   <thead>
                     <th>Opciones</th>
-                    <th>No de Solicitud</th>
+                    <th>No. de Solicitud</th>
                     <th>Fecha</th>
-                    <th>Nombre Solicitud</th>
+                    <th>Nombre de Solicitud</th>
                     <th>Usuario</th>
-                    <th>Periodo</th>
+                    <th>Período</th>
                     <th>Estado</th>
 
                   </thead>
@@ -129,18 +129,18 @@ if($visualizacion==0){
                       <!-- Ubicacion de la Actividad -->
                       <div class="col-sm-6">
                         <div class="form-group">
-                          <label>Ubicacion</label>
+                          <label>Ubicación</label>
                           <input type="text" class="form-control" name="ubicacion" id="ubicacion" maxlength="50" placeholder= "Ubicacion de la Actividad" required> 
                         </div>
                       </div>
                       <!-- Periodo Academico -->
                       <div class="col-sm-6">
                         <div class="form-group">
-                          <label>Periodo Academico:</label>
+                          <label>Período Académico:</label>
                           <select name="periodo" id="periodo"class="form-control" name="periodo" id="nombre" maxlength="50" placeholder="Seleccione el Periodo" required>
-                            <option value="Primer Periodo">Primer Periodo</option>
-                            <option value="Segundo Periodo">Segundo Periodo</option>
-                            <option value="Tercer Periodo">Tercer Periodo</option>
+                            <option value="Primer Periodo">Primer Período</option>
+                            <option value="Segundo Periodo">Segundo Período</option>
+                            <option value="Tercer Periodo">Tercer Período</option>
                           </select> 
                         </div>
                       </div>
@@ -231,7 +231,7 @@ if($visualizacion==0){
               <div class="form-group">
                <label>Ambito:</label>
                <select class="form-control select2" name="id_ambito" id="id_ambito" style="width: 100%;">
-                 <option value="0" disabled="disabled" >Seleccione un Ambito:</option>
+                 <option value="0" disabled="disabled" >Seleccione un Ámbito:</option>
                  <?php
                  $query = $mysqli -> query ("SELECT * FROM tbl_voae_ambitos where condicion = 1");
                  while ($resultado = mysqli_fetch_array($query)) {
@@ -292,7 +292,7 @@ if($visualizacion==0){
   $(document).ready(function() {
 
     $('.select2').select2({
-      placeholder: 'Seleccione una opcion',
+      placeholder: 'Seleccione una opción',
       theme: 'bootstrap4',
       tags: true,
     });

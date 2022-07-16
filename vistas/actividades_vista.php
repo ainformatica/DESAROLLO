@@ -17,7 +17,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -97,7 +97,7 @@ if ($visualizacion == 0) {
                                     <input type="text" class="form-control" id="n_actividad" name="n_actividad" maxlength="50" value="" style="text-transform: uppercase" onkeyup="DobleEspacio(this, event); MismaLetra('n_actividad');" oncopy="return false" onpaste="return false" onkeypress="return sololetras(event)" placeholder="Actividad" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="formGroupExampleInput2">Medios de Verificacion</label>
+                                    <label for="formGroupExampleInput2">Medios de Verificación</label>
                                     <input type="text" class="form-control" id="m_verificacion" name="m_verificacion" maxlength="50" value="" style="text-transform: uppercase" onkeyup="DobleEspacio(this, event); MismaLetra('m_verificacion');" oncopy="return false" onpaste="return false" onkeypress="return sololetras(event)" placeholder="Verificación" required>
                                 </div>
                                 <div class="form-group">

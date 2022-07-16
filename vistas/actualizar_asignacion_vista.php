@@ -29,7 +29,7 @@ if (isset($_REQUEST['msj'])) {
         echo '<script type="text/javascript">
     swal({
         title: "",
-        text: "Lo sentimos, tiene campos por rellenar",
+        text: "¡Lo sentimos! tiene campos por rellenar",
         type: "info",
         showConfirmButton: false,
         timer: 3000
@@ -42,7 +42,7 @@ if (isset($_REQUEST['msj'])) {
         echo '<script type="text/javascript">
     swal({
         title: "",
-        text: "Error al actualizar lo sentimos,intente de nuevo.",
+        text: "¡Lo sentimos! Error al actualizar,intente de nuevo.",
         type: "error",
         showConfirmButton: false,
         timer: 3000
@@ -69,7 +69,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -219,7 +219,7 @@ ob_end_flush();
 
                             <div class="col-md-6">
                                 <div class="form-group ">
-                                    <label class="control-label">Nueva Ubicación</label>
+                                    <label class="control-label">Nueva ubicación</label>
                                     <select class="form-control" id="cmb_ubicacion_modal" name="cmb_ubicacion_modal" required="">
                                         <!-- <option value="0"  >Seleccione una ubicación para reasignar:</option> -->
                                         <?php
@@ -263,7 +263,7 @@ ob_end_flush();
                                     date_default_timezone_set($timezone);
                                     $today = date("Y-m-d");
                                     ?>
-                                    <label>Nueva Fecha de Asignación</label>
+                                    <label>Nueva fecha de asignación</label>
                                     <input class="form-control" type="date" min="<?php echo date('Y'); ?>" id="nueva_fecha_asignacion" name="nueva_fecha_asignacion" maxlength="30" onkeyup="Espacio(this, event)" onblur="document.getElementById('nueva_fecha_asignacion').value=this.value" value="<?php echo $today; ?>" readonly>
                                 </div>
                             </div>

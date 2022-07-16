@@ -21,7 +21,7 @@ if (isset($_REQUEST['msj']))
     echo '<script type="text/javascript">
     swal({
      title:"",
-     text:"Lo sentimos tiene campos por rellenar",
+     text:"¡Lo sentimos! Tiene campos por rellenar",
      type: "info",
      showConfirmButton: false,
      timer: 4000
@@ -34,7 +34,7 @@ if ($msj==2)
      echo '<script type="text/javascript">
      swal({
        title:"",
-       text:"Los datos  se almacenaron correctamente",
+       text:"Los datos se almacenaron correctamente",
        type: "success",
        showConfirmButton: false,
        timer: 3000
@@ -47,7 +47,7 @@ if ($msj==2)
             echo '<script type="text/javascript">
        swal({
          title:"",
-         text:"Lo sentimos no se pudieron guardar los datos",
+         text:"¡Lo sentimos! No se pudieron guardar los datos",
          type: "error",
          showConfirmButton: false,
          timer: 3000
@@ -76,7 +76,7 @@ if ($msj==2)
        echo '<script type="text/javascript">
        swal({
          title:"",
-         text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+         text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
          type: "error",
          showConfirmButton: false,
          timer: 3000
@@ -266,7 +266,7 @@ $sql_datos_modal="SELECT px.valor as valor, concat(p.nombres,' ',p.apellidos) as
                     <thead>
                       <tr>
                        <th>NOMBRE COMPLETO</th>
-                       <th>CUENTA</th>   
+                       <th>NUMERO DE CUENTA</th>   
                        <th>PROCESO</th>
                        <th>EXPEDIENTE</th>                
                        <th>APROBAR PRACTICA</th>  
@@ -333,7 +333,7 @@ $sql_datos_modal="SELECT px.valor as valor, concat(p.nombres,' ',p.apellidos) as
   <div class="modal-dialog modal-xl">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title">Práctica  Profesional Supervisada</h4>
+        <h4 class="modal-title">Práctica Profesional Supervisada</h4>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -359,9 +359,9 @@ $sql_datos_modal="SELECT px.valor as valor, concat(p.nombres,' ',p.apellidos) as
 
               <div class="col-sm-6">
                <div class="form-group">
-                <label>Horas Practica</label>
+                <label>Horas Práctica</label>
                 <select class="form-control" name="cb_horas_practica" id="cb_horas_practica">
-                  <option value="0">Seleccione una opción :</option>
+                  <option value="0">Seleccione una opción:</option>
                   <option value="400">400</option>
                   <option value="800">800</option>
                 </select>

@@ -18,7 +18,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                             swal({
                             title:"",
-                            text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                            text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                             type: "error",
                             showConfirmButton: false,
                             timer: 3000
@@ -64,11 +64,11 @@ ob_end_flush();
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h4>Visualizacion de archivos del acta <br><b><?php echo $estado['num_acta']; ?></b></h1>
+                        <h4>Visualización de archivos del acta <br><b><?php echo $estado['num_acta']; ?></b></h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
-                            <li class="breadcrumb-item active">Visualizacion de archivos</li>
+                            <li class="breadcrumb-item active">Visualización de archivos</li>
                         </ol>
                     </div>
                 </div>
@@ -79,7 +79,7 @@ ob_end_flush();
             <table id="archivos" class="table table-bordered table-striped">
                 <thead>
                     <tr style="color: #3444d1;">
-                        <th>Nombre Archivo</th>
+                        <th>Nombre del Archivo</th>
                         <th>Formato</th>
                         <th>DESCARGAR</th>
                     </tr>
@@ -146,7 +146,7 @@ ob_end_flush();
                     zeroRecords: "Sin resultados encontrados",
                     paginate: {
                         first: "Primero",
-                        last: "Ultimo",
+                        last: "Último",
                         next: "Siguiente",
                         previous: "Anterior"
                     }

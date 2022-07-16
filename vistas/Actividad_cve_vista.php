@@ -19,7 +19,7 @@ if($visualizacion==0){
   echo '<script type="text/javascript">
       swal({
             title:"",
-            text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+            text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
             type: "error",
             showConfirmButton: false,
             timer: 3000
@@ -77,7 +77,7 @@ ob_end_flush();
                             <th>Opciones</th>
                             <th>Solicitud</th>
                             <th>Fecha</th>
-                            <th>Nombre Actividad</th>
+                            <th>Nombre de Actividad</th>
                             <th>Usuario</th>
                             
                           </thead>
@@ -88,7 +88,7 @@ ob_end_flush();
                     <div class="panel-body table-responsive" style="height: 800px;" id="formularioregistros">
               <form name="formulario" id="formulario" method="POST">
                 <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                  <label>No.Solicitud:</label>
+                  <label>No. de Solicitud:</label>
                   <input type="hidden" name="id_actividad_voae" id="id_actividad_voae">
                   <input type="text" class="form-control" name="no_solicitud" id="no_solicitud" maxlength="50" placeholder="Nombre" required>
                 </div>

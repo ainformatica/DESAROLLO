@@ -20,7 +20,7 @@ if($visualizacion==0){
   echo '<script type="text/javascript">
   swal({
     title:"",
-    text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+    text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
     type: "error",
     showConfirmButton: false,
     timer: 3000
@@ -88,11 +88,11 @@ ob_end_flush();
                  </div>
                   <thead>
                     <th>Opciones</th>
-                    <th>No de Solicitud</th>
+                    <th>No. de Solicitud</th>
                     <th>Fecha</th>
-                    <th>Nombre Solicitud</th>
+                    <th>Nombre de Solicitud</th>
                     <th>Usuario</th>
-                    <th>Periodo</th>
+                    <th>Período</th>
                     <th>Estado</th>
 
                   </thead>
@@ -128,7 +128,7 @@ ob_end_flush();
                         <!-- N de Solicitud -->
                         <div class="col-sm-6">
                           <div class="form-group">
-                           <label>No.Solicitud:</label>
+                           <label>No. de Solicitud:</label>
                            <input type="hidden" name="id_actividad_voae" id="id_actividad_voae">
                            <input type="text" class="form-control" name="no_solicitud" id="no_solicitud" maxlength="10" style="text-transform: uppercase "placeholder="No de Solicitud" oncopy="return false" onpaste="return false" required/>
                          </div>
@@ -143,14 +143,14 @@ ob_end_flush();
                       <!-- Ubicacion de la Actividad -->
                       <div class="col-sm-6">
                         <div class="form-group">
-                          <label>Ubicacion</label>
+                          <label>Ubicación</label>
                           <input type="text" class="form-control" oncopy="return false" onpaste="return false" name="ubicacion" id="ubicacion" maxlength="50" placeholder= "Ubicacion de la Actividad"onkeypress="return soloLetras(event)" required> 
                         </div>
                       </div>
                       <!-- Periodo Academico -->
                       <div class="col-sm-6">
                         <div class="form-group">
-                          <label>Periodo Academico:</label>
+                          <label>Período Académico:</label>
                           <select name="periodo" id="periodo"class="form-control-lg select2" oncopy="return false" onpaste="return false" name="periodo" id="nombre" maxlength="50" placeholder="Seleccione el Periodo" required>
                             <option value="PRIMER PERIODO">PRIMER PERIODO</option>
                             <option value="SEGUNDO PERIODO">SEGUNDO PERIODO</option>
@@ -214,14 +214,14 @@ ob_end_flush();
                 <!-- Descripcion -->
                 <div class="col-sm-6">
                   <div class="form-group">
-                   <label>Descripcion:</label>
+                   <label>Descripción:</label>
                    <input type="text" class="form-control" oncopy="return false" onpaste="return false" name="descripcion" onkeypress="return soloLetras(event)" id="descripcion" maxlength="50" onkeypress="return soloLetras(event)" placeholder="Descripcion" required>
                  </div>
                </div>
                <!-- Poblacion Objetivo -->
                <div class="col-sm-6">
                 <div class="form-group">
-                  <label>Poblacion Objetiva:</label>
+                  <label>Población Objetiva:</label>
                   <input type="text" class="form-control" oncopy="return false" onpaste="return false" onkeypress="return soloLetras(event)" name="poblacion_objetivo" id="poblacion_objetivo" maxlength="50" onkeypress="return soloLetras(event)" placeholder="Poblacion Objetiva" required>
                 </div>
               </div>
@@ -243,9 +243,9 @@ ob_end_flush();
             <!-- Ambito -->
             <div class="col-sm-6">
               <div class="form-group">
-               <label>Ambito:</label>
+               <label>Ámbito:</label>
                <select class="form-control select2" name="id_ambito" id="id_ambito" style="width: 100%;">
-                 <option value="0" disabled="disabled" >Seleccione un Ambito:</option>
+                 <option value="0" disabled="disabled" >Seleccione un Ámbito:</option>
                  <?php
                  $query = $mysqli -> query ("SELECT * FROM tbl_voae_ambitos where condicion = 1");
                  while ($resultado = mysqli_fetch_array($query)) {
@@ -311,7 +311,7 @@ ob_end_flush();
     $(document).ready(function() {
 
         $('.select2').select2({
-            placeholder: 'Seleccione una opcion',
+            placeholder: 'Seleccione una opción',
             theme: 'bootstrap4',
             tags: false,
         });

@@ -111,7 +111,7 @@ require_once('../vistas/pagina_inicio_vista.php');
                         swal({
                             title: '¡Dato Agregado!',
                             type: 'success',
-                            html: '¿Desea agregar mas datos?',
+                            html: '¿Desea agregar más información?',
                             showCloseButton: true,
                             showCancelButton: true,
                             focusConfirm: false,
@@ -123,7 +123,7 @@ require_once('../vistas/pagina_inicio_vista.php');
                     } else {
                         swal(
                             'Oops...',
-                            'Something went wrong!',
+                            '¡Something went wrong!',
                             'error'
                         )
                     }

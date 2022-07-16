@@ -19,7 +19,7 @@ if($visualizacion==0){
   echo '<script type="text/javascript">
       swal({
             title:"",
-            text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+            text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
             type: "error",
             showConfirmButton: false,
             timer: 3000
@@ -91,10 +91,10 @@ ob_end_flush();
                           <thead>
                             <th>Opciones</th>
                             <th>Identificador</th>
-                            <th>Nombre Actividad</th>
+                            <th>Nombre de Actividad</th>
                             <th>Ente Organizador</th>
                             <th>Fecha Final</th>
-                            <th>Periodo</th>
+                            <th>Período</th>
                             
                           </thead>
                           <tbody>                            
@@ -109,7 +109,7 @@ ob_end_flush();
                  <!-- Card 1 -->
               <div class="card card-default">
                 <div class="card-header bg-gradient-dark">
-                  <h3 class="card-title">Nombre Actividad</h3>
+                  <h3 class="card-title">Nombre de Actividad</h3>
                   <div class="card-tools">
                     <button type="button" class="btn btn-tool" data-card-widget="collapse">
                       <i class="fas fa-minus"></i>
@@ -165,7 +165,7 @@ ob_end_flush();
                 <!-- Card 9 -->
                 <div class="card card-default">
                 <div class="card-header bg-gradient-dark">
-                  <h3 class="card-title">Periodo Académico</h3>
+                  <h3 class="card-title">Período Académico</h3>
                   <div class="card-tools">
                     <button type="button" class="btn btn-tool" data-card-widget="collapse">
                       <i class="fas fa-minus"></i>
@@ -173,11 +173,11 @@ ob_end_flush();
                   </div>
                 </div>
                 <div class="card-body">
-                <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12 maxlength"><label>Periodo Académico:</label>
+                <div class="form-group col-lg-6 col-md-6 col-sm-6 col-xs-12 maxlength"><label>Período Académico:</label>
                   <select class="form-control select2" name="periodo" id="periodo" class="form-control"  maxlength="50" required>
-                    <option value="PRIMER PERIODO">Primer Periodo</option>
-                    <option value="SEGUNDO PERIODO">Segundo Periodo</option>
-                    <option value="TERCER PERIODO">Tercer Periodo</option>
+                    <option value="PRIMER PERIODO">Primer Período</option>
+                    <option value="SEGUNDO PERIODO">Segundo Período</option>
+                    <option value="TERCER PERIODO">Tercer Período</option>
                   </select> 
                 </div>
                 </div>

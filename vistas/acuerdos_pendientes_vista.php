@@ -13,7 +13,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -96,9 +96,9 @@ ob_end_flush();
                         <div class="card">
                             <!-- /.card -->
                             <div class="card-header">
-                                <h3 class="card-title">Listado de Acuerdos pendientes</h3>
+                                <h3 class="card-title">Listado de acuerdos pendientes</h3>
                                 <a href="crear_acuerdo_vista" type="button" class="btn btn-app bg-warning float-right derecha <?php echo $_SESSION['btn_crear']; ?>">
-                                    <i class="fas fa-plus-circle"><br></i>Crear Nuevo Acuerdo
+                                    <i class="fas fa-plus-circle"><br></i>Crear nuevo Acuerdo
                                 </a>
                             </div>
                             <!-- /.card-header -->
@@ -109,11 +109,11 @@ ob_end_flush();
                                             <table id="tabla29" class="table table-bordered table-striped table-hover">
                                                 <thead>
                                                     <tr class="table-secondary">
-                                                        <th>No. Acta</th>
+                                                        <th>No. de Acta</th>
                                                         <th>Responsable</th>
-                                                        <th>Nombre Acuerdo</th>
+                                                        <th>Nombre del Acuerdo</th>
                                                         <th>Descripción</th>
-                                                        <th>Fecha Vencimiento</th>
+                                                        <th>Fecha de Vencimiento</th>
                                                         <th>Acciones</th>
                                                     </tr>
                                                 </thead>
@@ -357,7 +357,7 @@ ob_end_flush();
                         <div><b>Hora Inicio: </b><a id="hora_inicio"></a></div>
                         <div><b>Hora Final: </b><a id="hora_final"></a></div>
                         <div><b>Enlace: </b><a id="enlace"></a></div>
-                        <div><b> Lista Participantes: </b>
+                        <div><b>Lista de Participantes: </b>
                             <div id="participantes"></div>
                         </div>
                         <h6><b> Asunto: </b></h6>

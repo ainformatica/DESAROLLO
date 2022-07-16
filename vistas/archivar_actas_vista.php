@@ -25,7 +25,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -182,7 +182,7 @@ ob_end_flush();
                                                 <input required style="background-color: #FFC107; border: 0;" class="form-control" type="file" id="archivo_acta" name="archivo_acta[]" accept="<?php echo $aceptados['Valor']; ?>">
                                             </div>
                                             <div style="border: 0;" class="alert alert-dark alert-dismissable">
-                                                <strong><i class="fas fa-cloud-upload-alt fa-2x"></i>⠀Vista previa archivos para subir:</strong>
+                                                <strong><i class="fas fa-cloud-upload-alt fa-2x"></i>⠀Vista previa de archivos para subir:</strong>
                                                 <ul name="listing" id="listing"></ul>
                                                 <input class="btn btn-danger" type="button" onclick="limpiar()" value="Limpiar" />
                                             </div>

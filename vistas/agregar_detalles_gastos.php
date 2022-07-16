@@ -37,10 +37,10 @@ require_once('../vistas/pagina_inicio_vista.php');
                         <!-- /.card-header -->
                         <div class="card-body">
                             <form id="form_detalles_g">
-                                <label for="">Selecciones el Tipo de Gasto</label>
+                                <label for="">Seleccione el Tipo de Gasto</label>
                                 <select name="" id="tipos_gastos" class="form-control">
                                 </select>
-                                <label for="">Nombre Gasto</label>
+                                <label for="">Nombre del Gasto</label>
                                 <input type="text" class="form-control" id="nombre_detalle_r" name="nombre_detalle_r" maxlength="20" value="" style="text-transform: uppercase" onkeyup="DobleEspacio(this, event); MismaLetra('nombre_detalle_r');" oncopy="return false" onpaste="return false" onkeypress="return sololetras(event)" placeholder="Nombre gasto" required>
                                 <label for="">Cantidad</label>
                                 <input type="number" class="form-control" id="cantidad_detalle" name="cantidad_detalle" placeholder="CANTIDAD" required>
@@ -110,7 +110,7 @@ require_once('../vistas/pagina_inicio_vista.php');
                         swal({
                             title: '¡Dato Agregado!',
                             type: 'success',
-                            html: '¿Desea agregar mas datos?',
+                            html: '¿Desea agregar más información?',
                             showCloseButton: true,
                             showCancelButton: true,
                             focusConfirm: false,

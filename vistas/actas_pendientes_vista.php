@@ -13,7 +13,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
             swal({
                 title:"",
-                text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                 type: "error",
                 showConfirmButton: false,
                 timer: 3000
@@ -68,7 +68,7 @@ if (isset($_REQUEST['msj'])) {
         echo '<script type="text/javascript">
                     swal({
                        title:"",
-                       text:"Lo sentimos el Parametro ya existe",
+                       text:"¡Lo sentimos! El Parámetro ya existe",
                        type: "info",
                        showConfirmButton: false,
                        timer: 3000
@@ -94,7 +94,7 @@ FROM tbl_parametros";
         echo '<script type="text/javascript">
                     swal({
                        title:"",
-                       text:"Lo sentimos tiene campos por rellenar.",
+                       text:"¡Lo sentimos! Tiene campos por rellenar.",
                        type: "error",
                        showConfirmButton: false,
                        timer: 3000
@@ -150,7 +150,7 @@ ob_end_flush();
                                             <tr class="table-secondary">
                                                 <th>No. Acta</th>
                                                 <th>Nombre Reunión</th>
-                                                <th>Categoria</th>
+                                                <th>Categoría</th>
                                                 <th>Modalidad</th>
                                                 <th>Fecha</th>
                                                 <th>Hora Inicio</th>
@@ -278,7 +278,7 @@ ob_end_flush();
                 zeroRecords: "Sin resultados encontrados",
                 paginate: {
                     first: "Primero",
-                    last: "Ultimo",
+                    last: "Último",
                     next: "Siguiente",
                     previous: "Anterior"
                 }

@@ -13,7 +13,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
   swal({
         title:"",
-        text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+        text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
         type: "error",
         showConfirmButton: false,
         timer: 3000
@@ -97,13 +97,13 @@ ob_end_flush();
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label>Numero de Cuenta</label>
+                    <label>Número de Cuenta</label>
                     <input class="form-control" value="<?php echo $sqltabla["ROWS"][0]['documento']  ?>" type="text" id="txt_cuenta" name="txt_cuenta" style="text-transform: uppercase" onkeypress="return Letras(event)" onkeyup="DobleEspacio(this, event)" readonly onmousedown="return false;">
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label>Correo Electronico</label>
+                    <label>Correo Electrónico</label>
                     <input class="form-control" value="<?php echo $sqltabla["ROWS"][0]['valor'] ?>" type="email" id="txt_correo" name="txt_correo" style="text-transform: uppercase" onkeypress="return Letras(event)" onkeyup="DobleEspacio(this, event)" readonly onmousedown="return false;">
                   </div>
                 </div>
