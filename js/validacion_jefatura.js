@@ -63,7 +63,7 @@
 		    var str3 = valor.substring(longitud - 1, longitud);
 		    nuevo_valor = valor.substring(0, longitud - 1);
 		    if (str1 == str2 && str1 == str3 && str2 == str3) {
-			    swal('Error', 'No se permiten 3 letras consecutivamente', 'error');
+			    swal('¡Error!', 'No se permiten 3 letras consecutivamente', '¡Error!');
 
 			    $('#' + id_input).val(nuevo_valor);
 		    }

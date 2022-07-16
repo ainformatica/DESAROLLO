@@ -4,13 +4,13 @@ console.log('hola_indicador');
 function eliminar(id) {
     swal({
         title: 'Seguro que quiere eliminar este recurso?',
-        text: "!Este registro no podra ser recuperado!",
+        text: "!Este registro no podrá ser recuperado!",
         type: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Si, Eliminarlo!',
-        cancelButtonText: 'No, Cancelar!',
+        confirmButtonText: 'Sí ¡Eliminarlo!',
+        cancelButtonText: 'No ¡Cancelar!',
         confirmButtonClass: 'btn btn-success',
         cancelButtonClass: 'btn btn-danger',
         buttonsStyling: false
@@ -28,7 +28,7 @@ function eliminar(id) {
             .then(data => {
                 if (data == 'exito') {
                     swal(
-                        'Eliminado!',
+                        '¡Eliminado!',
                         '!Su registro ha sido eliminado!',
                         'success'
                     )
@@ -36,7 +36,7 @@ function eliminar(id) {
                 } else {
                     swal(
                         'Error',
-                        'A ocurrido un error en la consulta!',
+                        '¡Ha ocurrido un error en la consulta!',
                         'error'
                     )
                 }
@@ -47,7 +47,7 @@ function eliminar(id) {
         if (dismiss === 'cancel') {
             swal(
                 'Cancelado',
-                'Su registro esta en la base de datos!',
+                '¡Su registro está en la base de datos!',
                 'error'
             )
         }
@@ -57,14 +57,14 @@ function eliminar(id) {
 
 function cambiarEstado(id, estado) {
     swal({
-        title: 'Seguro que quiere cambiar este recurso?',
-        text: "!Este registro podra ser cambiado!",
+        title: '¿Seguro que quiere cambiar este recurso?',
+        text: "!Este registro no podrá ser cambiado!",
         type: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Si, Cambiarlo!',
-        cancelButtonText: 'No, Cancelar!',
+        confirmButtonText: 'Sí ¡Cambiarlo!',
+        cancelButtonText: 'No ¡Cancelar!',
         confirmButtonClass: 'btn btn-success',
         cancelButtonClass: 'btn btn-danger',
         buttonsStyling: false
@@ -83,7 +83,7 @@ function cambiarEstado(id, estado) {
             .then(data => {
                 if (data == 'exito') {
                     swal(
-                        'Cambiado!',
+                        '¡Cambiado!',
                         '!Su registro ha sido cambiado!',
                         'success'
                     )
@@ -91,7 +91,7 @@ function cambiarEstado(id, estado) {
                 } else {
                     swal(
                         'Error',
-                        'A ocurrido un error en la consulta!',
+                        '¡Ha ocurrido un error en la consulta!',
                         'error'
                     )
                 }
@@ -102,7 +102,7 @@ function cambiarEstado(id, estado) {
         if (dismiss === 'cancel') {
             swal(
                 'Cancelado',
-                'Su registro sigue intacto!',
+                '¡Su registro sigue intacto!',
                 'error'
             )
         }
@@ -134,7 +134,7 @@ buttonGuardar.addEventListener('click', function (e) {
             .then(data => {
                 if (data == 'exito') {
                     swal.queue([{
-                        title: 'Exito!',
+                        title: '¡Éxito!',
                         confirmButtonText: 'Regresar',
                         text:
                             'Los datos han sido agregados exitosamente',

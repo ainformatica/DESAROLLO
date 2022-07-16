@@ -3,7 +3,7 @@ function VerificarUsuario(){
     var con = $("#txt_con").val();
 
     if(usu.length==0 || con.length==0){
-        return Swal.fire("Mensaje De Advertencia","Llene los campos vacios","warning");
+        return Swal.fire("¡Mensaje De Advertencia!","Llene los campos vacíos","warning");
     }
     $.ajax({
         url:'../controlador/usuario/controlador_verificar_usuario.php',
@@ -14,11 +14,11 @@ function VerificarUsuario(){
         }
     }).done(function(resp){
         if(resp==0){
-            Swal.fire("Mensaje De Error",'Usuario y/o contrase\u00f1a incorrecta',"error");
+            Swal.fire("¡Mensaje De Error!",'Usuario y/o contrase\u00f1a incorrecta',"error");
         }else{
             var data= JSON.parse(resp);
             if(data[0][5]==='INACTIVO'){
-                return Swal.fire("Mensaje De Advertencia","Lo sentimos el usuario "+usu+" se encuentra suspendido, comuniquese con el administrador","warning");
+                return Swal.fire("¡Mensaje De Advertencia!","Lo sentimos, el usuario "+usu+" se encuentra suspendido, comuníquese con el administrador","warning");
             }
             $.ajax({
                 url:'../controlador/usuario/controlador_crear_session.php',
@@ -31,8 +31,8 @@ function VerificarUsuario(){
             }).done(function(resp){
                 let timerInterval
                 Swal.fire({
-                title: 'BIENVENIDO AL SISTEMA',
-                html: 'Usted sera redireccionado en <b></b> milisegundos.',
+                title: '¡BIENVENIDO AL SISTEMA!',
+                html: 'Usted será redireccionado en <b></b> milisegundos.',
                 timer: 2000,
                 timerProgressBar: true,
                 onBeforeOpen: () => {
@@ -120,8 +120,8 @@ $('#tabla_usuario').on('click','.activar',function(){
         var data = table.row(this).data();
     }
     Swal.fire({
-        title: 'Esta seguro de activar al usuario?',
-        text: "Una vez hecho esto el usuario  tendra acceso al sistema",
+        title: '¿Está seguro de activar al usuario?',
+        text: "Una vez hecho esto, el usuario tendrá acceso al sistema",
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
@@ -140,8 +140,8 @@ $('#tabla_usuario').on('click','.desactivar',function(){
         var data = table.row(this).data();
     }
     Swal.fire({
-        title: 'Esta seguro de desactivar al usuario?',
-        text: "Una vez hecho esto el usuario no tendra acceso al sistema",
+        title: '¿Está seguro de desactivar al usuario?',
+        text: "Una vez hecho esto, el usuario no tendrá acceso al sistema",
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
@@ -170,7 +170,7 @@ function Modificar_Estatus(idusuario,estatus){
         }
     }).done(function(resp){
         if(resp>0){
-            Swal.fire("Mensaje De Confirmacion","El usuario se "+mensaje+" con exito","success")            
+            Swal.fire("¡Mensaje De Confirmacion!","El usuario se "+mensaje+" con éxito","success")            
             .then ( ( value ) =>  {
                 table.ajax.reload();
             }); 
@@ -217,11 +217,11 @@ function Registrar_Usuario(){
     var sexo = $("#cbm_sexo").val();
     var rol = $("#cbm_rol").val();
     if(usu.length==0 || contra.length==0 || contra.length==0 || contra2.length==0 || sexo.length==0 || rol.length==0){
-        return Swal.fire("Mensaje De Advertencia","Llene los campos vacios","warning");
+        return Swal.fire("¡Mensaje De Advertencia!","Llene los campos vacíos","warning");
     }
 
     if(contra != contra2){
-        return Swal.fire("Mensaje De Advertencia","Las contraseñas deben coincidir","warning");        
+        return Swal.fire("¡Mensaje De Advertencia!","Las contraseñas deben coincidir","warning");        
     }
 
     $.ajax({
@@ -237,16 +237,16 @@ function Registrar_Usuario(){
         if(resp>0){
             if(resp==1){
                 $("#modal_registro").modal('hide');
-                Swal.fire("Mensaje De Confirmacion","Datos correctamente, Nuevo Usuario Registrado","success")            
+                Swal.fire("¡Mensaje De Confirmacion!","Datos ingresados correctamente, Nuevo Usuario Registrado","success")            
                 .then ( ( value ) =>  {
                     LimpiarRegistro();
                     table.ajax.reload();
                 }); 
             }else{
-                return Swal.fire("Mensaje De Advertencia","Lo sentimos, el nombre del usuario ya se encuentra en nuestra base de datos","warning");
+                return Swal.fire("¡Mensaje De Advertencia!","Lo sentimos, el nombre del usuario ya se encuentra en nuestra base de datos","warning");
             }
         }else{
-            Swal.fire("Mensaje De Error","Lo sentimos, no se pudo completar el registro","error");
+            Swal.fire("¡Mensaje De Error!","Lo sentimos, no se pudo completar el registro","error");
         }
     })
 

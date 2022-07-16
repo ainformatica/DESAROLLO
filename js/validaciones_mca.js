@@ -9,7 +9,7 @@ function MismaLetra(id_input) {
 		var str3 = valor.substring(longitud - 1, longitud);
 		nuevo_valor = valor.substring(0, longitud - 1);
 		if (str1 == str2 && str1 == str3 && str2 == str3) {
-			swal('Error', 'No se permiten tres letras consecutivas', 'error');
+			swal('¡Error!', 'No se permiten tres letras iguales consecutivas', '¡Error!');
 
 			$('#' + id_input).val(nuevo_valor);
 		}
@@ -34,11 +34,11 @@ const comparaHoras = () => {
     const pFin = vFinal.split(":");
     tFin.setHours(pFin[0], pFin[1]);
     if (tFin.getTime() < tIni.getTime()) {
-        swal('Error', '<h5>La hora final no puede menor a la de inicio</h5>', 'error');
+        swal('¡Error!', '<h5>La hora final no puede ser menor a la de inicio</h5>', '¡Error!');
         document.getElementById('horafinal').value = ''
     }
     if (tFin.getTime() === tIni.getTime()) {
-        swal('Error', '<h5>La hora inicio con la hora final no pueden ser Iguales</h5>', 'error');
+        swal('¡Error!', '<h5>La hora inicio con la hora final no pueden ser iguales</h5>', '¡Error!');
         document.getElementById('horafinal').value = ''
     }
     

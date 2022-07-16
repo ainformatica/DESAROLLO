@@ -642,8 +642,8 @@ tipo={
 }
 
 msg={
-    copiar:"Por seguridad del sistema, la acción COPIAR esta deshabilitada",
-    pegar:"Por seguridad del sistema, la acción PEGAR esta deshabilitada",
+    copiar:"Por seguridad del sistema, la acción COPIAR está deshabilitada",
+    pegar:"Por seguridad del sistema, la acción PEGAR está deshabilitada",
     vacio:"Recuerda completar todo los campos",
     documentos:"No se permite cargar documentos con el mismo nombre",
 }

@@ -247,10 +247,10 @@ function sonLetrasMayYnumerosSolamente(texto) {
 
   }
   function myFunction() {
-  if(confirm("Desea guardar los datos?")){
+  if(confirm("¿Desea guardar los datos?")){
     alert("Datos guardados exitosamente");
   }else{
-    alert("Usted cancelo la acción para guardar");
+    alert("Usted canceló la acción para guardar");
   }
 }
 
@@ -267,7 +267,7 @@ function MismaLetra(id_input) {
 		var str3 = valor.substring(longitud - 1, longitud);
 		nuevo_valor = valor.substring(0, longitud - 1);
 		if (str1 == str2 && str1 == str3 && str2 == str3) {
-			swal('Error', 'No se permiten 3 letras consecutivamente', 'error');
+			swal('¡Error!', 'No se permiten 3 letras consecutivamente', '¡Error!');
 
 			$('#' + id_input).val(nuevo_valor);
 		}
@@ -332,13 +332,13 @@ $('.FormularioAjax2').submit(function(e){
  var metodo=form.attr('method');
  var respuesta=form.children('.RespuestaAjax2');
 
- var msjError="<script>swal('Ocurrió un error inesperado','Por favor recargue la página','error');</script>";
+ var msjError="<script>swal('Ocurrió un error inesperado','Por favor recargue la página','¡Error!');</script>";
  var formdata = new FormData(this);
 
 
  var textoAlerta;
  if(tipo==="save"){
-     textoAlerta="Los datos que enviaras quedaran almacenados en el sistema";
+     textoAlerta="Los datos que enviarás quedarán almacenados en el sistema";
  }else if(tipo==="delete"){
      textoAlerta="Los datos serán eliminados completamente del sistema";
  }else if(tipo==="update"){
