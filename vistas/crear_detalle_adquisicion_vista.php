@@ -27,7 +27,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
     swal({
         title: "",
-        text: "Lo sentimos el número de inventario ya existe",
+        text: "¡Lo sentimos! El número de inventario ya existe",
         type: "info",
         showConfirmButton: false,
         timer: 3000
@@ -42,7 +42,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
     swal({
         title: "",
-        text: "Agregado con exito",
+        text: "Agregado con éxito",
         type: "success",
         showConfirmButton: false,
         timer: 3000
@@ -71,7 +71,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
     swal({
         title: "",
-        text: "Error al crear lo sentimos, intente de nuevo.",
+        text: "¡Lo sentimos! Error al crear, intente de nuevo.",
         type: "error",
         showConfirmButton: false,
         timer: 3000
@@ -85,7 +85,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
     swal({
         title: "",
-        text: "Lo sentimos tiene campos por rellenar.",
+        text: "¡Lo sentimos! Tiene campos por rellenar.",
         type: "error",
         showConfirmButton: false,
         timer: 3000
@@ -115,7 +115,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
     swal({
         title: "",
-        text: "Error al actualizar lo sentimos,intente de nuevo.",
+        text: "¡Lo sentimos! Error al actualizar,intente de nuevo.",
         type: "error",
         showConfirmButton: false,
         timer: 3000
@@ -153,7 +153,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
   swal({
   title:"",
-  text:"Lo sentimos esta caracteristica ya tiene su valor",
+  text:"¡Lo sentimos! Esta característica ya tiene su valor",
   type: "error",   
   showConfirmButton: false,
   timer: 1000
@@ -166,7 +166,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
     swal({
         title: "",
-        text: "Caracteristicas guardadas exitosamente",
+        text: "Características guardadas exitosamente",
         type: "success",
         showConfirmButton: false,
         timer: 800
@@ -179,7 +179,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
     swal({
     title:"",
-    text:"Aún hay caracteristicas sin guardar",
+    text:"Aún hay características sin guardar",
     type: "error",   
     showConfirmButton: false,
     timer: 1000
@@ -197,7 +197,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -308,7 +308,7 @@ ob_end_flush();
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="../vistas/pagina_principal_vista.php">Inicio</a></li>
-              <li class="breadcrumb-item"><a href="../vistas/gestion_adquisicion_vista.php">Gestión Adquisición</a></li>
+              <li class="breadcrumb-item"><a href="../vistas/gestion_adquisicion_vista.php">Gestión de Adquisición</a></li>
 
 
             </ol>
@@ -328,7 +328,7 @@ ob_end_flush();
 
         <div class="card card-default">
           <div class="card-header">
-            <h3 class="card-title">Detalle Adquisición</h3>
+            <h3 class="card-title">Detalle de la Adquisición</h3>
 
             <div class="card-tools">
               <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
@@ -354,7 +354,7 @@ ob_end_flush();
 
                       <!-- <input type="hidden" name="txt_nombre_producto" id="txt_nombre_producto" class=""> -->
                       <select class="form-control select2 mr-3" style="height:38px; width:708px;" name="cmb_producto" required="">
-                        <option value="0">Seleccione el producto:</option>
+                        <option value="0">Seleccione el Producto:</option>
                         <?php
                         $query = $mysqli->query("SELECT * FROM tbl_productos where id_tipo_producto = 1");
                         while ($resultado = mysqli_fetch_array($query)) {
@@ -552,7 +552,7 @@ ob_end_flush();
               <tr>
 
                 <th> NOMBRE </th>
-                <th> VALOR CARACTERÍSTICA </th>
+                <th> VALOR DE LA CARACTERÍSTICA </th>
 
 
 

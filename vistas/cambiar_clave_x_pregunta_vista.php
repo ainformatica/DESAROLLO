@@ -15,8 +15,8 @@ if (isset($_REQUEST['msj'])) {
     echo '<script>
                 
                  swal(
-                      "Alerta!",
-                      "Lo sentimos NUEVA Y CONFIRMAR deben ser iguales intenta de nuevo",
+                      "¡Alerta!",
+                      "¡Lo sentimos! NUEVA CONTRASEÑA Y CONFIRMAR CONTRASEÑA deben ser iguales, intenta de nuevo",
                       "warning"
                     );          
           
@@ -26,7 +26,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script>
                 
                  swal(
-                      "Alerta!",
+                      "¡Alerta!",
                       "PASSWORD NO VÁLIDO: ' . $_REQUEST['error'] . '",
                       "warning"
                     );          
@@ -37,8 +37,8 @@ if (isset($_REQUEST['msj'])) {
     echo '<script>
                 
                  swal(
-                      "Alerta!",
-                      "Los datos  se actulizaron correctamente",
+                      "¡Alerta!",
+                      "Los datos se actulizaron correctamente",
                       "warning"
                     );          
           
@@ -48,8 +48,8 @@ if (isset($_REQUEST['msj'])) {
     echo '<script>
                 
                  swal(
-                      "Alerta!",
-                      "No se realizo el proceso, favor llame al administrador o intente de nuevo",
+                      "¡Alerta!",
+                      "No se realizó el proceso, favor llame al administrador o intente de nuevo",
                       "warning"
                     );          
           
@@ -85,7 +85,7 @@ if (isset($_REQUEST['msj'])) {
           <img src="../dist/img/logo_informatica.jpg" width="40%" height="40%" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
         </div>
 
-        <p class="login-box-msg">Cambiar contraseña por Pregunta de Seguridad</p>
+        <p class="login-box-msg">Cambiar Contraseña Mediante Preguntas de Seguridad</p>
 
         <form action="../Controlador/actualizar_clave_x_pregunta_controlador.php?id_usuario=<?php echo $id_usuarios ?>" method="post">
 
@@ -118,7 +118,7 @@ if (isset($_REQUEST['msj'])) {
         </form>
 
         <p class="mt-3 mb-1">
-          <a href="../login.php">Inicia Sesión</a>
+          <a href="../login.php">Iniciar Sesión</a>
         </p>
 
       </div>

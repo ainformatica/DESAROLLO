@@ -19,7 +19,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -87,7 +87,7 @@ ob_end_flush();
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="../vistas/pagina_principal_vista.php">Inicio</a></li>
-                                <li class="breadcrumb-item"><a href="../vistas/menu_plan_estudio_vista.php">Menu plan de estudio</a></li>
+                                <li class="breadcrumb-item"><a href="../vistas/menu_plan_estudio_vista.php">Menu Plan de Estudio</a></li>
                                 <li class="breadcrumb-item">Comparar Plan de Estudio</a></li>
 
                             </ol>
@@ -140,9 +140,9 @@ ob_end_flush();
                                                     <thead>
                                                         <tr>
 
-                                                            <th>Periodo</th>
+                                                            <th>Período</th>
                                                             <th>Asignatura</th>
-                                                            <th>Codigo</th>
+                                                            <th>Código</th>
                                                             <th>U.V</th>
                                                             <th>Requisitos</th>
                                                             <th>Equivalencias</th>
@@ -168,7 +168,7 @@ ob_end_flush();
                                     </div>
                                     <div class="card-body">
                                         <div class="form-group">
-                                            <label>Seleccione nombre de Plan</label>
+                                            <label>Seleccione Nombre de Plan</label>
                                             <br>
                                             <div class="row">
                                                 <div class='text-center'>
@@ -203,9 +203,9 @@ ob_end_flush();
                                                     <thead>
                                                         <tr>
 
-                                                            <th>Periodo</th>
+                                                            <th>Período</th>
                                                             <th>Asignatura</th>
-                                                            <th>Codigo</th>
+                                                            <th>Código</th>
                                                             <th>UV</th>
                                                             <th>Requisitos</th>
                                                             <th>Equivalencias</th>

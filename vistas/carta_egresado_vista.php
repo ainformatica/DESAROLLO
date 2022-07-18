@@ -13,7 +13,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
   swal({
         title:"",
-        text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+        text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
         type: "error",
         showConfirmButton: false,
         timer: 3000
@@ -100,21 +100,21 @@ ob_end_flush();
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group">
-                    <label>Nombre del alumno</label>
+                    <label>Nombre del Alumno</label>
                     <input class="form-control" type="text" id="txt_nombres" name="txt_nombre" style="text-transform: uppercase" onkeypress="return Letras(event)" onkeyup="DobleEspacio(this, event)" maxlength="50" value="<?php echo $row['nombres'] . ' ' . $row['apellidos'] ?>" readonly onmousedown="return false;">
                   </div>
                 </div>
 
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label>Verifiqué su Nombre</label>
+                    <label>Verifique su Nombre</label>
                     <input class="form-control" type="text" id="txt_verificados1" name="txt_verificado1" style="text-transform: uppercase" onkeypress="return Letras(event)" onkeyup="DobleEspacio(this, event)" maxlength="50" placeholder="Colocar acentos en los nombres si los lleva">
                     <input class="form-control d-none " type="text" value="<?php echo $row['id_persona'] ?>" name="id_persona">
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label>Verifiqué su Apellido</label>
+                    <label>Verifique su Apellido</label>
                     <input class="form-control" type="text" id="txt_verificados2" name="txt_verificado2" style="text-transform: uppercase" onkeypress="return Letras(event)" onkeyup="DobleEspacio(this, event)" maxlength="50" placeholder="Colocar acentos en los apellidos si los lleva">
                   </div>
                 </div>

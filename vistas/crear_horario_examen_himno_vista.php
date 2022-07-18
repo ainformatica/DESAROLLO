@@ -70,13 +70,13 @@ require_once('../clases/funcion_permisos.php');
 
                     <input type="text" hidden="" id="idhorario" name="">
                     <div id="alertaModal1" class='alert alert-warning'></div>
-                    <label>FECHA DEL EXAMEN</label>
+                    <label>FECHA</label>
                     <input class="form-control" type="date" id="fecha" name="fecha" maxlength="60" require>
                     <div id="alertaModal2" class='alert alert-warning'></div>
-                    <label>HORARIO DEL EXAMEN</label>
+                    <label>HORARIO</label>
                     <input class="form-control" type="time" id="horario" name="horario" maxlength="60" require>
                     <div id="alertaModal3" class='alert alert-warning'></div>
-                    <label>JORNADA DEL EXAMEN</label>
+                    <label>JORNADA</label>
                     <input class="form-control" name="jornada" id="jornada" maxlength="60" require readonly onmousedown="return false;">
 
                     <div id="alertaModal4" class='alert alert-warning'></div>

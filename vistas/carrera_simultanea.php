@@ -23,7 +23,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
       swal({
             title:"",
-            text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+            text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
             type: "error",
             showConfirmButton: false,
             timer: 3000
@@ -67,7 +67,7 @@ ob_end_flush();
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Carrera Simultanea </h1>
+            <h1>Carrera Simultánea </h1>
           </div>
 
 
@@ -95,7 +95,7 @@ ob_end_flush();
 
           <div class="card card-default">
             <div class="card-header">
-              <h3 class="card-title">Admision a la carrera</h3>
+              <h3 class="card-title">Admisión a la Carrera</h3>
 
               <div class="card-tools">
                 <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
@@ -115,13 +115,13 @@ ob_end_flush();
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label>Verifiqué su Nombre</label>
+                    <label>Verifique su Nombre</label>
                     <input class="form-control" type="text" id="txt_verificado" name="txt_verificado1" onkeypress="return Letras(event)" onkeyup="DobleEspacio(this, event)" maxlength="50" placeholder="Colocar acentos en los nombres si los lleva">
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label>Verifiqué su Apellido</label>
+                    <label>Verifique su Apellido</label>
                     <input class="form-control" type="text" id="verificado" name="txt_verificado2" onkeypress="return Letras(event)" onkeyup="DobleEspacio(this, event)" maxlength="50" placeholder="Colocar acentos en los apellidos si los lleva">
                   </div>
                 </div>
@@ -160,7 +160,7 @@ ob_end_flush();
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label>Copia de tarjeta de identidad.</label>
+                    <label>Copia de Tarjeta de Identidad.</label>
                     <input class="form-control" type="file" id="identidad" name="txt_identidad" multiple="">
                   </div>
                 </div>
@@ -204,7 +204,7 @@ ob_end_flush();
           if ($(this)[0].files[0].size > 1048576) {
             swal({
               title: "",
-              text: "excede el tamaño permitido...",
+              text: "Excede el tamaño permitido...",
               type: "error",
               showConfirmButton: false,
               timer: 2000

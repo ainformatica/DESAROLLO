@@ -46,7 +46,7 @@ $usuario = $_SESSION['id_persona'];
 
                         <div class="card " style="width:400px;border-color:gray;">
                             <div class="card-body">
-                                <h4 class="card-title">Correo</h4>
+                                <h4 class="card-title">Correo Electrónico</h4>
                                 <div class="form-group card-text">
                                     <!-- TABLA CORREO -->
                                     <button type="button" name="add_correo1" id="add_correo1" class="btn btn-info card-title" data-toggle="modal" data-target="#ModalCorreo">Agregar Correo</button>
@@ -55,7 +55,7 @@ $usuario = $_SESSION['id_persona'];
                                         <thead>
                                             <tr>
 
-                                                <th>Correo</th>
+                                                <th>Correo Electrónico</th>
                                                 <th id="eliminar_correo_tabla">Eliminar</th>
 
                                             </tr>
@@ -129,7 +129,7 @@ $usuario = $_SESSION['id_persona'];
             <div class="modal-body">
                 <div class="container">
                     <div class="form-group">
-                        <label for="">Correo</label>
+                        <label for="">Correo Electrónico</label>
                         <input required type="email" name="correo" id="correo" class="form-control name_list">
                     </div>
                 </div>

@@ -108,7 +108,7 @@ if ($visualizacion == 0) {
           <div class="col-sm-6">
 
 
-            <h1>Bitacora del Sistema</h1>
+            <h1>Bitácora del Sistema</h1>
           </div>
 
           <div class="col-sm-6">
@@ -176,11 +176,11 @@ if ($visualizacion == 0) {
                   <div class="form-group">
                     <label>Accion</label>
                     <select class="form-control" name="accion_bitacora" id="accion_bitacora">
-                      <option value="0">Seleccione una opcion:</option>
-                      <option value="Ingreso">Ingreso</option>
-                      <option value="Inserto">Inserto</option>
-                      <option value="Modifico">Modifico</option>
-                      <option value="Elimino">Elimino</option>
+                      <option value="0">Seleccione una opción:</option>
+                      <option value="Ingreso">Ingresó</option>
+                      <option value="Inserto">Insertó</option>
+                      <option value="Modifico">Modificó</option>
+                      <option value="Elimino">Eliminó</option>
 
                     </select>
                   </div>
@@ -225,7 +225,7 @@ if ($visualizacion == 0) {
 
     <div class="card card-default">
       <div class="card-header">
-        <h3 class="card-title">Registros de Bitacora del Sistema</h3>
+        <h3 class="card-title">Registros de Bitácora del Sistema</h3>
         <div class="card-tools">
           <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
         </div>

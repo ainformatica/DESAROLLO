@@ -27,7 +27,7 @@ if (empty($_SESSION['num_inventario'])) {
 
 
 $Id_objeto = 214;
-bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingreso', 'Nueva asignación.');
+bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingresó', 'Nueva asignación.');
 
 $inputTags = "";
 $id_usuario_responsable = (isset($_GET['id_usuario_responsable']) ? $_GET['id_usuario_responsable'] : null);
@@ -47,7 +47,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                             swal({
                                  title:"",
-                                 text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                 text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                  type: "error",
                                  showConfirmButton: false,
                                  timer: 3000
@@ -68,7 +68,7 @@ if ($visualizacion == 0) {
     if (isset($_REQUEST['msj'])) {
         $msj = $_REQUEST['msj'];
         if ($msj == 1) {
-            echo '<script> alert("Lo sentimos la SALIDA a ingresar ya existe favor intenta con uno nuevo")</script>';
+            echo '<script> alert("¡Lo sentimos! La SALIDA a ingresar ya existe, favor intenta con uno nuevo")</script>';
         }
 
         if ($msj == 2) {
@@ -194,7 +194,7 @@ ob_end_flush();
 
                                     <!-- Selector de Ubicación de Inventario -->
                                     <div class="form-group">
-                                        <label>Ubicación de Inventario</label>
+                                        <label>Ubicación de inventario</label>
                                         <select class="form-control select2" style="width: 100%;" name="cmb_id_ubicacion" id="cmb_id_ubicacion" required>
                                             <option>Seleccione una ubicación:</option>
                                             <?php

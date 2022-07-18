@@ -22,7 +22,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -31,7 +31,7 @@ if ($visualizacion == 0) {
 
                             </script>';
 } else {
-  bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingreso', 'A Permisos a roles y pantallas');
+  bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingresó', 'A Permisos, roles y pantallas');
 
 
   if (permisos::permiso_insertar($Id_objeto) == '1') {

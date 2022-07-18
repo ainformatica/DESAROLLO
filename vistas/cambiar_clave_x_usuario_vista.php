@@ -5,7 +5,7 @@ require_once('../clases/funcion_bitacora.php');
 
 
 $Id_objeto = 12;
-bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingreso', 'A Cambiar clave como usuario');
+bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingresó', 'A Cambiar clave como usuario');
 
 
 if (isset($_REQUEST['estatus'])) {
@@ -23,7 +23,7 @@ if (isset($_REQUEST['estatus'])) {
   <script src="../js/autologout.js"></script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Informatica Admistrativa</title>
+  <title>Informática Admistrativa</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
@@ -51,7 +51,7 @@ if (isset($_REQUEST['estatus'])) {
           <img src="../dist/img/logo_informatica.jpg" width="40%" height="40%" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
         </div>
 
-        <p class="login-box-msg">Cambiar contraseña</p>
+        <p class="login-box-msg">Cambiar Contraseña</p>
 
         <form action="../Controlador/actualizar_clave_x_usuario_controlador.php?estatus=<?php if (isset($estatus)) {
                                                                                           echo ($estatus);
@@ -97,7 +97,7 @@ if (isset($_REQUEST['estatus'])) {
           <div class="row">
             <div class="col-8">
               <p class="mb-0">
-                <a href="../login.php">Inicia Sesion</a>
+                <a href="../login.php">Iniciar Sesión</a>
               </p>
             </div>
 
@@ -202,7 +202,7 @@ if (isset($_REQUEST['msj'])) {
                           Swal.fire({
   position: "center",
   icon: "info",
-  title: "Lo sentimos NUEVA Y CONFIRMAR deben ser iguales intenta de nuevo",
+  title: "¡Lo sentimos! NUEVA CONTRASEÑA Y CONFIRMAR CONTRASEÑA deben ser iguales, intenta de nuevo",
   showConfirmButton: false,
   timer: 3000
 })   </script>';
@@ -211,7 +211,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script>
                 
                  swal(
-                      "Alerta!",
+                      "¡Alerta!",
                       "Clave actualizada correctamente",
                       "warning"
                     );          
@@ -224,7 +224,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script>
                 
                  swal(
-                      "Alerta!",
+                      "¡Alerta!",
                       "Clave incorrecta, verificar su clave actual",
                       "warning"
                     );          
@@ -237,8 +237,8 @@ if (isset($_REQUEST['msj'])) {
     echo '<script>
                 
                  swal(
-                      "Alerta!",
-                      "La clave nueva debe ser diferente a la anterior",
+                      "¡Alerta!",
+                      "La nueva clave debe ser diferente a la anterior",
                       "warning"
                     );          
           
@@ -249,7 +249,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script>
                 
                  swal(
-                      "Alerta!",
+                      "¡Alerta!",
                       "PASSWORD NO VÁLIDO: ' . $_REQUEST['error'] . '",
                       "warning"
                     );          

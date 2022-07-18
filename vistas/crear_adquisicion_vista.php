@@ -28,7 +28,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -100,7 +100,7 @@ ob_end_flush();
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="../vistas/pagina_principal_vista.php">Inicio</a></li>
-                            <li class="breadcrumb-item"><a href="../vistas/gestion_adquisicion_vista.php">Gestion Adquisiciones</a></li>
+                            <li class="breadcrumb-item"><a href="../vistas/gestion_adquisicion_vista.php">Gestión Adquisiciones</a></li>
 
                         </ol>
                     </div>
@@ -139,7 +139,7 @@ ob_end_flush();
                                     <div class="form-group">
                                         <label>Tipo de Adquisición</label>
                                         <select class="form-control select2" style="width: 100%;" name="cmb_tipoadquisicion" required="">
-                                            <option value="0">Seleccione un tipo de Adquisición:</option>
+                                            <option value="0">Seleccione un Tipo de Adquisición:</option>
                                             <?php
                                             $query = $mysqli->query("SELECT * FROM tbl_tipo_adquisicion");
                                             while ($resultado = mysqli_fetch_array($query)) {
@@ -160,7 +160,7 @@ ob_end_flush();
 
                                     <!-- FECHA ADQUISICION -->
                                     <div class="form-group">
-                                        <label>fecha de Adquisición</label>
+                                        <label>Fecha de Adquisición</label>
                                         <input type="hidden" name="id_adquisicion" id="id_adquisicion">
 
                                         <input type="hidden" name="id_estado" id="id_estado">
