@@ -15,7 +15,7 @@ require_once('../clases/funcion_permisos.php');
 
 
 $Id_objeto = 194;
-bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingreso', 'A Nuevo producto');
+bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingresó', 'A Nuevo producto');
 
 
 $visualizacion = permiso_ver($Id_objeto);
@@ -28,7 +28,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -53,7 +53,7 @@ if ($visualizacion == 0) {
     if (isset($_REQUEST['msj'])) {
         $msj = $_REQUEST['msj'];
         if ($msj == 1) {
-            echo '<script> alert("Lo sentimos el PRODUCTO a ingresar ya existe favor intenta con uno nuevo")</script>';
+            echo '<script> alert("¡Lo sentimos! El PRODUCTO a ingresar ya existe, favor intenta con uno nuevo")</script>';
         }
 
         if ($msj == 2) {
@@ -99,7 +99,7 @@ ob_end_flush();
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="../vistas/pagina_principal_vista.php">Inicio</a></li>
-                            <li class="breadcrumb-item"><a href="../vistas/gestion_producto_vista.php">Gestión Productos</a></li>
+                            <li class="breadcrumb-item"><a href="../vistas/gestion_producto_vista.php">Gestión de Productos</a></li>
 
                         </ol>
                     </div>
@@ -133,7 +133,7 @@ ob_end_flush();
                                 <div class="col-md-6">
 
                                     <div class="form-group ">
-                                        <label>Ingrese el nombre del Producto</label>
+                                        <label>Ingrese el Nombre del Producto</label>
                                         <input class="form-control " class="tf w-input" required type="text" id="txt_nombre_producto" onkeypress="return validacion_para_producto(event)" name="txt_nombre_producto" maxlength="50" style="text-transform: uppercase" onkeyup="DobleEspacio(this, event); MismaLetra('txt_nombre_producto');">
 
                                     </div>
@@ -141,7 +141,7 @@ ob_end_flush();
 
 
                                     <div class="form-group ">
-                                        <label>Ingrese la descripción del Producto</label>
+                                        <label>Ingrese la Descripción del Producto</label>
                                         <input class="form-control " class="tf w-input" required type="text" id="txt_descripcion" onkeypress="return validacion_para_producto(event)" name="txt_descripcion" maxlength="100" style="text-transform: uppercase" onkeyup="DobleEspacio(this, event); MismaLetra('txt_descripcion');">
 
                                     </div>
@@ -149,9 +149,9 @@ ob_end_flush();
                                     <!-- SELECT QUE TRAE LOS PRODUCTOS -->
 
                                     <div class="form-group">
-                                        <label>Tipo de producto</label>
+                                        <label>Tipo de Producto</label>
                                         <select class="form-control select2" style="width: 100%;" name="cmb_tipoproducto" id="cmb_tipoproducto" required>
-                                            <option>Seleccione un tipo de Producto:</option>
+                                            <option>Seleccione un Tipo de Producto:</option>
                                             <?php
                                             $query = $mysqli->query("SELECT * FROM tbl_tipo_producto");
                                             while ($resultado = mysqli_fetch_array($query)) {

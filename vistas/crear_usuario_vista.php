@@ -14,7 +14,7 @@ require_once('../clases/funcion_permisos.php');
 
 $Id_objeto = 3;
 
-bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingreso', 'A Crear Usuarios');
+bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingresó', 'A Crear Usuarios');
 
 $visualizacion = permiso_ver($Id_objeto);
 $nombre = $_SESSION['usuario'];
@@ -23,7 +23,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -147,7 +147,7 @@ ob_end_flush();
               <div class="col-md-7">
                 <div class="form-group">
 
-                  <label>Seleccione Persona</label>
+                  <label>Seleccione una Persona</label>
                   <select class="form-control select2" style="width: 100%;" name="cbm_persona" id="cbm_persona">
 
                   </select>
@@ -178,7 +178,7 @@ ob_end_flush();
 
                 <div class="form-group">
 
-                  <label>Ingrese Contraseña</label>
+                  <label>Ingrese una Contraseña</label>
                   <div class="input-group mb-3">
                     <input class="form-control" type="password" id="txt_contrasena" name="txt_contrasena" maxlength="10" readonly value="Hola*4321">
                     <div class="input-group-append">

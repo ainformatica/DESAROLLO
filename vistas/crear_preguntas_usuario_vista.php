@@ -43,8 +43,8 @@ if (isset($_REQUEST['msj'])) {
 
     echo '<script>  
       swal(
-      "Alerta!",
-      "Pregunta agregada correctamente, numero de pregunta ingresada : ' . $_REQUEST['contador'] . '",
+      "¡Alerta!",
+      "Pregunta agregada correctamente, número de pregunta ingresada : ' . $_REQUEST['contador'] . '",
       "success"
     );</script>';
   }
@@ -52,8 +52,8 @@ if (isset($_REQUEST['msj'])) {
 
     echo '<script> 
       swal(
-      "Alerta!",
-      "Lo sentimos tiene campos por rellenar",
+      "¡Alerta!",
+      "Lo sentimos, tiene campos por rellenar",
       "warning"
     );</script>';
   }
@@ -62,8 +62,8 @@ if (isset($_REQUEST['msj'])) {
 
     echo '<script>
       swal(
-      "Alerta!",
-      "Lo sentimos esta pregunta ya existe intenta con una nueva",
+      "¡Alerta!",
+      "Lo sentimos, esta pregunta ya existe, intenta con una nueva",
       "warning"
     );</script>';
   }
@@ -79,7 +79,7 @@ if (isset($_REQUEST['msj'])) {
 
 <head>
   <script src="../js/autologout.js"></script>
-  <title>Informatica Admistrativa</title>
+  <title>Informática Admistrativa</title>
   <!-- Tell the browser to be responsive to screen width -->
 
 </head>
@@ -95,7 +95,7 @@ if (isset($_REQUEST['msj'])) {
           <img src="../dist/img/logo_informatica.jpg" width="40%" height="40%" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
         </div>
 
-        <p class="login-box-msg">Se ingresarán 3 Preguntas de Seguridad </p>
+        <p class="login-box-msg">Se Ingresarán 3 Preguntas de Seguridad </p>
 
 
         <form action="../Controlador/guardar_pregunta_usuario_controlador.php?estatus_pregunta=<?php if (isset($estatus_nuevo_pregunta_usuario)) {
@@ -107,7 +107,7 @@ if (isset($_REQUEST['msj'])) {
           <div class="form-group">
             <label>Lista de Preguntas</label>
             <select class="form-control" name="combopregunta">
-              <option value="0">Seleccione una pregunta:</option>
+              <option value="0">Seleccione una Pregunta:</option>
               <?php
               $query = $mysqli->query("SELECT * FROM tbl_preguntas ");
               while ($resultado = mysqli_fetch_array($query)) {
@@ -129,7 +129,7 @@ if (isset($_REQUEST['msj'])) {
           <div class="row">
             <div class="col-8">
               <p class="mb-0">
-                <a href="../login.php">Inicia Sesion</a>
+                <a href="../login.php">Iniciar Sesión</a>
               </p>
             </div>
 

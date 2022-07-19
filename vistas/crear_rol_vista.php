@@ -30,7 +30,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -143,7 +143,7 @@ ob_end_flush();
                   </div>
 
                   <div class="form-group">
-                    <label>Descripcion</label>
+                    <label>Descripción</label>
                     <input class="form-control" type="text" id="txt_descripcionrol" name="txt_descripcionrol" required="" maxlength="30" style="text-transform: uppercase" onkeyup="DobleEspacio(this, event)" onkeypress="return Letras(event)" onkeypress="return comprobar(this.value, event, this.id)">
                   </div>
 

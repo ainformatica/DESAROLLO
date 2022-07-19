@@ -12,7 +12,7 @@ require_once('../clases/funcion_permisos.php');
 $producto = "";
 $caracteristicas = "";
 $Id_objeto = 209;
-bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingreso', 'A Nueva Salida');
+bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingresó', 'A Nueva Salida');
 
 $modal = "";
 if (isset($_REQUEST['msj'])) {
@@ -31,7 +31,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                             swal({
                                  title:"",
-                                 text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                 text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                  type: "error",
                                  showConfirmButton: false,
                                  timer: 3000
@@ -51,7 +51,7 @@ if ($visualizacion == 0) {
     if (isset($_REQUEST['msj'])) {
         $msj = $_REQUEST['msj'];
         if ($msj == 1) {
-            echo '<script> alert("Lo sentimos la SALIDA a ingresar ya existe favor intenta con uno nuevo")</script>';
+            echo '<script> alert("¡Lo sentimos! La SALIDA a ingresar ya existe, favor intenta con uno nuevo")</script>';
         }
 
         if ($msj == 2) {
@@ -82,13 +82,13 @@ ob_end_flush();
                     <div class="col-sm-6">
 
 
-                        <h1>Salida del producto</h1>
+                        <h1>Salida del Producto</h1>
                     </div>
 
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="../vistas/pagina_principal_vista.php">Inicio</a></li>
-                            <li class="breadcrumb-item"><a href="../vistas/gestion_salida_vista.php">Gestión salida</a></li>
+                            <li class="breadcrumb-item"><a href="../vistas/gestion_salida_vista.php">Gestión de Salida</a></li>
                         </ol>
                     </div>
 
@@ -109,7 +109,7 @@ ob_end_flush();
                 <div class="card card-default ">
                     <div class="card-header center">
                         <!-- BUSCADOR -->
-                        <h5>Buscar por No. Inventario</h5>
+                        <h5>Buscar por No. de Inventario</h5>
 
                         <div>
                             <form action="crear_salida_vista.php" method="post">

@@ -12,7 +12,7 @@ $hoy = $dt->format("Y-m-d");
 
 $Id_objeto = 5000;
 
-bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingreso', 'A crear Reunión');
+bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingresó', 'A crear Reunión');
 
 $visualizacion = permiso_ver($Id_objeto);
 
@@ -22,7 +22,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -67,8 +67,8 @@ ob_end_flush();
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="pagina_principal_vista">Inicio</a></li>
-                           <li class="breadcrumb-item"><a href="menu_reunion_vista">Menú Reuniones</a></li>
-                            <li class="breadcrumb-item active">Crear Reunión</li>
+                           <li class="breadcrumb-item"><a href="menu_reunion_vista">Menú de Reuniones</a></li>
+                            <li class="breadcrumb-item active">Crear una Reunión</li>
                         </ol>
                     </div>
                 </div>
@@ -82,7 +82,7 @@ ob_end_flush();
                     <div class="card-header p-0 pt-1 border-bottom-0">
                         <ul class="nav nav-tabs" id="custom-tabs-three-tab" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link active" id="datosgenerales-tab" data-toggle="pill" href="#datosgenerales" role="tab" aria-controls="datosgenerales" aria-selected="false">Datos Generales y Datos Reunión</a>
+                                <a class="nav-link active" id="datosgenerales-tab" data-toggle="pill" href="#datosgenerales" role="tab" aria-controls="datosgenerales" aria-selected="false">Datos Generales y Datos de Reunión</a>
                             </li>
                             <li class="nav-item">
                                 <a style="display: none;" class="nav-link " id="datosreunion-tab" data-toggle="pill" href="#datosreunion" role="tab" aria-controls="datosreunion" aria-selected="true">Participantes</a>
@@ -119,7 +119,7 @@ ob_end_flush();
                                                     <div class="form-group">
                                                         <label for="tipo">Tipo de Modalidad</label>
                                                         <select class="form-control" onChange="showInp(); showdatos();" style="width: 50%;" id="tipo" name="tipo">
-                                                            <option value="0">Seleccione una modalidad</option>
+                                                            <option value="0">Seleccione una Modalidad</option>
                                                             <?php
                                                             try {
                                                                 $sql = "SELECT * FROM tbl_tipo_reunion_acta ";
@@ -219,7 +219,7 @@ ob_end_flush();
                                                         <table id="" class="table table-bordered table-striped">
                                                             <thead>
                                                                 <tr>
-                                                                    <th>Nombre Participante</th>
+                                                                    <th>Nombre del Participante</th>
                                                                     <th>Tipo Contrado</th>
                                                                 </tr>
                                                             </thead>
@@ -270,7 +270,7 @@ ob_end_flush();
                                                         <table id="" class="table table-bordered table-striped">
                                                             <thead>
                                                                 <tr>
-                                                                    <th>Nombre Participante</th>
+                                                                    <th>Nombre del Participante</th>
                                                                     <th>Tipo Contrado</th>
                                                                 </tr>
                                                             </thead>
@@ -398,11 +398,11 @@ $('#guardar-reunion').on('submit', function(e) {
             if (resultado.respuesta == 'exito') {
                 swal({
                     title: "Correcto",
-                    text: "Se Agendo correctamente!",
+                    text: "¡Se Agendo correctamente!",
                     type: "success",
                     allowOutsideClick: false, //bloquear click fuera
                     confirmButtonText: "Ir a Reuniones Pendientes",
-                    html: `<h3>La reunión se Agendo con Exito!</h3>
+                    html: `<h3>¡La reunión se Agendó con Exito!</h3>
                         <br>
                         ¿Ahora que desea hacer?
                         <br>
@@ -416,7 +416,7 @@ $('#guardar-reunion').on('submit', function(e) {
             } else {
                 swal(
                     'Error',
-                    'Hubo un error!',
+                    '¡Hubo un error!',
                     'error'
                 )
             }
