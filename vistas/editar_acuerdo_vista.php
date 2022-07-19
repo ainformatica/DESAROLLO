@@ -16,7 +16,7 @@ $hoy = $dt->format("Y-m-d");
 
 $Id_objeto = 5008;
 
-bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingreso', 'A Editar Acuerdo');
+bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingresó', 'A Editar Acuerdo');
 
 $visualizacion = permiso_ver($Id_objeto);
 
@@ -26,7 +26,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -88,7 +88,7 @@ ob_end_flush();
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="pagina_principal_vista">Inicio</a></li>
-                            <li class="breadcrumb-item"><a href="menu_acuerdo_vista">Menú Acuerdos y Seg.</a></li>
+                            <li class="breadcrumb-item"><a href="menu_acuerdo_vista">Menú de Acuerdos y Seg.</a></li>
                             <li class="breadcrumb-item"><a href="acuerdos_pendientes_vista">Acuerdos Pendientes</a></li>
                             <li class="breadcrumb-item active">Editar Acuerdo</li>
                         </ol>
@@ -111,7 +111,7 @@ ob_end_flush();
                         </div>
                         <div class="card-body">
                             <div class="form-group">
-                                <label>Seleccione el acta:</label>
+                                <label>Seleccione el Acta:</label>
                                 <select class="form-control " style="width: 35%;" name="acta" id="acta">
                                     <?php
                                     try {
@@ -183,7 +183,7 @@ ob_end_flush();
                                 <textarea onkeyup="MismaLetra('descripcion');" onkeypress="return validacion(event)" onblur="limpia()" class="form-control" placeholder="Ingrese la descripción del Acuerdo. (Mínimo 5 caracteres)" rows="5" id="descripcion" name="descripcion" minlength="5" maxlength="80" required><?php echo $estado['descripcion']; ?></textarea>
                             </div>
                             <div class="form-group">
-                                <label>Fecha Expiración:</label>
+                                <label>Fecha de Expiración:</label>
                                 <div style="width: 20%;" class="input-group date">
                                     <input required style="width: 40%;" value="<?php echo $estado['fecha_expiracion']; ?>" type="date" class="form-control datetimepicker-input" id="fecha_exp" name="fecha_exp" min="<?php echo $hoy; ?>" />
 

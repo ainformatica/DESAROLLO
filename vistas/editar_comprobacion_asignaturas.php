@@ -20,7 +20,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -73,7 +73,7 @@ ob_end_flush();
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Verificación de las asignaturas</h1>
+            <h1>Verificación de las Asignaturas</h1>
           </div>
 
 
@@ -128,21 +128,21 @@ ob_end_flush();
 
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label>Nombre del estudiante</label>
+                    <label>Nombre del Estudiante</label>
                     <input class="form-control" type="text" id="txt_estudiante" name="txt_estudiante" value="<?php echo $verificacion ['nombres']; ?>" disabled>
                   </div>
                 </div>
 
                 <div class="col-sm-4">
                   <div class="form-group">
-                    <label>Número de cuenta</label>
+                    <label>Número de Cuenta</label>
                     <input class="form-control" type="text" id="txt_cuenta" name="txt_cuenta" value="<?php echo $verificacion ['valor']; ?>" disabled>
                   </div>
                 </div>
 
                 <div class="col-sm-2">
                   <div class="form-group">
-                    <label>Clases aprobadas</label>
+                    <label>Clases Aprobadas</label>
                     <input class="form-control" type="text" maxlength="2" id="clases" name="txt_clases" value="<?php echo $verificacion ['clases_aprobadas']; ?>" required onkeyup="Espacio(this, event)" onkeypress="return Numeros(event)">
                   </div>
                 </div>
@@ -158,7 +158,7 @@ ob_end_flush();
                   <div class="form-group">
                     <label>Verificación del 80%</label>
                     <select class="form-control" name="cb_verificacion" id="cb_verificacion">
-                      <option value="0">Seleccione una opción :</option>
+                      <option value="0">Seleccione una Opción :</option>
                       <?php
                            $sql=$mysqli->query("SELECT * FROM tbl_vinculacion_verificacion WHERE id_verificacion != 3");
 

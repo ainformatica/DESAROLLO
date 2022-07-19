@@ -11,13 +11,13 @@ $dtz = new DateTimeZone("America/Tegucigalpa");
 $dt = new DateTime("now", $dtz);
 $hoy = $dt->format("Y-m-d");
 $Id_objeto = 2008;
-bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingreso', 'A crear Reunion');
+bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingresó', 'A crear Reunion');
 $visualizacion = permiso_ver($Id_objeto);
 if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                                     swal({
                                         title:"",
-                                        text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                        text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                         type: "error",
                                         showConfirmButton: false,
                                         timer: 3000
@@ -55,7 +55,7 @@ ob_end_flush();
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Modificación de charla para PPS</h1>
+            <h1>Modificación de Charla para PPS</h1>
           </div>
 
 
@@ -96,7 +96,7 @@ ob_end_flush();
         <form action="../Controlador/actualizar_charla_controlador.php" method="post" data-form="save" autocomplete="off" class="FormularioAjax">
           <div class="card card-default">
             <div class="card-header">
-              <h3 class="card-title">Editar charla</h3>
+              <h3 class="card-title">Editar Charla</h3>
 
               <div class="card-tools">
                 <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
@@ -145,14 +145,14 @@ ob_end_flush();
 
                 <div class="col-sm-4">
                   <div class="form-group">
-                    <label>Fecha de la charla</label>
+                    <label>Fecha de la Charla</label>
                     <input class="form-control" type="date" value="<?php echo $charla ['fecha_charla']; ?>" id="txt_fecha_asignada" name="txt_fecha_asignada">
                   </div>
                 </div>
 
                 <div class="col-sm-2">
                   <div class="form-group">
-                    <label>Hora de la charla</label>
+                    <label>Hora de la Charla</label>
                     <input class="form-control" type="time" value="<?php echo $charla ['hora_charla']; ?>" maxlength="60" id="txt_hora_charla" name="txt_hora_charla">
                   </div>
                 </div>
@@ -183,21 +183,21 @@ ob_end_flush();
 
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label>Nombre de la charla</label>
+                    <label>Nombre de la Charla</label>
                     <input class="form-control" type="text" value="<?php echo $charla ['nombre_charla']; ?>" maxlength="100" id="txt_nombre_charla" name="txt_nombre_charla">
                   </div>
                 </div>
 
                 <div class="col-sm-2">
                   <div class="form-group">
-                    <label>Periodo académico</label>
+                    <label>Período Académico</label>
                     <input class="form-control" type="text" value="<?php echo $charla ['periodo']; ?>" maxlength="2" id="txt_periodo" name="txt_periodo" required onkeyup="Espacio(this, event)" onkeypress="return Numeros(event)">
                   </div>
                 </div>
 
                 <div class="col-sm-4">
                   <div class="form-group">
-                    <label>Vigencia de la constancia</label>
+                    <label>Vigencia de la Constancia</label>
                     <input class="form-control" type="date" value="<?php echo $charla ['fecha_valida']; ?>" id="txt_fecha_valida" name="txt_fecha_valida">
                   </div>
                 </div>

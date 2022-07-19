@@ -61,7 +61,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
     swal({
         title: "",
-        text: "Lo sentimos la caracteristica ya existe",
+        text: "¡Lo sentimos! La característica ya existe",
         type: "info",
         showConfirmButton: false,
         timer: 3000
@@ -96,7 +96,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
     swal({
         title: "",
-        text: "Error al crear lo sentimos,intente de nuevo.",
+        text: "¡Lo sentimos! Error al crear,intente de nuevo.",
         type: "error",
         showConfirmButton: false,
         timer: 3000
@@ -110,7 +110,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
     swal({
         title: "",
-        text: "Lo sentimos tiene campos por rellenar.",
+        text: "¡Lo sentimos! Tiene campos por rellenar.",
         type: "error",
         showConfirmButton: false,
         timer: 3000
@@ -168,7 +168,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -308,7 +308,7 @@ ob_end_flush();
 
         <div class="card card-default">
           <div class="card-header">
-            <h3 class="card-title">Editar Características del producto</h3>
+            <h3 class="card-title">Editar Características del Producto</h3>
 
             <div class="card-tools">
               <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
@@ -344,7 +344,7 @@ ob_end_flush();
 
 
                     <div class="form-group pt-3">
-                      <label>Tipo de características</label>
+                      <label>Tipo de Características</label>
                     </div>
 
 
@@ -353,7 +353,7 @@ ob_end_flush();
                     <div class="form-inline">
 
                       <select class="form-control select2 mr-3" style="height:38px; width:708px;" name="cmb_tipocaracteristicas" required="">
-                        <option value="0">Seleccione un tipo de característica:</option>
+                        <option value="0">Seleccione un Tipo de Característica:</option>
                         <?php
                         $query = $mysqli->query("SELECT * FROM tbl_tipo_caracteristica");
                         while ($resultado = mysqli_fetch_array($query)) {
@@ -484,7 +484,7 @@ ob_end_flush();
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h4 class="modal-title"> Tipo característica </h4>
+            <h4 class="modal-title"> Tipo de Característica </h4>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -499,7 +499,7 @@ ob_end_flush();
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group">
-                    <label>Nombre de tipo característica </label>
+                    <label>Nombre del Tipo de Característica </label>
                     <input class="form-control" class="tf w-input" type="text" id="txt_tipo_caracteristica1" onkeypress="return validacion_para_nombre(event)" name="txt_tipo_caracteristica1" value="" required style="text-transform: uppercase" onkeyup="DobleEspacio(this, event); MismaLetra('txt_tipo_caracteristica1');" maxlength="50">
                   </div>
                 </div>
@@ -513,9 +513,9 @@ ob_end_flush();
                 <div class="col-md-12">
                   <div class="form-group">
 
-                    <label>Tipo de dato de la Característica</label>
+                    <label>Tipo de Dato de la Característica</label>
                     <select class="form-control" name="cb_tipo_dato" id="cb_tipo_dato" onchange="">
-                      <option value="0">Seleccione una opción:</option>
+                      <option value="0">Seleccione una Opción:</option>
                       <option value="1">Letras</option>
                       <option value="2">Números</option>
                       <option value="3">Letras y Números</option>

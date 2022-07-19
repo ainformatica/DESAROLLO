@@ -25,7 +25,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
     swal({
         title: "",
-        text: "Lo sentimos el número de inventario ya existe",
+        text: "¡Lo sentimos! El número de inventario ya existe",
         type: "info",
         showConfirmButton: false,
         timer: 3000
@@ -40,7 +40,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
     swal({
         title: "",
-        text: "Agregado con exito",
+        text: "Agregado con éxito",
         type: "success",
         showConfirmButton: false,
         timer: 3000
@@ -71,7 +71,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
     swal({
         title: "",
-        text: "Error al crear lo sentimos, intente de nuevo.",
+        text: "¡Lo sentimos! Error al crear, intente de nuevo.",
         type: "error",
         showConfirmButton: false,
         timer: 3000
@@ -85,7 +85,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
     swal({
         title: "",
-        text: "Lo sentimos tiene campos por rellenar.",
+        text: "¡Lo sentimos! Tiene campos por rellenar.",
         type: "error",
         showConfirmButton: false,
         timer: 3000
@@ -117,7 +117,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
     swal({
         title: "",
-        text: "Error al actualizar lo sentimos,intente de nuevo.",
+        text: "¡Lo sentimos! Error al actualizar,intente de nuevo.",
         type: "error",
         showConfirmButton: false,
         timer: 3000
@@ -212,7 +212,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -353,7 +353,7 @@ ob_end_flush();
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1> Detalle Adquisiciones </h1>
+            <h1> Detalle de Adquisiciones </h1>
           </div>
 
 
@@ -361,7 +361,7 @@ ob_end_flush();
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="../vistas/pagina_principal_vista.php">Inicio</a></li>
-              <li class="breadcrumb-item"><a href="../vistas/gestion_adquisicion_vista.php">Gestión Adquisición</a></li>
+              <li class="breadcrumb-item"><a href="../vistas/gestion_adquisicion_vista.php">Gestión de Adquisición</a></li>
 
 
             </ol>
@@ -381,7 +381,7 @@ ob_end_flush();
 
         <div class="card card-default">
           <div class="card-header">
-            <h3 class="card-title">Actualizar Caracteristicas Detalle Adquisición</h3>
+            <h3 class="card-title">Actualizar Características del Detalle de la Adquisición</h3>
 
             <div class="card-tools">
               <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>

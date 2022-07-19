@@ -115,7 +115,7 @@ ob_end_flush();
 
                 <div class="col-md-2">
                   <div class="form-group" hidden>
-                    <label>nombre docente:</label>
+                    <label>Nombre del docente:</label>
                     <input class="form-control" readonly type="text" id="txt_nombre_docente" name="txt_nombre_docente">
 
                   </div>

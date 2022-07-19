@@ -11,13 +11,13 @@ $dtz = new DateTimeZone("America/Tegucigalpa");
 $dt = new DateTime("now", $dtz);
 $hoy = $dt->format("Y-m-d");
 $Id_objeto = 5005;
-bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingreso', 'Editar Actas');
+bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingresó', 'Editar Actas');
 $visualizacion = permiso_ver($Id_objeto);
 if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                                     swal({
                                         title:"",
-                                        text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                        text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                         type: "error",
                                         showConfirmButton: false,
                                         timer: 3000
@@ -57,7 +57,7 @@ ob_end_flush();
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="pagina_principal_vista">Inicio</a></li>
-                            <li class="breadcrumb-item"><a href="menu_acta_vista">Gestión Actas</a></li>
+                            <li class="breadcrumb-item"><a href="menu_acta_vista">Gestión de Actas</a></li>
                             <li class="breadcrumb-item"><a href="actas_pendientes_vista">Actas Pendientes</a></li>
                             <li class="breadcrumb-item active">Editar Acta</li>
                         </ol>
@@ -123,7 +123,7 @@ ob_end_flush();
                                                 </div>
                                                 <div class="card-body">
                                                     <div class="form-group">
-                                                        <label for="nombre">Nombre Reunión:</label>
+                                                        <label for="nombre">Nombre de la Reunión:</label>
                                                         <input required minlength="5" type="text" value="<?php echo $estado['nombre_reunion']; ?>" class="form-control" id="nombre" name="nombre" style="background: #FFCFCF;" disabled>
                                                     </div>
                                                     <div class="form-group">
@@ -161,7 +161,7 @@ ob_end_flush();
                                                         <input required style="width: 40%; background: #FFCFCF;" value="<?php echo $estado['fecha']; ?>" type="date" class="form-control datetimepicker-input" id="fecha" name="fecha" min="<?php echo $hoy; ?>" disabled />
                                                     </div>
                                                     <div class="form-group">
-                                                        <label for="nacta">No. Acta:</label>
+                                                        <label for="nacta">No. de Acta:</label>
                                                         <input onkeypress="return validacion(event)" onblur="limpia()" onkeyup="mayus(this); Misma('nacta');" value="<?php echo $estado['num_acta']; ?>" style="width: 90%;" type="text" class="form-control" id="nacta" minlength="5" maxlength="25" name="nacta" placeholder="Ingrese numero o codigo del acta. (Mínimo 5 caracteres)">
                                                     </div>
                                                     <div class="form-group">
@@ -193,7 +193,7 @@ ob_end_flush();
                                                     <table class="table table-bordered table-striped ">
                                                         <thead>
                                                             <tr >
-                                                                <th>Nombre Participante</th>
+                                                                <th>Nombre del Participante</th>
                                                                 <th>Editar Asistencia</th>
                                                                 <th>Estado Asistencia Actual</th>
                                                             </tr>
@@ -345,7 +345,7 @@ ob_end_flush();
                                                     <table id="tablaa" class="table table-bordered table-striped">
                                                         <thead>
                                                             <tr>
-                                                                <th>Nombre Archivo</th>
+                                                                <th>Nombre del Archivo</th>
                                                                 <th>Formato</th>
                                                                 <th>Acción</th>
                                                             </tr>

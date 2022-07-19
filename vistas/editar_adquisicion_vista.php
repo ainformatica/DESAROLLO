@@ -28,7 +28,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -106,7 +106,7 @@ ob_end_flush();
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="../vistas/pagina_principal_vista.php">Inicio</a></li>
-                            <li class="breadcrumb-item"><a href="../vistas/gestion_adquisicion_vista.php">Gestion Adquisiciones</a></li>
+                            <li class="breadcrumb-item"><a href="../vistas/gestion_adquisicion_vista.php">Gestion de Adquisiciones</a></li>
 
                         </ol>
                     </div>
@@ -150,7 +150,7 @@ ob_end_flush();
 
 
                                     <div class="form-group ">
-                                        <label>Editar descripcion de la Adquisición </label>
+                                        <label>Editar Descripción de la Adquisición </label>
                                         <!--<input class="form-control " type="text" id="txt_descripcion" name="txt_descripcion" value="<?php echo $_SESSION['descripcion_adquisicion_']; ?>"required="" maxlength="100" style="text-transform: uppercase" onkeyup="DobleEspacio(this, event); MismaLetra('txt_descripcion);" onkeypress="return sololetras(event)"  onkeypress="return comprobar(this.value, event, this.id)"> -->
                                         <textarea class="form-control " style="text-transform: uppercase" class="tf w-input" required type="text" maxlength="100" name="txt_descripcion" id="txt_descripcion" rows="5" cols="40" onkeyup="DobleEspacio(this, event); MismaLetra('txt_descripcion');" onkeypress="return validacion_para_producto(event)"><?php echo $_SESSION['descripcion_adquisicion_']; ?></textarea>
                                     </div>
@@ -158,7 +158,7 @@ ob_end_flush();
 
                                     <!-- FECHA ADQUISICION -->
                                     <div class="form-group">
-                                        <label>fecha de Adquisición</label>
+                                        <label>Fecha de Adquisición</label>
                                         <input type="hidden" name="id_adquisicion" id="id_adquisicion">
 
                                         <input type="hidden" name="id_estado" id="id_estado">
