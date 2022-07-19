@@ -10,7 +10,7 @@ require_once('../clases/funcion_permisos.php');
 
 $Id_objeto = 5021;
 
-bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingreso', 'A Editar Tipo Reunión');
+bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingresó', 'A Editar Tipo Reunión');
 
 $visualizacion = permiso_ver($Id_objeto);
 
@@ -20,7 +20,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -67,7 +67,7 @@ ob_end_flush();
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="pagina_principal_vista">Inicio</a></li>
-                            <li class="breadcrumb-item"><a href="menu_mantenimientoacta_vista">Menú Mantenimiento actas</a></li>
+                            <li class="breadcrumb-item"><a href="menu_mantenimientoacta_vista">Menú Mantenimiento de Actas</a></li>
                             <li class="breadcrumb-item active">Editar Tipo</li>
                         </ol>
                     </div>

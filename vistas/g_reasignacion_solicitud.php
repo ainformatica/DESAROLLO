@@ -15,7 +15,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -118,11 +118,11 @@ ob_end_flush();
                 <u id="fecha_inicio"></u> <strong align="right">Fecha Finaliza</strong><u id="fecha_final"></u>
               </p><br>
               <p style="text-align:left; margin-left: 58px;">
-                <strong>Avance realizado si estuvo el periodo anterior</strong>
+                <strong>Avance realizado si estuvo el período anterior</strong>
                 <u id="avance_realizado"></u>
               </p><br>
               <p style="text-align:left; margin-left: 58px;">
-                <strong>Proyección para este periodo académico</strong>
+                <strong>Proyección para este período académico</strong>
                 <u id="proyeccion"></u>
               </p><br>
               <p style="text-align:left; margin-left: 58px;">
@@ -180,7 +180,7 @@ ob_end_flush();
                 <input type="text" class="form-control" id="datepicker1" onkeydown="return false" name="fecha_final" required>
               </div>
             </div>
-            <label for="">Periodo del Proyecto</label>
+            <label for="">Período del Proyecto</label>
             <select name="periodo_soli" id="periodo_soli" class="form-control">
               <option value="PERIODO I">PERIODO I</option>
               <option value="PERIODO II">PERIODO II</option>
@@ -262,9 +262,9 @@ ob_end_flush();
             <tr>
               <th scope="col">ID SOLICITUD</th>
               <th scope="col">ID DOCENTE</th>
-              <th scope="col">NOMBRE DOCENTE</th>
+              <th scope="col">NOMBRE DEL DOCENTE</th>
               <th scope="col">RAZÓN</th>
-              <th scope="col">ESTADO SOLICITUD</th>
+              <th scope="col">ESTADO DE LA SOLICITUD</th>
               <th scope="col">ACCIÓN</th>
               <th scope="col">PDF</th>
             </tr>
@@ -499,8 +499,8 @@ ob_end_flush();
             if (data == 'exito') {
               $('#nueva_solicitud').modal('toggle');
               swal(
-                '¡Solicitud enviada con exito!',
-                'datos agregados a la base de datos',
+                '¡Solicitud enviada con éxito!',
+                'información agregada a la base de datos',
                 'success'
               )
               var tabla_revision = $('#tabla_solicitud').dataTable();
@@ -508,7 +508,7 @@ ob_end_flush();
             } else {
               swal(
                 'Oops...',
-                'Something went wrong!',
+                '¡Something went wrong!',
                 'error'
               )
             }

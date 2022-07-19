@@ -20,7 +20,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -63,7 +63,7 @@ ob_end_flush();
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Inicio</a></li>
-                            <li class="breadcrumb-item"><a href="#">Menu Mantenimiento</a></li>
+                            <li class="breadcrumb-item"><a href="#">Menú Mantenimiento</a></li>
                             <li class="breadcrumb-item"><a href="../vistas/menu_mantenimientos_jefatura_principal.php"> Mantenimiento Jefatura</a></li>
                         </ol>
                     </div>
@@ -106,7 +106,7 @@ ob_end_flush();
                                             <div class="col-12">
                                                 <label for="">Fecha</label><br>
                                                 <input type="text" class="form-control" id="datepicker" name="fecha_gasto" placeholder="dd/mm/yyyy" required> <br>
-                                                <label for="">Nombre Gasto</label><br>
+                                                <label for="">Nombre del Gasto</label><br>
                                                 <input type="text" class="form-control" id="nombre_gasto" name="nombre_gasto" maxlength="20" value="" style="text-transform: uppercase" onkeyup="DobleEspacio(this, event); MismaLetra('nombre_gasto');" oncopy="return false" onpaste="return false" onkeypress="return sololetras(event)" placeholder="Descripción" required>
                                                 <!-- <label for="">Gastos Tipos</label>
                                                 <select name="" id="" class="form-control">
@@ -170,7 +170,7 @@ ob_end_flush();
             var str3 = valor.substring(longitud - 1, longitud);
             nuevo_valor = valor.substring(0, longitud - 1);
             if (str1 == str2 && str1 == str3 && str2 == str3) {
-                swal('Error', 'No se permiten 3 letras consecutivamente', 'error');
+                swal('Error', 'No se permiten 3 letras iguales consecutivamente', 'error');
 
                 $('#' + id_input).val(nuevo_valor);
             }

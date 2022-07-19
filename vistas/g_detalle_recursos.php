@@ -15,7 +15,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -71,7 +71,7 @@ ob_end_flush();
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Gestión de Recurso Operativos de Jefatura</h1>
+                        <h1>Gestión de Recursos Operativos de Jefatura</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
@@ -99,7 +99,7 @@ ob_end_flush();
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Envio de datos</h5>
+                        <h5 class="modal-title">Envío de datos</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -154,7 +154,7 @@ ob_end_flush();
                         <h3 class="card-title">Detalles de Registro de Recursos</h3>
                     </div>
                     <div class="col-3">
-                        <a href="../vistas/agregar_detalles_recursos.php" class="btn btn-success btn-m">Agregar Detalle recursos</a>
+                        <a href="../vistas/agregar_detalles_recursos.php" class="btn btn-success btn-m">Agregar Detalle de Recursos</a>
                     </div>
 
                 </div>
@@ -192,7 +192,7 @@ ob_end_flush();
                                                         <th scope="col">DESCRIPCIÓN</th>
                                                         <th scope="col">PRECIO</th>
                                                         <th scope="col">TOTAL</th>
-                                                        <th scope="col">NOMBRE RECURSO</th>
+                                                        <th scope="col">NOMBRE DEL RECURSO</th>
                                                         <th scope="col">ELIMINAR</th>
                                                         <th scope="col">EDITAR</th>
                                                     </tr>
@@ -434,8 +434,8 @@ ob_end_flush();
                         console.log(data);
                         if (data == 'exito') {
                             swal(
-                                'Exito...',
-                                'Datos Eliminados con exito!',
+                                'Éxito...',
+                                '¡Datos eliminados con éxito!',
                                 'success'
                             )
                             $('#tabla_detalles_recursos').DataTable().ajax.reload();
@@ -535,8 +535,8 @@ ob_end_flush();
                 if (data == 'exito') {
                     $('#modal').modal('toggle');
                     swal(
-                        'Exito...',
-                        'Datos guardados!',
+                        'Éxito...',
+                        '¡Datos guardados!',
                         'success'
                     )
                     $('#tabla_detalles_recursos').DataTable().ajax.reload();
@@ -544,7 +544,7 @@ ob_end_flush();
                 } else {
                     swal(
                         'Oopss...',
-                        'algo ocurrio mal!',
+                        '¡Algo ocurrio mal!',
                         'error'
                     )
                 }

@@ -10,7 +10,7 @@ require_once('../clases/funcion_permisos.php');
 
 $Id_objeto = 5023;
 
-bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingreso', 'A Editar Estado Reunión');
+bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingresó', 'A Editar Estado Reunión');
 
 $visualizacion = permiso_ver($Id_objeto);
 
@@ -20,7 +20,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -62,13 +62,13 @@ ob_end_flush();
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Editar estado</h1>
+                        <h1>Editar Estado</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="pagina_principal_vista">Inicio</a></li>
-                            <li class="breadcrumb-item"><a href="menu_mantenimientoacta_vista">Menú Mantenimiento actas</a></li>
-                            <li class="breadcrumb-item active">Editar estado</li>
+                            <li class="breadcrumb-item"><a href="menu_mantenimientoacta_vista">Menú Mantenimiento de Actas</a></li>
+                            <li class="breadcrumb-item active">Editar Estado</li>
                         </ol>
                     </div>
                 </div>
@@ -85,7 +85,7 @@ ob_end_flush();
             <form role="form" name="guardar-estadoreunion" id="guardar-estadoreunion" method="post" action="../Modelos/modelo_manreunion.php">
                 <div class="card-body" style="padding-top: 100px;">
                     <div class="form-group">
-                        <label for="tipo">Nombre Estado: </label>
+                        <label for="tipo">Nombre del Estado: </label>
                         <input type="text" value="<?php echo $estado['estado_reunion']; ?>" class="form-control" class="form-control col-md-6" id="estado" name="estado" placeholder="Ingrese un estado nuevo. (Mínimo 3 caracteres)" onkeyup="MismaLetra('estado');" required title="Solo se permiten MAYÚSCULAS y no se Aceptan caracteres especiales" minlength="3" maxlength="15" pattern="[A-Z\s]{1,15}">
                     </div>
                 </div>

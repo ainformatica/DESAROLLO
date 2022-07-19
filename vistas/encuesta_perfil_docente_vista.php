@@ -120,18 +120,18 @@ $row11 = $consulta11->fetch_all(MYSQLI_ASSOC);
                             <div class="card-body">
                                 <h4 class="card-title">Preferencia Docente en Base a Experiencias Profesionales</h4>
                                 <div class="card-text">
-                                    <button type="button" id="btn_modal1" class="btn btn-info " onclick="pregunta1();">1. Identifique las Áreas que imparte clases</button>
+                                    <button type="button" id="btn_modal1" class="btn btn-info " onclick="pregunta1();">1. Identifique las áreas que imparte clases</button>
                                     <br><br>
                                     <button type="button" id="btn_modal2" class="btn btn-info " onclick="pregunta2();">
-                                        <h6 style="text-align: left;font-size:10;">2. Identifique las Áreas de Preferencia y Experencia Profesional</h6>
+                                        <h6 style="text-align: left;font-size:10;">2. Identifique las áreas de preferencia y experencia profesional</h6>
                                     </button>
                                     <br><br>
                                     <button type="button" id="btn_modal3" class="btn btn-info " onclick="pregunta3();">
-                                        <h6 style="text-align: left; font-size:10;">3. Identifique las Asignaturas de Preferencia Profesional</h6>
+                                        <h6 style="text-align: left; font-size:10;">3. Identifique las asignaturas de preferencia profesional</h6>
                                     </button>
                                     <br><br>
                                     <button type="button" id="btn_modal3" class="btn btn-info " onclick="pregunta4();">
-                                        <h6 style="text-align: left; font-size:10;">4. Identifique las Asignaturas de Experiencia Profesional</h6>
+                                        <h6 style="text-align: left; font-size:10;">4. Identifique las asignaturas de experiencia profesional</h6>
                                     </button>
                                 </div>
                             </div>
@@ -270,7 +270,7 @@ $row11 = $consulta11->fetch_all(MYSQLI_ASSOC);
                                 <div style="text-align:left">
 
                                     <h5 style="font-weight: bold; font-size: 15px">3. Basado en la respuesta de la pregunta anterior ¿Selecciones la(s) Asignatura(s)
-                                        en la que tiene mayor experiencia?</h5>
+                                        en la(s) que tiene mayor experiencia?</h5>
                                     <div class="form-check">
                                         <?php
 
@@ -327,7 +327,7 @@ $row11 = $consulta11->fetch_all(MYSQLI_ASSOC);
 
                                 <div style="text-align:left">
 
-                                    <h5 style="font-weight: bold; font-size: 15px"> 4. ¿Selecciones la(s) Asignatura(s) en la que desea de impartir? </h5>
+                                    <h5 style="font-weight: bold; font-size: 15px"> 4. ¿Selecciones la(s) Asignatura(s) que desea impartir? </h5>
                                     <div class="form-check">
 
                                         <?php

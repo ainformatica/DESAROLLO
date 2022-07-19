@@ -25,7 +25,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -109,7 +109,7 @@ if ($visualizacion == 0) {
             <div class="container">
               <div class="row">
                 <div class="col-sm">
-                  <label for="">Periodo</label><br>
+                  <label for="">Período</label><br>
                   <select name="periodo_ca_edit" id="periodo_ca_edit" class="form-control">
                     <option value="PERIODO I">PERIODO I</option>
                     <option value="PERIODO II">PERIODO II</option>
@@ -122,7 +122,7 @@ if ($visualizacion == 0) {
                   <input type="text" class="form-control" autocomplete="off" name="descrp_ca_edit" id="descrp_ca_edit" maxlength="50" value="" style="text-transform: uppercase" onkeyup="DobleEspacio(this, event); MismaLetra('descrp_ca');" oncopy="return false" onpaste="return false" onkeypress="return sololetras(event)" required="">
                 </div>
                 <div class="col-sm">
-                  <label for="">Año Periodo</label><br>
+                  <label for="">Año Período</label><br>
                   <input type="text" id="datepicker_acd" name="txt_fecha_ingreso_ca_edit" onkeydown="return false" class="form-control fecha_acd" placeholder="AÑO PERIODO" required="">
                   <!-- <input class="form-control" type="date" id="txt_fecha_ingreso_ca" name="txt_fecha_ingreso_ca" onkeydown="return false" max="2021-06-22" min="1970-01-01" required> -->
                 </div>
@@ -217,7 +217,7 @@ if ($visualizacion == 0) {
                           <div class="container">
                             <div class="row">
                               <div class="col-sm">
-                                <label for="">Periodo</label><br>
+                                <label for="">Período</label><br>
                                 <select name="periodo_ca" id="periodo_ca" class="form-control">
                                   <option value="PERIODO I">PERIODO I</option>
                                   <option value="PERIODO II">PERIODO II</option>
@@ -230,7 +230,7 @@ if ($visualizacion == 0) {
                                 <input type="text" class="form-control" autocomplete="off" name="descrp_ca" id="descrp_ca" maxlength="50" value="" style="text-transform: uppercase" onkeyup="DobleEspacio(this, event); MismaLetra('descrp_ca');" oncopy="return false" onpaste="return false" onkeypress="return sololetras(event)" required>
                               </div>
                               <div class="col-sm">
-                                <label for="">Año Periodo</label><br>
+                                <label for="">Año Período</label><br>
                                 <input type="text" id="datepicker" name="txt_fecha_ingreso_ca" onkeydown="return false" class="form-control" placeholder="AÑO PERIODO" required>
                                 <!-- <input class="form-control" type="date" id="txt_fecha_ingreso_ca" name="txt_fecha_ingreso_ca" onkeydown="return false" max="2021-06-22" min="1970-01-01" required> -->
                               </div>
@@ -263,7 +263,7 @@ if ($visualizacion == 0) {
                             <div class="row">
                               <div class="col-sm">
 
-                                <label for="">Periodo</label><br>
+                                <label for="">Período</label><br>
                                 <select name="periodo_cr" id="periodo_cr" class="form-control">
                                   <option value="PERIODO I">PERIODO I</option>
                                   <option value="PERIODO II">PERIODO II</option>
@@ -276,7 +276,7 @@ if ($visualizacion == 0) {
                                 <input type="text" class="form-control" autocomplete="off" name="descrip_cr" id="descrip_cr" maxlength="50" value="" style="text-transform: uppercase" onkeyup="DobleEspacio(this, event); MismaLetra('descrip_cr');" oncopy="return false" onpaste="return false" onkeypress="return sololetras(event)" required>
                               </div>
                               <div class="col-sm">
-                                <label for="">Año Periodo</label><br>
+                                <label for="">Año Período</label><br>
                                 <input type="text" id="datepicker1" name="txt_fecha_ingreso_cr" onkeydown="return false" class="form-control" placeholder="AÑO PERIODO" required>
                                 <!-- <input class="form-control" type="date" id="datepicker" name="txt_fecha_ingreso_cr" required="" onkeydown="return false" max="2021-06-22" min="1970-01-01" required> -->
                               </div>
@@ -619,14 +619,14 @@ if ($visualizacion == 0) {
         var id_acd = fila.id_coordAcademica;
         //alert(id_acd);
         swal({
-          title: 'Seguro que quiere eliminar este archivo?',
-          text: "!Este registro no podra ser recuperado!",
+          title: '¡Seguro que quiere eliminar este archivo?',
+          text: "!Este registro no podrá ser recuperado!",
           type: 'warning',
           showCancelButton: true,
           confirmButtonColor: '#3085d6',
           cancelButtonColor: '#d33',
-          confirmButtonText: 'Si, Eliminarlo!',
-          cancelButtonText: 'No, Cancelar!',
+          confirmButtonText: 'Sí ¡Eliminarlo!',
+          cancelButtonText: 'No ¡Cancelar!',
           confirmButtonClass: 'btn btn-success',
           cancelButtonClass: 'btn btn-danger',
           buttonsStyling: false
@@ -654,7 +654,7 @@ if ($visualizacion == 0) {
               } else {
                 swal(
                   'Error',
-                  'A ocurrido un error en la consulta!',
+                  '¡A ocurrido un error en la consulta!',
                   'error'
                 )
               }
@@ -666,7 +666,7 @@ if ($visualizacion == 0) {
           if (dismiss === 'cancel') {
             swal(
               'Cancelado',
-              'Su registro sigue intacto!',
+              '¡Su registro sigue intacto!',
               'error'
             )
           }
@@ -782,7 +782,7 @@ if ($visualizacion == 0) {
             } else {
               swal(
                 'Error',
-                'A ocurrido un error en la consulta!',
+                '¡A ocurrido un error en la consulta!',
                 'error'
               )
             }

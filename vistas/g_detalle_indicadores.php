@@ -15,7 +15,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -78,7 +78,7 @@ ob_end_flush();
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Indicadores de Gestión académica de Jefatura</h1>
+                        <h1>Indicadores de Gestión Académica de Jefatura</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
@@ -149,7 +149,7 @@ ob_end_flush();
             <div class="card-body  ">
                 <div class="row">
                     <div class="col-9">
-                        <h3 class="card-title">Detalle Indicadores de Gstión</h3>
+                        <h3 class="card-title">Detalle de Indicadores de Gestión</h3>
                     </div>
                     <div class="col-3">
                         <a href="../vistas/agregar_detalles_indicadores.php" class="btn btn-success btn-m">Agregar Nuevo Detalle Indicador</a>
@@ -497,8 +497,8 @@ ob_end_flush();
                 if (data == 'exito') {
                     $('#modal').modal('toggle');
                     swal(
-                        'Exito...',
-                        'Datos guardados!',
+                        'Éxito...',
+                        '¡Datos guardados!',
                         'success'
                     )
                     $('#tabla_detalles_indicador').DataTable().ajax.reload();
@@ -506,7 +506,7 @@ ob_end_flush();
                 } else {
                     swal(
                         'Oopss...',
-                        'algo ocurrio mal!',
+                        '¡Algo ocurrio mal!',
                         'error'
                     )
                 }

@@ -21,7 +21,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                             swal({
                                  title:"",
-                                 text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                 text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                  type: "error",
                                  showConfirmButton: false,
                                  timer: 3000
@@ -31,7 +31,7 @@ if ($visualizacion == 0) {
                           </script>';
 } else {
 
-    bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingreso', 'A Modificar Salida');
+    bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingresó', 'A Modificar Salida');
 
 
     if (permisos::permiso_modificar($Id_objeto) == '1') {
@@ -79,13 +79,13 @@ ob_end_flush();
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1>Actualización Salida del producto</h1>
+                        <h1>Actualización Salida del Producto</h1>
                     </div>
 
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="../vistas/pagina_principal_vista.php">Inicio</a></li>
-                            <li class="breadcrumb-item"><a href="../vistas/gestion_salida_vista.php">Gestión salida</a></li>
+                            <li class="breadcrumb-item"><a href="../vistas/gestion_salida_vista.php">Gestión de Salida</a></li>
                         </ol>
                     </div>
                     <!-- VERIFICAR -->

@@ -21,7 +21,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -51,7 +51,7 @@ ob_end_flush();
 
           <div class="card card-default">
             <div class="card-header">
-              <h3 class="card-title">Datos de filtro</h3>
+              <h3 class="card-title">Datos de Filtro</h3>
 
               <div class="card-tools">
                 <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
@@ -109,7 +109,7 @@ ob_end_flush();
   <!-- Main content -->
   <div class="card card-default">
     <div class="card-header">
-      <h3 class="card-title">Reporte Practica Profesional Supervisada</h3>
+      <h3 class="card-title">Reporte Práctica Profesional Supervisada</h3>
       <div class="card-tools">
         <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
 
@@ -122,7 +122,7 @@ ob_end_flush();
         <thead>
           <tr>
             <th>Nombre Completo</th>
-            <th>Número de cuenta</th>
+            <th>Número de Cuenta</th>
             <th>Empresa</th>
             <th>Dirección</th>
             <th>Supervisor Asignado</th>
@@ -130,7 +130,7 @@ ob_end_flush();
             <th>Fecha de finalización</th>
             <th>Primera Visita</th>
             <th>Segunda Visita</th>
-            <th>Visita Unica</th>
+            <th>Visita Única</th>
           </tr>
         </thead>
 

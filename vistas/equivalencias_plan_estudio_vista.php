@@ -20,7 +20,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -89,7 +89,7 @@ ob_end_flush();
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="../vistas/pagina_principal_vista.php">Inicio</a></li>
-                            <li class="breadcrumb-item"><a href="../vistas/menu_plan_estudio_vista.php">Menu Plan de Estudio</a></li>
+                            <li class="breadcrumb-item"><a href="../vistas/menu_plan_estudio_vista.php">Menú Plan de Estudio</a></li>
                         </ol>
                     </div>
 
@@ -269,7 +269,7 @@ ob_end_flush();
                             <div class="modal-dialog modal-lg">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title">Nueva equivalencia</h5>
+                                        <h5 class="modal-title">Nueva Equivalencia</h5>
                                         <button class="close" data-dismiss="modal" onclick="cancelar()">
                                             &times;
                                         </button>
@@ -289,7 +289,7 @@ ob_end_flush();
                                             <div class="col-md-6">
                                                 <div class="form-group">
 
-                                                    <label>Plan para equivalencia:</label>
+                                                    <label>Plan para Equivalencia:</label>
                                                     <td><select class="form-control" style="width: 100%;" name="cbm_plan_crear" id="cbm_plan_crear">
                                                         </select></td>
                                                 </div>

@@ -56,7 +56,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -172,7 +172,7 @@ ob_end_flush()
             <div class="col-4 col-sm-4 col-md-4">
               <div class="small-box bg-light">
                 <div class="inner">
-                  <h5>Gestión de Indicadores Académico</h5>
+                  <h5>Gestión de Indicadores Académicos</h5>
                   <p><?php echo $_SESSION['g_detalle_indicadores']; ?></p>
                 </div>
                 <div class="icon">

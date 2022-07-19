@@ -25,7 +25,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -36,7 +36,7 @@ if ($visualizacion == 0) {
 } else {
 
 
-    bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingreso', 'A EDITAR PRODUCTO');
+    bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingresó', 'A EDITAR PRODUCTO');
 
 
     if (permisos::permiso_modificar($Id_objeto) == '1') {
@@ -100,7 +100,7 @@ ob_end_flush();
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="../vistas/pagina_principal_vista.php">Inicio</a></li>
-                            <li class="breadcrumb-item"><a href="../vistas/gestion_producto_vista.php">Gestión Productos</a></li>
+                            <li class="breadcrumb-item"><a href="../vistas/gestion_producto_vista.php">Gestión de Productos</a></li>
 
                         </ol>
                     </div>
@@ -135,7 +135,7 @@ ob_end_flush();
 
                                     <div class="form-group">
 
-                                        <label>Modificar nombre </label>
+                                        <label>Modificar Nombre </label>
 
                                         <input class="form-control" class="tf w-input" type="text" id="txt_nombre_producto" name="txt_nombre_producto" onkeypress="return validacion_para_producto(event)" value="<?php echo $_SESSION['nombre_producto_']; ?>" required style="text-transform: uppercase" onkeyup="DobleEspacio(this, event); MismaLetra('txt_nombre_producto');" maxlength="50">
 
@@ -147,7 +147,7 @@ ob_end_flush();
 
                                     <div class="form-group">
 
-                                        <label>Descripcion del Producto </label>
+                                        <label>Descripción del Producto </label>
 
 
                                         <input class="form-control" class="tf w-input" type="text" id="txt_descripcion" name="txt_descripcion" onkeypress="return validacion_para_producto(event)" value="<?php echo $_SESSION['descripcion_producto_']; ?>" maxlength="100" required style="text-transform: uppercase" onkeyup="DobleEspacio(this, event); MismaLetra('txt_descripcion');">
@@ -157,9 +157,9 @@ ob_end_flush();
                                     <!-- SELECT QUE TRAE EL TIPO DE PRODUCTO -->
 
                                     <div class="form-group ">
-                                        <label class="control-label">Tipos de productos</label>
+                                        <label class="control-label">Tipos de Productos</label>
                                         <select class="form-control" id="cmb_tipoproducto2" name="cmb_tipoproducto2" disabled required="">
-                                            <option value="0">Seleccione un tipo:</option>
+                                            <option value="0">Seleccione un Tipo:</option>
                                             <?php
                                             // $_SESSION['tipo_producto_'] = $row['id_tipo_producto'];
 
@@ -194,7 +194,7 @@ ob_end_flush();
 
                                     <!-- STOCK DEL PRODUCTO -->
                                     <div class="form-group ">
-                                        <label>Stock Minimo</label>
+                                        <label>Stock Mínimo</label>
                                         <input class="form-control" value="<?php echo $_SESSION['stock_minimo_']; ?>" <?php echo $_SESSION['disabled']; ?> style="height:28px; width:70px;" min="0" max="100" type="number" id="stock2" name="stock2" placeholder="" size="20">
                                     </div>
 

@@ -15,7 +15,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -103,7 +103,7 @@ ob_end_flush();
             <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Envio de datos</h5>
+                        <h5 class="modal-title">Envío de datos</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -135,11 +135,11 @@ ob_end_flush();
                                             </div> <br>
                                             <div class="row">
                                                 <div class="col-6">
-                                                    <label for="">Nombre Gasto</label>
+                                                    <label for="">Nombre del Gasto</label>
                                                     <input type="text" name="nombre_gasto_detalle" id="nombre_gasto_detalle" class="form-control" maxlength="20" value="" style="text-transform: uppercase" onkeyup="DobleEspacio(this, event); MismaLetra('nombre_gasto_detalle');" oncopy="return false" onpaste="return false" onkeypress="return sololetras(event)" required> 
                                                 </div>
                                                 <div class="col-6">
-                                                    <label for="">Descripción Gasto</label>
+                                                    <label for="">Descripción del Gasto</label>
                                                     <input type="text" name="desc_gasto_detalle" id="desc_gasto_detalle" class="form-control" maxlength="255" value="" style="text-transform: uppercase" onkeyup="DobleEspacio(this, event); MismaLetra('desc_gasto_detalle');" oncopy="return false" onpaste="return false" onkeypress="return sololetras(event)" required> 
                                                 </div>
                                             </div>
@@ -205,7 +205,7 @@ ob_end_flush();
                                                         <th scope="col">PRECIO</th>
                                                         <th scope="col">CANTIDAD</th>
                                                         <th scope="col">TOTAL</th>
-                                                        <th scope="col">NOMBRE GASTO</th>
+                                                        <th scope="col">NOMBRE DEL GASTO</th>
                                                         <th scope="col">ELIMINAR</th>
                                                         <th scope="col">EDITAR</th>
                                                     </tr>
@@ -454,15 +454,15 @@ ob_end_flush();
                         console.log(data);
                         if (data == 'exito') {
                             swal(
-                                'Exito...',
-                                'Datos guardados!',
+                                'Éxito...',
+                                '¡Datos guardados!',
                                 'success'
                             )
                             $('#tabla_detalles_gastos').DataTable().ajax.reload();
                         } else {
                             swal(
                                 'Oops...',
-                                'Something went wrong!',
+                                '¡Something went wrong!',
                                 'error'
                             )
                         }
@@ -524,7 +524,7 @@ ob_end_flush();
                         //console.log(data);
                         if (data == 'exito') {
                             swal(
-                                'Cambiado!',
+                                'Cambiado',
                                 '!Su registro ha sido cambiado!',
                                 'success'
                             )
@@ -533,8 +533,8 @@ ob_end_flush();
                         } else {
                             swal(
                                 'Error',
-                                'A ocurrido un error en la consulta!',
-                                'error'
+                                '¡A ocurrido un error en la consulta!',
+                                'Error'
                             )
                         }
                     })

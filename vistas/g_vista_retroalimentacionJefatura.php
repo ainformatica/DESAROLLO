@@ -11,7 +11,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -111,16 +111,16 @@ ob_end_flush();
               <p></p>
 
               <p style="text-align:left; margin-left: 60px;">
-                <strong>Periodo</strong>
+                <strong>Período</strong>
                 <u id="id_periodo"></u>&nbsp;&nbsp; <strong>Año</strong> <u id="anio"></u>
               </p> <br>
               <p style="text-align:left; margin-left: 60px;">
                 <strong>Docente</strong>
-                <u id="docente_nombre"></u>&nbsp;&nbsp; <strong>Codigo Empleado</strong> <u id="cod_empleado"></u>
+                <u id="docente_nombre"></u>&nbsp;&nbsp; <strong>Código de Empleado</strong> <u id="cod_empleado"></u>
               </p> <br>
               <p style="text-align:left; margin-left: 60px;">
                 <strong>Cantidad de clases reasignadas</strong>
-                <u id="cant_clases"></u>&nbsp;&nbsp; <strong>memorándum</strong> <u id="memo"></u>
+                <u id="cant_clases"></u>&nbsp;&nbsp; <strong>Memorándum</strong> <u id="memo"></u>
               </p> <br>
 
               <p style="text-align:left; margin-left: 60px;">
@@ -173,11 +173,11 @@ ob_end_flush();
         </div>
         <div class="modal-body">
           <form id="form_retro_nueva">
-            <label for="">Nombre Docente</label>
+            <label for="">Nombre del Docente</label>
             <select name="nombre_docentes" id="nombre_docentes" class="form-control">
 
             </select>
-            <label for="">Nombre Proyecto</label>
+            <label for="">Nombre del Proyecto</label>
             <input type="text" class="form-control" id="nombre_proyecto" maxlength="90" name="nombre_proyecto" onkeyup="mayusculas(this);" required>
             <div class="row">
               <div class="col-6">
@@ -189,7 +189,7 @@ ob_end_flush();
                 <input type="text" class="form-control" id="datepicker1" onkeydown="return false" name="fecha_final" required>
               </div>
             </div>
-            <label for="">Periodo del Proyecto</label>
+            <label for="">Período del Proyecto</label>
             <select name="periodo_soli" id="periodo_soli" class="form-control">
               <option value="PERIODO I">PERIODO I</option>
               <option value="PERIODO II">PERIODO II</option>
@@ -206,7 +206,7 @@ ob_end_flush();
                 <input type="text" id="cant_clases" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;" name="cant_clases" class="form-control" number maxlength="1" required>
               </div>
               <div class="col-4">
-                <label for="">N° Memo</label>
+                <label for="">Memorándum N°</label>
                 <input type="text" id="n_memo" onKeypress="if (event.keyCode < 45 || event.keyCode > 57) event.returnValue = false;" name="n_memo" class="form-control" number maxlength="6" required>
               </div>
             </div>
@@ -284,7 +284,7 @@ ob_end_flush();
               <th scope="col">ID</th>
               <th scope="col">PERIODO</th>
               <th scope="col">DOCENTE</th>
-              <th scope="col">CODIGO EMPLEADO</th>
+              <th scope="col">CODIGO DE EMPLEADO</th>
               <th scope="col">AVANCES</th>
               <th scope="col">DETALLES</th>
               <th scope="col">PDF</th>
@@ -514,8 +514,8 @@ ob_end_flush();
             if (data == 'exito') {
               $('#nueva_retroali').modal('toggle');
               swal(
-                '¡Solicitud enviada con exito!',
-                'datos agregados a la base de datos',
+                '¡Solicitud enviada con éxito!',
+                'Información agregada a la base de datos',
                 'success'
               )
               var tabla_revision = $('#tabla_retroalimentacion').dataTable();
@@ -523,7 +523,7 @@ ob_end_flush();
             } else {
               swal(
                 'Oops...',
-                'Something went wrong!',
+                '¡Something went wrong!',
                 'error'
               )
             }

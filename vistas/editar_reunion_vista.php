@@ -12,7 +12,7 @@ $dt = new DateTime("now", $dtz);
 $hoy = $dt->format("Y-m-d");
 $Id_objeto = 5002;
 
-bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingreso', 'A Editar Reunión');
+bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingresó', 'A Editar Reunión');
 
 $visualizacion = permiso_ver($Id_objeto);
 
@@ -22,7 +22,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -75,7 +75,7 @@ ob_end_flush();
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="pagina_principal_vista">Inicio</a></li>
-                            <li class="breadcrumb-item"><a href="menu_reunion_vista">Menú Reuniones</a></li>
+                            <li class="breadcrumb-item"><a href="menu_reunion_vista">Menú de Reuniones</a></li>
                             <li class="breadcrumb-item active">Editar Reunión</li>
                         </ol>
                     </div>
@@ -229,8 +229,8 @@ ob_end_flush();
                                                         <table class="table table-bordered table-striped">
                                                             <thead>
                                                                 <tr>
-                                                                    <th>Nombre Participante</th>
-                                                                    <th>Tipo Contrado</th>
+                                                                    <th>Nombre del Participante</th>
+                                                                    <th>Tipo Contrato</th>
                                                                 </tr>
                                                             </thead>
                                                             <?php
@@ -294,8 +294,8 @@ ob_end_flush();
                                     <table class="table table-bordered table-striped">
                                         <thead>
                                             <tr>
-                                                <th>Nombre Participante</th>
-                                                <th>Tipo Contrado</th>
+                                                <th>Nombre del Participante</th>
+                                                <th>Tipo de Contrato</th>
                                             </tr>
                                         </thead>
 
