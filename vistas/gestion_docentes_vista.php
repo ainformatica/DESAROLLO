@@ -27,7 +27,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -39,7 +39,7 @@ if ($visualizacion == 0) {
 
 
     // $respuesta1=$instancia_modelo->listar_select1();
-    bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingreso', 'A gestion docentes');
+    bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'INGRESO', 'A GESTION DOCENTES');
 
 
 
@@ -119,7 +119,7 @@ ob_end_flush();
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="../vistas/pagina_principal_vista.php">Inicio</a></li>
-                            <li class="breadcrumb-item"><a href="../vistas/menu_docentes_vista.php">Menu Docentes</a></li>
+                            <li class="breadcrumb-item"><a href="../vistas/menu_docentes_vista.php">Menú Docentes</a></li>
 
                         </ol>
                     </div>
@@ -193,22 +193,22 @@ ob_end_flush();
                         <table id="tabladocentes" class="table table-bordered table-striped">
                             <thead>
                                 <tr>
-                                    <th>#</th>
-                                    <th>N# Empleado</th>
+                                    <th>No.:</th>
+                                    <th>Empleado No.</th>
                                     <th>Nombre</th>
-                                    <th>Identidad</th>
-                                    <th>Fecha ingreso</th>
+                                    <th>Identidad No.</th>
+                                    <th>Fecha de Ingreso</th>
                                     <th>Jornada</th>
-                                    <th>H_inicial</th>
-                                    <th>H_final</th>
-                                    <th>Categoria</th>
+                                    <th>H_Inicial</th>
+                                    <th>H_Final</th>
+                                    <th>Categoría</th>
                                     <th>SUED</th>
-                                    <th>Comisiónes</th>
+                                    <th>Comisiones</th>
                                     <th>Correos</th>
                                     <th>Teléfonos</th>
                                     <!--  <th>FOTO</th>
                                     <th>CURRICULUM</th> -->
-                                    <th>Eestado</th>
+                                    <th>Estado</th>
                                     <th>Modificar Estado</th>
                                     <th>Modificar Información</th>
 
@@ -266,7 +266,7 @@ ob_end_flush();
                                     </div> -->
                                     <div class="col-md-3">
                                         <div class="form-group">
-                                            <label>Fecha de ingreso</label>
+                                            <label>Fecha de Ingreso</label>
                                             <input class="form-control" type="date" name="fecha_ingreso" id="fecha_ingreso" required>
 
                                         </div>
@@ -290,7 +290,7 @@ ob_end_flush();
 
                                     <div class="col-md-2">
                                         <div class="form-group">
-                                            <label>N° Empleado</label>
+                                            <label>Empleado N°</label>
                                             <input class="form-control" name="nempleado_edita" id="nempleado_edita" onkeypress="return solonumeros(event)" onkeyUp="pierdeFoco(this)" maxlength="6" required>
 
                                         </div>
@@ -325,7 +325,7 @@ ob_end_flush();
                                     <div class="col-md-3">
                                         <div class="form-group">
 
-                                            <label>Categoria</label>
+                                            <label>Categoría</label>
                                             <select class="form-control" name="categoria_edita" id="categoria_edita"></select>
 
                                         </div>

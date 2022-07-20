@@ -21,7 +21,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -91,18 +91,18 @@ ob_end_flush();
                 <div class="modal-content">
                   <div class="modal-header">
                     <center>
-                      <h4 class="modal-title" id="myModalLabel">Datos personales del practicantes</h4>
+                      <h4 class="modal-title" id="myModalLabel">Datos Personales del Practicante</h4>
                     </center>
                   </div>
                   <div class="modal-body">
 
                     <label>Nombre Completo</label>
                     <input type="text" name="" id="nombre" class="form-control input-sm" readonly onmousedown="return false;">
-                    <label>Número de cuenta</label>
+                    <label>Número de Cuenta</label>
                     <input type="text" name="" id="cuenta" class="form-control input-sm" readonly onmousedown="return false;">
-                    <label>Email</label>
+                    <label>E-mail</label>
                     <input type="text" name="" id="email" class="form-control input-sm" readonly onmousedown="return false;">
-                    <label>telefono</label>
+                    <label>Teléfono</label>
                     <input type="text" name="" id="telefono" class="form-control input-sm" readonly onmousedown="return false;">
                     <label>Labora en la Empresa</label>
                     <input type="text" name="" id="labora" class="form-control input-sm" readonly onmousedown="return false;">
@@ -130,7 +130,7 @@ ob_end_flush();
 
                     <label>Nombre</label>
                     <input type="text" name="" id="nombree" class="form-control input-sm" readonly onmousedown="return false;">
-                    <label>Direccion</label>
+                    <label>Dirección</label>
                     <input type="text" name="" id="direccion" class="form-control input-sm" readonly onmousedown="return false;">
                     <label>Tipo de Empresa</label>
                     <input type="text" name="" id="tipo" class="form-control input-sm" readonly onmousedown="return false;">
@@ -138,13 +138,13 @@ ob_end_flush();
                     <input type="text" name="" id="departamento" class="form-control input-sm" readonly onmousedown="return false;">
                     <label>Jefe Inmediato</label>
                     <input type="text" name="" id="jefe" class="form-control input-sm" readonly onmousedown="return false;">
-                    <label>Titulo del Jefe Inmediato</label>
+                    <label>Título del Jefe Inmediato</label>
                     <input type="text" name="" id="titulo" class="form-control input-sm" readonly onmousedown="return false;">
                     <label>Cargo del Jefe Inmediato</label>
                     <input type="text" name="" id="cargo" class="form-control input-sm" readonly onmousedown="return false;">
-                    <label>Correo del Jefe Inmediato</label>
+                    <label>E-Mail del Jefe Inmediato</label>
                     <input type="text" name="" id="correo" class="form-control input-sm" readonly onmousedown="return false;">
-                    <label>Telefono del Jefe Inmediato</label>
+                    <label>Teléfono del Jefe Inmediato</label>
                     <input type="text" name="" id="telefonoj" class="form-control input-sm" readonly onmousedown="return false;">
 
                   </div>

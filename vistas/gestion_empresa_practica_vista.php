@@ -22,7 +22,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -204,7 +204,7 @@ ob_end_flush();
 
                 <div class="col-sm-12">
                   <div class="form-group">
-                    <label>Direccion</label>
+                    <label>Dirección</label>
                     <input class="form-control" type="text" maxlength="150" id="txt_direccion_empresa_practica_gestion" name="txt_direccion_empresa_practica_gestion" value="" style="text-transform: uppercase" onkeyup="DobleEspacio(this, event)">
                   </div>
                 </div>
@@ -225,7 +225,7 @@ ob_end_flush();
 
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label>Titulo Academico</label>
+                    <label>Título Académico</label>
                     <input class="form-control" type="text" maxlength="60" id="txt_titulo_jefe_inmediato_gestion" name="txt_titulo_jefe_inmediato_gestion" value="" style="text-transform: uppercase" onkeypress="return Letras(event)" onkeyup="DobleEspacio(this, event)" style="text-transform: uppercase">
                   </div>
                 </div>
@@ -239,7 +239,7 @@ ob_end_flush();
 
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label>Telefono</label>
+                    <label>Teléfono</label>
                     <input class="form-control" type="text" id="txt_telefono_jefe_inmediato_gestion" name="txt_telefono_jefe_inmediato_gestion" value="" data-inputmask='"mask": " 9999-9999"' data-mask>
                   </div>
                 </div>
@@ -248,7 +248,7 @@ ob_end_flush();
 
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label>Correo Electronico</label>
+                    <label>Correo Electrónico</label>
                     <input class="form-control" type="email" id="txt_nombre_jefe_inmediato_gestion" name="txt_nombre_jefe_inmediato_gestion" value="" required onkeypress="return ValidaMail($Correo_electronico)" onkeyup="Espacio(this, event)" maxlength="50">
                   </div>
                 </div>
@@ -313,7 +313,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
                     swal({
                        title:"",
-                       text:"Los datos  se almacenaron correctamente",
+                       text:"Los datos se almacenaron correctamente",
                        type: "success",
                        showConfirmButton: false,
                        timer: 3000
@@ -327,7 +327,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
                     swal({
                        title:"",
-                       text:"Error al actualizar lo sentimos,intente de nuevo.",
+                       text:"¡Lo sentimos! Error al actualizar, intente de nuevo.",
                        type: "error",
                        showConfirmButton: false,
                        timer: 3000
@@ -339,7 +339,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
                                                   swal({
                                                        title:"",
-                                                       text:"Lo sentimos tiene campos por rellenar.",
+                                                       text:"¡Lo sentimos! Tiene campos por rellenar.",
                                                        type: "info",
                                                        showConfirmButton: false,
                                                        timer: 3000

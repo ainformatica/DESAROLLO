@@ -15,7 +15,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
     swal({
         title: "",
-        text: "Lo sentimos no tiene permiso de visualizar la pantalla",
+        text: "¡Lo sentimos! No tiene permiso de visualizar la pantalla",
         type: "error",
         showConfirmButton: false,
         timer: 3000
@@ -60,7 +60,7 @@ ob_end_flush();
                     <div class="col-sm-6">
 
 
-                        <h1>Gestion de Personas</h1>
+                        <h1>Gestión de Personas</h1>
                     </div>
 
                     <div class="col-sm-6">
@@ -85,7 +85,7 @@ ob_end_flush();
 
         <div class="card card-default">
             <div class="card-header">
-                <h3 class="card-title">Personas Existente</h3>
+                <h3 class="card-title">Personas Existentes</h3>
                 <div class="card-tools">
 
 
@@ -206,7 +206,7 @@ ob_end_flush();
                             <div class="col-md-4">
                                 <div class="form-group">
 
-                                    <label>TIPO_PERSONA:</label>
+                                    <label>TIPO DE PERSONA:</label>
                                     <td><select class="form-control select2" style="width: 100%;" name="cbm_tipo_persona" id="cbm_tipo_persona">
                                         </select></td>
                                     <input hidden class="form-control" id="tipo_persona1" name="tipo_persona1" value="0" readonly>
@@ -219,7 +219,7 @@ ob_end_flush();
                                 <div class="form-group">
 
 
-                                    <label>FECHA_NACIMIENTO</label>
+                                    <label>FECHA DE NACIMIENTO</label>
                                     <input class="form-control" type="text" id="fecha" name="fecha" maxlength="150" value="" onkeyup="DobleEspacio(this, event); " onkeypress="return sololetras(event)" required readonly>
                                 </div>
                             </div>

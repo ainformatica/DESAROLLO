@@ -20,7 +20,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -82,7 +82,7 @@ ob_end_flush();
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="../vistas/pagina_principal_vista.php">Inicio</a></li>
-                                <li class="breadcrumb-item"><a href="../vistas/menu_plan_estudio_vista.php">Menu Plan de Estudio</a></li>
+                                <li class="breadcrumb-item"><a href="../vistas/menu_plan_estudio_vista.php">Menú Plan de Estudio</a></li>
                                 <li class="breadcrumb-item">Gestión de Plan</li>
 
                             </ol>
@@ -121,13 +121,13 @@ ob_end_flush();
                                 <table id="tabla_plan_estudio" class="table table-bordered table-striped" style="width:99%">
                                     <thead>
                                         <tr>
-                                            <th>editar</th>
-                                            <th>Cambiar vigencia</th>
+                                            <th>Editar</th>
+                                            <th>Cambiar Vigencia</th>
                                             <th>Nombre</th>
-                                            <th># Clases</th>
-                                            <th>Código de plan</th>
-                                            <th>Tipo de plan</th>
-                                            <th>UV del plan</th>
+                                            <th>Número de Clases</th>
+                                            <th>Código de Plan</th>
+                                            <th>Tipo de Plan</th>
+                                            <th>UV del Plan</th>
                                             <th>Plan Vigente</th>
 
                                         </tr>
@@ -171,7 +171,7 @@ ob_end_flush();
                             <div class="col-md-4">
                                 <div class="form-group">
 
-                                    <label>Seleccione Tipo de plan:</label>
+                                    <label>Seleccione Tipo de Plan:</label>
                                     <td><select class="form-control" style="width: 100%;" name="cbm_tipo_plan_edita" id="cbm_tipo_plan_edita">
                                         </select></td>
                                     <!-- <input class="form-control" type="text" id="txt_id_tipo_plan" name="txt_id_tipo_plan" required readonly hidden> -->
@@ -181,7 +181,7 @@ ob_end_flush();
                             <div class="col-md-4">
                                 <div class="form-group">
 
-                                    <label>Nombre de Plan</label>
+                                    <label>Nombre del Plan</label>
 
                                     <input class="form-control" type="text" id="txt_nombre_edita" name="txt_nombre_edita" maxlength="150" value="" onkeyup="DobleEspacio(this, event); MismaLetra('txt_nombre_edita');" onkeypress="return sololetras(event)" required>
 
@@ -204,7 +204,7 @@ ob_end_flush();
                             <div class="col-md-4">
                                 <div class="form-group">
 
-                                    <label>Número de clases del plan</label>
+                                    <label>Número de Clases del Plan</label>
                                     <input class="form-control" type="text" id="txt_num_clases_edita" name="txt_num_clases_edita" maxlength="2" onkeypress="return solonumeros(event)">
                                     <!-- <input class="form-control" type="text" id="txt_num_clases_edita2" name="txt_num_clases_edita2" maxlength="2" value="" readonly hidden> -->
 
@@ -261,7 +261,7 @@ ob_end_flush();
                     <div class="modal-footer">
                         <!-- <button class="btn btn-danger" name="cambiar_vigencia1" id="cambiar_vigencia1">Guardar Vigencia</button> -->
                         <button class="btn btn-primary" id="guardar" name="guardar" <?php echo $_SESSION['btn_guardar_cambio_plan']; ?>>Guardar</button>
-                        <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                     </div>
                 </div>
             </div>

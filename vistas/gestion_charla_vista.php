@@ -20,7 +20,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -82,7 +82,7 @@ ob_end_flush();
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Creación de charla para PPS</h1>
+            <h1>Creación de Charla para PPS</h1>
           </div>
 
 
@@ -111,7 +111,7 @@ ob_end_flush();
         <form action="../Controlador/guardar_charla_controlador.php" method="post" data-form="save" autocomplete="off" class="FormularioAjax">
           <div class="card card-default">
             <div class="card-header">
-              <h3 class="card-title">Nueva charla</h3>
+              <h3 class="card-title">Nueva Charla</h3>
 
               <div class="card-tools">
                 <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
@@ -127,7 +127,7 @@ ob_end_flush();
                   <div class="form-group">
                     <label> Expositor 1 </label>
                     <select class="form-control" name="cb_expositor_1" id="cb_expositor1" >
-                      <option value="0">Seleccione un docente:</option>
+                      <option value="0">Seleccione un Docente:</option>
                       <?php
                       $query = $mysqli->query("SELECT  p.id_persona, CONCAT(p.nombres,' ', p.apellidos) nombres FROM tbl_personas p, tbl_actividades_persona ap WHERE ap.id_persona=p.id_persona AND ap.id_actividad=1 ");
                       while ($valores = mysqli_fetch_array($query)) {
@@ -142,7 +142,7 @@ ob_end_flush();
                   <div class="form-group">
                     <label> Expositor 2 </label>
                     <select class="form-control" name="cb_expositor_2" id="cb_expositor2" onchange="Constancia();">
-                      <option value="0">Seleccione un docente :</option>
+                      <option value="0">Seleccione un Docente :</option>
                       <?php
                       $query = $mysqli->query("SELECT  p.id_persona, CONCAT(p.nombres,' ', p.apellidos) nombres FROM tbl_personas p, tbl_actividades_persona ap WHERE ap.id_persona=p.id_persona AND ap.id_actividad=1 ");
                       while ($valores = mysqli_fetch_array($query)) {
@@ -156,14 +156,14 @@ ob_end_flush();
 
                 <div class="col-sm-4">
                   <div class="form-group">
-                    <label>Fecha de la charla</label>
+                    <label>Fecha de la Charla</label>
                     <input class="form-control" type="date" id="txt_fecha_asignada" name="txt_fecha_asignada">
                   </div>
                 </div>
 
                 <div class="col-sm-2">
                   <div class="form-group">
-                    <label>Hora de la charla</label>
+                    <label>Hora</label>
                     <input class="form-control" type="time" maxlength="60" id="txt_hora_charla" name="txt_hora_charla">
                   </div>
                 </div>
@@ -179,7 +179,7 @@ ob_end_flush();
                   <div class="form-group">
                     <label> Jornada </label>
                     <select class="form-control" name="cb_jornada" id="cb_jornada">
-                      <option value="0">Seleccione una jornada :</option>
+                      <option value="0">Seleccione una Jornada :</option>
                       <?php
                            $sql=$mysqli->query("SELECT * FROM tbl_jornada_charla");
 
@@ -193,21 +193,21 @@ ob_end_flush();
 
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label>Nombre de la charla</label>
+                    <label>Nombre de la Charla</label>
                     <input class="form-control" type="text" maxlength="100" id="txt_nombre_charla" name="txt_nombre_charla" onkeyup="mayus(this);">
                   </div>
                 </div>
 
                 <div class="col-sm-2">
                   <div class="form-group">
-                    <label>Periodo académico</label>
+                    <label>Período Académico</label>
                     <input class="form-control" type="text" maxlength="2" id="txt_periodo" name="txt_periodo" required onkeyup="espacio(this, event)" onkeypress="return numeros(event)">
                   </div>
                 </div>
 
                 <div class="col-sm-4">
                   <div class="form-group">
-                    <label>Vigencia de la constancia</label>
+                    <label>Vigencia de la Constancia</label>
                     <input class="form-control" type="date" id="txt_fecha_valida" name="txt_fecha_valida">
                   </div>
                 </div>

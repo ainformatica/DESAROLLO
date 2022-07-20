@@ -21,7 +21,7 @@ if (isset($_REQUEST['msj']))
     echo '<script type="text/javascript">
     swal({
      title:"",
-     text:"Lo sentimos tiene campos por rellenar",
+     text:"¡Lo sentimos! Tiene campos por rellenar",
      type: "info",
      showConfirmButton: false,
      timer: 3000
@@ -34,7 +34,7 @@ if (isset($_REQUEST['msj']))
      echo '<script type="text/javascript">
      swal({
        title:"",
-       text:"Los datos  se almacenaron correctamente",
+       text:"Los datos se almacenaron correctamente",
        type: "success",
        showConfirmButton: false,
        timer: 3000
@@ -47,7 +47,7 @@ if (isset($_REQUEST['msj']))
             echo '<script type="text/javascript">
        swal({
          title:"",
-         text:"Lo sentimos no se pudieron guardar los datos",
+         text:"¡Lo sentimos! No se pudieron guardar los datos",
          type: "error",
          showConfirmButton: false,
          timer: 3000
@@ -74,7 +74,7 @@ if (isset($_REQUEST['msj']))
        echo '<script type="text/javascript">
        swal({
          title:"",
-         text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+         text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
          type: "error",
          showConfirmButton: false,
          timer: 3000
@@ -177,7 +177,7 @@ if (isset($_REQUEST['msj']))
               echo '<script type="text/javascript">
        swal({
          title:"",
-         text:"La revision de documentos ya fue enviada a Jefatura.",
+         text:"La revisión de documentos ya fue enviada a Jefatura.",
          type: "info",
          showConfirmButton: false,
          timer: 3000
@@ -192,7 +192,7 @@ if (isset($_REQUEST['msj']))
                   echo '<script type="text/javascript">
        swal({
          title:"",
-         text:"Esperando a que estudiante suba documentacion.",
+         text:"Esperando a que el estudiante suba la documentacion.",
          type: "info",
          showConfirmButton: false,
          timer: 3000
@@ -284,7 +284,7 @@ if (isset($_REQUEST['msj']))
                     <thead>
                       <tr>
                        <th>NOMBRE COMPLETO</th>
-                       <th>CUENTA</th>      
+                       <th>CUENTA NO.</th>      
                        <th>PROCESO</th>                
 
                        <th>EXPEDIENTE</th>                
@@ -373,9 +373,9 @@ if ($row['estado_coordinacion']<>'1' and $row['estado_coordinacion']<>'0' ) {
 
               <div class="col-sm-12">
                <div class="form-group">
-                <label>Aprobar documentación</label>
+                <label>Aprobar Documentación</label>
                 <select class="form-control" name="cb_aprobar" id="cb_aprobar" onchange="Vinculacion();">
-                  <option value="0">Seleccione una opcion:</option>
+                  <option value="0">Seleccione una Opcion:</option>
                   <option value="SI">SI</option>
                   <option value="NO">NO</option>
 

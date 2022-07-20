@@ -20,7 +20,7 @@ if ($visualizacion == 0) {
   header('location:  ../vistas/pagina_principal_vista.php');
 } else {
 
-  bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingreso', 'A Gestion de Parametros');
+  bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'INGRESO', 'A GESTION DE PARAMETROS');
 
 
   if (permisos::permiso_modificar($Id_objeto) == '1') {
@@ -92,7 +92,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
                     swal({
                        title:"",
-                       text:"Lo sentimos el Parametro ya existe",
+                       text:"¡Lo sentimos! El parámetro ya existe",
                        type: "info",
                        showConfirmButton: false,
                        timer: 3000
@@ -107,7 +107,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
                     swal({
                        title:"",
-                       text:"Los datos  se almacenaron correctamente",
+                       text:"Los datos se almacenaron correctamente",
                        type: "success",
                        showConfirmButton: false,
                        timer: 3000
@@ -124,7 +124,7 @@ FROM tbl_parametros";
     echo '<script type="text/javascript">
                     swal({
                        title:"",
-                       text:"Lo sentimos tiene campos por rellenar.",
+                       text:"¡Lo sentimos! Tiene campos por rellenar.",
                        type: "error",
                        showConfirmButton: false,
                        timer: 3000
@@ -159,13 +159,13 @@ ob_end_flush();
           <div class="col-sm-6">
 
 
-            <h1>Parametros del Sistema</h1>
+            <h1>Parámetros del Sistema</h1>
           </div>
 
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="../vistas/pagina_principal_vista.php">Inicio</a></li>
-              <li class="breadcrumb-item active"><a href="../vistas/crear_pregunta_vista.php"></a></li>
+              <li class="breadcrumb-item active"><a href="../vistas/crear_pregunta_vista.php">Parámetros del Sistema</a></li>
             </ol>
           </div>
 
@@ -182,7 +182,7 @@ ob_end_flush();
 
     <div class="card card-default">
       <div class="card-header">
-        <h3 class="card-title">Parametros existentes</h3>
+        <h3 class="card-title">Parámetros Existentes</h3>
         <div class="card-tools">
           <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
         </div>
@@ -250,7 +250,7 @@ ob_end_flush();
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h4 class="modal-title">Modificar Parametro</h4>
+            <h4 class="modal-title">Modificar Parámetro</h4>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -269,14 +269,14 @@ ob_end_flush();
                 <div class="col-md-12">
 
                   <div class="form-group">
-                    <label>Parametro</label>
+                    <label>Parámetro</label>
 
                     <input class="form-control" type="text" id="txt_parametro_modificar" name="txt_parametro_modificar" style="text-transform: uppercase" onkeypress="return Letras(event)" readonly="true" onkeyup="DobleEspacio(this, event)" required="" maxlength="30" value="<?php echo $_SESSION['TxtParametro']; ?>">
 
                   </div>
 
                   <div class="form-group">
-                    <label>Descripcion</label>
+                    <label>Descripción</label>
 
                     <input class="form-control" type="text" id="txt_parametro_descripcion" name="txt_parametro_descripcion" style="text-transform: uppercase" onkeypress="return Letras(event)" onkeyup="DobleEspacio(this, event)" required="" maxlength="30" value="<?php echo $_SESSION['TxtParametro_descripcion']; ?>">
 

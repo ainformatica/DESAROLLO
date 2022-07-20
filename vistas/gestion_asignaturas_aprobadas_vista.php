@@ -21,7 +21,7 @@ if (isset($_REQUEST['msj']))
 echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos tiene campos por rellenar",
+                                   text:"¡Lo sentimos! Tiene campos por rellenar",
                                    type: "info",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -35,7 +35,7 @@ echo '<script type="text/javascript">
     echo '<script type="text/javascript">
                     swal({
                        title:"",
-                       text:"Lo sentimos hay algunos asignaturas ya existente y no seran guardados",
+                       text:"¡Lo sentimos! Hay algunas asignaturas ya existentes, estas no se guardarán",
                        type: "error",
                        showConfirmButton: false,
                        timer: 3000
@@ -64,7 +64,7 @@ echo '<script type="text/javascript">
  echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no se pudieron guardar los datos",
+                                   text:"¡Lo sentimos! No se pudieron guardar los datos",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -92,7 +92,7 @@ if ($visualizacion==0)
  echo '<script type="text/javascript">
  swal({
    title:"",
-   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
    type: "error",
    showConfirmButton: false,
    timer: 3000
@@ -105,7 +105,7 @@ if ($visualizacion==0)
  else
 
  {
-  bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'],'INGRESO' , 'A GESTION ASIGNATURA APROBADAS');
+  bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'],'INGRESO' , 'A GESTION ASIGNATURAS APROBADAS');
 
 
   if (permisos::permiso_insertar($Id_objeto)=='1')

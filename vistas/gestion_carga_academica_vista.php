@@ -20,7 +20,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -89,13 +89,13 @@ ob_end_flush();
                     <div class="col-sm-6">
 
 
-                        <h1>Gestión Carga Académica</h1>
+                        <h1>Gestión de Carga Académica</h1>
                     </div>
 
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="../vistas/pagina_principal_vista.php">Inicio</a></li>
-                            <li class="breadcrumb-item"><a href="../vistas/menu_carga_academica_vista.php">Menu Carga Académica</a></li>
+                            <li class="breadcrumb-item"><a href="../vistas/menu_carga_academica_vista.php">Menú de Carga Académica</a></li>
                             <li class="breadcrumb-item">Gestion de Carga Académica</li>
                         </ol>
                     </div>
@@ -115,7 +115,7 @@ ob_end_flush();
 
         <div class="card card-default">
             <div class="card-header">
-                <h2>Datos del Periodo</h2>
+                <h2>Datos del Período</h2>
             </div>
             <div class="card-header">
                 <!--COMBOBOX-->
@@ -124,7 +124,7 @@ ob_end_flush();
                     <div class="col-md-3" style="width:75px">
                         <div class="input-group mb-3 input-group">
 
-                            <span class=" input-group-text" style="font-weight: bold;">Periodo Actual</span>
+                            <span class=" input-group-text" style="font-weight: bold;">Período Actual</span>
                             <input class="form-control" type="text" id="txt_periodo" name="txt_periodo" value="<?php echo $row2['num_periodo'] ?>" readonly>
 
 
@@ -153,7 +153,7 @@ ob_end_flush();
                     <div class="col-md-3" style="width:75px">
                         <div class="input-group mb-3 input-group">
 
-                            <span class="input-group-text" style="font-weight: bold;">Tipo Periodo</span>
+                            <span class="input-group-text" style="font-weight: bold;">Tipo de Período</span>
                             <input class="form-control" type="text" id="txt_tipo_periodo" name="txt_tipo_periodo" value="<?php echo $row2['tipo_periodo'] ?>" readonly>
 
                         </div>
@@ -294,18 +294,18 @@ ob_end_flush();
                             <tr>
                                 <th>Acción</th>
                                 <!-- <th>#</th> -->
-                                <th>N# Empleado</th>
+                                <th>Empleado No.:</th>
                                 <th>Nombre</th>
                                 <th>Código</th>
                                 <th>Asignatura</th>
                                 <th>UV</th>
                                 <th>Sección</th>
-                                <th>Hi</th>
-                                <th>Hf</th>
-                                <th>Dia</th>
+                                <th>HI</th>
+                                <th>HF</th>
+                                <th>Día</th>
                                 <th>Aula</th>
                                 <th>Edificio</th>
-                                <th>N. Alumnos</th>
+                                <th>No. de Alumnos</th>
                                 <th>Control</th>
                                 <th>Modalidad</th>
                             </tr>
@@ -314,18 +314,18 @@ ob_end_flush();
                             <tr>
                                 <th>Acción</th>
                                 <!-- <th>#</th> -->
-                                <th>N# Empleado</th>
+                                <th>Empleado No.:</th>
                                 <th>Nombre</th>
                                 <th>Código</th>
                                 <th>Asignatura</th>
                                 <th>UV</th>
                                 <th>Sección</th>
-                                <th>Hi</th>
-                                <th>Hf</th>
+                                <th>HI</th>
+                                <th>HF</th>
                                 <th>Día</th>
                                 <th>Aula</th>
                                 <th>Edificio</th>
-                                <th>N. Alumnos</th>
+                                <th>No. de Alumnos</th>
                                 <th>Control</th>
                                 <th>Modalidad</th>
                             </tr>
@@ -366,7 +366,7 @@ ob_end_flush();
                                         <div class="col-md-2">
                                             <div class="form-group">
 
-                                                <label>N# Docente:</label>
+                                                <label>Docente No.:</label>
                                                 <input class="form-control" type="text" id="txt_num_doc" name="txt_num_doc" value="" readonly>
 
 
@@ -375,7 +375,7 @@ ob_end_flush();
                                         <div class="col-md-2">
                                             <div class="form-group">
 
-                                                <label>Hi:</label>
+                                                <label>HI:</label>
                                                 <input class="form-control" type="text" id="txt_hra_entrada2" name="txt_hra_entrada2" value="" readonly>
 
 
@@ -384,7 +384,7 @@ ob_end_flush();
 
                                         <div class="col-md-2">
                                             <div class="form-group">
-                                                <label>Hf:</label>
+                                                <label>HF:</label>
                                                 <input class="form-control" type="text" id="txt_hra_salida" name="txt_hra_salida" value="" readonly>
 
                                             </div>
@@ -392,7 +392,7 @@ ob_end_flush();
 
                                         <div class="col-md-2">
                                             <div class="form-group">
-                                                <label>Tipo asignatura:</label>
+                                                <label>Tipo de Asignatura:</label>
 
                                                 <!-- <input class="form-control" type="text" id="cbm_reposicion1" name="cbm_reposicion1" readonly hidden> -->
                                                 <td> <select class="form-control select2" style="width: 100%;" name="cbm_tipo_asignatura" id="cbm_tipo_asignatura">
@@ -476,7 +476,7 @@ ob_end_flush();
                                         </div>
                                         <div class="col-md-2">
                                             <div class="form-group">
-                                                <label>Hi:</label>
+                                                <label>HI:</label>
 
                                                 <select class="form-control" onblur="valida_entrada_crear();" onchange="mostrar_hora($('#hora_inicial').val());" id="hora_inicial" name="hora_inicial"></select>
 
@@ -484,7 +484,7 @@ ob_end_flush();
                                         </div>
                                         <div class="col-md-2">
                                             <div class="form-group">
-                                                <label>Hf:</label>
+                                                <label>HF:</label>
                                                 <select class="form-control" onchange="mostrar_hora($('#hora_final').val());" id="hora_final" name="hora_final" onblur="valida_horario_crear()"></select>
 
                                             </div>
@@ -498,7 +498,7 @@ ob_end_flush();
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
-                                                <label>Seleccione dias:</label>
+                                                <label>Seleccione días:</label>
                                                 <div style="padding: 3px 5px; border: #c3c3c3  1px solid;  border-radius:5px; width:260px; height:39px;">
 
                                                     <input class="form-control" id="dias" name="dias" type="text" value="" hidden readonly>
@@ -540,7 +540,7 @@ ob_end_flush();
                             <!--  <div class="modal-dialog" role="document">-->
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Información Docente</h5>
+                                    <h5 class="modal-title" id="exampleModalLabel">Información del Docente</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
@@ -595,7 +595,7 @@ ob_end_flush();
 
                                             <div class="col-md-5">
                                                 <div class="form-group">
-                                                    <label class="control-label">Categoria</label>
+                                                    <label class="control-label">Categoría</label>
                                                     <input class="form-control" type="text" id="input2" name="input2" value="" style="text-transform: uppercase" readonly>
 
                                                 </div>
@@ -615,9 +615,9 @@ ob_end_flush();
                                                         <tr>
                                                             <!-- <th>#</th> -->
                                                             <th>Información Profesional</th>
-                                                            <th>Preferencia Área</th>
+                                                            <th>Área de Preferencia</th>
                                                             <th>Experiencia Académica</th>
-                                                            <th>Preferencia Asignatura</th>
+                                                            <th>Asignatura de Preferencia</th>
                                                             <th>Desea impartir</th>
                                                         </tr>
                                                     </thead>
@@ -645,7 +645,7 @@ ob_end_flush();
 
                                 <!-- Modal Header -->
                                 <div class="modal-header">
-                                    <h4 class="modal-title">Estas seguro de eliminar la carga?</h4>
+                                    <h4 class="modal-title">¿Estás seguro de eliminar la carga?</h4>
                                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                                 </div>
 
@@ -724,7 +724,7 @@ ob_end_flush();
                                         </div>
                                         <div class="col-md-2">
                                             <div class="form-group">
-                                                <label>N# Docente:</label>
+                                                <label>Docente No.:</label>
                                                 <input class="form-control" type="text" id="txt_num_doc_edita" name="txt_num_doc_edita" value="" readonly>
 
 
@@ -733,7 +733,7 @@ ob_end_flush();
                                         <div class="col-md-2">
                                             <div class="form-group">
 
-                                                <label>Hi:</label>
+                                                <label>HI:</label>
                                                 <input class="form-control" type="text" id="txtentrada" readonly>
 
 
@@ -742,7 +742,7 @@ ob_end_flush();
 
                                         <div class="col-md-2">
                                             <div class="form-group">
-                                                <label>Hf:</label>
+                                                <label>HF:</label>
                                                 <input class="form-control" type="text" id="txtsalida" readonly>
 
                                             </div>
@@ -750,7 +750,7 @@ ob_end_flush();
 
                                         <div class="col-md-2">
                                             <div class="form-group">
-                                                <label>Tipo asignatura:</label>
+                                                <label>Tipo de Asignatura:</label>
                                                 <!-- 
                                                 <input class="form-control" type="text" id="cbm_reposicion1" name="cbm_reposicion1" readonly hidden> -->
                                                 <td> <select class="form-control" style="width: 100%;" name="cbm_tipo_asignatura_edita" id="cbm_tipo_asignatura_edita">
@@ -862,14 +862,14 @@ ob_end_flush();
                                         </div>
                                         <div class="col-md-2">
                                             <div class="form-group">
-                                                <label>Hi:</label>
+                                                <label>HI:</label>
                                                 <select class="form-control" style="width: 100%;" name="cbm_hi_edita" id="cbm_hi_edita" onblur="validaentrada_edita()"></select>
 
                                             </div>
                                         </div>
                                         <div class="col-md-2">
                                             <div class="form-group">
-                                                <label>Hf:</label>
+                                                <label>HF:</label>
                                                 <select class="form-control" style="width: 100%;" name="cbm_hf_edita" id="cbm_hf_edita" onblur="validahoraperiodo_edita();">
                                                 </select>
                                             </div>
@@ -884,7 +884,7 @@ ob_end_flush();
                                         </div>
                                         <div class="col-md-4">
                                             <div class="form-group">
-                                                <label>Seleccione dias:</label>
+                                                <label>Seleccione días:</label>
                                                 <div style="padding: 3px 5px; border: #c3c3c3  1px solid;  border-radius:5px; width:260px; height:39px;">
 
                                                     <input class="form-control" id="dias" name="dias" type="text" value="" hidden readonly>

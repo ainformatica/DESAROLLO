@@ -17,7 +17,7 @@ if (isset($_REQUEST['msj'])) {
         echo '<script type="text/javascript">
     swal({
         title: "",
-        text: "Lo sentimos, ya existe esa asignación.",
+        text: "¡Lo sentimos! Ya existe esa asignación.",
         type: "info",
         showConfirmButton: false,
         timer: 3000
@@ -54,7 +54,7 @@ if (isset($_REQUEST['msj'])) {
         echo '<script type="text/javascript">
     swal({
         title: "",
-        text: "Error al actualizar lo sentimos,intente de nuevo.",
+        text: "¡Lo sentimos! Error al actualizar,intente de nuevo.",
         type: "error",
         showConfirmButton: false,
         timer: 3000
@@ -71,7 +71,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -193,7 +193,7 @@ ob_end_flush();
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="../vistas/pagina_principal_vista.php">Inicio</a></li>
-                            <li class="breadcrumb-item active"><a href="../vistas/crear_asignacion_vista.php">Nueva asignación</a></li>
+                            <li class="breadcrumb-item active"><a href="../vistas/crear_asignacion_vista.php">Nueva Asignación</a></li>
                         </ol>
                     </div>
 
@@ -226,7 +226,7 @@ ob_end_flush();
                         <thead>
                             <tr>
                                 <th>INVENTARIO</th>
-                                <th>NOMBRE PRODUCTO</th>
+                                <th>NOMBRE DEL PRODUCTO</th>
                                 <th>UBICACIÓN</th>
                                 <th>RESPONSABLE</th>
                                 <th>MOTIVO</th>

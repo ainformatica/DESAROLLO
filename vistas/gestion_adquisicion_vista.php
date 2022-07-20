@@ -17,7 +17,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
     swal({
         title: "",
-        text: "Lo sentimos la adquisicion ya existe",
+        text: "¡Lo sentimos! La adquisición ya existe",
         type: "info",
         showConfirmButton: false,
         timer: 3000
@@ -51,7 +51,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
     swal({
         title: "",
-        text: "Error al actualizar lo sentimos,intente de nuevo.",
+        text: "¡Lo sentimos! Error al actualizar,intente de nuevo.",
         type: "error",
         showConfirmButton: false,
         timer: 3000
@@ -70,7 +70,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -153,7 +153,7 @@ ob_end_flush();
           <div class="col-sm-6">
 
 
-            <h1>Gestion Adquisiciones
+            <h1>Gestión Adquisiciones
             </h1>
           </div>
 

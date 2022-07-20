@@ -43,7 +43,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
   swal({
       title: "",
-      text: "Error al actualizar lo sentimos, intente de nuevo.",
+      text: "¡Lo sentimos! Error al actualizar, intente de nuevo.",
       type: "error",
       showConfirmButton: false,
       timer: 3000
@@ -57,7 +57,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
   swal({
       title: "",
-      text: "Periodo no modificable",
+      text: "Período no modificable",
       type: "error",
       showConfirmButton: false,
       timer: 3000
@@ -74,7 +74,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -102,7 +102,7 @@ if ($visualizacion == 0) {
       echo '<script type="text/javascript">
                     swal({
                        title:"",
-                       text:"Lo sentimos tiene campos por rellenar",
+                       text:"¡Lo sentimos! Tiene campos por rellenar",
                        type: "info",
                        showConfirmButton: false,
                        timer: 3500
@@ -208,7 +208,7 @@ ob_end_flush();
                   <div class="form-group">
                     <label> Charla PSS </label>
                     <select class="form-control" name="cb_charla" id="charla">
-                      <option disabled selected value="0">Seleccione una charla :</option>
+                      <option disabled selected value="0">Seleccione una Charla :</option>
                         <?php
                             $sql=$mysqli->query("SELECT id_charla, nombre_charla FROM tbl_vinculacion_gestion_charla");
 
@@ -310,7 +310,7 @@ ob_end_flush();
                 <tr>
 
                   <th>ESTUDIANTE</th>
-                  <th>Nº CUENTA</th>
+                  <th>CUENTA Nº</th>
                   <th>ASISTENCIA</th>
 
                 </tr>
