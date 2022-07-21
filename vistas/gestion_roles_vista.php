@@ -20,7 +20,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
                     swal({
                        title:"",
-                       text:"Lo sentimos el rol ya existe",
+                       text:"¡Lo sentimos! El rol ya existe",
                        type: "info",
                        showConfirmButton: false,
                        timer: 3000
@@ -35,7 +35,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
                     swal({
                        title:"",
-                       text:"Los datos  se almacenaron correctamente",
+                       text:"Los datos se almacenaron correctamente",
                        type: "success",
                        showConfirmButton: false,
                        timer: 3000
@@ -58,7 +58,7 @@ FROM tbl_roles";
     echo '<script type="text/javascript">
                     swal({
                        title:"",
-                       text:"Error al actualizar lo sentimos,intente de nuevo.",
+                       text:"¡Lo sentimos! Error al actualizar, intente de nuevo.",
                        type: "error",
                        showConfirmButton: false,
                        timer: 3000
@@ -84,7 +84,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -94,7 +94,7 @@ if ($visualizacion == 0) {
                             </script>';
 } else {
 
-  bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingreso', 'A Gestion de Roles');
+  bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'INGRESO', 'A GESTION DE ROLES');
 
 
   if (permisos::permiso_modificar($Id_objeto) == '1') {
@@ -264,7 +264,7 @@ ob_end_flush();
 
     <div class="card card-default">
       <div class="card-header">
-        <h3 class="card-title">Roles Existente</h3>
+        <h3 class="card-title">Roles Existentes</h3>
         <div class="card-tools">
           <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
         </div>
@@ -364,7 +364,7 @@ ob_end_flush();
 
 
                   <div class="form-group">
-                    <label class="control-label">Descripcion</label>
+                    <label class="control-label">Descripción</label>
 
                     <input class="form-control" type="text" id="txtdescripcionrol" name="txtdescripcionrol" value="<?php echo $_SESSION['DescripcionRol_gestion']; ?>" required style="text-transform: uppercase" onkeypress="return Letras(event)" onkeyup="DobleEspacio(this, event)" maxlength="30" onkeypress="return comprobar(this.value, event, this.id)">
 

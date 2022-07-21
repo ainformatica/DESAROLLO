@@ -26,7 +26,7 @@ if($visualizacion==0){
   echo '<script type="text/javascript">
   swal({
     title:"",
-    text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+    text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
     type: "error",
     showConfirmButton: false,
     timer: 3000
@@ -110,7 +110,7 @@ ob_end_flush();
       <table id="tbllistado" class="table table-striped table-bordered table-condensed table-hover">
         <thead>
           
-          <th>Cuenta</th>
+          <th>Cuenta No.</th>
           <th>Estudiante</th>
           <th>Cantidad Horas</th>
         </thead>
@@ -152,7 +152,7 @@ ob_end_flush();
     $(document).ready(function() {
 
         $('.select2').select2({
-            placeholder: 'Seleccione una opcion',
+            placeholder: 'Seleccione una opción',
             theme: 'bootstrap4',
             tags: true,
         });

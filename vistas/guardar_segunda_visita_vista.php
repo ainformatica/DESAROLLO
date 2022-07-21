@@ -19,7 +19,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -124,7 +124,7 @@ ob_end_flush();
 
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label>N de Cuenta</label>
+                    <label>No. de Cuenta</label>
                     <input class="form-control" type="text" id="cuenta_sv" name="cuenta_sv" maxlength="60" readonly>
                   </div>
                 </div>
@@ -133,28 +133,28 @@ ob_end_flush();
 
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label>Nombre de la empresa o institución</label>
+                    <label>Nombre de la Empresa o Institución</label>
                     <input class="form-control" type="text" id="empresa_sv" name="empresa_sv" maxlength="60" readonly>
                   </div>
                 </div>
 
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label>Nombre del jefe inmediato</label>
+                    <label>Nombre del Jefe Inmediato</label>
                     <input class="form-control" type="text" id="jefe_sv" name="jefe_sv" maxlength="60" readonly>
                   </div>
                 </div>
 
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label>Titulo del jefe inmediato o representante de la institución</label>
+                    <label>Titulo del Jefe Inmediato o Representante de la Institución</label>
                     <input class="form-control" type="text" id="titulo_sv" name="titulo_sv" maxlength="60" readonly>
                   </div>
                 </div>
 
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label>Correo electrónico</label>
+                    <label>Correo Electrónico</label>
                     <input class="form-control" type="text" id="correo_sv" name="correo_sv" maxlength="60" readonly>
                   </div>
                 </div>
@@ -162,7 +162,7 @@ ob_end_flush();
 
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label>No. de teléfono de la organización</label>
+                    <label>No. de Teléfono de la Organización</label>
                     <input class="form-control" type="text" id="telefono_sv" name="telefono_sv" maxlength="60" readonly>
                   </div>
                 </div>
@@ -170,21 +170,21 @@ ob_end_flush();
 
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label>Nombre del estudiante</label>
+                    <label>Nombre del Estudiante</label>
                     <input class="form-control" type="text" id="estudiante_sv" name="estudiante_sv" maxlength="60" readonly>
                   </div>
                 </div>
 
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label>Fecha de inicio</label>
+                    <label>Fecha de Inicio</label>
                     <input class="form-control" type="text" id="inicio_sv" name="inicio_sv" maxlength="60" readonly>
                   </div>
                 </div>
 
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label>Fecha de finalizacion</label>
+                    <label>Fecha de Finalizacion</label>
                     <input class="form-control" type="text" id="finalizacion_sv" name="finalizacion_sv" maxlength="60" readonly>
                   </div>
                 </div>
@@ -229,7 +229,7 @@ ob_end_flush();
 
 
                 <div class="col-sm-12">
-                  <label>Aspectos relevantes</label>
+                  <label>Aspectos Relevantes</label>
                 </div>
                 <br>
                 <br>
@@ -376,14 +376,14 @@ ob_end_flush();
 
               <div class="col-sm-12">
                 <div class="form-group">
-                  <label for="exampleFormControlTextarea1">Por favor anotar ¿Cuales de las áreas cree usted que deben reforzar o adquirir nuevos conocimientos?</label>
+                  <label for="exampleFormControlTextarea1">Por favor anotar ¿Cuáles de las áreas cree usted que deben reforzar o adquirir nuevos conocimientos?</label>
                   <textarea class="form-control" id="areas_refuerzo_sv" rows="3" style="text-transform:uppercase" require></textarea>
                 </div>
               </div>
 
               <div class="col-sm-12">
                 <div class="form-group">
-                  <label>¿Cual seria su calificación global de 0 a 10 para el o la practicante?</label>
+                  <label>¿Cuál seria su calificación global de 0 a 10 para el o la practicante?</label>
                   <select class="form-control" name="calificacion_sv" id="calificacion_sv" require>
                     <option value="">Seleccione</option>
                     <option value="0">0</option>
@@ -402,7 +402,7 @@ ob_end_flush();
 
               <div class="col-sm-12">
                 <div class="form-group">
-                  <label>¿Solicitaría nuevamente uno de nuestros estudiantes para practica profesional supervisada en su empresa?</label>
+                  <label>¿Solicitaría nuevamente a uno de nuestros estudiantes para práctica profesional supervisada en su empresa?</label>
                   <select class="form-control" name="solicitar_practicante_sv" id="solicitar_practicante_sv" require>
                     <option value="">Seleccione</option>
                     <option value="Si">SI</option>
@@ -425,7 +425,7 @@ ob_end_flush();
 
               <div class="col-sm-12">
                 <div class="form-group">
-                  <label>Nombre completo del representante de la carrera de informática que le ha contactado</label>
+                  <label>Nombre completo del representante de la Carrera de Informática que le ha contactado</label>
                   <input class="form-control" type="text" id="representante_sv" name="representante_sv" style="text-transform:uppercase" maxlength="60" require>
                 </div>
               </div>

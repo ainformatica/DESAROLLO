@@ -18,7 +18,7 @@ if($visualizacion==0){
   echo '<script type="text/javascript">
   swal({
     title:"",
-    text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+    text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
     type: "error",
     showConfirmButton: false,
     timer: 3000
@@ -50,7 +50,7 @@ ob_end_flush();
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="../vistas/pagina_principal_vista.php">Inicio</a></li>
-              <li class="breadcrumb-item active"><a href="../vistas/menu_actividades_cve_vista.php">Menu Actividades CVE</a></li>
+              <li class="breadcrumb-item active"><a href="../vistas/menu_actividades_cve_vista.php">Menú de Actividades CVE</a></li>
             </ol>
           </div>
           <div class="RespuestaAjax"></div>
@@ -76,7 +76,7 @@ ob_end_flush();
               <table id="tbllistado" class="table table-striped table-bordered table-condensed table-hover">
                 <thead>
                   <th>OPCIONES</th>
-                  <th>NO ACTIVIDAD</th>
+                  <th>ACTIVIDAD NO.</th>
                   <th>NOMBRE DE ACTIVIDAD</th>
                   <th>ASISTENCIA</th>
                   <th>FECHA INFORME</th> 
@@ -109,7 +109,7 @@ ob_end_flush();
                     <input type="hidden" name="id_informe" id="id_informe">
                     <label>Actividad:</label>
                     <select class="form-control-lg select2" id= "id_actividad" style="width: 100%;" name="id_actividad" required="">
-                        <option  disabled="disabled">Seleccione una actividad realizada:</option>
+                        <option  disabled="disabled">Seleccione una Actividad Realizada:</option>
                           <?php
                             $query = $mysqli -> query ("call vista_act_usuario('$usuario')");
                             while ($resultado = mysqli_fetch_array($query)) {
@@ -208,7 +208,7 @@ ob_end_flush();
                     <div class="col-sm-6">
                       <div class="form-group">                     
                         <label>Fotografías </label>
-                        <p> Solo se admite un documento en formato PDF. Se recomienda insertar las imágenes en de Word o PowerPoint y guardarlo como PDF para importar el archivo. <p>
+                        <p> Solo se admite un documento en formato PDF. Se recomienda insertar las imágenes en Word o PowerPoint y guardarlo como PDF para importar el archivo. <p>
                         
                         <!-- <div class="custom-file">
                           <input type="file" class="custom-file-input" accept="application/pdf" id="fotos_pdf" name="fotos_pdf" required="">

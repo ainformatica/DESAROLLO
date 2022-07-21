@@ -24,7 +24,7 @@ require_once('../vistas/pagina_inicio_vista.php');
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Inscripcion para Charla de PPS</h1>
+            <h1>Inscripción para Charla de PPS</h1>
           </div>
 
 
@@ -32,7 +32,7 @@ require_once('../vistas/pagina_inicio_vista.php');
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="../vistas/pagina_principal_vista.php">Inicio</a></li>
-              <li class="breadcrumb-item active">Vinculacion</li>
+              <li class="breadcrumb-item active">Vinculación</li>
             </ol>
           </div>
 
@@ -66,7 +66,7 @@ require_once('../vistas/pagina_inicio_vista.php');
 
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label>Nº Constancia</label>
+                    <label>Constancia Nº</label>
                     <input class="form-control" type="text" id="txt_constancia_charla" name="txt_constancia_charla" value="" required onkeyup="Espacio(this, event)" maxlength="11">
                   </div>
                 </div>
@@ -81,7 +81,7 @@ require_once('../vistas/pagina_inicio_vista.php');
 
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label>Nº de Cuenta</label>
+                    <label>Cuenta Nº</label>
                     <input class="form-control" type="text" id="txt_cuenta" name="txt_cuenta" value="" required onkeyup="Espacio(this, event)" maxlength="11">
                   </div>
                 </div>
@@ -104,7 +104,7 @@ require_once('../vistas/pagina_inicio_vista.php');
 
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label>Impartida por</label>
+                    <label>Impartida Por</label>
                     <select class="form-control select2" style="width: 100%;" name="combo_docente" required="">
                       <option value="0">Seleccione un Docente:</option>
                       <?php
@@ -126,7 +126,7 @@ require_once('../vistas/pagina_inicio_vista.php');
 
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label>Fecha Valida</label>
+                    <label>Fecha Válida</label>
                     <input class="form-control" type="date" id="txt_fecha_valida_charla" name="txt_fecha_valida_charla">
                   </div>
                 </div>

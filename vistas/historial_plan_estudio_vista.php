@@ -19,7 +19,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -82,7 +82,7 @@ ob_end_flush();
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="../vistas/pagina_principal_vista.php">Inicio</a></li>
-                                <li class="breadcrumb-item"><a href="../vistas/menu_plan_estudio_vista.php">Menu plan de estudio</a></li>
+                                <li class="breadcrumb-item"><a href="../vistas/menu_plan_estudio_vista.php">Menú Plan de Estudio</a></li>
                                 <li class="breadcrumb-item">Historial de Plan de Estudio</a></li>
 
                             </ol>
@@ -128,9 +128,9 @@ ob_end_flush();
                                             <tr>
 
                                                 <th>Nombre</th>
-                                                <th>Codigo</th>
-                                                <th>Numero de Clases</th>
-                                                <th>Fecha Creacion</th>
+                                                <th>Código</th>
+                                                <th>Número de Clases</th>
+                                                <th>Fecha Creación</th>
                                                 <th>Vigente</th>
                                                 <th>Acción</th>
 
@@ -193,9 +193,9 @@ ob_end_flush();
                                         <thead class="thead-dark">
                                             <tr>
 
-                                                <th>Periodo</th>
+                                                <th>Período</th>
                                                 <th>Asignatura</th>
-                                                <th>Codigo</th>
+                                                <th>Código</th>
                                                 <th>UV</th>
                                                 <th>Requisitos</th>
                                                 <th>Equivalencia</th>

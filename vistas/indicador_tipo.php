@@ -20,7 +20,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -30,7 +30,7 @@ if ($visualizacion == 0) {
                             </script>';
 } else {
 
-    bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'INGRESO', 'A TIPOS DE INDICADOR .');
+    bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'INGRESO', 'A TIPOS DE INDICADORES .');
 
 
  
@@ -60,7 +60,7 @@ ob_end_flush();
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="#">Inicio</a></li>
-                            <li class="breadcrumb-item"><a href="#">Menu Mantenimiento</a></li>
+                            <li class="breadcrumb-item"><a href="#">Menú Mantenimiento</a></li>
                             <li class="breadcrumb-item"><a href="../vistas/menu_mantenimientos_jefatura_principal.php"> Mantenimiento Jefatura</a></li>
                         </ol>
                     </div>
@@ -103,7 +103,7 @@ ob_end_flush();
                                             <div class="col-12">
                                                 <label for="">Fecha</label><br>
                                                 <input type="text" class="form-control" id="datepicker" name="fecha_indicador" placeholder="dd/mm/yyyy" required> <br>
-                                                <label for="">Nombre Indicador</label><br>
+                                                <label for="">Nombre del Indicador</label><br>
                                                 <input type="text" class="form-control" id="nombre_indicador" name="nombre_indicador" maxlength="20" value="" style="text-transform: uppercase" onkeyup="DobleEspacio(this, event); MismaLetra('nombre_indicador');" oncopy="return false" onpaste="return false" onkeypress="return sololetras(event)" placeholder="nombre indicador" required><br>
                                             </div>
                                             <br>

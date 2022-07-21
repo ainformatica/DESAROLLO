@@ -28,7 +28,7 @@ if ($row3['aprobado'] === 'desaprobado') {
   echo '<script type="text/javascript">
       swal({
             title:"",
-            text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+            text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
             type: "error",
             showConfirmButton: false,
             timer: 4000
@@ -45,7 +45,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
       swal({
             title:"",
-            text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+            text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
             type: "error",
             showConfirmButton: false,
             timer: 3000

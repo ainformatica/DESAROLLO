@@ -13,7 +13,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
   swal({
         title:"",
-        text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+        text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
         type: "error",
         showConfirmButton: false,
         timer: 3000
@@ -52,7 +52,7 @@ $sql_tabla = json_decode(file_get_contents('http://localhost/automatizacion/api/
         <div class="row mb-2">
           <div class="col-sm-6">
 
-            <h1>Alumnos para la realizacion del himno</h1>
+            <h1>Alumnos para la Realización del Himno</h1>
           </div>
 
           <div class="col-sm-6">
@@ -85,7 +85,7 @@ $sql_tabla = json_decode(file_get_contents('http://localhost/automatizacion/api/
             <thead>
               <tr>
                 <th>NOMBRE</th>
-                <th># DE CUENTA</th>
+                <th>CUENTA NO.</th>
                 <th>CORREO ELÉCTRONICO</th>
                 <th>FECHA</th>
                 <th>HORA</th>

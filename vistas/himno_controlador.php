@@ -31,7 +31,7 @@ if(isset($_POST['aprobado'])){
     echo '<script type="text/javascript">
                 swal({
                         title:"",
-                        text:"No a seleccionado su aprobación....",
+                        text:"No ha seleccionado su aprobación....",
                         type: "error",
                         showConfirmButton: false,
                         timer: 1500

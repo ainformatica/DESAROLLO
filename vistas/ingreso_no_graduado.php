@@ -23,7 +23,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
       swal({
             title:"",
-            text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+            text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
             type: "error",
             showConfirmButton: false,
             timer: 3000
@@ -87,7 +87,7 @@ ob_end_flush();
 
           <div class="card card-default">
             <div class="card-header">
-              <h3 class="card-title">Cambio Carrera</h3>
+              <h3 class="card-title">Cambio de Carrera</h3>
 
               <div class="card-tools">
                 <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
@@ -114,7 +114,7 @@ ob_end_flush();
                 </div>
                 <div class="col-md-12">
                   <div class="form-group">
-                    <label>Correo Electronico</label>
+                    <label>Correo Electrónico</label>
                     <input class="form-control" type="email" id="txt_correo" name="txt_correo" style="text-transform: uppercase" onkeyup="DobleEspacio(this, event)" maxlength="30">
                   </div>
                 </div>
@@ -123,25 +123,25 @@ ob_end_flush();
                 <!-- legend -->
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label>Solicitud.</label>
+                    <label>Solicitud</label>
                     <input class="form-control" type="file" id="txt_solicitud" name="txt_solicitud">
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label>Copia de la solicitud en línea</label>
+                    <label>Copia de la Solicitud en Línea</label>
                     <input class="form-control" type="file" id="txt_copia" name="txt_copia">
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label>Certificación de estudios e índice de 70% (original)</label>
+                    <label>Certificación de Estudios e Índice de 70% (original)</label>
                     <input class="form-control" type="file" id="txt_certificado" name="txt_certificado">
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label>Copia de identidad</label>
+                    <label>Copia de Identidad</label>
                     <input class="form-control" type="file" id="txt_identida" name="txt_identidad">
                   </div>
                 </div>
@@ -153,7 +153,7 @@ ob_end_flush();
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label>Foto tamaño carne.</label>
+                    <label>Foto Tamaño carné</label>
                     <input class="form-control" type="file" id="txt_foto" name="txt_foto">
                   </div>
                 </div>
@@ -191,7 +191,7 @@ ob_end_flush();
           if ($(this)[0].files[0].size > 1048576) {
             swal({
               title: "",
-              text: "excede el tamaño permitido...",
+              text: "Excede el tamaño permitido...",
               type: "error",
               showConfirmButton: false,
               timer: 2000

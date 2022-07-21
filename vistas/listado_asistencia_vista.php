@@ -30,7 +30,7 @@ if($visualizacion==0){
   echo '<script type="text/javascript">
   swal({
     title:"",
-    text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+    text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
     type: "error",
     showConfirmButton: false,
     timer: 3000
@@ -62,7 +62,7 @@ ob_end_flush();
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="../vistas/pagina_principal_vista.php">Inicio</a></li>
-              <li class="breadcrumb-item"><a href="../vistas/menu_actividad_cve_vista.php">Menu actividades CVE</a></li>
+              <li class="breadcrumb-item"><a href="../vistas/menu_actividad_cve_vista.php">Menú actividades CVE</a></li>
               <li class="breadcrumb-item"><a href="../vistas/informe_actividad_cve_vista.php">Informes de actividades</a></li>
             </ol>
           </div>
@@ -144,9 +144,9 @@ ob_end_flush();
       <table id="tbllistado" class="table table-striped table-bordered table-condensed table-hover">
         <thead>
           <th>OPCIÓN</th>
-          <th>CUENTA</th>
+          <th>CUENTA NO.</th>
           <th>ESTUDIANTE</th>
-          <th>cant_horas</th>
+          <th>CANT. HORAS</th>
           <th>CARRERA</th>
         </thead>
         <tbody>                            
@@ -175,7 +175,7 @@ ob_end_flush();
               <!-- CUENTA-->   
               <div class="col-sm-6">
                 <div class="form-group">
-                  <label>CUENTA: </label>
+                  <label>CUENTA NO.: </label>
                   <select class="form-control-lg select2"  style="width: 100%;" id="cuenta" name="cuenta" required="" >
                         <option  disabled="disabled" >Cuenta:</option>
                           <?php
@@ -202,7 +202,7 @@ ob_end_flush();
                 <div class="form-group">
                   <label>CARRERA:</label>
                   <select class="form-control-lg select2" id= "carrera" style="width: 100%;" name="carrera" required="">
-                    <option  value="" disabled="disabled">Seleccione una carrera:</option>
+                    <option  value="" disabled="disabled">Seleccione una Carrera:</option>
                     <?php
                     $query = $mysqli -> query ("SELECT * FROM tbl_carrera");
                     while ($resultado = mysqli_fetch_array($query)) {
@@ -215,7 +215,7 @@ ob_end_flush();
               <!-- HORAS -->   
               <div class="col-sm-6">
                 <div class="form-group">
-                  <label>cant_horas: </label>
+                  <label>CANT. HORAS: </label>
                   <input class="form-control" type="number" id="cant_horas" name="cant_horas" required="" min="1" style="text-transform: uppercase" >
                 </div>
               </div>         

@@ -20,7 +20,7 @@ if($visualizacion==0){
   echo '<script type="text/javascript">
       swal({
             title:"",
-            text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+            text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
             type: "error",
             showConfirmButton: false,
             timer: 3000
@@ -29,7 +29,7 @@ if($visualizacion==0){
 
        </script>'; 
 }else{
-  bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'],'INGRESO' , 'A Horas VOAE Gestión');
+  bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'],'INGRESO' , 'A HORAS VOAE GESTION');
 }
 
 
@@ -222,7 +222,7 @@ ob_end_flush();
     $(document).ready(function() {
 
         $('.select2').select2({
-            placeholder: 'Seleccione una opcion',
+            placeholder: 'Seleccione una opción',
             theme: 'bootstrap4',
             tags: true,
         });

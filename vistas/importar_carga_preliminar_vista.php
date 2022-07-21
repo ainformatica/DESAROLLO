@@ -20,7 +20,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -90,7 +90,7 @@ ob_end_flush();
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="../vistas/pagina_principal_vista.php">Inicio</a></li>
-                            <li class="breadcrumb-item"><a href="../vistas/menu_carga_academica_vista.php">Menu Carga Académica</a></li>
+                            <li class="breadcrumb-item"><a href="../vistas/menu_carga_academica_vista.php">Menú Carga Académica</a></li>
                             <li class="breadcrumb-item">Importar Carga Preliminar</li>
 
                         </ol>
@@ -108,7 +108,7 @@ ob_end_flush();
 
                 <div class="card card-default">
                     <div class="card-header">
-                        <h3 class="card-title">Seleccione el archivo</h3>
+                        <h3 class="card-title">Seleccione el Archivo</h3>
                         <div class="card-tools">
                             <button type="button" class="btn btn-tool" data-card-widget="collapse">
                                 <i class="fas fa-minus"></i>

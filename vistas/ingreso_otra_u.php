@@ -23,7 +23,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
       swal({
             title:"",
-            text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+            text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
             type: "error",
             showConfirmButton: false,
             timer: 3000
@@ -59,7 +59,7 @@ ob_end_flush();
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Cambio de Carrera de Estudiante de otras Universidades</h1>
+            <h1>Cambio de Carrera para Estudiantes de otras Universidades</h1>
           </div>
 
 
@@ -111,13 +111,13 @@ ob_end_flush();
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label>Correo Electronico</label>
+                    <label>Correo Electrónico</label>
                     <input class="form-control" type="text" id="txt_correo" name="txt_correo" style="text-transform: uppercase" onkeypress="return Letras(event)" onkeyup="DobleEspacio(this, event)" maxlength="30">
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label>Universidad de la que proviene</label>
+                    <label>Universidad de la que Proviene</label>
                     <input class="form-control" type="text" id="txt_u" name="txt_u" style="text-transform: uppercase" onkeypress="return Letras(event)" onkeyup="DobleEspacio(this, event)" maxlength="30">
                   </div>
                 </div>
@@ -125,19 +125,19 @@ ob_end_flush();
                 <!-- legend -->
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label>Solicitud.</label>
+                    <label>Solicitud</label>
                     <input class="form-control" type="file" id="txt_solicitud" name="txt_solicitud">
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label>Copia de la solicitud en línea</label>
+                    <label>Copia de la Solicitud en Línea</label>
                     <input class="form-control" type="file" id="txt_copia" name="txt_copia">
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label>Certificación de estudios</label>
+                    <label>Certificación de Estudios</label>
                     <input class="form-control" type="file" id="txt_certificado" name="txt_certificado">
                   </div>
                 </div>
@@ -149,7 +149,7 @@ ob_end_flush();
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label>Constancia de conducta</label>
+                    <label>Constancia de Conducta</label>
                     <input class="form-control" type="file" id="txt_conducta" name="txt_conducta">
                   </div>
                 </div>
@@ -193,7 +193,7 @@ ob_end_flush();
           if ($(this)[0].files[0].size > 1048576) {
             swal({
               title: "",
-              text: "excede el tamaño permitido...",
+              text: "Excede el tamaño permitido...",
               type: "error",
               showConfirmButton: false,
               timer: 2000

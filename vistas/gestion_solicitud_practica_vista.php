@@ -22,7 +22,7 @@ if (isset($_REQUEST['msj']))
   echo '<script type="text/javascript">
                     swal({
                        title:"",
-                       text:"Lo sentimos el rol ya existe",
+                       text:"¡Lo sentimos! El rol ya existe",
                        type: "info",
                        showConfirmButton: false,
                        timer: 3000
@@ -39,7 +39,7 @@ if (isset($_REQUEST['msj']))
   echo '<script type="text/javascript">
                     swal({
                        title:"",
-                       text:"Los datos  se almacenaron correctamente",
+                       text:"Los datos se almacenaron correctamente",
                        type: "success",
                        showConfirmButton: false,
                        timer: 3000
@@ -66,7 +66,7 @@ $resultadotabla = $mysqli->query($sqltabla);
   echo '<script type="text/javascript">
                     swal({
                        title:"",
-                       text:"Error al actualizar lo sentimos,intente de nuevo.",
+                       text:"¡Lo sentimos! Error al actualizar, intente de nuevo.",
                        type: "error",
                        showConfirmButton: false,
                        timer: 3000
@@ -97,7 +97,7 @@ if ($visualizacion==0)
    echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -111,7 +111,7 @@ else
 
 {
   
-        bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'],'Ingreso' , 'A Gestion de Solicitud de PPS');
+        bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'],'INGRESO' , 'A GESTION DE SOLICITUD DE PPS');
 
 
 
@@ -194,7 +194,7 @@ ob_end_flush();
                 <thead>
                 <tr>
                <th>NOMBRE COMPLETO</th>
-                  <th>Nº CUENTA </th>
+                  <th>CUENTA Nº</th>
                   <th>EMPRESA</th>
                   <th>PPS-01</th>
                  </tr>

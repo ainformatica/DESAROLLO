@@ -30,7 +30,7 @@ if($visualizacion==0){
   echo '<script type="text/javascript">
       swal({
             title:"",
-            text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+            text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
             type: "error",
             showConfirmButton: false,
             timer: 3000
@@ -39,7 +39,7 @@ if($visualizacion==0){
 
        </script>'; 
 }else{
-  bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'],'INGRESO' , 'A Historial de Horas Alumno');
+  bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'],'INGRESO' , 'A HISTORIAL DE HORAS ALUMNO');
 }
 if (permisos::permiso_insertar($Id_objeto)==0)
   {
@@ -77,7 +77,7 @@ ob_end_flush();
             <ol class="breadcrumb float-sm-right">
 
                     <li class="breadcrumb-item"><a href="../vistas/pagina_principal_vista.php">Inicio</a></li>
-              <li class="breadcrumb-item active"><a href="../vistas/horas_voae_cve_vista.php">Horas Voae Gestion</a></li>
+              <li class="breadcrumb-item active"><a href="../vistas/horas_voae_cve_vista.php">Horas Voae Gestión</a></li>
               <li class="breadcrumb-item active"><a>Detalle Horas Alumno </a>
               
             </ol>
@@ -102,7 +102,7 @@ ob_end_flush();
                           <section>
                           
                           <h5><b><i><p>Nombre Alumno: <?php echo $nombre;?></p></i></b></h5>
-                          <h5><b><i><p>Cuenta: <?php echo $cuenta;?></i></b></p></h5>
+                          <h5><b><i><p>Cuenta No.: <?php echo $cuenta;?></i></b></p></h5>
                           </section>
                     </div>
                    <form  target="_black" action="../Controlador/historial_alumno_generarpdf.php"> 

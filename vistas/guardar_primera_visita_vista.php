@@ -19,7 +19,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -125,7 +125,7 @@ ob_end_flush();
 
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label>N de cuenta</label>
+                    <label>No. de Cuenta</label>
                     <input class="form-control" type="text" id="cuenta_pv" name="cuenta_pv" readonly maxlength="60">
                   </div>
                 </div>
@@ -140,20 +140,20 @@ ob_end_flush();
 
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label>Nombre de la empresa o institución</label>
+                    <label>Nombre de la Empresa o Institución</label>
                     <input class="form-control" type="text" id="empresa_pv" name="empresa_pv" maxlength="60" readonly>
                   </div>
                 </div>
 
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label>Nombre del jefe inmediato</label>
+                    <label>Nombre del Jefe Inmediato</label>
                     <input class="form-control" type="text" id="jefe_pv" name="jefe_pv" maxlength="60" readonly>
                   </div>
                 </div>
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label>Titulo del jefe inmediato o representante de la institución</label>
+                    <label>Titulo del Jefe Inmediato o Representante de la Institución</label>
                     <input class="form-control" type="text" id="titulo_pv" name="titulo_pv" maxlength="60" readonly>
                   </div>
                 </div>
@@ -161,7 +161,7 @@ ob_end_flush();
 
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label>Correo electrónico </label>
+                    <label>Correo Electrónico </label>
                     <input class="form-control" type="text" id="correo_pv" name="correo_pv" maxlength="60" readonly>
                   </div>
                 </div>
@@ -169,7 +169,7 @@ ob_end_flush();
 
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label>No. de teléfono de la organización</label>
+                    <label>No. de teléfono de la Organización</label>
                     <input class="form-control" type="text" id="telefono_pv" name="telefono_pv" data-inputmask='"mask": " 9999-9999"' data-mask readonly>
                   </div>
                 </div>
@@ -179,21 +179,21 @@ ob_end_flush();
 
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label>Nombre del estudiante</label>
+                    <label>Nombre del Estudiante</label>
                     <input class="form-control" type="text" id="estudiante_pv" name="estudiante_pv" maxlength="60" readonly>
                   </div>
                 </div>
 
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label>Fecha de inicio</label>
+                    <label>Fecha de Inicio</label>
                     <input class="form-control" type="text" id="inicio_pv" name="inicio_pv" maxlength="60" readonly>
                   </div>
                 </div>
 
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label>Fecha de finalizacion</label>
+                    <label>Fecha de Finalizacion</label>
                     <input class="form-control" type="text" id="finalizacion_pv" name="finalizacion_pv" maxlength="60" readonly>
                   </div>
                 </div>
@@ -263,7 +263,7 @@ ob_end_flush();
                 </div>
 
                 <div class="col-sm-12">
-                  <label>Valores y cualidades</label>
+                  <label>Valores y Cualidades</label>
                 </div>
                 <br>
                 <br>
@@ -385,7 +385,7 @@ ob_end_flush();
                 <div class="col-sm-12">
                   <br><br>
                   <br>
-                  <label>Competencias/Capacidades observadas</label><br>
+                  <label>Competencias/Capacidades Observadas</label><br>
                   <br>
                 </div>
 
@@ -426,7 +426,7 @@ ob_end_flush();
 
                     <tr>
 
-                      <th>Trabajo en equipo</th>
+                      <th>Trabajo en Equipo</th>
 
                       <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="trabajo_equipo_pv" value="Básico" require></td>
 
@@ -468,7 +468,7 @@ ob_end_flush();
 
                     <tr>
 
-                      <th>Analisis de Sistemas</th>
+                      <th>Análisis de Sistemas</th>
 
                       <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="analisis_pv" value="Básico" require></td>
 
@@ -522,7 +522,7 @@ ob_end_flush();
 
                     </tr>
 
-                    <th>Aspectos de auditoria de Sistemas</th>
+                    <th>Aspectos de Auditoría de Sistemas</th>
 
                     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="aspectos_auditoria_pv" value="Básico" require></td>
 
@@ -534,7 +534,7 @@ ob_end_flush();
 
                     </tr>
 
-                    <th>Aspectos de auditoria Informática </th>
+                    <th>Aspectos de Auditoría Informática </th>
 
                     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="aspectos_seguridad_pv" value="Básico" require></td>
 
@@ -568,7 +568,7 @@ ob_end_flush();
 
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label>¿Solicitaría nuevamente uno de nuestros estudiantes para practica profesional supervisada en su empresa?</label>
+                    <label>¿Solicitaría nuevamente a uno de nuestros estudiantes para práctica profesional supervisada en su empresa?</label>
                     <select class="form-control" name="solicitar_practicante_pv" id="solicitar_practicante_pv" require>
                       <option value="">Seleccione</option>
                       <option value="Si">SI</option>
@@ -580,7 +580,7 @@ ob_end_flush();
 
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label>Nombre completo del representante de la carrera de informática que le ha contactado</label>
+                    <label>Nombre completo del representante de la Carrera de Informática que le ha contactado</label>
                     <input class="form-control" type="text" id="representante_pv" name="representante_pv" maxlength="60" require>
                   </div>
                 </div>

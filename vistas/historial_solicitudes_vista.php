@@ -12,7 +12,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
   swal({
         title:"",
-        text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+        text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
         type: "error",
         showConfirmButton: false,
         timer: 3000
@@ -100,9 +100,9 @@ $sql_tabla = json_decode(file_get_contents($url), true);
           <thead>
             <tr>
             <tr class="bg-basic">
-              <th> TIPO SOLICITUD </th>
+              <th> TIPO DE SOLICITUD </th>
               <th> NOMBRE </th>
-              <th> # CUENTA </th>
+              <th> CUENTA NO. </th>
               <th> ESTADO</th>
               <th> FECHA</th>
               <th> CANCELAR SOLICITUD </th>
@@ -270,7 +270,7 @@ $sql_tabla = json_decode(file_get_contents($url), true);
   function activo() {
     swal({
       title: "ELIMINAR SOLICITUD",
-      text: "La solicitud solo se puede eliminar cuando esta en estado Nueva",
+      text: "La solicitud sólo se puede eliminar cuando está en estado Nueva",
       type: "info",
       showConfirmButton: false,
       timer: 8000

@@ -18,7 +18,7 @@ if($visualizacion==0){
   echo '<script type="text/javascript">
       swal({
             title:"",
-            text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+            text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
             type: "error",
             showConfirmButton: false,
             timer: 3000
@@ -27,7 +27,7 @@ if($visualizacion==0){
 
        </script>'; 
 }else{
-  bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'],'INGRESO' , 'A Memorandums');
+  bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'],'INGRESO' , 'A MEMORANDUMS');
 }
 
 if (permisos::permiso_insertar($Id_objeto)==0)
@@ -53,7 +53,7 @@ ob_end_flush();
                 <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
                     <li class="breadcrumb-item"><a href="../vistas/pagina_principal_vista.php">Inicio</a></li>
-              <li class="breadcrumb-item active"><a href="../vistas/menu_actividades_cve_vista.php">Actividades Menú</a></li>
+              <li class="breadcrumb-item active"><a href="../vistas/menu_actividades_cve_vista.php">Menú de Actividades</a></li>
             </ol>
           </div>
 
@@ -85,8 +85,8 @@ ob_end_flush();
                         <table id="tbllistado" class="table table-striped table-bordered table-condensed table-hover">
                           <thead>
                             <th>Opciones</th>
-                            <th>Año Informe</th>
-                            <th>Fecha Creación</th>
+                            <th>Año del Informe</th>
+                            <th>Fecha de Creación</th>
                           </thead>
                           <tbody>                            
                           </tbody>
@@ -168,7 +168,7 @@ ob_end_flush();
                        <!-- Año -->
                 <div class="card card-default">
                 <div class="card-header bg-gradient-dark">
-                  <h3 class="card-title">Selección del año</h3>
+                  <h3 class="card-title">Selección del Año</h3>
                   <div class="card-tools">
                     <button type="button" class="btn btn-tool" data-card-widget="collapse">
                       <i class="fas fa-minus"></i>

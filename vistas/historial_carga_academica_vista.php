@@ -21,7 +21,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -85,7 +85,7 @@ ob_end_flush();
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="../vistas/pagina_principal_vista.php">Inicio</a></li>
-                            <li class="breadcrumb-item"><a href="../vistas/menu_carga_academica_vista.php">Menu Carga Académica</a></li>
+                            <li class="breadcrumb-item"><a href="../vistas/menu_carga_academica_vista.php">Menú Carga Académica</a></li>
                             <li class="breadcrumb-item"><a href="../vistas/gestion_carga_academica_vista.php">Ir a Carga Académica</a></li>
 
                         </ol>
@@ -113,7 +113,7 @@ ob_end_flush();
                     <div class="col-md-3" style="width:75px">
                         <div class="input-group mb-3 input-group">
                             <div class="input-group-prepend">
-                                <span class="input-group-text" style="font-weight: bold;">Periodo</span>
+                                <span class="input-group-text" style="font-weight: bold;">Período</span>
                             </div>
                             <input class="form-control" type="text" id="txt_periodo" name="txt_periodo" value="<?php echo $row2['num_periodo'] ?>" readonly>
                         </div>
@@ -222,7 +222,7 @@ ob_end_flush();
                         <thead>
                             <tr>
 
-                                <th>Periodo</th>
+                                <th>Período</th>
                                 <th>Año</th>
                                 <th>Secciones Aperturadas</th>
                                 <th>Acción</th>
@@ -280,7 +280,7 @@ ob_end_flush();
                                         <th>Aula</th>
                                         <th>Edificio</th>
                                         <th>Alumnos</th>
-                                        <th>Dia</th>
+                                        <th>Día</th>
 
                                     </tr>
                                 </thead>

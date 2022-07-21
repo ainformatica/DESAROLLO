@@ -19,7 +19,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -125,7 +125,7 @@ ob_end_flush();
 
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label>N de cuenta</label>
+                    <label>No. de Cuenta</label>
                     <input class="form-control" type="text" id="cuenta_uv" name="cuenta_uv" readonly maxlength="60">
                   </div>
                 </div>
@@ -135,20 +135,20 @@ ob_end_flush();
 
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label>Nombre de la empresa o institución</label>
+                    <label>Nombre de la Empresa o Institución</label>
                     <input class="form-control" type="text" id="empresa_uv" name="empresa_uv" maxlength="60" readonly>
                   </div>
                 </div>
 
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label>Nombre del jefe inmediato</label>
+                    <label>Nombre del Jefe Inmediato</label>
                     <input class="form-control" type="text" id="jefe_uv" name="jefe_uv" maxlength="60" readonly>
                   </div>
                 </div>
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label>Titulo del jefe inmediato o representante de la institución</label>
+                    <label>Título del Jefe Inmediato o Representante de la Institución</label>
                     <input class="form-control" type="text" id="titulo_uv" name="titulo_uv" maxlength="60" readonly>
                   </div>
                 </div>
@@ -158,7 +158,7 @@ ob_end_flush();
 
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label>Correo electrónico </label>
+                    <label>Correo Electrónico </label>
                     <input class="form-control" type="text" id="correo_uv" name="correo_uv" maxlength="60" readonly>
                   </div>
                 </div>
@@ -166,7 +166,7 @@ ob_end_flush();
 
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label>No. de teléfono de la organización</label>
+                    <label>No. de Teléfono de la Organización</label>
                     <input class="form-control" type="text" id="telefono_uv" name="telefono_uv" data-inputmask='"mask": " 9999-9999"' data-mask readonly>
                   </div>
                 </div>
@@ -176,21 +176,21 @@ ob_end_flush();
 
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label>Nombre del estudiante</label>
+                    <label>Nombre del Estudiante</label>
                     <input class="form-control" type="text" id="estudiante_uv" name="estudiante_uv" maxlength="60" readonly>
                   </div>
                 </div>
 
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label>Fecha de inicio</label>
+                    <label>Fecha de Inicio</label>
                     <input class="form-control" type="text" id="inicio_uv" name="inicio_uv" maxlength="60" readonly>
                   </div>
                 </div>
 
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label>Fecha de finalizacion</label>
+                    <label>Fecha de Finalización</label>
                     <input class="form-control" type="text" id="finalizacion_uv" name="finalizacion_uv" maxlength="60" readonly>
                   </div>
                 </div>
@@ -376,7 +376,7 @@ ob_end_flush();
                   <br>
                   <br>
                   <br>
-                  <label>Competencias/Capacidades observadas</label><br>
+                  <label>Competencias/Capacidades Observadas</label><br>
                   <br>
                 </div>
 
@@ -456,7 +456,7 @@ ob_end_flush();
 
                     <tr>
 
-                      <th>Analisis de Sistemas</th>
+                      <th>Análisis de Sistemas</th>
 
                       <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="analisis_uv" value="Básico" require></td>
 
@@ -510,7 +510,7 @@ ob_end_flush();
 
                     </tr>
 
-                    <th>Aspectos de auditoria de Sistemas</th>
+                    <th>Aspectos de Auditoría de Sistemas</th>
 
                     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="aspectos_auditoria_uv" value="Básico" require></td>
 
@@ -522,7 +522,7 @@ ob_end_flush();
 
                     </tr>
 
-                    <th>Aspectos de auditoria Informática </th>
+                    <th>Aspectos de Auditoría Informática </th>
 
                     <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="aspectos_seguridad_uv" value="Básico" require></td>
 
@@ -562,7 +562,7 @@ ob_end_flush();
 
 
                 <div class="col-sm-12">
-                  <label>Aspectos relevantes</label>
+                  <label>Aspectos Relevantes</label>
                 </div>
                 <br>
                 <br>
@@ -709,14 +709,14 @@ ob_end_flush();
 
               <div class="col-sm-12">
                 <div class="form-group">
-                  <label for="exampleFormControlTextarea1">Por favor anotar ¿Cuales de las áreas cree usted que deben reforzar o adquirir nuevos conocimientos?</label>
+                  <label for="exampleFormControlTextarea1">Por favor anotar ¿Cuáles de las áreas cree usted que deben reforzar o adquirir nuevos conocimientos?</label>
                   <textarea class="form-control" name="areas_refuerzo_uv" id="areas_refuerzo_uv" rows="3" require></textarea>
                 </div>
               </div>
 
               <div class="col-sm-12">
                 <div class="form-group">
-                  <label>¿Cual seria su calificación global de 0 a 10 para el o la practicante?</label>
+                  <label>¿Cuál sería su calificación global de 0 a 10 para el o la practicante?</label>
                   <select require class="form-control" name="calificacion_uv" id="calificacion_uv">
                     <option value="">Seleccione</option>
                     <option value="0">0</option>
@@ -735,7 +735,7 @@ ob_end_flush();
 
               <div class="col-sm-12">
                 <div class="form-group">
-                  <label>¿Solicitaría nuevamente uno de nuestros estudiantes para practica profesional supervisada en su empresa?</label>
+                  <label>¿Solicitaría nuevamente a uno de nuestros estudiantes para práctica profesional supervisada en su empresa?</label>
                   <select class="form-control" name="solicitar_practicante_uv" id="solicitar_practicante_uv">
                     <option value="" require>Seleccione</option>
                     <option value="Si">SI</option>
@@ -758,7 +758,7 @@ ob_end_flush();
 
               <div class="col-sm-12">
                 <div class="form-group">
-                  <label>Nombre completo del representante de la carrera de informática que le ha contactado</label>
+                  <label>Nombre completo del representante de la Carrera de Informática que le ha contactado</label>
                   <input class="form-control" type="text" id="representante_uv" name="representante_uv" maxlength="60" require>
                 </div>
               </div>

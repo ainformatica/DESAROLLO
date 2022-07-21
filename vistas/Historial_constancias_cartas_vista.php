@@ -30,7 +30,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
 	swal({
 		title:"",
-		text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+		text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
 		type: "error",
 		showConfirmButton: false,
 		timer: 3000
@@ -107,7 +107,7 @@ ob_end_flush();
               <thead>
                 <tr>
                   <th>NOMBRE COMPLETO</th>
-                  <th>CUENTA</th>
+                  <th>CUENTA NO.</th>
                   <th>CONSTANCIA CHARLA</th>
                   <th>CARTA PRESENTACION</th>
                   <th>CONSTANCIA CLASES</th>

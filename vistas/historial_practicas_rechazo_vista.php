@@ -19,7 +19,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
     swal({
      title:"",
-     text:"Lo sentimos tiene campos por rellenar",
+     text:"¡Lo sentimos! Tiene campos por rellenar",
      type: "info",
      showConfirmButton: false,
      timer: 3000
@@ -33,7 +33,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
     swal({
      title:"",
-     text:"No se realizara ningun proceso.",
+     text:"No se realizará ningún proceso.",
      type: "info",
      showConfirmButton: false,
      timer: 3000
@@ -46,7 +46,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
      swal({
        title:"",
-       text:"Los datos  se almacenaron correctamente",
+       text:"Los datos se almacenaron correctamente",
        type: "success",
        showConfirmButton: false,
        timer: 3000
@@ -58,7 +58,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
        swal({
          title:"",
-         text:"Lo sentimos no se pudieron guardar los datos",
+         text:"¡Lo sentimos! No se pudo guardar la información",
          type: "error",
          showConfirmButton: false,
          timer: 3000
@@ -82,7 +82,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
 	swal({
 		title:"",
-		text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+		text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
 		type: "error",
 		showConfirmButton: false,
 		timer: 3000
@@ -91,7 +91,7 @@ if ($visualizacion == 0) {
 
 		</script>';
 } else {
-  bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'INGRESO', 'A  HISTORIAL DE PRACTICA RECHAZADAS ');
+  bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'INGRESO', 'A HISTORIAL DE PRACTICAS RECHAZADAS ');
 
 
   $sql_tabla_estudiantes_practica = "select pr.id_practica_rechazo,  p.nombre,p.documento,pr.nombre_empresa,pr.motivo
@@ -189,7 +189,7 @@ ob_end_flush();
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Historial de practicas rechazadas </h1>
+            <h1>Historial de Prácticas Rechazadas </h1>
           </div>
           <div class="RespuestaAjax"></div>
 
@@ -198,7 +198,7 @@ ob_end_flush();
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="../vistas/pagina_principal_vista.php">Inicio</a></li>
-              <li class="breadcrumb-item active">Vinculacion</li>
+              <li class="breadcrumb-item active">Vinculación</li>
 
             </ol>
           </div>
@@ -227,7 +227,7 @@ ob_end_flush();
               <thead>
                 <tr>
                   <th>NOMBRE COMPLETO</th>
-                  <th>CUENTA</th>
+                  <th>CUENTA NO.</th>
                   <th>EMPRESA</th>
                   <th>EXPEDIENTE</th>
                   <th>MOTIVO</th>

@@ -22,7 +22,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -205,7 +205,7 @@ ob_end_flush();
 
                 <div class="col-sm-12">
                   <hr>
-                  <label>Tiempo de Ejecucion </label>
+                  <label>Tiempo de Ejecución </label>
                 </div>
 
                 <div class="col-sm-6">
@@ -217,14 +217,14 @@ ob_end_flush();
 
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label>Fecha de Finalizacion</label>
+                    <label>Fecha de Finalización</label>
                     <input class="form-control" type="date" id="txt_fecha_final" name="txt_fecha_final">
                   </div>
                 </div>
 
                 <div class="col-sm-12">
                   <hr>
-                  <label>Fecha de Evaluacion </label>
+                  <label>Fecha de Evaluación </label>
                 </div>
 
                 <div class="col-sm-6">
@@ -263,14 +263,14 @@ ob_end_flush();
 
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label> Telefono </label>
+                    <label> Teléfono </label>
                     <input class="form-control" type="text" id="txt_telefono_empresa" name="txt_telefono_empresa" value="" required data-inputmask='"mask": " 9999-9999"' data-mask>
                   </div>
                 </div>
 
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label> Correo Electronico </label>
+                    <label> Correo Electrónico </label>
                     <input class="form-control" type="text" id="txt_correo_contacto" name="txt_correo_contacto" value="" required onkeypress="return ValidaMail($Correo_electronico)" onkeyup="Espacio(this, event)" maxlength="50">
                   </div>
                 </div>
@@ -335,7 +335,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
                     swal({
                        title:"",
-                       text:"Los datos  se almacenaron correctamente",
+                       text:"Los datos se almacenaron correctamente",
                        type: "success",
                        showConfirmButton: false,
                        timer: 3000
@@ -349,7 +349,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
                     swal({
                        title:"",
-                       text:"Error al actualizar lo sentimos,intente de nuevo.",
+                       text:"¡Lo sentimos! Error al actualizar, intente de nuevo.",
                        type: "error",
                        showConfirmButton: false,
                        timer: 3000
@@ -361,7 +361,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
                                                   swal({
                                                        title:"",
-                                                       text:"Lo sentimos tiene campos por rellenar.",
+                                                       text:"¡Lo sentimos! Tiene campos por rellenar.",
                                                        type: "info",
                                                        showConfirmButton: false,
                                                        timer: 3000

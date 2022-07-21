@@ -15,7 +15,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -212,7 +212,7 @@ if ($visualizacion == 0) {
                                     <div class="modal-body">
                                         <form id="ind_form">
                                             <div class="container">
-                                                <label for="">Nombre Indicador</label>
+                                                <label for="">Nombre del Indicador</label>
                                                 <textarea class="form-control" id="ind_indicador" name="ind_indicador" rows="3" maxlength="255" value="" style="text-transform: uppercase" onkeyup="DobleEspacio(this, event); MismaLetra('ind_indicador');" oncopy="return false" onpaste="return false" onkeypress="return sololetras(event)" placeholder="Nombre indicador" required></textarea>
                                                 <label for="">Resultado Esperado</label>
                                                 <textarea class="form-control" id="ind_resultado" name="ind_resultado" rows="3" maxlength="255" value="" style="text-transform: uppercase" onkeyup="DobleEspacio(this, event); MismaLetra('ind_resultado');" oncopy="return false" onpaste="return false" onkeypress="return sololetras(event)" placeholder=" Resultado Esperado" required></textarea>
@@ -309,7 +309,7 @@ if ($visualizacion == 0) {
                                                         <th scope="col">ID INDICADOR</th>
                                                         <th scope="col">INDICADOR</th>
                                                         <th scope="col">RESULTADOS</th>
-                                                        <th scope="col">ID_OBJETIVOS</th>
+                                                        <th scope="col">ID OBJETIVOS</th>
                                                         <th scope="col">ACCIONES</th>
                                                         <th scope="col">METAS</th>
                                                         <th scope="col">ACTIVIDAD</th>
@@ -583,13 +583,13 @@ if ($visualizacion == 0) {
         function delete_Indicador(id_indicador) {
             swal({
                 title: '¿Desea eliminar este registro?',
-                text: "¡no será capaz de recuperarlo!",
+                text: "¡No podrá volver a recuperarlo!",
                 type: 'warning',
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',
                 cancelButtonColor: '#d33',
-                confirmButtonText: '¿Si, Eliminar!',
-                cancelButtonText: '¿No, cancelar!',
+                confirmButtonText: 'Sí ¡Eliminar!',
+                cancelButtonText: 'No ¡Cancelar!',
                 confirmButtonClass: 'btn btn-success',
                 cancelButtonClass: 'btn btn-danger',
                 buttonsStyling: false
@@ -640,7 +640,7 @@ if ($visualizacion == 0) {
                             .clear()
                             .draw();
                         swal(
-                            'Exito!',
+                            'Éxito!',
                             '¡Datos eliminados correctamente!',
                             'success'
                         )
@@ -650,7 +650,7 @@ if ($visualizacion == 0) {
                         localStorage.setItem('datos', JSON.stringify(data));
                         updateTable();
                         swal(
-                            '¡Exito!',
+                            '¡Éxito!',
                             '¡Datos eliminados correctamente!',
                             'success'
                         );
@@ -743,13 +743,13 @@ if ($visualizacion == 0) {
 
             swal({
                 title: '¿Seguro que desea borrar este registro?',
-                text: "¡No podrá recuperar este registro!",
+                text: "¡No podrá volver a recuperarlo!",
                 type: 'warning',
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',
                 cancelButtonColor: '#d33',
-                confirmButtonText: 'Si, eliminar!',
-                cancelButtonText: 'No, cancelar!',
+                confirmButtonText: 'Sí ¡Eliminar!',
+                cancelButtonText: 'No ¡Cancelar!',
                 confirmButtonClass: 'btn btn-success',
                 cancelButtonClass: 'btn btn-danger',
                 buttonsStyling: false
@@ -768,14 +768,14 @@ if ($visualizacion == 0) {
                             actualizr_responsables();
                             $('#tabla_responsables tbody').empty();
                             swal(
-                                'Eliminado!',
-                                'Su registro se a eliminado',
+                                '¡Eliminado!',
+                                'Su registro se ha eliminado correctamente',
                                 'success'
                             )
                         } else {
                             swal(
-                                'Alto!',
-                                'Algo ocurrio mal.',
+                                '¡Alto!',
+                                'Algo ocurrió mal',
                                 'error'
                             )
                         }
@@ -785,7 +785,7 @@ if ($visualizacion == 0) {
                 // 'close', and 'timer'
                 if (dismiss === 'cancel') {
                     swal(
-                        'Cancelado!',
+                        '¡Cancelado!',
                         'Su registro sigue en la base de datos',
                         'info'
                     )

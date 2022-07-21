@@ -14,7 +14,7 @@ require_once('../clases/funcion_permisos.php');
 
 $Id_objeto = 4;
 
-bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingreso', 'A Gestion de Usuarios');
+bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'INGRESO', 'A GESTION DE USUARIOS');
 //Lineas de msj al cargar pagina de acuerdo a actualizar o eliminar datos
 
 if (isset($_REQUEST['msj'])) {
@@ -51,7 +51,7 @@ from tbl_usuarios u ,tbl_roles r WHERE u.Id_rol=r.Id_rol ";
     echo '<script type="text/javascript">
                     swal({
                        title:"",
-                       text:"Error al actualizar lo sentimos,intente de nuevo.",
+                       text:"¡Lo sentimos! Error al actualizar, intente de nuevo.",
                        type: "error",
                        showConfirmButton: false,
                        timer: 3000
@@ -70,7 +70,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -189,7 +189,7 @@ ob_end_flush();
           <div class="col-sm-6">
 
 
-            <h1>Gestion de Usuarios</h1>
+            <h1>Gestión de Usuarios</h1>
           </div>
 
           <div class="col-sm-6">
@@ -214,7 +214,7 @@ ob_end_flush();
 
     <div class="card card-default">
       <div class="card-header">
-        <h3 class="card-title">Usuarios Existente</h3>
+        <h3 class="card-title">Usuarios Existentes</h3>
         <div class="card-tools">
 
 
@@ -378,7 +378,7 @@ ob_end_flush();
                     </div>
 
                     <div class="form-group ">
-                      <label class="control-label">Lista de roles</label>
+                      <label class="control-label">Lista de Roles</label>
                       <select class="form-control" name="cb_comborol" required="">
                         <option value="0">Seleccione un Rol:</option>
                         <?php
