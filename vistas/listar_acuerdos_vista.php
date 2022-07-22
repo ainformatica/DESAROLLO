@@ -13,7 +13,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -21,7 +21,7 @@ if ($visualizacion == 0) {
                            window.location = "../vistas/menu_acuerdo_vista.php";
                             </script>';
 } else {
-  bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingreso', 'A Lista de Acuerdos');
+  bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'INGRESO', 'A LISTA DE ACUERDOS');
 }
 
 ob_end_flush();
@@ -84,7 +84,7 @@ ob_end_flush();
                   <table id="tabla30" class="table table-bordered table-striped table-hover">
                     <thead>
                       <tr class="table-secondary">
-                        <th>No. Acta</th>
+                        <th>Acta No.</th>
                         <th>Responsable</th>
                         <th>Nombre Acuerdo</th>
                         <th>Descripción</th>

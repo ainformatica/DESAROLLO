@@ -17,7 +17,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
     swal({
         title: "",
-        text: "Lo sentimos el departamento ya existe",
+        text: "¡Lo sentimos! El departamento ya existe",
         type: "info",
         showConfirmButton: false,
         timer: 3000
@@ -31,7 +31,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
     swal({
         title: "",
-        text: "Los datos  se almacenaron correctamente",
+        text: "Los datos se almacenaron correctamente",
         type: "success",
         showConfirmButton: false,
         timer: 3000
@@ -50,7 +50,7 @@ FROM tbl_departamentos";
     echo '<script type="text/javascript">
     swal({
         title: "",
-        text: "Error al actualizar lo sentimos,intente de nuevo.",
+        text: "¡Lo sentimos! Error al actualizar, intente de nuevo.",
         type: "error",
         showConfirmButton: false,
         timer: 3000
@@ -70,7 +70,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -174,7 +174,7 @@ ob_end_flush();
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="../vistas/pagina_principal_vista.php">Inicio</a></li>
-              <li class="breadcrumb-item active"><a href="../vistas/menu_mantenimiento.php">Menu Mantenimientos de Docentes</a></li>
+              <li class="breadcrumb-item active"><a href="../vistas/menu_mantenimiento.php">Menú Mantenimientos de Docentes</a></li>
               <li class="breadcrumb-item active"><a href="../vistas/mantenimiento_crear_departamento_vista.php">Nuevo Departamento</a></li>
             </ol>
           </div>
@@ -301,7 +301,7 @@ ob_end_flush();
                 <div class="col-md-12">
                   <div class="form-group">
 
-                    <label>Modificar departamento</label>
+                    <label>Modificar Departamento</label>
 
 
                     <input class="form-control" type="text" id="txtdepartamento" name="txtdepartamento" value="<?php echo $_SESSION['departamento']; ?>" required="" maxlength="30" style="text-transform: uppercase" onkeyup="DobleEspacio(this, event); MismaLetra('txtdepartamento');" onkeypress="return sololetras(event)" onkeypress="return comprobar(this.value, event, this.id)">

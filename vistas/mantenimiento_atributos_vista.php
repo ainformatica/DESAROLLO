@@ -17,7 +17,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
     swal({
         title: "",
-        text: "Lo sentimos el atributo ya existe",
+        text: "¡Lo sentimos! El atributo ya existe",
         type: "info",
         showConfirmButton: false,
         timer: 3000
@@ -31,7 +31,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
     swal({
         title: "",
-        text: "Los datos  se almacenaron correctamente",
+        text: "Los datos se almacenaron correctamente",
         type: "success",
         showConfirmButton: false,
         timer: 3000
@@ -54,7 +54,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
     swal({
         title: "",
-        text: "Error al actualizar lo sentimos,intente de nuevo.",
+        text: "¡Lo sentimos! Error al actualizar, intente de nuevo.",
         type: "error",
         showConfirmButton: false,
         timer: 3000
@@ -74,7 +74,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -84,7 +84,7 @@ if ($visualizacion == 0) {
                             </script>';
 } else {
 
-  bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingreso', 'A Mantenimiento Atributos');
+  bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'INGRESO', 'A MANTENIMIENTO ATRIBUTOS');
 
 
   if (permisos::permiso_modificar($Id_objeto) == '1') {
@@ -255,7 +255,7 @@ ob_end_flush();
             <tr>
               <th>Atributos</th>
               <th>Requerido </th>
-              <th>Tipo persona </th>
+              <th>Tipo Persona </th>
               <th>Modificar</th>
               <th>Eliminar</th>
             </tr>
@@ -410,7 +410,7 @@ ob_end_flush();
   $(document).ready(function() {
 
     $('.select2').select2({
-      placeholder: 'Seleccione una opcion',
+      placeholder: 'Seleccione una opción',
       theme: 'bootstrap4',
       tags: true,
     });

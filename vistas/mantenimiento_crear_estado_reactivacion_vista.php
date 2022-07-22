@@ -13,7 +13,7 @@ require_once('../clases/funcion_permisos.php');
 
 $Id_objeto = 134;
 
-bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingreso', 'A Mantenimiento/Crear estado');
+bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'INGRESO', 'A MANTENIMIENTO/CREAR ESTADO');
 
 
 
@@ -27,7 +27,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -54,7 +54,7 @@ if ($visualizacion == 0) {
       $msj=$_REQUEST['msj'];
         if ($msj==1)
             {
-            echo '<script> alert("Lo sentimos el rol a ingresar ya existe favor intenta con uno nuevo")</script>';
+            echo '<script> alert("¡Lo sentimos! El rol a ingresar ya existe, por favor intenta con uno nuevo")</script>';
             }
    
                if ($msj==2)
@@ -95,7 +95,7 @@ ob_end_flush();
                     <div class="col-sm-6">
 
 
-                        <h1>Estado de Reactivacion</h1>
+                        <h1>Estado de Reactivación</h1>
                     </div>
 
 
@@ -136,12 +136,12 @@ ob_end_flush();
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group ">
-                                        <label>Ingrese el estado</label>
+                                        <label>Ingrese el Estado</label>
                                         <input class="form-control " type="text" id="txt_estado" name="txt_estado" required style="text-transform: uppercase" onkeyup="DobleEspacio(this, event)" maxlength="30" onkeypress="return comprobar(this.value, event, this.id)">
                                     </div>
 
                                     <div class="form-group ">
-                                        <label>Ingrese la descripcion</label>
+                                        <label>Ingrese la Descripción</label>
                                         <input class="form-control" type="text" id="txt_descripcion" name="txt_descripcion" required style="text-transform: uppercase" onkeyup="DobleEspacio(this, event); MismaLetra('txt_descripcion');" onkeypress="return LetrasyNumeros(event)" maxlength="30" onkeypress="return comprobar(this.value, event, this.id)">
                                     </div>
 

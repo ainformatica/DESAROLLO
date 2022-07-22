@@ -27,7 +27,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -52,7 +52,7 @@ if ($visualizacion == 0) {
     if (isset($_REQUEST['msj'])) {
         $msj = $_REQUEST['msj'];
         if ($msj == 1) {
-            echo '<script> alert("Lo sentimos la característica a ingresar ya existe favor intenta con una nueva")</script>';
+            echo '<script> alert("¡Lo sentimos! La característica a ingresar ya existe, por favor intenta con una nueva")</script>';
         }
 
         if ($msj == 2) {
@@ -90,7 +90,7 @@ ob_end_flush();
                     <div class="col-sm-6">
 
 
-                        <h1>Tipo Característica</h1>
+                        <h1>Tipo de Característica</h1>
                     </div>
 
 
@@ -98,7 +98,7 @@ ob_end_flush();
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="../vistas/pagina_principal_vista.php">Inicio</a></li>
-                            <li class="breadcrumb-item"><a href="../vistas/menu_mantenimiento_laboratorio.php">Menu Mantenimiento</a></li>
+                            <li class="breadcrumb-item"><a href="../vistas/menu_mantenimiento_laboratorio.php">Menú Mantenimiento</a></li>
                             <li class="breadcrumb-item"><a href="../vistas/mantenimiento_tipo_caracteristica_vista.php"> Mantenimiento Tipo Característica</a></li>
                         </ol>
                     </div>
@@ -118,7 +118,7 @@ ob_end_flush();
 
                     <div class="card card-default ">
                         <div class="card-header center">
-                            <h3 class="card-title">Nuevo Tipo Característica</h3>
+                            <h3 class="card-title">Nuevo Tipo de Característica</h3>
 
                             <div class="card-tools">
                                 <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
@@ -138,9 +138,9 @@ ob_end_flush();
 
                                     <!-- <div class="col-sm-4"> -->
                                     <div class="form-group">
-                                        <label>Tipo de dato de la Característica</label>
+                                        <label>Tipo de Dato de la Característica</label>
                                         <select class="form-control" name="cb_tipo_dato" id="cb_tipo_dato" onchange="">
-                                            <option value="0">Seleccione una opción:</option>
+                                            <option value="0">Seleccione una Opción:</option>
                                             <option value="1">Letras</option>
                                             <option value="2">Números</option>
                                             <option value="3">Letras y Números</option>

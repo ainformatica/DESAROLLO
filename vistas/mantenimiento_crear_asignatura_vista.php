@@ -15,7 +15,7 @@ require_once('../clases/funcion_permisos.php');
 
 $Id_objeto = 107;
 
-bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingreso', 'A MANTENIMIENTO/CREAR ASIGNATURA');
+bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'INGRESO', 'A MANTENIMIENTO/CREAR ASIGNATURA');
 
 
 
@@ -29,7 +29,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -86,7 +86,7 @@ ob_end_flush();
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="../vistas/pagina_principal_vista.php">Inicio</a></li>
-                            <li class="breadcrumb-item"><a href="../vistas/menu_mantenimiento_plan.php">Menu Mantenimiento</a></li>
+                            <li class="breadcrumb-item"><a href="../vistas/menu_mantenimiento_plan.php">Menú Mantenimiento</a></li>
                             <li class="breadcrumb-item"><a href="../vistas/mantenimiento_asignatura_vista.php"> Mantenimiento Asignatura</a></li>
                         </ol>
                     </div>
@@ -118,7 +118,7 @@ ob_end_flush();
                             <div class="col-md-4">
                                 <div class="form-group">
 
-                                    <label>Plan que pertenece:</label>
+                                    <label>Plan al que Pertenece:</label>
                                     <td><select class="form-control" style="width: 100%;" name="cbm_plan" id="cbm_plan">
                                         </select></td>
                                     <input class="form-control" type="text" id="txt_uv_plan" name="txt_uv_plan" readonly hidden>
@@ -131,7 +131,7 @@ ob_end_flush();
                             <div class="col-md-4">
                                 <div class="form-group">
 
-                                    <label>Periodo que pertenece:</label>
+                                    <label>Período al que Pertenece:</label>
                                     <td><select class="form-control" style="width: 100%;" name="cbm_periodo" id="cbm_periodo">
                                         </select></td>
                                 </div>
@@ -139,7 +139,7 @@ ob_end_flush();
                             <div class="col-md-4">
                                 <div class="form-group">
 
-                                    <label> Área que pertenece:</label>
+                                    <label> Área a la que Pertenece:</label>
                                     <td><select class="form-control" style="width: 100%;" name="cbm_area" id="cbm_area">
                                         </select></td>
                                 </div>
@@ -247,7 +247,7 @@ ob_end_flush();
                             <div class="col-md-4">
                                 <div class="form-group">
 
-                                    <label>Plan para equivalencia:</label>
+                                    <label>Plan para Equivalencia:</label>
                                     <td><select class="form-control" style="width: 100%;" name="cbm_plan1" id="cbm_plan1">
                                         </select></td>
                                 </div>
@@ -273,7 +273,7 @@ ob_end_flush();
                             </div> -->
                             <div class="col-md-8">
                                 <div class="form-group">
-                                    <label>Seleccione Requisito de la asignatura </label>
+                                    <label>Seleccione Requisito de la A signatura </label>
                                     <select class="mul-select" multiple="true" style="width: 100%;" id="cbm_asignaturas_requisito">
 
                                     </select>

@@ -16,7 +16,7 @@ require_once('../clases/funcion_permisos.php');
 
 $Id_objeto = 64;
 
-bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingreso', 'A Mantenimiento/Crear Comision');
+bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'INGRESO', 'A MANTENIMIENTO/CREAR COMISION');
 
 
 
@@ -30,7 +30,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -107,7 +107,7 @@ ob_end_flush();
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="../vistas/pagina_principal_vista.php">Inicio</a></li>
                             <li class="breadcrumb-item"><a href="../vistas/menu_mantenimiento.php">Menú Mantenimientos de Docentes</a></li>
-                            <li class="breadcrumb-item"><a href="../vistas/mantenimiento_comisiones_docente_vista.php"> Mantenimiento comisiones</a></li>
+                            <li class="breadcrumb-item"><a href="../vistas/mantenimiento_comisiones_docente_vista.php"> Mantenimiento Comisiones</a></li>
                         </ol>
                     </div>
 
@@ -148,7 +148,7 @@ ob_end_flush();
                                     <div class="form-group">
                                         <label>Ingrese la Carrera</label>
                                         <select class="form-control-lg select2" type="text" id="cbm_carrera" name="cbm_carrera" style="width: 100%;">
-                                            <option value="">Seleccione una opción</option>
+                                            <option value="">Seleccione una Opción</option>
                                         </select>
                                     </div>
                                     <input class="form-control" id="carrera1" name="carrera1" hidden>
@@ -196,7 +196,7 @@ ob_end_flush();
     $(document).ready(function() {
 
         $('.select2').select2({
-            placeholder: 'Seleccione una opcion',
+            placeholder: 'Seleccione una opción',
             theme: 'bootstrap4',
             tags: true,
         });

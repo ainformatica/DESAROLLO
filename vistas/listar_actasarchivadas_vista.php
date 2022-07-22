@@ -13,7 +13,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -21,7 +21,7 @@ if ($visualizacion == 0) {
                            window.location = "../vistas/menu_acta_vista.php";
                             </script>';
 } else {
-    bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingreso', 'A Lista Actas Archivadas (Secretaria)');
+    bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'INGRESO', 'A LISTA ACTAS ARCHIVADAS (SECRETARIA)');
 }
 
 ob_end_flush();
@@ -51,7 +51,7 @@ ob_end_flush();
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="pagina_principal_vista">Inicio</a></li>
-                        <li class="breadcrumb-item"><a href="menu_acta_vista">Menú Acta</a></li>
+                        <li class="breadcrumb-item"><a href="menu_acta_vista">Menú Actas</a></li>
                         <li class="breadcrumb-item"><a href="listar_actas_vista">Listar Actas</a></li>
                         <li class="breadcrumb-item active">Actas Archivadas</li>
                         </ol>
@@ -62,7 +62,7 @@ ob_end_flush();
         </section>
         <div class="card card-default">
             <div class="card-header">
-                <h3 class="card-title">Listado de todas las Actas archivadas</h3>
+                <h3 class="card-title">Listado de Todas las Actas archivadas</h3>
                 
                 <!--BOTON AGENDAR REUNIÓN-->
                 <!-- <div class="px-1">
@@ -85,7 +85,7 @@ ob_end_flush();
                                     <table id="listar_actas" class="table table-bordered table-striped table-hover">
                                         <thead>
                                             <tr class="table-secondary">
-                                                <th>No. Acta</th>
+                                                <th>Acta No.</th>
                                                 <th>Nombre Reunión</th>
                                                 <th>Tipo Reunión</th>
                                                 <th>Fecha Reunión</th>

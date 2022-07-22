@@ -16,7 +16,7 @@ require_once('../clases/funcion_permisos.php');
 
 $Id_objeto = 109;
 
-bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingreso', 'A MANTENIMIENTO/CREAR ASIGNATURA DE SERVICIO');
+bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'INGRESO', 'A MANTENIMIENTO/CREAR ASIGNATURA DE SERVICIO');
 
 
 
@@ -30,7 +30,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -89,8 +89,8 @@ ob_end_flush();
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="../vistas/pagina_principal_vista.php">Inicio</a></li>
-                            <li class="breadcrumb-item"><a href="../vistas/menu_mantenimiento_plan.php">Menu Mantenimiento</a></li>
-                            <li class="breadcrumb-item"><a href="../vistas/mantenimiento_asignatura_servicio_vista.php"> Mantenimiento Asignatura de servicio</a></li>
+                            <li class="breadcrumb-item"><a href="../vistas/menu_mantenimiento_plan.php">Menú Mantenimiento</a></li>
+                            <li class="breadcrumb-item"><a href="../vistas/mantenimiento_asignatura_servicio_vista.php"> Mantenimiento Asignatura de Servicio</a></li>
                         </ol>
                     </div>
 
@@ -105,7 +105,7 @@ ob_end_flush();
             <div class="container-fluid ">
                 <div class="card card-default">
                     <div class="card-header">
-                        <h3 class="card-title">Nuevo Asignatura</h3>
+                        <h3 class="card-title">Nueva Asignatura</h3>
                         <div class="card-tools">
                             <button type="button" class="btn btn-tool" data-card-widget="collapse">
                                 <i class="fas fa-minus"></i>

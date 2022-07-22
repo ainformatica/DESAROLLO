@@ -8,7 +8,7 @@ require_once('../clases/funcion_visualizar.php');
 require_once('../clases/funcion_permisos.php');
 $Id_objeto = 5015;
 
-bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingreso', 'A Mantenimiento Estado Reunión');
+bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'INGRESO', 'A MANTENIMIENTO ESTADO REUNION');
 
 $visualizacion = permiso_ver($Id_objeto);
 
@@ -18,7 +18,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! no tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -74,7 +74,7 @@ ob_end_flush();
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="pagina_principal_vista">Inicio</a></li>
-                            <li class="breadcrumb-item"><a href="menu_mantenimientoacta_vista">Menú Mantenimiento actas</a></li>
+                            <li class="breadcrumb-item"><a href="menu_mantenimientoacta_vista">Menú Mantenimiento Actas</a></li>
                             <li class="breadcrumb-item active">Estado Reunión</li>
                         </ol>
                     </div>
@@ -87,7 +87,7 @@ ob_end_flush();
                 <div class="modal-dialog modal-dialog-centered modal-lg">
                     <div class="modal-content lg-secondary ">
                         <div class="modal-header">
-                            <h4 class="modal-title">Nuevo estado</h4>
+                            <h4 class="modal-title">Nuevo Estado</h4>
                         </div>
                         <form role="form" name="guardar-estadoreunion" id="guardar-estadoreunion" method="post" action="../Modelos/modelo_manreunion.php">
                             <div class="card-body">

@@ -17,7 +17,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
     swal({
         title: "",
-        text: "Lo sentimos la actividad ya existe para esa comisión",
+        text: "¡Lo sentimos! La actividad ya existe para esa comisión",
         type: "info",
         showConfirmButton: false,
         timer: 3000
@@ -53,7 +53,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
     swal({
         title: "",
-        text: "Error al actualizar lo sentimos,intente de nuevo.",
+        text: "¡Lo sentimos! Error al actualizar, intente de nuevo.",
         type: "error",
         showConfirmButton: false,
         timer: 3000
@@ -73,7 +73,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -83,7 +83,7 @@ if ($visualizacion == 0) {
                             </script>';
 } else {
 
-  bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingreso', 'A Mantenimiento Actividades');
+  bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'INGRESO', 'A MANTENIMIENTO ACTIVIDADES');
 
 
   if (permisos::permiso_modificar($Id_objeto) == '1') {
@@ -183,7 +183,7 @@ ob_end_flush();
           <div class="col-sm-6">
 
 
-            <h1>Mantenimiento Actividades
+            <h1>Mantenimiento de Actividades
             </h1>
           </div>
 
@@ -334,9 +334,9 @@ ob_end_flush();
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group ">
-                    <label class="control-label">Tipo Comisión</label>
+                    <label class="control-label">Tipo de Comisión</label>
                     <select class="form-control" name="comision1" required="">
-                      <option value="0">Seleccione una opción:</option>
+                      <option value="0">Seleccione una Opción:</option>
                       <?php
 
                       if (isset($_SESSION['id_comisiones'])) {

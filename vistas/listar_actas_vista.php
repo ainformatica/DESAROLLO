@@ -13,7 +13,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -21,7 +21,7 @@ if ($visualizacion == 0) {
                            window.location = "../vistas/menu_acta_vista.php";
                             </script>';
 } else {
-    bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingreso', 'A Lista Actas');
+    bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'INGRESO', 'A LISTA ACTAS');
 }
 
 ob_end_flush();
@@ -52,7 +52,7 @@ ob_end_flush();
                         <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="pagina_principal_vista">Inicio</a></li>
                            <li class="breadcrumb-item"><a href="menu_acta_vista">Menú Actas</a></li>
-                           <li class="breadcrumb-item active">Listar de Actas</li>
+                           <li class="breadcrumb-item active">Listado de Actas</li>
                         </ol>
                         <br>
                     </div>
@@ -130,7 +130,7 @@ ob_end_flush();
         </div>
         <div class="card card-default">
             <div class="card-header">
-                <h3 class="card-title">Listado de todas las Actas</h3>
+                <h3 class="card-title">Listado de Todas las Actas</h3>
                 <!--BOTON AGENDAR REUNIÓN-->
                 <!-- <div class="px-1">
                     <a href="../vistas/agendar_reunion_vista.php" class="btn btn-warning"><i class="fas fa-arrow"></i>Agendar Nueva Reunión</a>
@@ -152,9 +152,9 @@ ob_end_flush();
                                     <table id="listar_actas" class="table table-bordered table-striped table-hover">
                                         <thead>
                                             <tr class="table-secondary">
-                                                <th>No. Acta</th>
+                                                <th>Acta No.</th>
                                                 <th>Nombre Reunión</th>
-                                                <th>Categoria</th>
+                                                <th>Categoría</th>
                                                 <th>Estado</th>
                                                 <th>Fecha</th>
                                                 <th>Hora Inicio</th>

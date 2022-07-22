@@ -17,7 +17,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
     swal({
         title: "",
-        text: "Lo sentimos el estado civil ya existe",
+        text: "¡Lo sentimos! El estado civil ya existe",
         type: "info",
         showConfirmButton: false,
         timer: 3000
@@ -31,7 +31,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
     swal({
         title: "",
-        text: "Los datos  se almacenaron correctamente",
+        text: "Los datos se almacenaron correctamente",
         type: "success",
         showConfirmButton: false,
         timer: 3000
@@ -50,7 +50,7 @@ FROM tbl_estadocivil";
     echo '<script type="text/javascript">
     swal({
         title: "",
-        text: "Error al actualizar lo sentimos,intente de nuevo.",
+        text: "¡Lo sentimos! Error al actualizar, intente de nuevo.",
         type: "error",
         showConfirmButton: false,
         timer: 3000
@@ -70,7 +70,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -80,7 +80,7 @@ if ($visualizacion == 0) {
                             </script>';
 } else {
 
-  bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingreso', 'A Mantenimiento Estado Civil');
+  bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'INGRESO', 'A MANTENIMIENTO ESTADO CIVIL');
 
 
   if (permisos::permiso_modificar($Id_objeto) == '1') {
@@ -174,7 +174,7 @@ ob_end_flush();
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="../vistas/pagina_principal_vista.php">Inicio</a></li>
-              <li class="breadcrumb-item active"><a href="../vistas/menu_mantenimiento.php">Menu Mantenimiento de Docentes</a></li>
+              <li class="breadcrumb-item active"><a href="../vistas/menu_mantenimiento.php">Menú Mantenimientos de Docentes</a></li>
               <li class="breadcrumb-item active"><a href="../vistas/mantenimiento_crear_estado_civil_vista.php">Nuevo Estado Civil</a></li>
             </ol>
           </div>
@@ -190,7 +190,7 @@ ob_end_flush();
 
     <div class="card card-default">
       <div class="card-header">
-        <h3 class="card-title">Estado Civil Existentes</h3>
+        <h3 class="card-title">Estados Civiles Existentes</h3>
         <div class="card-tools">
           <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
         </div>

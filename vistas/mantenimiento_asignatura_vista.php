@@ -16,7 +16,7 @@ require_once('../clases/funcion_permisos.php');
 
 $Id_objeto = 108;
 
-bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingreso', 'A MANTENIMIENTO ASIGNATURA');
+bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'INGRESO', 'A MANTENIMIENTO ASIGNATURA');
 
 
 
@@ -30,7 +30,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -106,7 +106,7 @@ ob_end_flush();
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="../vistas/pagina_principal_vista.php">Inicio</a></li>
-                            <li class="breadcrumb-item"><a href="../vistas/menu_mantenimiento_plan.php">Menu Mantenimiento</a></li>
+                            <li class="breadcrumb-item"><a href="../vistas/menu_mantenimiento_plan.php">Menú Mantenimiento</a></li>
                             <li class="breadcrumb-item"><a href="../vistas/mantenimiento_crear_asignatura_vista.php"> Crear Asignaturas</a></li>
                         </ol>
                     </div>
@@ -144,7 +144,7 @@ ob_end_flush();
                                     <th>Plan</th>
                                     <th>Área</th>
                                     <!--   <th>Tipo Asignatura</th> -->
-                                    <th>Periodo</th>
+                                    <th>Período</th>
                                     <!--  <th>Plan de estudio</th> -->
                                     <th>Suficiencia</th>
                                     <th>Reposición</th>
@@ -187,7 +187,7 @@ ob_end_flush();
                                 <div class="form-group">
                                     <input class="form-control" type="text" id="cbm_plan1" name="cbm_plan1" readonly hidden>
 
-                                    <label>Plan de estudio:</label>
+                                    <label>Plan de Estudio:</label>
                                     <td> <select class="form-control" style="width: 100%;" name="cbm_plan" id="cbm_plan"></select>
                                     </td>
                                 </div>
@@ -197,7 +197,7 @@ ob_end_flush();
                             <div class="col-md-3">
                                 <div class="form-group">
                                     <input class="form-control" type="text" id="cbm_periodo1" name="cbm_periodo1" readonly hidden>
-                                    <label>Periodo:</label>
+                                    <label>Período:</label>
                                     <td><select class="form-control" style="width: 100%;" name="cbm_periodo" id="cbm_periodo">
                                         </select></td>
                                 </div>
@@ -272,7 +272,7 @@ ob_end_flush();
                                 </div>
                             </div>
                             <div class="col-md-2">
-                                <label>Usada en carga</label>
+                                <label>Usada en Carga</label>
                                 <input class="form-control" type="text" id="cbm_usada_carga1" name="cbm_usada_carga1" readonly hidden>
                                 <td><select class="form-control" style="width: 100%;" name="cbm_usada_carga" id="cbm_usada_carga">
                                         <option value="0">SELECCIONAR</option>

@@ -16,7 +16,7 @@ require_once('../clases/funcion_permisos.php');
 
 $Id_objeto = 81;
 
-bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingreso', 'A Mantenimiento/Crear Atributo');
+bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'INGRESO', 'A MANTENIMIENTO/CREAR ATRIBUTO');
 
 
 
@@ -30,7 +30,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -57,7 +57,7 @@ if ($visualizacion == 0) {
       $msj=$_REQUEST['msj'];
         if ($msj==1)
             {
-            echo '<script> alert("Lo sentimos el rol a ingresar ya existe favor intenta con uno nuevo")</script>';
+            echo '<script> alert("¡Lo sentimos! El rol a ingresar ya existe, por favor intenta con uno nuevo")</script>';
             }
    
                if ($msj==2)
@@ -153,7 +153,7 @@ ob_end_flush();
                                     <div class="form-group">
                                         <label>Tipo Persona</label>
                                         <select class="form-control-lg select2" type="text" id="cbm_persona" name="txt_persona1" style="width: 100%;">
-                                            <option value="">Seleccione una opción</option>
+                                            <option value="">Seleccione una Opción</option>
                                         </select>
                                     </div>
                                     <input class="form-control" id="persona1" hidden>
@@ -200,7 +200,7 @@ ob_end_flush();
     $(document).ready(function() {
 
         $('.select2').select2({
-            placeholder: 'Seleccione una opcion',
+            placeholder: 'Seleccione una opción',
             theme: 'bootstrap4',
             tags: true,
         });

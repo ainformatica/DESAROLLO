@@ -13,7 +13,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -21,7 +21,7 @@ if ($visualizacion == 0) {
                            window.location = "../vistas/menu_reunion_vista.php";
                             </script>';
 } else {
-  bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingreso', 'A Lista de Reuniones');
+  bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'INGRESO', 'A LISTA DE REUNIONES');
 }
 $sql2 = $mysqli->prepare("SELECT tbl_periodo.id_periodo AS id_periodo, tbl_periodo.num_periodo AS num_periodo, tbl_periodo.num_anno AS num_anno, tbl_periodo.fecha_adic_canc AS fecha_adic_canc, tbl_periodo.fecha_desbloqueo AS fecha_desbloqueo,
 (SELECT tp.descripcion FROM tbl_tipo_periodo AS tp INNER JOIN tbl_periodo AS pdo ON tp.id_tipo_periodo=pdo.id_tipo_periodo
@@ -61,7 +61,7 @@ ob_end_flush();
             <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item"><a href="pagina_principal_vista">Inicio</a></li>
             <li class="breadcrumb-item"><a href="menu_reunion_vista">Menú Reuniones</a></li>
-            <li class="breadcrumb-item active">Listar de Reuniones</li>
+            <li class="breadcrumb-item active">Lista de Reuniones</li>
             </ol>
           </div>
           <div class="RespuestaAjax"></div>
@@ -94,7 +94,7 @@ ob_end_flush();
                       <tr class="table-secondary">
                         <th>Nombre Reunión</th>
                         <th>Fecha</th>
-                        <th>Categoria</th>
+                        <th>Categoría</th>
                         <th>Modalidad</th>
                         <th>Estado</th>
                         <th>Memorándum</th>

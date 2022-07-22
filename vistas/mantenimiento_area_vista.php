@@ -16,7 +16,7 @@ if (isset($_REQUEST['msj'])) {
         echo '<script type="text/javascript">
     swal({
         title: "",
-        text: "Lo sentimos el área ya existe",
+        text: "¡Lo sentimos! El área ya existe",
         type: "info",
         showConfirmButton: false,
         timer: 3000
@@ -48,7 +48,7 @@ if (isset($_REQUEST['msj'])) {
         echo '<script type="text/javascript">
     swal({
         title: "",
-        text: "Error al actualizar lo sentimos, intente de nuevo.",
+        text: "¡Lo sentimos! Error al actualizar, intente de nuevo.",
         type: "error",
         showConfirmButton: false,
         timer: 3000
@@ -68,7 +68,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -78,7 +78,7 @@ if ($visualizacion == 0) {
                             </script>';
 } else {
 
-    bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingreso', 'A mantenimiento area');
+    bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'INGRESO', 'A MANTENIMIENTO AREA');
 
 
     if (permisos::permiso_modificar($Id_objeto) == '1') {
@@ -166,7 +166,7 @@ ob_end_flush();
                     <div class="col-sm-6">
 
 
-                        <h1>Mantenimiento Área
+                        <h1>Mantenimiento de Área
                         </h1>
                     </div>
 
@@ -206,7 +206,7 @@ ob_end_flush();
 
                     <thead>
                         <tr>
-                            <th># </th>
+                            <th>No. </th>
                             <th>Área</th>
                             <th>Carrera</th>
                             <th>Modificar</th>
@@ -270,7 +270,7 @@ ob_end_flush();
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title"> Actualizar área</h4>
+                        <h4 class="modal-title"> Actualizar Área</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
