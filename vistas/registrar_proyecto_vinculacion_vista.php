@@ -34,7 +34,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -81,7 +81,7 @@ ob_end_flush();
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Registro de Proyectos Vinculacion Universidad Sociedad</h1>
+            <h1>Registro de Proyectos Vinculación Universidad Sociedad</h1>
           </div>
 
 
@@ -89,7 +89,7 @@ ob_end_flush();
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="../vistas/pagina_principal_vista.php">Inicio</a></li>
-              <li class="breadcrumb-item active">Vinculacion</li>
+              <li class="breadcrumb-item active">Vinculación</li>
             </ol>
           </div>
 
@@ -108,7 +108,7 @@ ob_end_flush();
 
           <div class="card card-default">
             <div class="card-header">
-              <h3 class="card-title">I. Informacion academica del Proyecto</h3>
+              <h3 class="card-title">I. Información Académica del Proyecto</h3>
 
               <div class="card-tools">
                 <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
@@ -123,7 +123,7 @@ ob_end_flush();
 
                 <div class="col-sm-4">
                   <div class="form-group">
-                    <label>Codigo de Proyecto</label>
+                    <label>Código de Proyecto</label>
                     <input class="form-control" type="text" maxlength="12" id="txt_cod_proyecto" name="txt_cod_proyecto" value="" required onkeyup="DobleEspacio(this, event)" onkeypress="return Numeros(event)">
                   </div>
                 </div>
@@ -149,7 +149,7 @@ ob_end_flush();
 
                 <div class="col-sm-12">
                   <hr>
-                  <label>Unidad Academica</label>
+                  <label>Unidad Académica</label>
 
 
                 </div>
@@ -181,7 +181,7 @@ ob_end_flush();
 
                 <div class="col-sm-12">
                   <hr>
-                  <label>Tiempo de Ejecucion </label>
+                  <label>Tiempo de Ejecución </label>
                 </div>
 
                 <div class="col-sm-6">
@@ -193,14 +193,14 @@ ob_end_flush();
 
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label>Fecha de Finalizacion</label>
+                    <label>Fecha de Finalización</label>
                     <input class="form-control" type="date" id="txt_fecha_final" name="txt_fecha_final">
                   </div>
                 </div>
 
                 <div class="col-sm-12">
                   <hr>
-                  <label>Fecha de Evaluacion </label>
+                  <label>Fecha de Evaluación </label>
                 </div>
 
                 <div class="col-sm-6">
@@ -263,9 +263,9 @@ ob_end_flush();
 
                 <div class="col-sm-4">
                   <div class="form-group">
-                    <label>Tipo de Vinculacion </label>
+                    <label>Tipo de Vinculación </label>
                     <select class="form-control select2" style="width: 100%;" name="combo_tipo" id="combo_tipo" required="">
-                      <option value="0">Seleccione un Tipo de Vinculacion:</option>
+                      <option value="0">Seleccione un Tipo de Vinculación:</option>
                       <?php
                       $query = $mysqli->query("SELECT * FROM tbl_tipos_vinculacion ");
                       while ($resultado = mysqli_fetch_array($query)) {
@@ -285,7 +285,7 @@ ob_end_flush();
 
                 <div class="col-sm-12">
                   <hr>
-                  <label>Vinculacion con la Entidad </label>
+                  <label>Vinculación con la Entidad </label>
 
 
                 </div>
@@ -301,7 +301,7 @@ ob_end_flush();
                   <div class="form-group">
                     <label>Aporte en el Proyecto: </label>
                     <select class="form-control select2" style="width: 100%;" name="combo_aporte_empresa" id="combo_aporte_empresa" required="">
-                      <option value="0">Seleccione una opcion:</option>
+                      <option value="0">Seleccione una opción:</option>
                       <?php
                       $query = $mysqli->query("SELECT * FROM tbl_empresa_aporte_proyecto ");
                       while ($resultado = mysqli_fetch_array($query)) {
@@ -315,9 +315,9 @@ ob_end_flush();
 
                 <div class="col-sm-4">
                   <div class="form-group">
-                    <label>Doc. de Formalización </label>
+                    <label>Documentos de Formalización </label>
                     <select class="form-control select2" style="width: 100%;" name="combo_formalizacion" id="combo_formalizacion" required="">
-                      <option value="0">Seleccione una opcion:</option>
+                      <option value="0">Seleccione una opción:</option>
                       <?php
                       $query = $mysqli->query("SELECT * FROM tbl_tipo_formalizacion_proyecto ");
                       while ($resultado = mysqli_fetch_array($query)) {
@@ -345,14 +345,14 @@ ob_end_flush();
 
                 <div class="col-sm-3">
                   <div class="form-group">
-                    <label> Telefono </label>
+                    <label> Teléfono </label>
                     <input class="form-control" type="text" id="txt_telefono_contacto" name="txt_telefono_contacto" value="" required data-inputmask='"mask": " 9999-9999"' data-mask>
                   </div>
                 </div>
 
                 <div class="col-sm-3">
                   <div class="form-group">
-                    <label> Correo Electronico </label>
+                    <label> Correo Electrónico </label>
                     <input class="form-control" type="email" id="txt_correo_contacto" name="txt_correo_contacto" value="" required onkeypress="return ValidaMail($Correo_electronico)" onkeyup="Espacio(this, event)" maxlength="30">
                   </div>
                 </div>
@@ -375,14 +375,14 @@ ob_end_flush();
 
                 <div class="col-sm-4">
                   <div class="form-group">
-                    <label> Nº de Empleado </label>
+                    <label> Empleado Nº </label>
                     <input class="form-control" type="text" id="txt_num_empleado" name="txt_num_empleado" value="" required onkeypress="return Numeros(event)" onkeyup="DobleEspacio(this, event)" style="text-transform: uppercase" maxlength="12">
                   </div>
                 </div>
 
                 <div class="col-sm-4">
                   <div class="form-group">
-                    <label> Direccion </label>
+                    <label> Dirección </label>
                     <input class="form-control" type="text" id="txt_direccion_cor" name="txt_direccion_cor" value="" required onkeyup="DobleEspacio(this, event)" style="text-transform: uppercase" maxlength="60">
                   </div>
                 </div>
@@ -396,14 +396,14 @@ ob_end_flush();
 
                 <div class="col-sm-4">
                   <div class="form-group">
-                    <label>Telefono </label>
+                    <label>Teléfono </label>
                     <input class="form-control" type="text" id="txt_telefono_coordinador" name="txt_telefono_coordinador" value="" required data-inputmask='"mask": " 9999-9999"' data-mask>
                   </div>
                 </div>
 
                 <div class="col-sm-4">
                   <div class="form-group">
-                    <label> Correo Electronico </label>
+                    <label> Correo Electrónico </label>
                     <input class="form-control" type="email" id="txt_correo_coordinador" name="txt_correo_coordinador" value="" required onkeypress="return ValidaMail($Correo_electronico)" onkeyup="Espacio(this, event)" maxlength="50">
                   </div>
                 </div>
@@ -421,13 +421,13 @@ ob_end_flush();
 
                 <div class="col-sm-12">
                   <hr>
-                  <label>III. Zona de influencia del Proyecto</label>
+                  <label>III. Zona de Influencia del Proyecto</label>
                   <hr>
                 </div>
 
                 <div class="col-sm-4">
                   <div class="form-group">
-                    <label> Region </label>
+                    <label> Región </label>
                     <input class="form-control" type="text" id="txt_region" name="txt_region" value="" required onkeypress="return Letras(event)" onkeyup="DobleEspacio(this, event)" style="text-transform: uppercase" maxlength="20">
                   </div>
                 </div>
@@ -466,10 +466,10 @@ ob_end_flush();
 
                 <div class="col-sm-4">
                   <div class="form-group">
-                    <label> Aldea/Caserio </label>
+                    <label> Aldea/Caserío </label>
 
                     <select class="form-control select2" style="width: 100%;" name="combo_aldea_caserio" id="combo_aldea_caserio" required="">
-                      <option value="0">Seleccione Aldea/Caserio</option>
+                      <option value="0">Seleccione Aldea/Caserío</option>
 
                     </select>
                   </div>
@@ -491,27 +491,27 @@ ob_end_flush();
 
                 <div class="col-sm-12">
                   <hr>
-                  <label>IV. Informacion especifica del Proyecto</label>
+                  <label>IV. Información Específica del Proyecto</label>
                   <hr>
                 </div>
 
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label> Objetivos de desarrollo </label>
+                    <label> Objetivos de Desarrollo </label>
                     <textarea class="form-control" rows="3" id="txt_objetivos" name="txt_objetivos" value="" required onkeyup="DobleEspacio(this, event)" style="text-transform: uppercase" maxlength="120"> </textarea>
                   </div>
                 </div>
 
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label> Objetivos inmediatos del proyecto </label>
+                    <label> Objetivos Inmediatos del Proyecto </label>
                     <textarea class="form-control" rows="3" id="txt_objetivos_inmediatos" name="txt_objetivos_inmediatos" value="" required onkeyup="DobleEspacio(this, event)" style="text-transform: uppercase" maxlength="120"> </textarea>
                   </div>
                 </div>
 
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label> Resultados esperados </label>
+                    <label> Resultados Esperados </label>
                     <textarea class="form-control" rows="3" id="txt_resultados_esperados" name="txt_resultados_esperados" value="" required onkeyup="DobleEspacio(this, event)" style="text-transform: uppercase" maxlength="120"> </textarea>
                   </div>
                 </div>

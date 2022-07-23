@@ -23,7 +23,7 @@ if ($visualizacion==0)
  echo '<script type="text/javascript">
  swal({
    title:"",
-   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
    type: "error",
    showConfirmButton: false,
    timer: 3000
@@ -73,7 +73,7 @@ if ($visualizacion==0)
      echo '<script type="text/javascript">
      swal({
        title:"",
-       text:"El estudiante no esta registrado, lo sentimos intente de nuevo.",
+       text:"¡lo sentimos! El estudiante no está registrado, intente de nuevo",
        type: "info",
        showConfirmButton: false,
        timer: 1500
@@ -170,7 +170,7 @@ if ($visualizacion==0)
                 <tr>
 
                   <th>ESTUDIANTES</th>
-                  <th>Nº CUENTA</th>
+                  <th>CUENTA Nº</th>
                   <th>CLASES APROBADAS</th>
                   <th>PORCENTAJE</th>
                   <th>ACCIONES</th>

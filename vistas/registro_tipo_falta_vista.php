@@ -19,7 +19,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -92,7 +92,7 @@ ob_end_flush();
 
                     <div class="card card-default">
                         <div class="card-header">
-                            <h3 class="card-title">Nuevo Tipo de falta</h3>
+                            <h3 class="card-title">Nuevo Tipo de Falta</h3>
                             <div class="card-tools">
                                 <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
                             </div>
@@ -109,7 +109,7 @@ ob_end_flush();
                                     </div>
 
                                     <div class="form-group">
-                                        <label>Descripcion</label>
+                                        <label>Descripción</label>
                                         <input class="form-control" type="text" id="txt_descripcion_tipo_falta" name="txt_descripcion_tipo_falta" required="" maxlength="195" style="text-transform: uppercase" onkeyup="DobleEspacio(this, event)" onkeypress="return Letras(event)" onkeypress="return comprobar(this.value, event, this.id)">
                                     </div>
 

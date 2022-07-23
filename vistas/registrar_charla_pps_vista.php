@@ -20,7 +20,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -135,7 +135,7 @@ if ($visualizacion == 0) {
                   <div class="form-group">
                     <label> Charla PSS </label>
                     <select class="form-control" name="cb_charla" id="charla">
-                      <option disabled selected value="0">Seleccione una charla :</option>
+                      <option disabled selected value="0">Seleccione una charla:</option>
                         <?php
                             $sql=$mysqli->query("SELECT * FROM tbl_vinculacion_gestion_charla WHERE fecha_charla> CURRENT_DATE() 
                             ");
@@ -164,7 +164,7 @@ if ($visualizacion == 0) {
 
                 <div class="col-sm-3">
                   <div class="form-group">
-                    <label>Fecha y hora</label>
+                    <label>Fecha y Hora</label>
                     <input class="form-control" type="text" id="fechahora" name="txt_fechahora" value="" required onkeyup="Espacio(this, event)" maxlength="20" readonly>
                   </div>
                 </div>
@@ -180,7 +180,7 @@ if ($visualizacion == 0) {
 
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label>Nº Constancia</label>
+                    <label>Constancia Nº</label>
                     <input class="form-control" type="text" id="constancia_charla" name="txt_constancia_charla" value="" required onkeyup="Espacio(this, event)" maxlength="11" readonly>
                   </div>
                 </div>
@@ -195,7 +195,7 @@ if ($visualizacion == 0) {
 
                 <div class="col-sm-6" hidden>
                   <div class="form-group">
-                    <label>persona</label>
+                    <label>Persona</label>
                     <input class="form-control" type="text" id="id_persona_charla" name="id_persona_charla" value="<?php echo $id_persona; ?>">
                   </div>
                 </div>
@@ -203,7 +203,7 @@ if ($visualizacion == 0) {
 
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label>Nº de Cuenta</label>
+                    <label>Cuenta Nº</label>
                     <input class="form-control" type="text" id="txt_cuenta" name="txt_cuenta" value="<?php echo $cuenta; ?>" required onkeyup="Espacio(this, event)" maxlength="11" readonly>
                   </div>
                 </div>

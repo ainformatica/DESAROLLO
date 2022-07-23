@@ -18,7 +18,7 @@ if($visualizacion==0){
   echo '<script type="text/javascript">
       swal({
             title:"",
-            text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+            text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
             type: "error",
             showConfirmButton: false,
             timer: 3000
@@ -27,7 +27,7 @@ if($visualizacion==0){
 
        </script>'; 
 }else{
-  bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'],'INGRESO' , 'A registro de faltas');
+  bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'],'INGRESO' , 'A REGISTRO DE FALTAS');
 }
 if (permisos::permiso_insertar($Id_objeto)==0)
   {
@@ -132,7 +132,7 @@ ob_end_flush();
                               </select>
                 </div>
                 <div class="form-group col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                  <label>Fecha Falta:</label>
+                  <label>Fecha de Falta:</label>
                   <input type="date" max="<?php $hoy=date("Y-m-d"); echo $hoy;?>" class="form-control" name="fch_falta" id="fch_falta" maxlength="256" >
                 </div>
                 </div>
@@ -297,7 +297,7 @@ ob_end_flush();
     $(document).ready(function() {
 
         $('.select2').select2({
-            placeholder: 'Seleccione una opcion',
+            placeholder: 'Seleccione una opción',
             theme: 'bootstrap4',
             tags: true,
         });

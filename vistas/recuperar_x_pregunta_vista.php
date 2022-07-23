@@ -18,7 +18,7 @@
  <head>
    <meta charset="utf-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <title>Informatica Admistrativa</title>
+   <title>Informática Administrativa</title>
    <!-- Tell the browser to be responsive to screen width -->
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <link rel="stylesheet" href="../plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
@@ -75,7 +75,7 @@
            <div class="row">
              <div class="col-8">
                <p class="mb-0">
-                 <a href="../login.php">Inicia Sesion</a>
+                 <a href="../login.php">Iniciar Sesión</a>
                </p>
              </div>
 
@@ -120,7 +120,7 @@
                           Swal.fire({
   position: "center",
   icon: "info",
-  title: "Lo sentimos datos incorrectos, favor intente de nuevo",
+  title: "¡Lo sentimos! Datos incorrectos, por favor intente de nuevo",
   showConfirmButton: false,
   timer: 3000
 })   </script>';

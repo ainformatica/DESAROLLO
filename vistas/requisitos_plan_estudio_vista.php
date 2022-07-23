@@ -20,7 +20,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -87,7 +87,7 @@ ob_end_flush();
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="../vistas/pagina_principal_vista.php">Inicio</a></li>
-                            <li class="breadcrumb-item"><a href="../vistas/menu_plan_estudio_vista.php">Menu Plan de Estudio</a></li>
+                            <li class="breadcrumb-item"><a href="../vistas/menu_plan_estudio_vista.php">Menú Plan de Estudio</a></li>
                         </ol>
                     </div>
 
@@ -280,7 +280,7 @@ ob_end_flush();
                                             <div class="col-md-6">
                                                 <div class="form-group">
 
-                                                    <label>Plan para requisito:</label>
+                                                    <label>Plan para Requisito:</label>
                                                     <td><select class="form-control" style="width: 100%;" name="cbm_plan_crear" id="cbm_plan_crear">
                                                         </select></td>
                                                 </div>

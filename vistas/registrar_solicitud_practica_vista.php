@@ -47,7 +47,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -155,7 +155,7 @@ ob_end_flush();
         
             <div class="col-sm-4">
                 <div class="form-group">
-                  <label>Fecha de nacimiento</label>
+                  <label>Fecha de Nacimiento</label>
                   <input class="form-control" type="text" id="txt_cuenta_solicitud" name="txt_cuenta_solicitud" maxlength="12" value="<?php echo $datos_estudiante['fecha_nacimiento']; ?>" readonly>
                 </div>
             </div>
@@ -167,7 +167,7 @@ ob_end_flush();
             </div>
             <div class="col-sm-6">
                 <div class="form-group">
-                  <label>Teléfono fijo</label>
+                  <label>Teléfono Fijo</label>
                   <input class="form-control" type="text" id="txt_cuenta_solicitud" name="txt_cuenta_solicitud" maxlength="12" value="<?php echo $datos_estudiante['telefono']; ?>" readonly>
                 </div>
             </div>
@@ -221,9 +221,9 @@ ob_end_flush();
 
                 <div class="col-sm-4">
                   <div class="form-group">
-                    <label>Tipo de institución</label>
+                    <label>Tipo de Institución</label>
                     <select class="form-control" name="cb_empresa" id="empresa">
-                      <option selected disabled value="0">Seleccione una opcion:</option>
+                      <option selected disabled value="0">Seleccione una opción:</option>
                       <?php
                       $query = $mysqli->query("SELECT * FROM tbl_tipo_empresa");
                       while ($resultado = mysqli_fetch_array($query)) {
@@ -260,14 +260,14 @@ ob_end_flush();
 
                     <div class="col-sm-4">
                         <div class="form-group">
-                          <label>Correo electrónico</label> 
+                          <label>Correo Electrónico</label> 
                           <input class="form-control" type="text" id="correo" name="correo_jefe">
                         </div>
                     </div>
 
                     <div class="col-sm-2">
                         <div class="form-group">
-                          <label>Telefono (Ext.)</label> 
+                          <label>Teléfono (Ext.)</label> 
                           <input class="form-control" type="text" id="telefono" name="telefono_jefe">
                         </div>
                     </div>
@@ -281,9 +281,9 @@ ob_end_flush();
 
                     <div class="col-sm-4">
                         <div class="form-group">
-                          <label>Nivel académico</label>
+                          <label>Nivel Académico</label>
                           <select class="form-control" name="cb_nivel" id="nivel_academico">
-                            <option selected disabled value="0">Seleccione una opcion:</option>
+                            <option selected disabled value="0">Seleccione una opción:</option>
                             <option value="1">Bachillerato</option>
                             <option value="2">Licenciado</option>
                             <option value="3">Ingeniero</option>
@@ -297,9 +297,9 @@ ob_end_flush();
                     <div class="col-sm-4">
                    
                    <div class="form-group">
-                     <label>¿ Trabaja para la institución ?</label>
+                     <label>¿ Trabaja para la Institución?</label>
                      <select class="form-control" name="cb_trabaja" id="trabaja_institucion">
-                       <option selected disabled value="10">Seleccione una opcion:</option>
+                       <option selected disabled value="10">Seleccione una opción:</option>
                        <option value="1">Sí</option>
                        <option value="2">No</option>
                      
@@ -377,7 +377,7 @@ ob_end_flush();
                  <div class="form-group">
                    <label>Modalidad de Práctica</label>
                    <select class="form-control" name="cb_modalidad" id="cb_modalidad">
-                     <option selected disabled value="0">Seleccione una opcion:</option>
+                     <option selected disabled value="0">Seleccione una opción:</option>
                      <?php
                      $query = $mysqli->query("SELECT * FROM tbl_modalidad");
                      while ($resultado = mysqli_fetch_array($query)) {
@@ -407,7 +407,7 @@ ob_end_flush();
                  <div class="form-group">
                    <label>Jornada laboral</label>
                    <select class="form-control" name="cb_jornada" id="jornada">
-                     <option selected disabled value="0">Seleccione una opcion:</option>
+                     <option selected disabled value="0">Seleccione una opción:</option>
                      <?php
                      $query = $mysqli->query("SELECT * FROM tbl_jornada_laboral");
                      while ($resultado = mysqli_fetch_array($query)) {
@@ -478,14 +478,14 @@ ob_end_flush();
 
                     <div class="col-sm-4">
                         <div class="form-group">
-                          <label>Correo electrónico</label> 
+                          <label>Correo Electrónico</label> 
                           <input class="form-control" type="text" id="txt_cuenta_solicitud" name="txt_cuenta_solicitud">
                         </div>
                     </div>
 
                     <div class="col-sm-2">
                         <div class="form-group">
-                          <label>Telefono (Ext.)</label> 
+                          <label>Teléfono (Ext.)</label> 
                           <input class="form-control" type="text" id="txt_cuenta_solicitud" name="txt_cuenta_solicitud">
                         </div>
                     </div>
@@ -499,9 +499,9 @@ ob_end_flush();
 
                     <div class="col-sm-4">
                         <div class="form-group">
-                          <label>Nivel académico</label>
+                          <label>Nivel Académico</label>
                           <select class="form-control" name="cb_empresa" id="empresa">
-                            <option selected disabled value="0">Seleccione una opcion:</option>
+                            <option selected disabled value="0">Seleccione una opción:</option>
                             <option value="1">Bachillerato</option>
                             <option value="2">Licenciado</option>
                             <option value="3">Ingeniero</option>

@@ -15,7 +15,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -315,13 +315,13 @@ if ($visualizacion == 0) {
         function delete_Obj(id_delete) {
             swal({
                 title: '¿Desea eliminar este registro?',
-                text: "¡no será capaz de recuperarlo!",
+                text: "¡Si continúa, no será capaz de recuperarlo!",
                 type: 'warning',
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',
                 cancelButtonColor: '#d33',
-                confirmButtonText: '¿Si, Eliminar!',
-                cancelButtonText: '¿No, cancelar!',
+                confirmButtonText: 'Sí ¡Eliminar!',
+                cancelButtonText: 'No ¡Cancelar!',
                 confirmButtonClass: 'btn btn-success',
                 cancelButtonClass: 'btn btn-danger',
                 buttonsStyling: false
@@ -375,7 +375,7 @@ if ($visualizacion == 0) {
                             .clear()
                             .draw();
                         swal(
-                            'Exito!',
+                            'Éxito!',
                             '¡Datos eliminados correctamente!',
                             'success'
                         )
@@ -385,7 +385,7 @@ if ($visualizacion == 0) {
                         localStorage.setItem('data', JSON.stringify(data));
                         updateTable();
                         swal(
-                            '¡Exito!',
+                            '¡Éxito!',
                             '¡Datos eliminados correctamente!',
                             'success'
                         );

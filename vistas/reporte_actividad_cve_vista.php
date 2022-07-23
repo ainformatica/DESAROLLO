@@ -21,7 +21,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
   swal({
     title:"",
-    text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+    text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
     type: "error",
     showConfirmButton: false,
     timer: 3000
@@ -30,7 +30,7 @@ if ($visualizacion == 0) {
 
     </script>';
 } else {
-  bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'INGRESO', 'A Solicitud de Actividades CVE');
+  bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'INGRESO', 'A SOLICITUD DE ACTIVIDADES CVE');
 }
 if (permisos::permiso_insertar($Id_objeto) == 0) {
   $_SESSION["btnagregar"] = "hidden";
@@ -114,7 +114,7 @@ ob_end_flush();
                         <!-- Periodo Academico -->
                         <div class="col-sm-6">
                           <div class="form-group">
-                            <label>Filtrar por Periodo Academico:</label>
+                            <label>Filtrar por Periodo Académico:</label>
                             <select name="periodo" id="periodo" class="form-control select2" name="periodo" id="nombre" maxlength="50" placeholder="Seleccione el Periodo" required>
                               <option value="PRIMER PERIODO">--PRIMER PERIODO</option>
                               <option value="SEGUNDO PERIODO">--SEGUNDO PERIODO</option>

@@ -13,7 +13,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
   swal({
         title:"",
-        text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+        text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
         type: "error",
         showConfirmButton: false,
         timer: 3000
@@ -61,7 +61,7 @@ ob_end_flush();
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="../vistas/pagina_principal_vista.php">Inicio</a></li>
-              <li class="breadcrumb-item"><a href="../vistas/revision_cancelar_clases.php">Solicitudes de Cancelacion de clases</a></li>
+              <li class="breadcrumb-item"><a href="../vistas/revision_cancelar_clases.php">Solicitudes de Cancelación de clases</a></li>
             </ol>
           </div>
 
@@ -112,7 +112,7 @@ ob_end_flush();
                 </div>
                 <div class="col-md-12">
                   <div class="form-group">
-                    <label>Motivo de cancelación</label>
+                    <label>Motivo de Cancelación</label>
                     <textarea class="form-control" id="txt_razon" name="txt_razon" rows="3" style="text-transform: uppercase" onkeypress="return Letras(event)" onkeyup="DobleEspacio(this, event)" readonly onmousedown="return false;"><?php echo $sqltabla["ROWS"][0]['motivo']; ?> </textarea>
                   </div>
                 </div>

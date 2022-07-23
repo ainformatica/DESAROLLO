@@ -13,7 +13,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
   swal({
         title:"",
-        text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+        text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
         type: "error",
         showConfirmButton: false,
         timer: 3000
@@ -60,7 +60,7 @@ ob_end_flush();
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Solicitud de Reactivacion de Cuenta</h1>
+            <h1>Solicitud de Reactivación de Cuenta</h1>
           </div>
 
 
@@ -68,7 +68,7 @@ ob_end_flush();
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="../vistas/pagina_principal_vista.php">Inicio</a></li>
-              <li class="breadcrumb-item"><a href="../vistas/reactivacion_cuenta_vista.php">Reactivacion de cuenta</a></li>
+              <li class="breadcrumb-item"><a href="../vistas/reactivacion_cuenta_vista.php">Reactivación de Cuenta</a></li>
             </ol>
           </div>
 
@@ -87,7 +87,7 @@ ob_end_flush();
 
           <div class="card card-default">
             <div class="card-header">
-              <h3 class="card-title">Reactivacion</h3>
+              <h3 class="card-title">Reactivación</h3>
 
               <div class="card-tools">
                 <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
@@ -109,13 +109,13 @@ ob_end_flush();
 
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label>Verifiqué su Nombre</label>
+                    <label>Verifique su Nombre</label>
                     <input class="form-control" type="text" id="txt_verificado" name="txt_verificado1" style="text-transform: uppercase" onkeypress="return Letras(event)" onkeyup="DobleEspacio(this, event)" maxlength="50" placeholder="Colocar acentos en los nombres si los lleva">
                   </div>
                 </div>
                 <div class="col-md-6">
                   <div class="form-group">
-                    <label>Verifiqué su Apellido</label>
+                    <label>Verifique su Apellido</label>
                     <input class="form-control" type="text" id="txt_verificado2" name="txt_verificado2" style="text-transform: uppercase" onkeypress="return Letras(event)" onkeyup="DobleEspacio(this, event)" maxlength="50" placeholder="Colocar acentos en los apellidos si los lleva">
                   </div>
                 </div>
@@ -191,7 +191,7 @@ ob_end_flush();
           if ($(this)[0].files[0].size > 1048576) {
             swal({
               title: "",
-              text: "excede el tamaño permitido...",
+              text: "Excede el tamaño permitido...",
               type: "error",
               showConfirmButton: false,
               timer: 2000
@@ -203,7 +203,7 @@ ob_end_flush();
           $(this).val('');
           swal({
             title: "",
-            text: "Extensión no permitida: " + ext,
+            text: "Extensión no permitida" + ext,
             type: "error",
             showConfirmButton: false,
             timer: 2000

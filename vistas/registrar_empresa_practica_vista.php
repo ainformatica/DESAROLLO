@@ -24,7 +24,7 @@ if (isset($_REQUEST['msj'])) {
                                  location.reload()
                               swal({
                                    title:"",
-                                   text:"Los datos  se almacenaron correctamente",
+                                   text:"Los datos se almacenaron correctamente",
                                    type: "success",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -38,7 +38,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no se pudieron guardar los datos",
+                                   text:"¡Lo sentimos! No se pudieron guardar los datos",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -76,7 +76,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000

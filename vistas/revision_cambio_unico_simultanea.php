@@ -13,7 +13,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
   swal({
         title:"",
-        text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+        text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
         type: "error",
         showConfirmButton: false,
         timer: 3000
@@ -60,7 +60,7 @@ ob_end_flush();
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="../vistas/pagina_principal_vista.php">Inicio</a></li>
-              <li class="breadcrumb-item"><a href="../vistas/revision_cambio_carrera_simultanea_vista.php">Solicitudes de Cambio Carrera Simultanea</a></li>
+              <li class="breadcrumb-item"><a href="../vistas/revision_cambio_carrera_simultanea_vista.php">Solicitudes de Cambio Carrera Simultánea</a></li>
             </ol>
           </div>
 

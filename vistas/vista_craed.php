@@ -46,7 +46,7 @@
                   <input type="text" class="form-control" autocomplete="off" name="descrip_cr_edit" id="descrip_cr_edit" maxlength="50" value="" style="text-transform: uppercase" onkeyup="DobleEspacio(this, event); MismaLetra('descrip_cr');" oncopy="return false" onpaste="return false" onkeypress="return sololetras(event)" required="">
                 </div>
                 <div class="col-sm">
-                  <label for="">Año Periodo</label><br>
+                  <label for="">Año Período</label><br>
                   <input type="text" id="datepicker_cr" name="txt_fecha_ingreso_cr" onkeydown="return false" class="form-control" placeholder="AÑO PERIODO" required="">
                 </div>
               </div>
@@ -289,14 +289,14 @@
       var id_crd = fila.id_craed_jefa;
       //alert(id_acd);
       swal({
-        title: 'Seguro que quiere eliminar este archivo?',
-        text: "!Este registro no podra ser recuperado!",
+        title: '¿Seguro que desea eliminar este archivo?',
+        text: "!Si decide continua, este registro no podrá ser recuperado!",
         type: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Si, Eliminarlo!',
-        cancelButtonText: 'No, Cancelar!',
+        confirmButtonText: 'Sí ¡Eliminarlo!',
+        cancelButtonText: 'No ¡Cancelar!',
         confirmButtonClass: 'btn btn-success',
         cancelButtonClass: 'btn btn-danger',
         buttonsStyling: false
@@ -324,7 +324,7 @@
             } else {
               swal(
                 'Error',
-                'A ocurrido un error en la consulta!',
+                '¡Ha ocurrido un error en la consulta!',
                 'error'
               )
             }
@@ -336,7 +336,7 @@
         if (dismiss === 'cancel') {
           swal(
             'Cancelado',
-            'Su registro sigue intacto!',
+            '¡Su registro sigue intacto!',
             'error'
           )
         }
@@ -421,7 +421,7 @@
           } else {
             swal(
               'Error',
-              'A ocurrido un error en la consulta!',
+              '¡Ha ocurrido un error en la consulta!',
               'error'
             )
           }

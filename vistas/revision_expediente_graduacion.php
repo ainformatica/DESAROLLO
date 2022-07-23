@@ -12,7 +12,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
   swal({
         title:"",
-        text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+        text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
         type: "error",
         showConfirmButton: false,
         timer: 3000
@@ -96,7 +96,7 @@ $sql_tabla = json_decode(file_get_contents('http://desarrollo.informaticaunah.co
           <thead>
             <tr>
               <th>NOMBRE</th>
-              <th># DE CUENTA</th>
+              <th>Nº DE CUENTA</th>
               <th>ESTADO</th>
               <th>FECHA</th>
               <th>REVISAR SOLICITUD</th>

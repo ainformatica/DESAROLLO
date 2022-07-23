@@ -25,7 +25,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -79,7 +79,7 @@ ob_end_flush();
 
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1>Registro Docentes</h1>
+              <h1>Registro de Docentes</h1>
             </div>
 
 
@@ -166,8 +166,8 @@ ob_end_flush();
                   </div>
 
                   <div class="col-sm-3">
-                    <label id="label1" for="">Nº Identidad:</label>
-                    <label hidden id="label2" for="">Nº Pasaporte:</label>
+                    <label id="label1" for="">Nº de Identidad:</label>
+                    <label hidden id="label2" for="">Nº de Pasaporte:</label>
 
                     <div class="form-group">
                       <div class="input-group-prepend">
@@ -189,7 +189,7 @@ ob_end_flush();
                   <div class="col-sm-3">
                     <div class="form-group">
                       <!-- FECHA DE NACIMIENTO  -->
-                      <label>Fecha Nacimiento</label>
+                      <label>Fecha de Nacimiento</label>
                       <input class="form-control" type="date" id="txt_fecha_nacimiento" onblur="valida_mayoria()" name="txt_fecha_nacimiento" required onkeydown="return false">
 
                     </div>
@@ -199,7 +199,7 @@ ob_end_flush();
                   <div class="col-sm-3">
                     <div class="form-group">
                       <!-- ESTADO CIVIL -->
-                      <label>Estado civil</label>
+                      <label>Estado Civil</label>
                       <select class="form-control" name="cb_ecivil" id="cb_ecivil" style="text-transform: uppercase" required>
 
                       </select>
@@ -218,7 +218,7 @@ ob_end_flush();
                   <div class="col-sm-3">
                     <div class="form-group">
                       <!-- CURRICULUM -->
-                      <label>Curriculum</label>
+                      <label>Currículum</label>
                       <input class="form-control" type="file" accept=application/pdf id="curriculum" name="curriculum" required>
 
                     </div>
@@ -260,7 +260,7 @@ ob_end_flush();
                         <table class="table table-bordered table-striped m-0">
                           <thead>
                             <tr>
-                              <th>Teléfono's</th>
+                              <th>Teléfonos</th>
                             </tr>
                           </thead>
                           <tbody id="tbData2"></tbody>
@@ -517,7 +517,7 @@ ob_end_flush();
                           <thead>
                             <tr>
 
-                              <th hidden>#</th>
+                              <th hidden>No.</th>
                               <th>Comisiones</th>
                               <th>Actividades</th>
                             </tr>

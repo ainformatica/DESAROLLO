@@ -24,7 +24,7 @@ require_once('../vistas/pagina_inicio_vista.php');
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Registro de Estudiantes a realizar PPS</h1>
+            <h1>Registro de Estudiantes a Realizar PPS</h1>
           </div>
 
 
@@ -32,7 +32,7 @@ require_once('../vistas/pagina_inicio_vista.php');
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="../vistas/pagina_principal_vista.php">Inicio</a></li>
-              <li class="breadcrumb-item active">Vinculacion</li>
+              <li class="breadcrumb-item active">Vinculación</li>
             </ol>
           </div>
 
@@ -73,7 +73,7 @@ require_once('../vistas/pagina_inicio_vista.php');
 
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label>Nº de Cuenta</label>
+                    <label>Cuenta Nº</label>
                     <input class="form-control" type="text" id="txt_cuenta" name="txt_cuenta" value="" required onkeyup="Espacio(this, event)" maxlength="11">
                   </div>
                 </div>
@@ -90,7 +90,7 @@ require_once('../vistas/pagina_inicio_vista.php');
 
                 <div class="col-sm-4">
                   <div class="form-group">
-                    <label>Direccion de la Empresa</label>
+                    <label>Dirección de la Empresa</label>
                     <input class="form-control" type="text" maxlength="60" id="txt_direccion_empresa" name="txt_direccion_empresa" value="" required style="text-transform: uppercase" onkeypress="return Letras(event)" onkeyup="DobleEspacio(this, event)" onkeypress="return comprobar(this.value, event, this.id)">
                   </div>
                 </div>
@@ -113,7 +113,7 @@ require_once('../vistas/pagina_inicio_vista.php');
 
                 <div class="col-sm-4">
                   <div class="form-group">
-                    <label>Fecha de Finalizacion</label>
+                    <label>Fecha de Finalización</label>
                     <input class="form-control" type="date" id="txt_fecha_final" name="txt_fecha_final">
                   </div>
                 </div>
@@ -139,7 +139,7 @@ require_once('../vistas/pagina_inicio_vista.php');
 
                 <div class="col-sm-6">
                   <div class="form-group">
-                    <label>Horas de Practica</label>
+                    <label>Horas de Práctica</label>
                     <input class="form-control" type="text" id="txt_cuenta" name="txt_cuenta" value="" required onkeyup="Espacio(this, event)" maxlength="11">
                   </div>
                 </div>

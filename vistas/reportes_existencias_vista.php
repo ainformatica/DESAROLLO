@@ -17,7 +17,7 @@ require_once('../clases/funcion_permisos.php');
 //     echo '<script type="text/javascript">
 //     swal({
 //         title: "",
-//         text: "Lo sentimos el tipo adquisición ya existe",
+//         text: "¡Lo sentimos! El tipo adquisición ya existe",
 //         type: "info",
 //         showConfirmButton: false,
 //         timer: 3000
@@ -31,7 +31,7 @@ require_once('../clases/funcion_permisos.php');
 //     echo '<script type="text/javascript">
 //     swal({
 //         title: "",
-//         text: "Los datos  se almacenaron correctamente",
+//         text: "Los datos se almacenaron correctamente",
 //         type: "success",
 //         showConfirmButton: false,
 //         timer: 3000
@@ -49,7 +49,7 @@ require_once('../clases/funcion_permisos.php');
 //     echo '<script type="text/javascript">
 //     swal({
 //         title: "",
-//         text: "Error al actualizar lo sentimos,intente de nuevo.",
+//         text: "¡Lo sentimos! Error al actualizar, intente de nuevo.",
 //         type: "error",
 //         showConfirmButton: false,
 //         timer: 3000
@@ -69,7 +69,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -79,7 +79,7 @@ if ($visualizacion == 0) {
                             </script>';
 } else {
 
-  bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingreso', 'A Reportes de existencias');
+  bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'INGRESO', 'A REPORTES DE EXISTENCIAS');
 
 
 

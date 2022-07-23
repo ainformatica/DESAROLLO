@@ -19,7 +19,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -88,7 +88,7 @@ ob_end_flush();
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="../vistas/pagina_principal_vista.php">Inicio</a></li>
-                            <li class="breadcrumb-item"><a href="../vistas/menu_plan_estudio_vista.php">Menu plan de estudio</a></li>
+                            <li class="breadcrumb-item"><a href="../vistas/menu_plan_estudio_vista.php">Menú Plan de Estudio</a></li>
                             <li class="breadcrumb-item">Consultar Asignaturas</a></li>
 
                         </ol>
@@ -128,7 +128,7 @@ ob_end_flush();
                         <div class="col-md-3" style="width:75px">
                             <div class="input-group mb-3 input-group">
 
-                                <span class=" input-group-text" style="font-weight: bold;">Numero de Clases</span>
+                                <span class=" input-group-text" style="font-weight: bold;">Número de Clases</span>
                                 <input type="text" class="form-control" id="num_clases" name="num_clases" value="<?php echo $row2['num_clases'] ?>" readonly>
 
 
@@ -163,9 +163,9 @@ ob_end_flush();
                                 <thead>
                                     <tr>
 
-                                        <th>Periodo</th>
+                                        <th>Período</th>
                                         <th>Asignatura</th>
-                                        <th>Codigo</th>
+                                        <th>Código</th>
                                         <th>UV</th>
                                         <th>Requisitos</th>
                                         <th>Equivalencias</th>

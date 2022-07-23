@@ -19,7 +19,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -147,7 +147,7 @@ ob_end_flush();
                   </select>
                 </div>
                 <div class="col-md-4">
-                  <label>Estado civil</label>
+                  <label>Estado Civil</label>
                   <select class="form-control" name="estado_civil_persona" id="estado_civil_persona">
 
                   </select>
@@ -165,7 +165,7 @@ ob_end_flush();
 
                 </div>
                 <div class="col-md-4">
-                  <label>Fecha de nacimiento</label>
+                  <label>Fecha de Nacimiento</label>
                   <input class="form-control" type="date" id="fecha_persona" name="fecha_persona">
 
                 </div>
@@ -182,7 +182,7 @@ ob_end_flush();
 
                 </div>
                 <div class="col-md-2">
-                  <label>Télefono Movil</label>
+                  <label>Teléfono Móvil</label>
 
                   <input class="form-control" type="text" id="telefono_persona" name="telefono_persona" maxlength="20" onkeypress="return solonumeros(event)">
 

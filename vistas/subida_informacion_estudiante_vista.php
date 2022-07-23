@@ -21,7 +21,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
                     swal({
                        title:"",
-                       text:"Lo sentimos la cantidad de archivos sobrepasa el permitido,.",
+                       text:"¡Lo sentimos! La cantidad de archivos sobrepasa el permitido",
                        type: "info",
                        showConfirmButton: false,
                        timer: 3000
@@ -35,7 +35,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
                     swal({
                        title:"",
-                       text:"Los archivos fueron reemplazado correctamente.",
+                       text:"Los archivos fueron reemplazados correctamente",
                        type: "info",
                        showConfirmButton: false,
                        timer: 3000
@@ -58,7 +58,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -164,7 +164,7 @@ ob_end_flush();
 
             <div class="col-sm-6">
               <div class="form-group">
-                <label>N° Cuenta</label>
+                <label>N° de Cuenta</label>
                 <input class="form-control" type="text" id="txt_cuenta_estudiante" name="txt_cuenta_estudiante" value="<?php
                                                                                                                         if (!empty($_SESSION['cuenta_estudiante'])) {
                                                                                                                           echo $_SESSION['cuenta_estudiante'];
@@ -177,7 +177,7 @@ ob_end_flush();
 
             <div class="col-sm-4">
               <div class="form-group">
-                <label> Copia de la Cédula</label>
+                <label> Copia de Identidad</label>
                 <input class="form-control" type="file" class="form-control" id="txt_documentos[]" name="txt_cedula" multiple="">
               </div>
             </div>

@@ -23,7 +23,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -35,7 +35,7 @@ if ($visualizacion == 0) {
 
 
   // $respuesta1=$instancia_modelo->listar_select1();
-  bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingreso', 'A Reporte Carga Academica Docente');
+  bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'INGRESO', 'A REPORTE CARGA ACADEMICA DOCENTE');
 
 
 
@@ -248,7 +248,7 @@ ob_end_flush();
           <table id="tabla1" class="table table-bordered table-striped">
             <thead>
               <tr>
-                <th>#</th>
+                <th>NO.</th>
                 <th>COMISIÓN</th>
                 <th>ACTIVIDAD </th>
                 <th>HORAS SEMANALES</th>

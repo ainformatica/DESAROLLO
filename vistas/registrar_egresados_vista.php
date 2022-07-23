@@ -23,7 +23,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -117,7 +117,7 @@ ob_end_flush();
 
                 <div class="col-sm-4">
                   <div class="form-group">
-                    <label>Nº de Cuenta</label>
+                    <label>Cuenta Nº</label>
                     <input class="form-control" type="text" id="txt_cuenta" name="txt_cuenta" maxlength="11" pattern="[0-9]{11}" required onkeyup="Espacio(this,event)" onkeypress="return Numeros(event)" title="El número de cuenta no es valido">
                   </div>
                 </div>

@@ -23,7 +23,7 @@ if ($visualizacion==0)
  echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -36,7 +36,7 @@ if ($visualizacion==0)
 else
 
 {
-        bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'],'Ingreso' , 'A Permisos a roles y pantallas');
+        bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'],'INGRESO' , 'A PERMISOS, ROLES Y PANTALLAS');
 
 
 if (permisos::permiso_insertar($Id_objeto)=='1')
@@ -59,7 +59,7 @@ if (isset($_REQUEST['msj']))
       }
            if ($msj==2)
             {
-              echo '<script> alert("Lo sentimos tiene campos por rellenar ")</script>';
+              echo '<script> alert("¡Lo sentimos! Tiene campos por rellenar ")</script>';
             }
    
 }*/
@@ -103,7 +103,7 @@ ob_end_flush();
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="../vistas/pagina_principal_vista.php">Inicio</a></li>
-              <li class="breadcrumb-item active">Vinculacion</li>
+              <li class="breadcrumb-item active">Vinculación</li>
             </ol>
           </div>
 

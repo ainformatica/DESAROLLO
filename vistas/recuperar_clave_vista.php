@@ -13,7 +13,7 @@ $Button="";
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Informatica Admistrativa</title>
+  <title>Informática Administrativa</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
@@ -64,7 +64,7 @@ $Button="";
   <br>
         <div class="row">
           <div class="col-12">
-            <button type="submit" class="btn btn-primary btn-block" id="Correo" name="Correo" value="Correo">Correo Electronico</button>
+            <button type="submit" class="btn btn-primary btn-block" id="Correo" name="Correo" value="Correo">Correo Electrónico</button>
           </div>
           <!-- /.col -->
         </div>
@@ -72,10 +72,10 @@ $Button="";
       </form>
 
       <p class="mt-3 mb-1">
-        <a href="../login.php">Inicia Sesion</a>
+        <a href="../login.php">Iniciar Sesión</a>
       </p>
       <p class="mb-0">
-        <a href="../auto_registro.php" class="text-center">Registrate</a>
+        <a href="../auto_registro.php" class="text-center">Regístrate</a>
       </p>
     </div>
     <!-- /.login-card-body -->
@@ -103,7 +103,7 @@ if (isset($_REQUEST['msj']))
                           Swal.fire({
   position: "center",
   icon: "info",
-  title: "Lo sentimos datos incorrectos, favor intente de nuevo",
+  title: "¡Lo sentimos! Datos incorrectos, por favor intente de nuevo",
   showConfirmButton: false,
   timer: 3000
 })   </script>';

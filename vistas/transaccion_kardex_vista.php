@@ -82,7 +82,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
                                               swal({
                                                 title:"",
-                                                text:"La cantidad debe ser menor o igual a la existencia",
+                                                text:"La cantidad debe ser menor o igual a la existencie",
                                                 type: "error",
                                                 showConfirmButton: false,
                                                 timer: 3000
@@ -103,7 +103,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -116,7 +116,7 @@ if ($visualizacion == 0) {
 
 
   /* Manda a llamar todos las datos de la tabla para llenar el gridview  */
-  bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingreso', 'A transaccion');
+  bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'INGRESO', 'A TRANSACCION');
   $sqltabla = "call sel_transacciones_kardex()";
   $resultadotabla = $mysqli->query($sqltabla);
 }

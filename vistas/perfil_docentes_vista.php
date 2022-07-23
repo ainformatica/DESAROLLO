@@ -20,7 +20,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -30,7 +30,7 @@ if ($visualizacion == 0) {
                             </script>';
 } else {
 
-    bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingreso', 'A perfil docente');
+    bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'INGRESO', 'A PERFIL DOCENTE');
 
 
     // if (permisos::permiso_modificar($Id_objeto) == '1') {
@@ -183,7 +183,7 @@ $fechaActual = date('d-m-Y h:i:s');
 
 
                                                                         <div class="col-sm-4" id="parrafo_numEmpleado">
-                                                                            <label for="">Nº Empleado:</label>
+                                                                            <label for="">Empleado Nº:</label>
 
                                                                             <div class="form-group">
                                                                                 <div class="input-group-prepend">
@@ -263,7 +263,7 @@ $fechaActual = date('d-m-Y h:i:s');
 
 
                                                                         <div class="col-sm-4" id="parrafo_identidad">
-                                                                            <label for="">Nº Identidad:</label>
+                                                                            <label for="">Identidad Nº:</label>
 
                                                                             <div class="form-group">
                                                                                 <div class="input-group-prepend">
@@ -272,7 +272,7 @@ $fechaActual = date('d-m-Y h:i:s');
 
                                                                                 </div>
                                                                             </div>
-                                                                            <p hidden id="TextoIdentidad" style="color:red;">La Identidad Ya existe</p>
+                                                                            <p hidden id="TextoIdentidad" style="color:red;">La Identidad ya existe</p>
                                                                             <p hidden id="Textomayor" style="color:red;">¡Es menor de edad! </p>
 
                                                                         </div>
@@ -345,7 +345,7 @@ $fechaActual = date('d-m-Y h:i:s');
                                                                             </div>
                                                                         </div>
                                                                         <div class="col-sm-3" id="parrafor_hi">
-                                                                            <label for="">H. entrada:</label>
+                                                                            <label for="">Hora entrada:</label>
 
                                                                             <div class="form-group">
                                                                                 <div class="input-group-prepend">
@@ -356,7 +356,7 @@ $fechaActual = date('d-m-Y h:i:s');
                                                                             </div>
                                                                         </div>
                                                                         <div class="col-sm-3" id="parrafor_hf">
-                                                                            <label for="">H. salida:</label>
+                                                                            <label for="">Hora salida:</label>
 
                                                                             <div class="form-group">
                                                                                 <div class="input-group-prepend">

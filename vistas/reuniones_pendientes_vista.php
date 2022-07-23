@@ -10,7 +10,7 @@ require_once('../clases/funcion_permisos.php');
 
 $Id_objeto = 5001;
 
-bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingreso', 'A Reuniones Pendientes');
+bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'INGRESO', 'A REUNIONES PENDIENTES');
 
 $visualizacion = permiso_ver($Id_objeto);
 
@@ -20,7 +20,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -109,7 +109,7 @@ ob_end_flush();
                             <!-- /.card -->
                             <div class="card">
                                 <div class="card-header">
-                                    <h3 class="card-title">Listado de reuniones que se desarrollaran pronto</h3>
+                                    <h3 class="card-title">Listado de reuniones que se desarrollarán pronto</h3>
                                     <a href="crear_reunion_vista" type="button" class="btn btn-app bg-warning float-right derecha <?php echo $_SESSION['btn_crear']; ?>">
                                         <i class="fas fa-plus-circle"><br></i>Agendar Nueva Reunión
                                     </a>
@@ -135,7 +135,7 @@ ob_end_flush();
                                                             <thead>
                                                                 <tr class="table-secondary">
                                                                     <th>Nombre Reunión</th>
-                                                                    <th>Categoria</th>
+                                                                    <th>Categoría</th>
                                                                     <th>Modalidad</th>
                                                                     <th>Lugar</th>
                                                                     <th>Fecha</th>
@@ -185,7 +185,7 @@ ob_end_flush();
                                                             <div class="row justify-content-start">
                                                                 <div style="background:#ff0000; color:white;font-weight:bold; margin: 10px; margin-left: 10%; text-align: center;" class="col-3">Reuniones del día</div>
                                                                 <div style="background:#1c4299; color:white; font-weight:bold; margin: 10px; text-align: center;" class="col-3">Reuniones más cercanas</div>
-                                                                <div style="background:#1d964f; color:white; font-weight:bold; margin: 10px; text-align: center;" class="col-3">Reuniones Próximas</div>
+                                                                <div style="background:#1d964f; color:white; font-weight:bold; margin: 10px; text-align: center;" class="col-3">Reuniones próximas</div>
                                                             </div>
                                                         </div>
                                                         <script>
@@ -295,7 +295,7 @@ ob_end_flush();
                         </button>
                     </div>
                     <div class="modal-body" style="word-break: break-all;">
-                        <div><b>Categoria: </b><a id="categoria"></a></div>
+                        <div><b>Categoría: </b><a id="categoria"></a></div>
                         <div><b>Modalidad: </b><a id="tipo"></a></div>
                         <div><b>Estado: </b><a id="estado"></a></div>
                         <div><b>Enlace: </b><a id="enlace"></a></div>

@@ -16,7 +16,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -328,14 +328,14 @@ if ($visualizacion == 0) {
                 var id_plani = fila.id_planificacion;
                 console.log(id_plani);
                 swal({
-                    title: '¿Esta seguro de eliminar este plan?',
-                    text: "¡No podrá ser revertido!",
+                    title: '¿Está seguro de eliminar este plan?',
+                    text: "¡Si continúa, no podrá ser revertido!",
                     type: 'warning',
                     showCancelButton: true,
                     confirmButtonColor: '#3085d6',
                     cancelButtonColor: '#d33',
-                    confirmButtonText: 'Si, eliminar!',
-                    cancelButtonText: 'No, cancelar!',
+                    confirmButtonText: 'Sí ¡Eliminar!',
+                    cancelButtonText: 'No ¡Cancelar!',
                     confirmButtonClass: 'btn btn-success',
                     cancelButtonClass: 'btn btn-danger',
                     buttonsStyling: false
@@ -354,14 +354,14 @@ if ($visualizacion == 0) {
                             if (datos_eliminar == 'exito') {
                                 $('#tabla_poa').DataTable().ajax.reload();
                                 swal(
-                                    'Eliminado!',
-                                    'Su plan fue eliminado!',
+                                    'Eliminado',
+                                    '¡Su plan fue eliminado!',
                                     'success'
                                 )
                             } else {
                                 swal(
-                                    'Opps!',
-                                    'algo a salido mal!',
+                                    '¡Opps!',
+                                    '¡Algo a salido mal!',
                                     'error'
                                 )
                             }
@@ -372,7 +372,7 @@ if ($visualizacion == 0) {
                     if (dismiss === 'cancel') {
                         swal(
                             'Cancelled',
-                            'Your imaginary file is safe :)',
+                            'Your imaginary file is safe',
                             'error'
                         )
                     }
