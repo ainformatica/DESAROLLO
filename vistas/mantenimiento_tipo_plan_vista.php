@@ -15,7 +15,7 @@ if (isset($_REQUEST['msj'])) {
         echo '<script type="text/javascript">
     swal({
         title: "",
-        text: "Lo sentimos el nombre ya existe",
+        text: "¡Lo sentimos! El nombre ya existe",
         type: "info",
         showConfirmButton: false,
         timer: 3000
@@ -47,7 +47,7 @@ if (isset($_REQUEST['msj'])) {
         echo '<script type="text/javascript">
     swal({
         title: "",
-        text: "Error al actualizar lo sentimos, intente de nuevo.",
+        text: "¡Lo sentimos! Error al actualizar, intente de nuevo.",
         type: "error",
         showConfirmButton: false,
         timer: 3000
@@ -67,7 +67,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -77,7 +77,7 @@ if ($visualizacion == 0) {
                             </script>';
 } else {
 
-    bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingreso', 'A Mantenimiento Tipo Plan de Estudios');
+    bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'INGRESO', 'A MANTENIMIENTO TIPO PLAN DE ESTUDIO');
 
 
     if (permisos::permiso_modificar($Id_objeto) == '1') {
@@ -167,7 +167,7 @@ ob_end_flush();
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="../vistas/pagina_principal_vista.php">Inicio</a></li>
-                            <li class="breadcrumb-item active"><a href="../vistas/menu_mantenimiento_plan.php">Menu Mantenimientos Plan</a></li>
+                            <li class="breadcrumb-item active"><a href="../vistas/menu_mantenimiento_plan.php">Menú Mantenimientos Plan</a></li>
                             <li class="breadcrumb-item active"><a href="../vistas/mantenimiento_crear_tipo_plan_vista.php">Nuevo Nombre de Plan </a></li>
                         </ol>
                     </div>
@@ -199,7 +199,7 @@ ob_end_flush();
 
                     <thead>
                         <tr>
-                            <th># </th>
+                            <th>NO. </th>
                             <th>NOMBRE</th>
                             <th>MODIFICAR</th>
                             <th>ELIMINAR</th>

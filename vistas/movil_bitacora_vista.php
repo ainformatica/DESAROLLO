@@ -29,14 +29,14 @@ if ($visualizacion == 0) {
     $msj = $_REQUEST['msj'];
 
     if ($msj == 1) {
-      echo '<script> alert("Fecha invalidas favor verificar.")</script>';
+      echo '<script> alert("Fecha inválidas, favor verificar")</script>';
     }
 
     if ($msj == 2) {
-      echo '<script> alert("Datos por rellenar, por favor verificar.")</script>';
+      echo '<script> alert("Datos por rellenar, por favor verificar")</script>';
     }
     if ($msj == 3) {
-      echo '<script> alert("Por favor verificar fechas.")</script>';
+      echo '<script> alert("Por favor verificar fechas")</script>';
     }
   }
 }
@@ -60,7 +60,7 @@ if ($visualizacion == 0) {
         <div class="row mb-2">
           <div class="col-sm-6">
 
-            <h1>Bitácora del Sistema Movil</h1>
+            <h1>Bitácora del Sistema Móvil</h1>
           </div>
 
           <div class="col-sm-6">

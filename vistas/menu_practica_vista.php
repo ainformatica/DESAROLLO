@@ -148,7 +148,7 @@ $_SESSION['revision_doc_practica_menu']="No
    <div class="col-6 col-sm-6 col-md-4">
    <div class="small-box bg-primary">
    <div class="inner">
-    <h5>Mantenimiento días feriado </h5>
+    <h5>Mantenimiento Días Feriado </h5>
    <p><?php echo $_SESSION['mantenimiento_dias_feriados']; ?></p> 
   </div>
   <div class="icon">
@@ -163,7 +163,7 @@ $_SESSION['revision_doc_practica_menu']="No
 <div class="col-6 col-sm-6 col-md-4">
    <div class="small-box bg-light">
    <div class="inner">
-    <h5>Creación de charla</h5>
+    <h5>Creación de Charla</h5>
    <p><?php echo $_SESSION['gestion_charla_menu']; ?></p> 
   </div>
   <div class="icon">

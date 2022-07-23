@@ -152,7 +152,7 @@ ob_end_flush();
            <div class="col-6 col-sm-6 col-md-4">
             <div class="small-box bg-primary">
               <div class="inner">
-                <h5>Mantenimiento <br> Tipos de Memorandum</h5>
+                <h5>Mantenimiento <br> Tipos de Memorándum</h5>
                 <p><?php echo $_SESSION['mantenimiento_tipos_memorandum_vista']; ?></p> 
               </div>
               <div class="icon">

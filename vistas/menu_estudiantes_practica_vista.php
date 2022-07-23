@@ -132,7 +132,7 @@ if (permiso_ver('6003') == '1') {
             <div class="col-6 col-sm-6 col-md-4">
               <div class="small-box bg-light">
                 <div class="inner">
-                  <h5>Inscripción para charla de PPS</h5>
+                  <h5>Inscripción para Charla de PPS</h5>
                   <p><?php echo $_SESSION['incripcion_estudiante_charla_menu']; ?></p>
                 </div>
                 <div class="icon">
@@ -188,7 +188,7 @@ if (permiso_ver('6003') == '1') {
             <div class="col-6 col-sm-6 col-md-4">
               <div class="small-box bg-light">
                 <div class="inner">
-                  <h5>Adjuntar documentación de PPS</h5>
+                  <h5>Adjuntar Documentación de PPS</h5>
                   <p><?php echo $_SESSION['subir_doc_practica_menu']; ?></p>
                 </div>
                 <div class="icon">
@@ -204,7 +204,7 @@ if (permiso_ver('6003') == '1') {
             <div class="col-6 col-sm-6 col-md-4">
               <div class="small-box bg-light">
                 <div class="inner">
-                  <h5>Historial de constancias y/o cartas</h5>
+                  <h5>Historial de Constancias y/o Cartas</h5>
                   <p><?php echo $_SESSION['historial_constancias_practica_menu']; ?></p>
                 </div>
                 <div class="icon">

@@ -17,7 +17,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
     swal({
         title: "",
-        text: "Lo sentimos el tipo característica ya existe",
+        text: "¡Lo sentimos! El tipo de característica ya existe",
         type: "info",
         showConfirmButton: false,
         timer: 3000
@@ -76,7 +76,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
     swal({
         title: "",
-        text: "Lo sentimos tiene campos por rellenar.",
+        text: "¡Lo sentimos! Tiene campos por rellenar.",
         type: "error",
         showConfirmButton: false,
         timer: 3000
@@ -119,7 +119,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -129,7 +129,7 @@ if ($visualizacion == 0) {
                             </script>';
 } else {
 
-  bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingreso', 'A Mantenimiento Tipo Caracteristica');
+  bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'INRESO', 'A MANTENIMIENTO TIPO CARACTERISTICA');
 
 
   if (permisos::permiso_modificar($Id_objeto) == '1') {
@@ -222,7 +222,7 @@ ob_end_flush();
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="../vistas/pagina_principal_vista.php">Inicio</a></li>
-              <li class="breadcrumb-item active"><a href="../vistas/menu_mantenimiento_laboratorio.php">Menu Mantenimiento</a></li>
+              <li class="breadcrumb-item active"><a href="../vistas/menu_mantenimiento_laboratorio.php">Menú Mantenimiento</a></li>
               <!-- <li class="breadcrumb-item active"><a href="../vistas/mantenimiento_crear_tipo_caracteristica_vista.php">Nuevo Tipo Característica</a></li> -->
             </ol>
           </div>
@@ -401,7 +401,7 @@ ob_end_flush();
 
                   <label>Tipo de dato de la Característica</label>
                   <select class="form-control" name="cb_tipo_dato" id="cb_tipo_dato" onchange="">
-                    <option value="0">Seleccione una opción:</option>
+                    <option value="0">Seleccione una Opción:</option>
                     <?php
 
 

@@ -15,7 +15,7 @@ if (isset($_REQUEST['msj'])) {
         echo '<script type="text/javascript">
     swal({
         title: "",
-        text: "Lo sentimos el período ya existe",
+        text: "¡Lo sentimos! El período ya existe",
         type: "info",
         showConfirmButton: false,
         timer: 3000
@@ -47,7 +47,7 @@ if (isset($_REQUEST['msj'])) {
         echo '<script type="text/javascript">
     swal({
         title: "",
-        text: "Error al actualizar lo sentimos, intente de nuevo.",
+        text: "¡Lo sentimos! Error al actualizar, intente de nuevo.",
         type: "error",
         showConfirmButton: false,
         timer: 3000
@@ -61,7 +61,7 @@ if (isset($_REQUEST['msj'])) {
         echo '<script type="text/javascript">
     swal({
         title: "",
-        text: "Periodo no modificable",
+        text: "Período no modificable",
         type: "error",
         showConfirmButton: false,
         timer: 3000
@@ -81,7 +81,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -91,7 +91,7 @@ if ($visualizacion == 0) {
                             </script>';
 } else {
 
-    bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingreso', 'A mantenimiento período');
+    bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'INGRESO', 'A MANTENIMIENTO PERIODO');
 
 
     if (permisos::permiso_modificar($Id_objeto) == '1') {
@@ -255,7 +255,7 @@ ob_end_flush();
                     <thead>
                         <tr>
                             <th hidden>Id </th>
-                            <th>N. período</th>
+                            <th>Período No.</th>
                             <th>Año</th>
                             <th>Fecha Inicio </th>
                             <th>Fecha Final</th>
@@ -342,26 +342,26 @@ ob_end_flush();
                                 <div class="col-md-12">
                                     <div class="form-group">
 
-                                        <label>Número período</label>
+                                        <label>Número Período</label>
                                         <input class="form-control" readonly type="text" id="num_periodo" name="num_periodo" style="text-transform: uppercase" onkeypress="return Numeros(event)" value="<?php echo $_SESSION['num_periodo']; ?>">
                                     </div>
                                     <div class="form-group">
-                                        <label>Año académico</label>
+                                        <label>Año Académico</label>
                                         <input class="form-control" readonly type="text" id="num_anno" name="num_anno" style="text-transform: uppercase" onkeypress="return Numeros(event)" value="<?php echo $_SESSION['num_anno']; ?>">
                                     </div>
 
                                     <div class="form-group">
-                                        <label>Inicio del período</label>
+                                        <label>Inicio del Período</label>
                                         <input class="form-control" type="date" id="fecha_inicio" name="fecha_inicio" value="<?php echo $_SESSION['fecha_inicio']; ?>">
                                     </div>
 
                                     <div class="form-group">
-                                        <label>Finalización del período</label>
+                                        <label>Finalización del Período</label>
                                         <input class="form-control" type="date" id="fecha_final" name="fecha_final" value="<?php echo $_SESSION['fecha_final']; ?>">
                                     </div>
 
                                     <div class="form-group" hidden>
-                                        <label>Finalización del período</label>
+                                        <label>Finalización del Período</label>
                                         <input class="form-control" hidden type="date" id="final_modificar" name="final_modificar" value="<?php echo $_SESSION['fecha_final']; ?>">
                                     </div>
 
@@ -371,7 +371,7 @@ ob_end_flush();
                                     </div>
 
                                     <div class="form-group ">
-                                        <label class="control-label">Tipo de período</label>
+                                        <label class="control-label">Tipo de Período</label>
                                         <select class="form-control" name="tipo_p" required="">
                                             <option value="0">Seleccione una opción:</option>
                                             <?php
@@ -456,7 +456,7 @@ ob_end_flush();
     $(document).ready(function() {
 
         $('.select2').select2({
-            placeholder: 'Seleccione una opcion',
+            placeholder: 'Seleccione una opción',
             theme: 'bootstrap4',
             tags: true,
         });

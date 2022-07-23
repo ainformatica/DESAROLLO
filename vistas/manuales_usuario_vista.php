@@ -26,7 +26,7 @@ require_once('../vistas/pagina_inicio_vista.php');
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Manuales de usuario</h1>
+            <h1>Manuales de Usuario</h1>
           </div>
 
 

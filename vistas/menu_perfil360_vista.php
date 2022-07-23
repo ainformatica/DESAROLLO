@@ -33,7 +33,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
   swal({
         title:"",
-        text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+        text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
         type: "error",
         showConfirmButton: false,
         timer: 3000
@@ -312,7 +312,7 @@ ob_end_flush();
                           <i class="fas fa-file-pdf">
                           </i>
                         </button>
-                        Datos Personales del estudiante
+                        Datos Personales del Estudiante
                       </th>
                     </tr>
                   </thead>
@@ -329,28 +329,28 @@ ob_end_flush();
                     </tr>
 
                     <tr>
-                      <th>Numero de cuenta:</th>
+                      <th>Número de Cuenta:</th>
                       <td><?php echo $row['valor'] ?></td>
                     </tr>
 
                     <tr>
-                      <th>fecha de Nacimiento:</th>
+                      <th>Fecha de Nacimiento:</th>
                       <td><?php echo $row['fecha_nacimiento'] ?></td>
                     </tr>
                     <tr>
-                      <th>Correo electronico:</th>
+                      <th>Correo Electrónico:</th>
                       <td><?php echo $rowD['valor'] ?></td>
                     </tr>
                     <tr>
-                      <th>Telefono fijo:</th>
+                      <th>Teléfono Fijo:</th>
                       <td><?php echo $rowB['valor'] ?></td>
                     </tr>
                     <tr>
-                      <th>Telefono celular:</th>
+                      <th>Teléfono Celular:</th>
                       <td><?php echo $rowA['valor'] ?></td>
                     </tr>
                     <tr>
-                      <th>Direccion:</th>
+                      <th>Dirección:</th>
                       <td><?php echo $rowC['valor'] ?></td>
                     </tr>
                   </tbody>
@@ -378,7 +378,7 @@ ob_end_flush();
                   <p class="card-text"><?php echo $row['nombres'] . ' ' . $row['apellidos'] ?></p>
                 </div>
               </div>
-              <h4 class="mb-2">Resumen academico</h4>
+              <h4 class="mb-2">Resumen Académico</h4>
               <!--<div class="container-fluid">-->
               <div class="container">
                 <div class="row">
@@ -469,39 +469,39 @@ ob_end_flush();
                 <thead>
                   <tr>
                   <tr class="bg-basic">
-                    <th>Solicitudes realizadas</th>
+                    <th>Solicitudes Realizadas</th>
                     <td><a href="../vistas/historial_solicitudes_vista.php"><?php echo $fila1['id_persona'] + $fila2['id_persona'] + $fila3['id_persona'] + $fila4['id_persona'] + $fila5['id_persona'] + $fila6['id_persona'] + $fila7['id_persona'] + $fila8['id_persona'] + $fila9['id_persona'] ?></td>
                   </tr>
                 </thead>
 
                 <tbody>
                   <tr>
-                    <th>Examen de suficiencia:</th>
+                    <th>Examen de Suficiencia:</th>
                     <td><a href="../vistas/historial_solicitudes_vista.php"><?php echo $fila1['id_persona'] ?></a></td>
 
                   </tr>
                   <tr>
-                    <th>Reactivacion de cuenta:</th>
+                    <th>Reactivación de Cuenta:</th>
                     <td><a href="../vistas/historial_solicitudes_vista.php"><?php echo $fila2['id_persona'] ?></a></td>
 
                   </tr>
                   <tr>
-                    <th>cambio de carrera:</th>
+                    <th>Cambio de Carrera:</th>
                     <td><a href="../vistas/historial_solicitudes_vista.php"><?php echo $fila3['id_persona'] ?></a></td>
 
                   </tr>
                   <tr>
-                    <th>Practica profesional:</th>
+                    <th>Práctica Profesional:</th>
                     <td><a href="../vistas/historial_solicitudes_vista.php"><?php echo $fila4['id_persona'] ?></a></td>
 
                   </tr>
                   <tr>
-                    <th>Cancelacion de clases:</th>
+                    <th>Cancelación de Clases:</th>
                     <td><a href="../vistas/historial_solicitudes_vista.php"><?php echo $fila5['id_persona'] ?></a></td>
 
                   </tr>
                   <tr>
-                    <th>Servicio comunitario:</th>
+                    <th>Servicio Comunitario:</th>
                     <td><a href="../vistas/historial_solicitudes_vista.php"><?php echo $fila6['id_persona'] ?></a></td>
 
                   </tr>
@@ -512,13 +512,13 @@ ob_end_flush();
                   </tr>
                   </tr>
                   <tr>
-                    <th>Carta de egresado:</th>
+                    <th>Carta de Egresado:</th>
                     <td><a href="../vistas/historial_solicitudes_vista.php"><?php echo $fila8['id_persona'] ?></a></td>
 
                   </tr>
                   </tr>
                   <tr>
-                    <th>Expediente de graduacion:</th>
+                    <th>Expediente de Graduación:</th>
                     <td><a href="../vistas/historial_solicitudes_vista.php"><?php echo $fila9['id_persona'] ?></a></td>
 
                   </tr>
@@ -545,7 +545,7 @@ ob_end_flush();
   <!-----------Fin de barra lateral----------->
   <div class="clearfix"></div>
   <footer>
-    Este es el pie de pagina &copy; 2021 Departamento de Informatica Administrativa
+    Este es el pie de página &copy; 2021 Departamento de Informática Administrativa
 
   </footer>
   <!-----------Fin del pie de pagina----------->

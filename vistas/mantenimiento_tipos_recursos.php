@@ -15,7 +15,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -188,7 +188,7 @@ ob_end_flush();
                                             <table id="tabla_recursos_tipo" class="table table-bordered table-striped" cellpadding="0" width="100%">
                                                 <thead>
                                                     <tr>
-                                                        <th scope="col">NUM RECURSO</th>
+                                                        <th scope="col">RECURSO NO.</th>
                                                         <th scope="col">NOMBRE</th>
                                                         <th scope="col">DESCRIPCIÓN</th>
                                                         <th scope="col">FECHA</th>
@@ -429,14 +429,14 @@ ob_end_flush();
                 console.log(id_recurso_tipo);
                 //eliminar(id_recurso_tipo);
                 swal({
-                    title: 'Seguro que quiere eliminar este recurso?',
-                    text: "!Este registro no podra ser recuperado!",
+                    title: '¿Seguro que desea eliminar este recurso?',
+                    text: "!Si decide continuar, no podrá volver a recuperarlo!",
                     type: 'warning',
                     showCancelButton: true,
                     confirmButtonColor: '#3085d6',
                     cancelButtonColor: '#d33',
-                    confirmButtonText: 'Si, Eliminarlo!',
-                    cancelButtonText: 'No, Cancelar!',
+                    confirmButtonText: 'Sí ¡Eliminarlo!',
+                    cancelButtonText: 'No ¡Cancelar!',
                     confirmButtonClass: 'btn btn-success',
                     cancelButtonClass: 'btn btn-danger',
                     buttonsStyling: false
@@ -454,15 +454,15 @@ ob_end_flush();
                             console.log(data);
                             if (data == 'exito') {
                                 swal(
-                                    'Eliminado!',
-                                    '!Su registro ha sido eliminado!',
+                                    '¡Eliminado!',
+                                    '¡Su registro ha sido eliminado!',
                                     'success'
                                 )
                                 $('#tabla_recursos_tipo').DataTable().ajax.reload();
                             } else {
                                 swal(
                                     'Error',
-                                    'A ocurrido un error en la consulta!',
+                                    '¡A ocurrido un error en la consulta!',
                                     'error'
                                 )
                             }
@@ -471,7 +471,7 @@ ob_end_flush();
                     if (dismiss === 'cancel') {
                         swal(
                             'Cancelado',
-                            'Su registro esta en la base de datos!',
+                            '¡Su registro continúa en la base de datos!',
                             'error'
                         )
                     }
@@ -569,8 +569,8 @@ ob_end_flush();
                 console.log(data);
                 if (data == 'exito') {
                     swal(
-                        'Exito...',
-                        'Datos guardados!',
+                        'Éxito...',
+                        '¡Datos guardados!',
                         'success'
                     )
                     $('#tabla_recursos_tipo').DataTable().ajax.reload();
@@ -578,7 +578,7 @@ ob_end_flush();
                 } else {
                     swal(
                         'Oopss...',
-                        'algo ocurrio mal!',
+                        '¡Algo ocurrio mal!',
                         'error'
                     )
                 }

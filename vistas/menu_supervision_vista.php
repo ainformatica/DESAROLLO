@@ -104,7 +104,7 @@ $_SESSION['reportes_pps_menu']="No
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
                 <li class="breadcrumb-item"><a href="../vistas/pagina_principal_vista.php">Inicio</a></li>
-                <li class="breadcrumb-item active">Vinculacion</li>
+                <li class="breadcrumb-item active">Vinculación</li>
               </ol>
             </div><!-- /.col -->
           </div><!-- /.row -->
@@ -179,7 +179,7 @@ $_SESSION['reportes_pps_menu']="No
             <div class="col-6 col-sm-6 col-md-4">
               <div class="small-box bg-light">
                 <div class="inner">
-                  <h5>Asignar docente supervisor </h5>
+                  <h5>Asignar Docente Supervisor </h5>
                   <p><?php echo $_SESSION['asignar_docente_menu']; ?></p>
                 </div>
                 <div class="icon">

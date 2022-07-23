@@ -17,7 +17,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
     swal({
         title: "",
-        text: "Lo sentimos la ubicación ya existe",
+        text: "¡Lo sentimos! La ubicación ya existe",
         type: "info",
         showConfirmButton: false,
         timer: 3000
@@ -69,7 +69,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -79,7 +79,7 @@ if ($visualizacion == 0) {
                             </script>';
 } else {
 
-  bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingreso', 'A Mantenimiento Ubicacion');
+  bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'INGRESO', 'A MANTENIMIENTO UBICACION');
 
 
   if (permisos::permiso_modificar($Id_objeto) == '1') {
@@ -173,7 +173,7 @@ ob_end_flush();
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="../vistas/pagina_principal_vista.php">Inicio</a></li>
-              <li class="breadcrumb-item active"><a href="../vistas/menu_mantenimiento_laboratorio.php">Menu Mantenimiento</a></li>
+              <li class="breadcrumb-item active"><a href="../vistas/menu_mantenimiento_laboratorio.php">Menú Mantenimiento</a></li>
               <!-- <li class="breadcrumb-item active"><a href="../vistas/mantenimiento_crear_ubicacion_vista.php">Nueva Ubicación</a></li> -->
             </ol>
           </div>

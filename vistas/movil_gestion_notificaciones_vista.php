@@ -16,7 +16,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
   swal({
         title:"",
-        text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+        text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
         type: "error",
         showConfirmButton: false,
         timer: 3000
@@ -66,7 +66,7 @@ if (isset($_REQUEST['msj'])) {
         echo '<script type="text/javascript">
                     swal({
                        title:"",
-                       text:"Lo sentimos el segmento ya existe",
+                       text:"¡Lo sentimos! El segmento ya existe",
                        type: "info",
                        showConfirmButton: false,
                        timer: 3000
@@ -88,7 +88,7 @@ if (isset($_REQUEST['msj'])) {
         echo '<script type="text/javascript">
                     swal({
                        title:"",
-                       text:"Lo sentimos tiene campos por rellenar.",
+                       text:"¡Lo sentimos! Tiene campos por rellenar",
                        type: "error",
                        showConfirmButton: false,
                        timer: 3000
@@ -99,7 +99,7 @@ if (isset($_REQUEST['msj'])) {
         echo '<script type="text/javascript">
                     swal({
                        title:"",
-                       text:"los datos se eliminaron correctamente.",
+                       text:"Los datos se eliminaron correctamente",
                        type: "error",
                        showConfirmButton: false,
                        timer: 3000
@@ -110,7 +110,7 @@ if (isset($_REQUEST['msj'])) {
         echo '<script type="text/javascript">
                     swal({
                        title:"",
-                       text:"No se puede agregar mas de una imagen!!!",
+                       text:"¡No se puede agregar más de una imagen!",
                        type: "error",
                        showConfirmButton: false,
                        timer: 3000
@@ -274,7 +274,7 @@ if (isset($_REQUEST['msj'])) {
                                         </div>
                                         <div class="form-group">
                                             <?php if ($_SESSION['txtUrl'] != 'null') : ?>
-                                                <label>No necesita mas imagenes!</label>
+                                                <label>¡No necesita más imágenes!</label>
                                             <?php else : ?>
                                                 <label> Nueva Imagen:</label>
                                                 <input class="form-control" type="file" class="form-control" id="subir_archivo" name="subir_archivo" accept="<?php echo $_SESSION['archivos_aceptados_notificacion']?>">
@@ -351,7 +351,7 @@ if (isset($_REQUEST['msj'])) {
                     'funcion': "eliminar_imagen",
                     'id': id,
                 };
-                var confirmacion = confirm("esta seguro de eliminar");
+                var confirmacion = confirm("¿Está seguro de eliminar?");
                 if (confirmacion) {
                     $.ajax({
                         data: parametro, //datos que se envian a traves de ajax
@@ -365,7 +365,7 @@ if (isset($_REQUEST['msj'])) {
                         },
                     });
                 } else {
-                    console.log("decidio no eliminar");
+                    console.log("Decidio no eliminar");
                 }
             }
         </script>

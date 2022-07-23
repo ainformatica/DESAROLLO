@@ -17,7 +17,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
     swal({
         title: "",
-        text: "Lo sentimos este tipo de transacción ya existe",
+        text: "¡Lo sentimos! Este tipo de transacción ya existe",
         type: "info",
         showConfirmButton: false,
         timer: 3000
@@ -49,7 +49,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
     swal({
         title: "",
-        text: "Error al actualizar, lo sentimos,intente de nuevo.",
+        text: "¡Lo sentimos! Error al actualizar, intente de nuevo.",
         type: "error",
         showConfirmButton: false,
         timer: 3000
@@ -69,7 +69,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -170,7 +170,7 @@ ob_end_flush();
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="../vistas/pagina_principal_vista.php">Inicio</a></li>
-              <li class="breadcrumb-item active"><a href="../vistas/menu_mantenimiento_laboratorio.php">Menu Mantenimiento</a></li>
+              <li class="breadcrumb-item active"><a href="../vistas/menu_mantenimiento_laboratorio.php">Menú Mantenimiento</a></li>
               <!-- <li class="breadcrumb-item active"><a href="../vistas/mantenimiento_crear_tipo_transaccion_vista.php">Nuevo Tipo Transacción</a></li> -->
             </ol>
           </div>

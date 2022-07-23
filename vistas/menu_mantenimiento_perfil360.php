@@ -147,7 +147,7 @@ if (permiso_ver('142') == '1') {
                                         <div class="col-6 col-sm-6 col-md-4">
                                             <div class="small-box bg-light">
                                                 <div class="inner">
-                                                    <h4>Crear Estado Reactivacion Cuenta </h4>
+                                                    <h4>Crear Estado Reactivación Cuenta </h4>
                                                     <p><?php echo $_SESSION['mantenimiento_crear_periodo_vista']; ?></p>
                                                 </div>
                                                 <div class="icon">
@@ -166,7 +166,7 @@ if (permiso_ver('142') == '1') {
                                         <div class="col-6 col-sm-6 col-md-4">
                                             <div class="small-box bg-primary">
                                                 <div class="inner">
-                                                    <h4>Mantenimiento Estado Reactivacion Cuenta </h4>
+                                                    <h4>Mantenimiento Estado Reactivación Cuenta </h4>
                                                     <p><?php echo $_SESSION['mantenimiento_periodo_vista']; ?></p>
                                                 </div>
                                                 <div class="icon">

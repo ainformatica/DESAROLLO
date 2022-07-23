@@ -140,7 +140,7 @@ if (permiso_ver('111') == '1') {
                     <div class="col-6 col-sm-6 col-md-4">
                       <div class="small-box bg-light">
                         <div class="inner">
-                          <h4>Crear Periodo Plan </h4>
+                          <h4>Crear Período Plan </h4>
                           <p><?php echo $_SESSION['mantenimiento_crear_periodo_plan_vista']; ?></p>
                         </div>
                         <div class="icon">
@@ -159,7 +159,7 @@ if (permiso_ver('111') == '1') {
                     <div class="col-6 col-sm-6 col-md-4">
                       <div class="small-box bg-primary">
                         <div class="inner">
-                          <h4>Mantenimiento Periodo Plan </h4>
+                          <h4>Mantenimiento Período Plan </h4>
                           <p><?php echo $_SESSION['mantenimiento_periodo_plan_vista']; ?></p>
                         </div>
                         <div class="icon">
@@ -285,7 +285,7 @@ if (permiso_ver('111') == '1') {
                     <div class="col-6 col-sm-6 col-md-4">
                       <div class="small-box bg-light">
                         <div class="inner">
-                          <h4>Crear Asignatura de servicio</h4>
+                          <h4>Crear Asignatura de Servicio</h4>
                           <p><?php echo $_SESSION['mantenimiento_crear_asignatura_servicio_vista']; ?></p>
                         </div>
                         <div class="icon">
@@ -304,7 +304,7 @@ if (permiso_ver('111') == '1') {
                     <div class="col-6 col-sm-6 col-md-4">
                       <div class="small-box bg-primary">
                         <div class="inner">
-                          <h4>Mantenimiento Asignatura de servicio </h4>
+                          <h4>Mantenimiento Asignatura de Servicio </h4>
                           <p><?php echo $_SESSION['mantenimiento_asignatura_servicio_vista']; ?></p>
                         </div>
                         <div class="icon">

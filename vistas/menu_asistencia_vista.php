@@ -6,7 +6,7 @@ require_once('../clases/Conexion.php');
 require_once('../clases/funcion_visualizar.php');
 require_once('../clases/funcion_bitacora.php');
 
-bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingreso', 'A Menu Asistencia');
+bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'INGRESO', 'A MENU ASISTENCIA');
 
 
 if (permiso_ver('5011') == '1') {
@@ -43,12 +43,12 @@ ob_end_flush();
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0 text-dark">Menú asistencia</h1>
+                            <h1 class="m-0 text-dark">Menú Asistencia</h1>
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="pagina_principal_vista">Inicio</a></li>
-                                <li class="breadcrumb-item active">menú asistencia</li>
+                                <li class="breadcrumb-item active">Menú Asistencia</li>
                             </ol>
                         </div><!-- /.col -->
                     </div><!-- /.row -->

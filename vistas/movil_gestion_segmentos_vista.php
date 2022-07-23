@@ -15,7 +15,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
   swal({
         title:"",
-        text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+        text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
         type: "error",
         showConfirmButton: false,
         timer: 3000
@@ -63,7 +63,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
                     swal({
                        title:"",
-                       text:"Lo sentimos el segmento ya existe",
+                       text:"¡Lo sentimos! El segmento ya existe",
                        type: "info",
                        showConfirmButton: false,
                        timer: 3000
@@ -85,7 +85,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
                     swal({
                        title:"",
-                       text:"Lo sentimos tiene campos por rellenar.",
+                       text:"¡Lo sentimos! Tiene campos por rellenar",
                        type: "error",
                        showConfirmButton: false,
                        timer: 3000
@@ -96,7 +96,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
                     swal({
                        title:"",
-                       text:"los datos se eliminaron correctamente.",
+                       text:"Los datos se eliminaron correctamente",
                        type: "error",
                        showConfirmButton: false,
                        timer: 3000
@@ -251,7 +251,7 @@ if (isset($_REQUEST['msj'])) {
           'funcion': 'eliminar',
           'id': id
         }
-        var confirmacion = confirm('esta seguro de eliminar');
+        var confirmacion = confirm('¿Está seguro de eliminar?');
         if (confirmacion) {
           $.ajax({
             data: parametro, //datos que se envian a traves de ajax
@@ -263,7 +263,7 @@ if (isset($_REQUEST['msj'])) {
                 readProducts();
                 datoseliminados();
               } else {
-                alert('no se pudo eliminar!!');
+                alert('¡No se pudo eliminar!');
               }
             }
           });
@@ -275,7 +275,7 @@ if (isset($_REQUEST['msj'])) {
       function datoseliminados() {
         swal({
           title: "",
-          text: "los datos se eliminaron correctamente.",
+          text: "Los datos se eliminaron correctamente",
           type: "success",
           showConfirmButton: true,
           timer: 3000

@@ -66,7 +66,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
                     swal({
                        title:"",
-                       text:"Lo sentimos el segmento ya existe",
+                       text:"¡Lo sentimos! El segmento ya existe",
                        type: "info",
                        showConfirmButton: false,
                        timer: 3000
@@ -88,7 +88,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
                     swal({
                        title:"",
-                       text:"Lo sentimos tiene campos por rellenar.",
+                       text:"¡Lo sentimos! Tiene campos por rellenar",
                        type: "error",
                        showConfirmButton: false,
                        timer: 3000
@@ -99,7 +99,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
                     swal({
                        title:"",
-                       text:"los datos se eliminaron correctamente.",
+                       text:"Los datos se eliminaron correctamente",
                        type: "error",
                        showConfirmButton: false,
                        timer: 3000

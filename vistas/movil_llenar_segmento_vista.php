@@ -13,7 +13,7 @@ require_once('../clases/funcion_permisos.php');
 
 $Id_objeto = 10173;
 
-bitacora_movil::evento_bitacora($_SESSION['id_usuario'], $Id_objeto, 'Ingreso', 'A llenar Segmento');
+bitacora_movil::evento_bitacora($_SESSION['id_usuario'], $Id_objeto, 'INGRESO', 'A LLENAR SEGMENTO');
 
 $visualizacion = permiso_ver($Id_objeto);
 if (isset($_REQUEST['msj'])) {
@@ -23,7 +23,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
                     swal({
                        title:"",
-                       text:"Lo sentimos el segmento ya existe",
+                       text:"¡Lo sentimos! El segmento ya existe",
                        type: "info",
                        showConfirmButton: false,
                        timer: 3000
@@ -34,7 +34,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
                     swal({
                        title:"",
-                       text:"Los datos  se almacenaron correctamente",
+                       text:"Los datos se almacenaron correctamente",
                        type: "success",
                        showConfirmButton: false,
                        timer: 3000
@@ -45,7 +45,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
                     swal({
                        title:"",
-                       text:"Lo sentimos tiene campos por rellenar.",
+                       text:"Lo sentimos tiene campos por rellenar",
                        type: "error",
                        showConfirmButton: false,
                        timer: 3000
@@ -57,7 +57,7 @@ if (isset($_REQUEST['msj'])) {
 //   echo '<script type="text/javascript">
 //                               swal({
 //                                    title:"",
-//                                    text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+//                                    text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
 //                                    type: "error",
 //                                    showConfirmButton: false,
 //                                    timer: 3000
@@ -229,7 +229,7 @@ if (isset($_REQUEST['msj'])) {
             if (data != '') {
               readProducts(segmento);
             } else {
-              alert('no se pudo guardar!!');
+              alert('¡No se pudo guardar!');
             }
           }
         });
@@ -272,7 +272,7 @@ if (isset($_REQUEST['msj'])) {
             readProducts(segmento);
             realizaProceso();
           } else {
-            alert('no se pudo eliminar!!');
+            alert('¡No se pudo eliminar!');
           }
         }
       });

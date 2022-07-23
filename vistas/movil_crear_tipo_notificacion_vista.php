@@ -23,7 +23,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
                     swal({
                        title:"",
-                       text:"Lo sentimos el tipo notificación ya existe",
+                       text:"¡Lo sentimos! El tipo notificación ya existe",
                        type: "info",
                        showConfirmButton: false,
                        timer: 3000
@@ -34,7 +34,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
                     swal({
                        title:"",
-                       text:"Los datos  se almacenaron correctamente",
+                       text:"Los datos se almacenaron correctamente",
                        type: "success",
                        showConfirmButton: false,
                        timer: 3000
@@ -45,7 +45,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
                     swal({
                        title:"",
-                       text:"Lo sentimos tiene campos por rellenar.",
+                       text:"¡Lo sentimos! Tiene campos por rellenar.",
                        type: "error",
                        showConfirmButton: false,
                        timer: 3000
@@ -57,7 +57,7 @@ if (isset($_REQUEST['msj'])) {
 //   echo '<script type="text/javascript">
 //                               swal({
 //                                    title:"",
-//                                    text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+//                                    text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
 //                                    type: "error",
 //                                    showConfirmButton: false,
 //                                    timer: 3000

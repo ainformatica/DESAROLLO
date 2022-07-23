@@ -18,7 +18,7 @@ if($visualizacion==0){
   echo '<script type="text/javascript">
       swal({
             title:"",
-            text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+            text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
             type: "error",
             showConfirmButton: false,
             timer: 3000
@@ -27,7 +27,7 @@ if($visualizacion==0){
 
        </script>'; 
 }else{
-  bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'],'INGRESO' , 'A Mantenimiento de tipo Meorandum');
+  bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'],'INGRESO' , 'A MANTENIMIENTO DE TIPO MEMORANDUM');
 }
 
 if (permisos::permiso_insertar($Id_objeto)==0)
@@ -48,7 +48,7 @@ ob_end_flush();
         <div class="row mb-2">
           <div class="col-sm-6">
 
-         <h1>Mantenimiento Tipo Memorandum</h1>
+         <h1>Mantenimiento Tipo Memorándum</h1>
           </div>
 
                 <div class="col-sm-6">

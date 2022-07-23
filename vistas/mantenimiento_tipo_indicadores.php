@@ -15,7 +15,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -25,7 +25,7 @@ if ($visualizacion == 0) {
                             </script>';
 } else {
 
-    bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'INGRESO', 'A MANTENIMIENTOS TIPOS DE INDICADORE.');
+    bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'INGRESO', 'A MANTENIMIENTOS TIPOS DE INDICADORES');
 }
 
 ob_end_flush();
@@ -89,7 +89,7 @@ ob_end_flush();
                             <div class="modal-dialog modal-lg">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title">Envio de datos</h5>
+                                        <h5 class="modal-title">Envío de datos</h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                             <span aria-hidden="true">&times;</span>
                                         </button>
@@ -184,7 +184,7 @@ ob_end_flush();
                                             <table id="tabla_indicadores_tipo" class="table table-bordered table-striped" cellpadding="0" width="100%">
                                                 <thead>
                                                     <tr>
-                                                        <th scope="col">NUM INDICADOR</th>
+                                                        <th scope="col">INDICADOR NO.</th>
                                                         <th scope="col">NOMBRE</th>
                                                         <th scope="col">DESCRIPCIÓN</th>
                                                         <th scope="col">FECHA</th>
@@ -285,7 +285,7 @@ ob_end_flush();
                     {
                         extend: 'pdf',
                         download: 'open',
-                        title: 'UNIVERSIDAD NACIONAL AUTONOMA DE HONDURAS REGISTRO MANTENIMIENTO DE INDICADORES DE GESTION ACAEMICA',
+                        title: 'UNIVERSIDAD NACIONAL AUTONOMA DE HONDURAS REGISTRO MANTENIMIENTO DE INDICADORES DE GESTION ACADEMICA',
                         text: 'PDF <i class="fas fa-file-pdf"></i>',
                         //messageBottom: datetime,
                         footer: 'true',
@@ -463,8 +463,8 @@ ob_end_flush();
                 if (data == 'exito') {
                     $('#modal').modal('toggle');
                     swal(
-                        'Exito...',
-                        'Datos guardados!',
+                        'Éxito...',
+                        '¡Datos guardados!',
                         'success'
                     )
                     $('#tabla_indicadores_tipo').DataTable().ajax.reload();
@@ -472,7 +472,7 @@ ob_end_flush();
                 } else {
                     swal(
                         'Oopss...',
-                        'algo ocurrio mal!',
+                        '¡Algo ocurrió mal!',
                         'error'
                     )
                 }

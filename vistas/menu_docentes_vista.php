@@ -167,7 +167,7 @@ tiene permisos para visualizar";
             <div class="col-12 col-sm-6 col-md-4">
               <div class="small-box bg-primary">
                 <div class="inner">
-                  <h4>Reporte Carga Academica </h4>
+                  <h4>Reporte Carga Académica </h4>
                   <p><?php echo $_SESSION['reporte_carga_academica_docentes_vista']; ?></p>
                 </div>
                 <div class="icon">

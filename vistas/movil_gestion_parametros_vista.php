@@ -15,7 +15,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
   swal({
         title:"",
-        text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+        text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
         type: "error",
         showConfirmButton: false,
         timer: 3000
@@ -24,7 +24,7 @@ if ($visualizacion == 0) {
 
    </script>';
 } else {
-  bitacora_movil::evento_bitacora($_SESSION['id_usuario'], $Id_objeto, 'INGRESO', 'A GESTI?N DE PARAMETROS ');
+  bitacora_movil::evento_bitacora($_SESSION['id_usuario'], $Id_objeto, 'INGRESO', 'A GESTION DE PARAMETROS ');
 }
 
 // /* Esta condicion sirve para  verificar el valor que se esta enviando al momento de dar click en el icono modicar */
@@ -61,7 +61,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
                     swal({
                        title:"",
-                       text:"Lo sentimos el Parametro ya existe",
+                       text:"¡Lo sentimos! El Parámetro ya existe",
                        type: "info",
                        showConfirmButton: false,
                        timer: 3000
@@ -72,7 +72,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
                     swal({
                        title:"",
-                       text:"Los datos se almacenaron correctamente",
+                       text:"¡Los datos! Se almacenaron correctamente",
                        type: "success",
                        showConfirmButton: false,
                        timer: 3000
@@ -83,7 +83,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
                     swal({
                        title:"",
-                       text:"Lo sentimos tiene campos por rellenar.",
+                       text:"¡Lo sentimos! Tiene campos por rellenar",
                        type: "error",
                        showConfirmButton: false,
                        timer: 3000
@@ -94,7 +94,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
                     swal({
                        title:"",
-                       text:"los datos se eliminaron correctamente.",
+                       text:"Los datos se eliminaron correctamente",
                        type: "error",
                        showConfirmButton: false,
                        timer: 3000
@@ -105,7 +105,7 @@ if (isset($_REQUEST['msj'])) {
     echo '<script type="text/javascript">
                     swal({
                        title:"",
-                       text:"el valor no puede quedar sin valor",
+                       text:"El valor no puede quedar vacío",
                        type: "error",
                        showConfirmButton: false,
                        timer: 3000

@@ -18,7 +18,7 @@ if($visualizacion==0){
   echo '<script type="text/javascript">
       swal({
             title:"",
-            text:"Lo sentimos no tiene permiso de visualizar la pantalla",
+            text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
             type: "error",
             showConfirmButton: false,
             timer: 3000
@@ -27,7 +27,7 @@ if($visualizacion==0){
 
        </script>'; 
 }else{
-  bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'],'INGRESO' , 'A Memorandums');
+  bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'],'INGRESO' , 'A MEMORANDUMS');
 }
 
 if (permisos::permiso_insertar($Id_objeto)==0)
@@ -47,7 +47,7 @@ ob_end_flush();
         <div class="row mb-2">
           <div class="col-sm-6">
 
-         <h1>Memoramdums</h1>
+         <h1>Memorámdums</h1>
           </div>
 
                 <div class="col-sm-6">
@@ -89,9 +89,9 @@ ob_end_flush();
                         <table id="tbllistado" class="table table-striped table-bordered table-condensed table-hover">
                           <thead>
                             <th>Opciones</th>
-                            <th>N_Memorandum</th>
-                            <th>Tipo de Memorandum</th>
-                            <th>Envia</th>
+                            <th>Memorándum No.</th>
+                            <th>Tipo de Memorándum</th>
+                            <th>Envía</th>
                             <th>Recibe</th>
                             <th>Fecha</th>
                           </thead>
@@ -108,7 +108,7 @@ ob_end_flush();
                     <!-- Card 1 Nombre de memorandum y ultimo memo -->
                     <div class="card card-default">
                       <div class="card-header bg-gradient-dark">
-                        <h3 class="card-title">Número de Memorandum</h3>
+                        <h3 class="card-title">Número de Memorándum</h3>
                         <div class="card-tools">
                           <button type="button" class="btn btn-tool" data-card-widget="collapse">
                             <i class="fa fa-minus"></i>
@@ -121,7 +121,7 @@ ob_end_flush();
                           <!-- N MEMORANDUM -->
                           <div class="col-sm-6">
                             <div class="form-group">
-                              <label>N. DE MEMORANDUM</label>
+                              <label>MEMORANDUM NO.</label>
                               <input type="text" class="form-control" name="no_memo" id="no_memo" style="text-transform: uppercase;" 
                                 placeholder="N° MEMORANDUM" minlength="3" maxlength="50" onkeypress="return soloLetras(event)" 
                                 oncopy="return false" onpaste="return false" " pattern="^[a-zA-Z]{2}-[0-9]{4}$" 
@@ -148,7 +148,7 @@ ob_end_flush();
                     <!-- Card 2 sELECT TIPO DE MEMO -->
                     <div class="card card-default">
                       <div class="card-header bg-gradient-dark">
-                        <h3 class="card-title">Tipo de Memorandum</h3>
+                        <h3 class="card-title">Tipo de Memorándum</h3>
                         <div class="card-tools">
                           <button type="button" class="btn btn-tool" data-card-widget="collapse">
                             <i class="fa fa-minus"></i>
@@ -217,7 +217,7 @@ ob_end_flush();
                     <!-- Card 4 ASUNTO Y CONTENIDO -->
                     <div class="card card-default">
                       <div class="card-header bg-gradient-dark">
-                        <h3 class="card-title">Asunto y Contendio del Memorandum</h3>
+                        <h3 class="card-title">Asunto y Contendio del Memorándum</h3>
                         <div class="card-tools">
                           <button type="button" class="btn btn-tool" data-card-widget="collapse">
                             <i class="fa fa-minus"></i>

@@ -6,7 +6,7 @@ require_once('../clases/Conexion.php');
 require_once('../clases/funcion_visualizar.php');
 require_once('../clases/funcion_bitacora.php');
 
-bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingreso', 'A Menu Reuniones');
+bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'INGRESO', 'A MENU REUNIONES');
 
 
 if (permiso_ver('5000') == '1') {

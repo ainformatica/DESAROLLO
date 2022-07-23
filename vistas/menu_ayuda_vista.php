@@ -37,7 +37,7 @@ if (permiso_ver('22') == '1') {
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1 class="m-0 text-dark">Manuales de usuario </h1>
+              <h1 class="m-0 text-dark">Manuales de Usuario </h1>
             </div><!-- /.col -->
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
@@ -63,7 +63,7 @@ if (permiso_ver('22') == '1') {
             <div class="col-6 col-sm-6 col-md-4">
               <div class="small-box bg-light">
                 <div class="inner">
-                  <h4>Manuales de usuario</h4>
+                  <h4>Manuales de Usuario</h4>
                   <p><?php echo $_SESSION['ayuda_menu']; ?></p>
                 </div>
                 <div class="icon">

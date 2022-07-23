@@ -6,7 +6,7 @@ require_once('../clases/Conexion.php');
 require_once('../clases/funcion_visualizar.php');
 require_once('../clases/funcion_bitacora.php');
 
-bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingreso', 'A Menu Mantenimiento Actas');
+bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'INGRESO', 'A MENU MANTENIMIENTO ACTA');
 
 
 
@@ -73,12 +73,12 @@ ob_end_flush();
                 <div class="container-fluid">
                     <div class="row mb-2">
                         <div class="col-sm-6">
-                            <h1 class="m-0 text-dark">Menú Mantenimiento actas</h1>
+                            <h1 class="m-0 text-dark">Menú Mantenimiento Actas</h1>
                         </div><!-- /.col -->
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="pagina_principal_vista">Inicio</a></li>
-                                <li class="breadcrumb-item active">Menú Mantenimiento actas</li>
+                                <li class="breadcrumb-item active">Menú Mantenimiento Actas</li>
                             </ol>
                         </div><!-- /.col -->
                     </div><!-- /.row -->
@@ -113,7 +113,7 @@ ob_end_flush();
                                         <div class="col-6 col-sm-6 col-md-4">
                                             <div class="small-box bg-primary">
                                                 <div class="inner">
-                                                    <h4>Mantenimiento Tipo Reunion</h4>
+                                                    <h4>Mantenimiento Tipo Reunión</h4>
                                                     <p><?php echo $_SESSION['mantenimiento_tipo_reunion_vista']; ?></p>
                                                 </div>
                                                 <div class="icon">
