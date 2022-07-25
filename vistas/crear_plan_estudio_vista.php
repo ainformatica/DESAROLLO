@@ -26,7 +26,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
+                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -105,8 +105,8 @@ ob_end_flush();
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
                                 <li class="breadcrumb-item"><a href="../vistas/pagina_principal_vista.php">Inicio</a></li>
-                                <li class="breadcrumb-item"><a href="../vistas/menu_plan_estudio_vista.php">Menú Plan de Estudio</a></li>
-                                <li class="breadcrumb-item">Crear Plan de Estudio</a></li>
+                                <li class="breadcrumb-item"><a href="../vistas/menu_plan_estudio_vista.php">Menu plan de estudio</a></li>
+                                <li class="breadcrumb-item">Crear plan de estudio</a></li>
 
                             </ol>
                         </div>
@@ -146,7 +146,7 @@ ob_end_flush();
                                     <div class="col-md-3">
                                         <div class="form-group">
 
-                                            <label>Seleccione el Tipo de Plan:</label>
+                                            <label>Seleccione Tipo de plan:</label>
                                             <td><select class="form-control" style="width: 100%;" name="cbm_tipo_plan" id="cbm_tipo_plan">
                                                 </select></td>
                                         </div>
@@ -189,7 +189,7 @@ ob_end_flush();
                                     <div class="col-md-3">
                                         <div class="form-group">
 
-                                            <label>Nombre del Plan</label>
+                                            <label>Nombre de Plan</label>
 
                                             <input class="form-control" type="text" id="txt_nombre" name="txt_nombre" maxlength="150" value="" required onkeyup="DobleEspacio(this, event); MismaLetra('txt_nombre');">
 
@@ -199,7 +199,7 @@ ob_end_flush();
                                     <div class="col-md-3">
                                         <div class="form-group">
 
-                                            <label>Código del Plan</label>
+                                            <label>Código de Plan</label>
 
                                             <input class="form-control" type="text" id="txt_codigo_plan" name="txt_codigo_plan" maxlength="25" value="" required>
 
@@ -211,7 +211,7 @@ ob_end_flush();
                                     <div class="col-md-2">
                                         <div class="form-group">
 
-                                            <label># Clases del Plan</label>
+                                            <label># Clases de plan</label>
                                             <input class="form-control" type="text" id="txt_num_clases" name="txt_num_clases" maxlength="2" value="" onkeypress="return solonumeros(event)">
                                         </div>
                                     </div>
@@ -219,7 +219,7 @@ ob_end_flush();
                                     <div class="col-md-2">
                                         <div class="form-group">
 
-                                            <label># Créditos del Plan</label>
+                                            <label># Créditos de plan</label>
                                             <input class="form-control" type="text" id="txt_creditos_plan" name="txt_creditos_plan" maxlength="3" value="" onkeypress="return solonumeros(event)">
                                         </div>
                                     </div>

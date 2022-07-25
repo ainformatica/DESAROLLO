@@ -14,7 +14,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
+                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -58,7 +58,7 @@ ob_end_flush();
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="../vistas/pagina_principal_vista">Inicio</a></li>
-                            <li class="breadcrumb-item"><a href="../vistas/menu_asistencia_vista">Menú asistencia</a></li>
+                            <li class="breadcrumb-item"><a href="../vistas/menu_asistencia_vista">Menú Asistencia</a></li>
                             <li class="breadcrumb-item active">
 Asistencia por persona</li>
                         </ol>
@@ -72,7 +72,7 @@ Asistencia por persona</li>
 
         <div class="card card-default">
             <div class="card-header">
-                <h3 class="card-title">Lista de asistencia por persona</h3>
+                <h3 class="card-title">Lista Asistencia por persona</h3>
 
                 <div class="card-tools">
                     <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
@@ -93,7 +93,7 @@ Asistencia por persona</li>
                                         <thead class="text-center">
                                             <tr class="table-secondary">
                                                 <th>Nombre Persona</th>
-                                                <th>No. de Reuniones</th>
+                                                <th>No. Reuniones</th>
                                                 <th>Asistencia</th>
                                                 <th>Inasistencia</th>
                                                 <th>Excusados</th>
@@ -215,7 +215,7 @@ Asistencia por persona</li>
                     zeroRecords: "Sin resultados encontrados",
                     paginate: {
                         first: "Primero",
-                        last: "Último",
+                        last: "Ultimo",
                         next: "Siguiente",
                         previous: "Anterior"
                     }

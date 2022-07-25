@@ -18,7 +18,7 @@ require_once('../clases/funcion_bitacora.php');
   <script src="../js/autologout.js"></script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Informática Admistrativa</title>
+  <title>Informatica Admistrativa</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="../plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css">
@@ -46,7 +46,7 @@ require_once('../clases/funcion_bitacora.php');
           <img src="../dist/img/logo_informatica.jpg" width="40%" height="40%" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
         </div>
 
-        <p class="login-box-msg">Cambiar Contraseña por Vencimiento</p>
+        <p class="login-box-msg">Cambiar contraseña por Vencimiento</p>
 
         <form action="../Controlador/actualizar_cambiar_clave_vencimiento_controlador.php" method="post">
 
@@ -88,7 +88,7 @@ require_once('../clases/funcion_bitacora.php');
           <div class="row">
             <div class="col-8">
               <p class="mb-0">
-                <a href="../login.php">Iniciar Sesión</a>
+                <a href="../login.php">Inicia Sesion</a>
               </p>
             </div>
 
@@ -192,7 +192,7 @@ if (isset($_REQUEST['msj'])) {
                           Swal.fire({
   position: "center",
   icon: "info",
-  title: "¡Lo sentimos! NUEVA CONTRASEÑA Y CONFIRMAR CONTRASEÑA, deben ser iguales, intenta de nuevo",
+  title: "Lo sentimos NUEVA Y CONFIRMAR deben ser iguales intenta de nuevo",
   showConfirmButton: false,
   timer: 3000
 })   </script>';

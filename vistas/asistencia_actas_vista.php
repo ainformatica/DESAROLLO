@@ -15,7 +15,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
+                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -48,13 +48,13 @@ ob_end_flush();
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6"><br><br>
-                        <h1>Porcentaje Asistencia por Acta</h1>
+                        <h1>Porcentaje Asistencia por acta</h1>
                     </div>
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
                             <li class="breadcrumb-item"><a href="pagina_principal_vista">Inicio</a></li>
-                            <li class="breadcrumb-item"><a href="menu_asistencia_vista">Menú Asistencia</a></li>
-                            <li class="breadcrumb-item active">Porcentaje Asistencia por Acta</li>
+                            <li class="breadcrumb-item"><a href="menu_asistencia_vista">menú asistencia</a></li>
+                            <li class="breadcrumb-item active">Porcentaje Asistencia por acta</li>
                         </ol>
                     </div>
                     <div class="RespuestaAjax"></div>
@@ -66,7 +66,7 @@ ob_end_flush();
 
         <div class="card card-default">
             <div class="card-header">
-                <h3 class="card-title">listado de Asistencia por Acta</h3>
+                <h3 class="card-title">listado de Asistencia por acta</h3>
 
                 <div class="card-tools">
                     <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
@@ -85,9 +85,9 @@ ob_end_flush();
                                     <table id="asistencia_acta" class="table table-bordered table-striped table-hover">
                                         <thead>
                                             <tr class="table-secondary">
-                                                <th>No. de Acta</th>
+                                                <th>No. Acta</th>
                                                 <th>Nombre Reunión</th>
-                                                <th>No. de Participantes</th>
+                                                <th>No. Participantes</th>
                                                 <th>Asistencia</th>
                                                 <th>Inasistencia</th>
                                                 <th>Excusados</th>

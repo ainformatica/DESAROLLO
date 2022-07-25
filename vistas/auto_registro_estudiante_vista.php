@@ -6,7 +6,7 @@
   <meta charset="utf-8">
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Informática Admistrativa</title>
+  <title>Informatica Admistrativa</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -35,7 +35,7 @@
           <img src="../dist/img/lOGO_OFICIAL.jpg" width="40%" height="40%" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
         </div>
 
-        <p class="login-box-msg">Regístro de Estudiantes</p>
+        <p class="login-box-msg">Registro de Estudiantes</p>
 
         <form action="../Controlador/guardar_auto_registro_estudiantes_controlador.php" method="post">
 
@@ -107,7 +107,7 @@
 
           <div class="row">
             <div class="col-8">
-              <a href="../login.php" class="text-center">Iniciar Sesión</a>
+              <a href="../login.php" class="text-center">Iniciar Sesion</a>
             </div>
             <!-- /.col -->
             <div class="col-4">

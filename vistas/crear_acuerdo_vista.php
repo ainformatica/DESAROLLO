@@ -26,7 +26,7 @@ if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
+                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -93,7 +93,7 @@ ob_end_flush();
                         </div>
                         <div class="card-body">
                             <div class="form-group">
-                                <label>Seleccione el Acta:</label>
+                                <label>Seleccione el acta:</label>
                                 <select class="form-control select2" style="width: 35%;" name="acta" id="acta" required>
                                     <option value="-1">-- Seleccione --</option>
                                     <?php
@@ -138,7 +138,7 @@ ob_end_flush();
                                 <textarea onkeyup="MismaLetra('descripcion');" onkeypress="return validacion(event)" onblur="limpia()" class="form-control" placeholder="Ingrese la descripción del Acuerdo. (Mínimo 5 caracteres)" rows="5" id="descripcion" name="descripcion" minlength="5" maxlength="80" required></textarea>
                             </div>
                             <div class="form-group">
-                                <label>Fecha de Expiración:</label>
+                                <label>Fecha Expiración:</label>
                                 <div style="width: 20%;" class="input-group date">
                                     <input type="date" class="form-control " id="fecha_exp" name="fecha_exp" min="<?php echo $hoy; ?>" required />
                                 </div>

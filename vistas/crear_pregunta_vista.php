@@ -25,7 +25,7 @@ if ($visualizacion == 0) {
   echo '<script type="text/javascript">
                               swal({
                                    title:"",
-                                   text:"¡Lo sentimos! No tiene permiso de visualizar la pantalla",
+                                   text:"Lo sentimos no tiene permiso de visualizar la pantalla",
                                    type: "error",
                                    showConfirmButton: false,
                                    timer: 3000
@@ -35,7 +35,7 @@ if ($visualizacion == 0) {
                             </script>';
 } else {
 
-  bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingresó', 'A Creación de Preguntas');
+  bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingreso', 'A Creacion de Preguntas');
 
 
   if (permisos::permiso_insertar($Id_objeto) == '1') {
@@ -112,7 +112,7 @@ ob_end_flush();
 
           <div class="card card-default">
             <div class="card-header">
-              <h3 class="card-title">Nueva Pregunta</h3>
+              <h3 class="card-title">Nueva pregunta</h3>
 
               <div class="card-tools">
                 <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
@@ -125,7 +125,7 @@ ob_end_flush();
               <div class="row">
                 <div class="col-md-12">
                   <div class="form-group">
-                    <label>Ingrese la Pregunta</label>
+                    <label>Ingrese la pregunta</label>
                     <input class="form-control" type="text" id="txt_Pregunta" name="txt_Pregunta" style="text-transform: uppercase" onkeypress="return Letras(event)" onkeyup="DobleEspacio(this, event)" required="" maxlength="30">
                   </div>
 
