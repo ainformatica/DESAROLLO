@@ -19,6 +19,8 @@ if (!isset($_SESSION['id_usuario'])) {
 require_once('../Modelos/permisos_modelo.php');
 
 /*Menu laterales*/
+$_SESSION['gestion_estudiantes_vista'] = 'none'; //10-08-22 Gestión Estudiantes
+$_SESSION['estudiantes_vista'] = 'none'; //30-7-22 Mantenimiento Estudiantes
 $_SESSION['pregunta_vista'] = 'none';
 $_SESSION['usuarios_vista'] = 'none';
 $_SESSION['roles_vista'] = 'none';
@@ -132,6 +134,20 @@ function  permisos_a_roles_visualizar($pantalla, $confirmacion)
       }
    }
    //objetos creacion y gestion
+   
+   if ($_SESSION['pantalla'] == '291') {
+      if ($_SESSION['confirmacion'] == 'block') {
+         $_SESSION['estudiantes_vista'] = "block";//Registro Estudiantes 30-07-22
+      }
+   }
+
+   
+   if ($_SESSION['pantalla'] == '292') {
+      if ($_SESSION['confirmacion'] == 'block') {
+         $_SESSION['gestion_estudiantes_vista'] = "block";//Gestión Estudiantes 10-07-22
+      }
+   }
+
    if ($_SESSION['pantalla'] == '283' or $_SESSION['pantalla'] == '284') {
       if ($_SESSION['confirmacion'] == 'block') {
          $_SESSION['objetos_vista'] = "block";
