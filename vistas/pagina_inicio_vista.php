@@ -750,7 +750,7 @@ if(session_status() === PHP_SESSION_ACTIVE){
               <ul class="nav nav-treeview">
 
               <li class="nav-item" style="display:<?php echo $_SESSION['estudiantes_vista'] ?>">
-                  <a href="../vistas/menu_mantenimiento" class="nav-link">
+                  <a href="../vistas/menu_registro_estudiantes_vista.php" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
                     <p>Estudiantes</p>
                   </a>
