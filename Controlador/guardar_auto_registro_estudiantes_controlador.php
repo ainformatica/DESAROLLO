@@ -74,9 +74,9 @@ if(strlen($contrasena) < $tamano_min['valor']  )
   $msj=5;
     header("location: ../vistas/auto_registro_estudiante_vista.php?msj=$msj&error= $error_clave"); 
 
-   }else{
+  }else{
     $existe_usuario="";
-    $existe_usuario=("select count(numero_cuenta) as Usuario from tbl_usuarios where Usuario='$numero_cuenta'");
+    $existe_usuario=("select count(Usuario) as Usuario from tbl_usuarios where Usuario='$usuario_final'");
       $existe=mysqli_fetch_assoc($mysqli->query($existe_usuario));
         if($existe['Usuario']==1)
         {
