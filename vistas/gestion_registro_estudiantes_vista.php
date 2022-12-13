@@ -81,6 +81,18 @@ if ($visualizacion == 0) {
                     <a href="../vistas/registro_estudiantes_vista.php" class="btn btn-warning"><i class="fas fa-arrow"></i>
                     Registro de Nuevo Estudiante</a>
                 </div>
+                <!--IMPORTACIÓN DE DATOS-->
+                <div class="card-body">
+                <div class="row">
+                    <div class="col-6">
+                        <input type="file" id="txt_archivo_excel" class="form-control">
+                    </div>
+                    <div class="col-2">
+                        <button class="btn btn-success" style="width: 100%" onclick="cargar_excel()">Importar de Excel</button>
+                    </div>
+                </div>
+                </div>
+
                 <div class="card-tools">
                     <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
                 </div>
@@ -290,3 +302,47 @@ if ($visualizacion == 0) {
 <script src="../plugins/datatables/pdfmake-0.1.36/pdfmake.min.js"></script>
 <script src="../plugins/datatables/pdfmake-0.1.36/vfs_fonts.js"></script>
 <script src="../plugins/datatables/Buttons-1.5.6/js/buttons.html5.min.js"></script>
+<script>
+    //Validacion para que solo acepte archivos EXCEL
+document.getElementById("txt_archivo_excel").addEventListener("change", ()=>{
+    var fileName = document.getElementById("txt_archivo_excel").value;
+    var idxDot = fileName.lastIndexOf(".")+1;
+    var extFile = fileName.substr(idxDot, fileName.length).
+    toLowerCase();
+    if (extFile =="xlsx" || extFile =="xlsb") {
+        //TO DO
+    } else {
+        swal("Mensaje de Advertencia", "Solo se aceptan archivos Excel - Usted subió un archivo con extensión "+extFile,"warning");
+        document.getElementById("txt_archivo_excel").value="";
+    }
+});
+
+//Funcion para subir informacion del archivo a la base de datos
+function cargar_excel() {
+    let archivo = document.getElementById ('txt_archivo_excel').value;
+    if (archivo.length==0) {
+        //return Swal.fire("Mensaje de advertencia", "Seleccione un archivo", "warning");
+        swal({
+                title: "¡Mensaje de Advertencia!",
+                text: "Seleccione un archivo ",
+                type: "warning",
+                showConfirmButton: true,
+                timer: 10000,
+            });
+    }
+    let formData = new FormData();
+    let excel = $("#txt_archivo_excel")[0].files[0];
+    formData.append('excel', excel);
+    $.ajax({
+        url: 'import_registro_estudiantes_controlador.php',
+        type:'POST',
+        data: formData,
+        contentType: false,
+        processData: false,
+        success: function (resp){
+            alert(resp);
+        }
+    });
+    return false;
+}
+</script>

@@ -73,5 +73,10 @@ break;
     echo json_encode($rspta);
     break;
 
+    case 'import_registro_estudiante':
+      $respuesta=$instancia_modelo->import_registro_estudiante($_nombres, $_apellidos, $_identidad,$_nacionalidad,$_fecha_nacimiento,$_n_cuenta,$_telefono,$_email,$_usuario,$_contrasena)
+      # code...
+      break;
+
  }
 ?>

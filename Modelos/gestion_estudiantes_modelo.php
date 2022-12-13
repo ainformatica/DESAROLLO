@@ -65,4 +65,15 @@ function listar_selectNACI(){
 
 }
 
+function import_registro_estudiantes ()
+{
+  global $instancia_conexion;
+  $sql = "call proc_insert_usuario_estudiantes_IMPORT('$_nombres', '$_apellidos', '$_identidad','$_nacionalidad','$_fecha_nacimiento','$_n_cuenta','$_telefono','$_email','$_usuario','$_contrasena')";
+  if ($consulta = $instancia_conexion->ejecutarConsulta($sql)) {
+    return 1;
+  } else {
+    return 0;
+  }
+}
+
 ?>

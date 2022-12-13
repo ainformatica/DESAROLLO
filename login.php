@@ -180,7 +180,7 @@ if (isset($_REQUEST['msj'])) {
 
 
         <p class="mb-1">
-          <a href="vistas/recuperar_clave_vista.php">Olvidaste tu contraseña?</a>
+          <a href="vistas/recuperar_clave_vista.php">¿Olvidaste tu contraseña?</a>
         </p>
         <p class="mb-0">
           <a href="vistas/auto_registro_estudiante_vista.php" class="text-center">Regístrate</a>
