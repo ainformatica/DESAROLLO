@@ -624,11 +624,26 @@ function RegistrarEstudiante(
     nacionalidad,
     estado,    
     fecha_nacimiento,
+    lugar_nacimiento,
     ncuenta,
     tipo_estudiante,
     trabajo
         
 ) {
+    /*
+    var nombre = $('#txt_nombres').val(); 
+    var apellidos = $('#txt_apellidos').val(); 
+    var sexo = $('#cb_genero').val(); 
+    var identidad = $('#identidad').val(); 
+    var nacionalidad = $('#cb_nacionalidad').val();
+    var estado= $('#cb_ecivil').val();
+    var fecha_nacimiento = $('#txt_fecha_nacimiento').val();
+    var lugar_nacimiento = $('#txt_lugar_nacimiento').val();
+    var ncuenta = $('#txt_n_cuenta').val(); 
+    var tipo_estudiante = $('#tipo_estudiante').val();
+    var trabajo = $('#trabajo').val(), $('#cb_carrera').val();*/
+    
+
     var idcarrera = $('#cb_carrera').children('option:selected').val();
     var idcr = $('#cb_cr').children('option:selected').val();
     var foto = document.getElementById('seleccionararchivo');
@@ -642,8 +657,8 @@ function RegistrarEstudiante(
             sexo = sexo.toUpperCase();
             identidad = identidad.toUpperCase();
             nacionalidad = nacionalidad.toUpperCase();
+            lugar_nacimiento = lugar_nacimiento.toUpperCase();
             estado = estado.toUpperCase();
-            ncuenta = ncuenta.toUpperCase();
             trabajo = trabajo.toUpperCase();            
             tipo_estudiante = tipo_estudiante.toUpperCase();
                         
@@ -656,6 +671,7 @@ function RegistrarEstudiante(
                     nacionalidad: nacionalidad,
                     estado: estado,
                     fecha_nacimiento: fecha_nacimiento,                    
+                    lugar_nacimiento: lugar_nacimiento,
                     ncuenta: ncuenta,
                     tipo_estudiante: tipo_estudiante, 
                     trabajo: trabajo,                   

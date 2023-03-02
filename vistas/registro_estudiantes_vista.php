@@ -175,6 +175,14 @@ ob_end_flush();
                     </div>
                     </div>
 
+                    <div class="col-sm-3">
+                    <div class="form-group">
+                      <!-- LUGAR DE NACIMIENTO -->
+                      <label>Lugar de Nacimiento </label>
+                      <input class="form-control" type="text" id="txt_lugar_nacimiento" name="txt_lugar_nacimiento" maxlength="25" value="" required style="text-transform: uppercase" onkeyup="DobleEspacio(this, event); MismaLetra('txt_lugar_nacimiento');" onkeypress="return sololetras(event)" ;>
+                    </div>
+                  </div>
+
                   <div class="col-sm-3">
                     <div class="form-group">
                       <!-- ESTADO CIVIL -->
@@ -433,7 +441,7 @@ ob_end_flush();
           <p class="text-center" style="margin-top: 10px;">
             <button type="submit" class="btn btn-primary btn-lg" id="btn_guardar_registro_estudiantes" name="btn_guardar_registro_estudiantes" 
             onclick="RegistrarEstudiante($('#txt_nombres').val(), $('#txt_apellidos').val(), $('#cb_genero').val(), $('#identidad').val(), 
-            $('#cb_nacionalidad').val(), $('#cb_ecivil').val(), $('#txt_fecha_nacimiento').val(), $('#txt_n_cuenta').val(), 
+            $('#cb_nacionalidad').val(), $('#cb_ecivil').val(), $('#txt_fecha_nacimiento').val(), $('#txt_lugar_nacimiento').val(),$('#txt_n_cuenta').val(), 
             $('#tipo_estudiante').val(), $('#trabajo').val(), $('#cb_carrera').val(), $('#cb_cr').val());   ">
               <i class="zmdi zmdi-floppy"></i>GUARDAR</button>
 

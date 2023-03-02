@@ -11,13 +11,14 @@ require_once('../clases/funcion_bitacora.php');
 require_once('../clases/funcion_visualizar.php');
 require_once('../clases/funcion_permisos.php');
 require_once('../clases/conexion_mantenimientos.php');
+require_once('../Controlador/import_registro_estudiantes_controlador.php');
 
 
 $Id_objeto = 292;
 $visualizacion = permiso_ver($Id_objeto);
 
 
-if ($visualizacion == 0) {    
+if ($visualizacion == 0) {
     echo '<script type="text/javascript">
                               swal({
                                    title:"",
@@ -79,23 +80,28 @@ if ($visualizacion == 0) {
 
                 <div class="px-1">
                     <a href="../vistas/registro_estudiantes_vista.php" class="btn btn-warning"><i class="fas fa-arrow"></i>
-                    Registro de Nuevo Estudiante</a>
+                        Registro de Nuevo Estudiante</a>
                 </div>
+
                 <!--IMPORTACIÓN DE DATOS-->
                 <div class="card-body">
-                <div class="row">
-                    <div class="col-6">
-                        <input type="file" id="txt_archivo_excel" class="form-control">
+                    <div class="row">
+                        <div class="col-6">
+                            <form action="" method="post" name="frmExcelImport" id="frmExcelImport" enctype="multipart/form-data">
+                                <input type="file" id="file" name="file" class="form-control" accept=".xls,.xlsx,.xlsb">
+                        </div>
+                        <div class="col-2">
+                            <button type="submit" id="submit" name="import" class="btn btn-success" style="width: 100%">Importar de Excel</button>
+                        </div>
                     </div>
-                    <div class="col-2">
-                        <button class="btn btn-success" style="width: 100%" onclick="cargar_excel()">Importar de Excel</button>
-                    </div>
-                </div>
                 </div>
 
                 <div class="card-tools">
                     <button type="button" class="btn btn-tool" data-card-widget="collapse"><i class="fas fa-minus"></i></button>
                 </div>
+                </form>
+            </div>
+            <div id="response" class="<?php if(!empty($type)) { echo $type . " display-block"; } ?>"><?php if(!empty($message)) { echo $message; } ?></div>
             </div>
 
             <!-- /.card-header -->
@@ -137,16 +143,16 @@ if ($visualizacion == 0) {
                             <thead>
                                 <tr>
                                     <th>Id Persona</th>
-                                    <th>Nombre</th>                                    
+                                    <th>Nombre</th>
                                     <th>Identidad</th>
                                     <th>Cuenta Nº</th>
                                     <th>Teléfonos</th>
                                     <th>Correos</th>
-                                    <th>Trabaja</th>                                     
-                                    <th>Egresado</th> 
+                                    <th>Trabaja</th>
+                                    <th>Egresado</th>
                                     <th>Carrera</th>
                                     <th>Centro Regional</th>
-                                    <th>Estado</th> 
+                                    <th>Estado</th>
                                     <th>Modificar Estado</th>
                                     <th>Modificar Información</th>
                                 </tr>
@@ -175,18 +181,15 @@ if ($visualizacion == 0) {
                                         <div class="form-group">
                                             <input hidden type="text" id="txt_id_persona" readonly>
                                             <label> Estudiante: </label>
-                                            <input class="form-control" type="text" id="txt_nombre_estudiante" name="txt_nombre_estudiante" 
-                                            readonly>
+                                            <input class="form-control" type="text" id="txt_nombre_estudiante" name="txt_nombre_estudiante" readonly>
                                         </div>
                                     </div>
 
-                                    
+
                                     <div class="col-md-3">
                                         <div class="form-group">
                                             <label>Identificación</label>
-                                            <input class="form-control" name="identidad_edita" data-inputmask="'mask': '9999-9999-99999'" 
-                                            data-mask id="identidad_edita" onkeyup="ValidarIdentidad($('#identidad_edita').val());" 
-                                            readonly>
+                                            <input class="form-control" name="identidad_edita" data-inputmask="'mask': '9999-9999-99999'" data-mask id="identidad_edita" onkeyup="ValidarIdentidad($('#identidad_edita').val());" readonly>
                                         </div>
                                     </div>
 
@@ -200,17 +203,17 @@ if ($visualizacion == 0) {
 
                                     <div class="col-md-3">
                                         <div class="form-group">
-                                        <label>Carrera</label>
-                                         <select class="form-control" name="cb_carrera_edita" id="cb_carrera_edita">
-                                         </select>
+                                            <label>Carrera</label>
+                                            <select class="form-control" name="cb_carrera_edita" id="cb_carrera_edita">
+                                            </select>
                                         </div>
                                     </div>
 
                                     <div class="col-md-3">
                                         <div class="form-group">
-                                        <label>Centro Regional</label>
-                                         <select class="form-control" name="cb_credita" id="cb_credita">
-                                         </select>
+                                            <label>Centro Regional</label>
+                                            <select class="form-control" name="cb_credita" id="cb_credita">
+                                            </select>
                                         </div>
                                     </div>
 
@@ -225,11 +228,10 @@ if ($visualizacion == 0) {
                                     </div>
 
 
-                            </div>
+                                </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-info" onclick="modificar_gestion_estudiante();" id="editar_info" name="editar_info">Guardar Cambios</button>
-                                    <button class="btn btn-secondary" data-dismiss="modal" onclick="limpiar(); actualizar_tabla();" 
-                                    id="salir">Cancelar</button>
+                                    <button class="btn btn-secondary" data-dismiss="modal" onclick="limpiar(); actualizar_tabla();" id="salir">Cancelar</button>
                                 </div>
                             </div>
 
@@ -238,11 +240,11 @@ if ($visualizacion == 0) {
                     </div>
                 </div>
 
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
+    </div>
+    </div>
+    </div>
     </div>
     </div>
 
@@ -304,45 +306,17 @@ if ($visualizacion == 0) {
 <script src="../plugins/datatables/Buttons-1.5.6/js/buttons.html5.min.js"></script>
 <script>
     //Validacion para que solo acepte archivos EXCEL
-document.getElementById("txt_archivo_excel").addEventListener("change", ()=>{
-    var fileName = document.getElementById("txt_archivo_excel").value;
-    var idxDot = fileName.lastIndexOf(".")+1;
-    var extFile = fileName.substr(idxDot, fileName.length).
-    toLowerCase();
-    if (extFile =="xlsx" || extFile =="xlsb") {
-        //TO DO
-    } else {
-        swal("Mensaje de Advertencia", "Solo se aceptan archivos Excel - Usted subió un archivo con extensión "+extFile,"warning");
-        document.getElementById("txt_archivo_excel").value="";
-    }
-});
-
-//Funcion para subir informacion del archivo a la base de datos
-function cargar_excel() {
-    let archivo = document.getElementById ('txt_archivo_excel').value;
-    if (archivo.length==0) {
-        //return Swal.fire("Mensaje de advertencia", "Seleccione un archivo", "warning");
-        swal({
-                title: "¡Mensaje de Advertencia!",
-                text: "Seleccione un archivo ",
-                type: "warning",
-                showConfirmButton: true,
-                timer: 10000,
-            });
-    }
-    let formData = new FormData();
-    let excel = $("#txt_archivo_excel")[0].files[0];
-    formData.append('excel', excel);
-    $.ajax({
-        url: 'import_registro_estudiantes_controlador.php',
-        type:'POST',
-        data: formData,
-        contentType: false,
-        processData: false,
-        success: function (resp){
-            alert(resp);
+    document.getElementById("submit").addEventListener("change", () => {
+        var fileName = document.getElementById("submit").value;
+        var idxDot = fileName.lastIndexOf(".") + 1;
+        var extFile = fileName.substr(idxDot, fileName.length).
+        toLowerCase();
+        if (extFile == "xlsx" || extFile == "xlsb") {
+            //TO DO
+        } else {
+            swal("Mensaje de Advertencia", "Solo se aceptan archivos Excel - Usted subió un archivo con extensión " + extFile, "warning");
+            document.getElementById("submit").value = "";
         }
     });
-    return false;
-}
+
 </script>

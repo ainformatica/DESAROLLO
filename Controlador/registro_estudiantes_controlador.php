@@ -6,7 +6,8 @@ $apellidos=isset($_POST["apellidos"]) ? limpiarCadena1($_POST["apellidos"]) : ""
 $identidad=isset($_POST["identidad"]) ? limpiarCadena1($_POST["identidad"]) : "";
 $nacionalidad=isset($_POST["nacionalidad"]) ? limpiarCadena1($_POST["nacionalidad"]) : "";
 $fecha_nacimiento=isset($_POST["fecha_nacimiento"]) ? limpiarCadena1($_POST["fecha_nacimiento"]) : "";
-$estado=isset($_POST["estado"]) ? limpiarCadena1($_POST["estado"]) : "";
+$lugar_nacimiento=isset($_POST["lugar_nacimiento"]) ? limpiarCadena1($_POST["lugar_nacimiento"]) : "";
+$ecivil=isset($_POST["ecivil"]) ? limpiarCadena1($_POST["ecivil"]) : "";
 $sexo=isset($_POST["sexo"]) ? limpiarCadena1($_POST["sexo"]) : "";
 $trabajo=isset($_POST["trabajo"]) ? limpiarCadena1($_POST["trabajo"]) : "";
 $ncuenta=isset($_POST["ncuenta"]) ? limpiarCadena1($_POST["ncuenta"]) : "";
@@ -141,8 +142,8 @@ case 'ExisteNCuenta':
 break;
 
 case 'registrar':
-      $respuesta=$instancia_modelo->registrar($nombre,$apellidos, $sexo, $identidad, $nacionalidad, $estado, $fecha_nacimiento, 
-      $trabajo, $ncuenta, $idcarrera, $idcr, $tipo_estudiante);
+      $respuesta=$instancia_modelo->registrar($nombre,$apellidos, $sexo, $identidad, $nacionalidad, $ecivil, $fecha_nacimiento,$lugar_nacimiento,
+      $ncuenta, $tipo_estudiante, $trabajo,$idcarrera, $idcr);
 break;
 
 case 'mayoria_edad':

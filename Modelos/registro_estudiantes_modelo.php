@@ -10,11 +10,11 @@ class modelo_registro_estudiantes
 {
 
     //Insertar registros
-    public function registrar($nombre,$apellidos,$sexo,$identidad,$nacionalidad,$estado,$fecha_nacimiento,$ncuenta,$tipo_estudiante,
+    public function registrar($nombre,$apellidos,$sexo,$identidad,$nacionalidad,$ecivil,$fecha_nacimiento,$lugar_nacimiento,$ncuenta,$tipo_estudiante,
     $trabajo, $idcarrera,$idcr){
         global $instancia_conexion;
-        $sql="call proc_insertar_estudiantes_persona ('$nombre', '$apellidos', '$sexo', '$identidad', '$nacionalidad', '$estado', 
-        '$fecha_nacimiento', '2', 'ACTIVO', '$ncuenta', '$tipo_estudiante', '$trabajo', '$idcarrera', '$idcr')";
+        $sql="call proc_insertar_estudiantes_persona ('$nombre', '$apellidos', '$sexo', '$identidad', '$nacionalidad', '$ecivil', 
+        '$fecha_nacimiento', '$lugar_nacimiento', '2', 'ACTIVO', '$ncuenta', '$tipo_estudiante', '$trabajo', '$idcarrera', '$idcr')";
         
 
         return $instancia_conexion->ejecutarConsulta($sql);
@@ -85,6 +85,13 @@ class modelo_registro_estudiantes
         global $instancia_conexion;
         $consulta=$instancia_conexion->ejecutarConsulta('SELECT * FROM `tbl_carrera`;');
         return $consulta;
+    }
+
+    function mayoria_edad()
+    {
+        global $instancia_conexion;
+        $sql = 'SELECT valor FROM tbl_parametros WHERE parametro = "mayoria_edad"';
+        return $instancia_conexion->ejecutarConsultaSimpleFila($sql);
     }
 
     function validardepto($codigo)
