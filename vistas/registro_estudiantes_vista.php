@@ -56,7 +56,7 @@ ob_end_flush();
 </head>
 
 <body>
-  <form action="" method="POST" id="Formulario" class="FormularioAjax" name="miFormulario" autocomplete="off" role="form" enctype="multipart/form-data">
+  <form id="Formulario" class="FormularioAjax" name="miFormulario" autocomplete="off" role="form" enctype="multipart/form-data">
 
     <div class="content-wrapper">
       <!-- Content Header (Page header) -->
@@ -439,10 +439,8 @@ ob_end_flush();
           </div>
           <!-- /.card-body -->
           <p class="text-center" style="margin-top: 10px;">
-            <button type="submit" class="btn btn-primary btn-lg" id="btn_guardar_registro_estudiantes" name="btn_guardar_registro_estudiantes" 
-            onclick="RegistrarEstudiante($('#txt_nombres').val(), $('#txt_apellidos').val(), $('#cb_genero').val(), $('#identidad').val(), 
-            $('#cb_nacionalidad').val(), $('#cb_ecivil').val(), $('#txt_fecha_nacimiento').val(), $('#txt_lugar_nacimiento').val(),$('#txt_n_cuenta').val(), 
-            $('#tipo_estudiante').val(), $('#trabajo').val(), $('#cb_carrera').val(), $('#cb_cr').val());   ">
+            <button type="button" class="btn btn-primary btn-lg" id="btn_guardar_registro_estudiantes" name="btn_guardar_registro_estudiantes" 
+            onclick="RegistrarEstudiante($('#txt_nombres').val(), $('#txt_apellidos').val(), $('#cb_genero').val(), $('#identidad').val(), $('#cb_nacionalidad').val(), $('#cb_ecivil').val(), $('#txt_fecha_nacimiento').val(), $('#txt_lugar_nacimiento').val(), $('#txt_n_cuenta').val(), $('#tipo_estudiante').val(), $('#trabajo').val(), $('#cb_carrera').val(), $('#cb_cr').val());   ">
               <i class="zmdi zmdi-floppy"></i>GUARDAR</button>
 
           </p>

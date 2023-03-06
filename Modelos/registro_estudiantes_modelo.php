@@ -1,6 +1,21 @@
 <?php
 require_once "../clases/conexion_mantenimientos.php";
-//require_once "../clases/Conexion.php";
+
+
+$nombre=$_POST['txt_nombres'];
+$apellidos=$_POST['txt_apellidos'];
+$sexo=$_POST['cb_genero'];
+$identidad=$_POST['identidad'];
+$nacionalidad=$_POST['cb_nacionalidad'];
+$estado=$_POST['cb_ecivil'];
+$fecha_nacimiento=$_POST['txt_fecha_nacimiento'];
+$lugar_nacimiento=$_POST['txt_lugar_nacimiento'];
+$ncuenta=$_POST['txt_n_cuenta'];
+$tipo_estudiante=$_POST['tipo_estudiante'];
+$trabajo=$_POST['trabajo'];
+$idcarrera=$_POST['cb_carrera'];
+$idcr=$_POST['cb_cr'];
+
 
 $instancia_conexion = new conexion();
 
@@ -10,11 +25,9 @@ class modelo_registro_estudiantes
 {
 
     //Insertar registros
-    public function registrar($nombre,$apellidos,$sexo,$identidad,$nacionalidad,$ecivil,$fecha_nacimiento,$lugar_nacimiento,$ncuenta,$tipo_estudiante,
-    $trabajo, $idcarrera,$idcr){
+    public function registrar($nombre,$apellidos,$sexo,$identidad,$nacionalidad,$estado,$fecha_nacimiento,$lugar_nacimiento,$ncuenta,$tipo_estudiante,$trabajo, $idcarrera,$idcr){
         global $instancia_conexion;
-        $sql="call proc_insertar_estudiantes_persona ('$nombre', '$apellidos', '$sexo', '$identidad', '$nacionalidad', '$ecivil', 
-        '$fecha_nacimiento', '$lugar_nacimiento', '2', 'ACTIVO', '$ncuenta', '$tipo_estudiante', '$trabajo', '$idcarrera', '$idcr')";
+        $sql="call proc_insertar_estudiantes_persona ('$nombre','$apellidos','$sexo','$identidad','$nacionalidad','$estado','$fecha_nacimiento','$lugar_nacimiento','2','ACTIVO','$ncuenta','$tipo_estudiante','$trabajo','$idcarrera','$idcr')";
         
 
         return $instancia_conexion->ejecutarConsulta($sql);
@@ -103,8 +116,5 @@ class modelo_registro_estudiantes
 
 
 
-  
-    
-
-
 }
+?>

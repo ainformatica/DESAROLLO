@@ -630,26 +630,25 @@ function RegistrarEstudiante(
     trabajo
         
 ) {
-    /*
-    var nombre = $('#txt_nombres').val(); 
-    var apellidos = $('#txt_apellidos').val(); 
-    var sexo = $('#cb_genero').val(); 
-    var identidad = $('#identidad').val(); 
+
+    var nombre = $('#txt_nombres').val();
+    var apellidos = $('#txt_apellidos').val();
+    var sexo= $('#cb_genero').val();
+    var identidad = $('#identidad').val();
     var nacionalidad = $('#cb_nacionalidad').val();
-    var estado= $('#cb_ecivil').val();
+    var estado = $('#cb_ecivil').val();
     var fecha_nacimiento = $('#txt_fecha_nacimiento').val();
     var lugar_nacimiento = $('#txt_lugar_nacimiento').val();
-    var ncuenta = $('#txt_n_cuenta').val(); 
+    var ncuenta = $('#txt_n_cuenta').val();
     var tipo_estudiante = $('#tipo_estudiante').val();
-    var trabajo = $('#trabajo').val(), $('#cb_carrera').val();*/
-    
+    var trabajo = $('#trabajo').val();
 
     var idcarrera = $('#cb_carrera').children('option:selected').val();
     var idcr = $('#cb_cr').children('option:selected').val();
-    var foto = document.getElementById('seleccionararchivo');
+    /*var foto = document.getElementById('seleccionararchivo');
     var curriculo = document.getElementById('curriculum');
     var telefonox = $("#telefonox").val();
-    var correosx = $("#correosx").val();
+    var correosx = $("#correosx").val();*/
     
      {
             nombre = nombre.toUpperCase();
@@ -657,11 +656,11 @@ function RegistrarEstudiante(
             sexo = sexo.toUpperCase();
             identidad = identidad.toUpperCase();
             nacionalidad = nacionalidad.toUpperCase();
-            lugar_nacimiento = lugar_nacimiento.toUpperCase();
             estado = estado.toUpperCase();
-            trabajo = trabajo.toUpperCase();            
+            lugar_nacimiento = lugar_nacimiento.toUpperCase();            
             tipo_estudiante = tipo_estudiante.toUpperCase();
-                        
+            trabajo = trabajo.toUpperCase();            
+                                    
             $.post(
                 '../Controlador/registro_estudiantes_controlador.php?op=registrar', {
                     nombre: nombre,
@@ -674,13 +673,17 @@ function RegistrarEstudiante(
                     lugar_nacimiento: lugar_nacimiento,
                     ncuenta: ncuenta,
                     tipo_estudiante: tipo_estudiante, 
-                    trabajo: trabajo,                   
+                    trabajo: trabajo,
                     idcarrera: idcarrera,
                     idcr: idcr
                     
                 },
+                
+                function(data,status) {
+                    
+                    console.log(data);
+                    console.log(status);
 
-                function(e) {
                     saveAll();                                        
                     saveAll2();
                     Registrar();

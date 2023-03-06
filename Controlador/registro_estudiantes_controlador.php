@@ -3,19 +3,17 @@ require_once "../Modelos/registro_estudiantes_modelo.php";
 
 $nombre=isset($_POST["nombre"]) ? limpiarCadena1($_POST["nombre"]) : "";
 $apellidos=isset($_POST["apellidos"]) ? limpiarCadena1($_POST["apellidos"]) : "";
+$sexo=isset($_POST["sexo"]) ? limpiarCadena1($_POST["sexo"]) : "";
 $identidad=isset($_POST["identidad"]) ? limpiarCadena1($_POST["identidad"]) : "";
 $nacionalidad=isset($_POST["nacionalidad"]) ? limpiarCadena1($_POST["nacionalidad"]) : "";
+$estado=isset($_POST["estado"]) ? limpiarCadena1($_POST["estado"]) : "";
 $fecha_nacimiento=isset($_POST["fecha_nacimiento"]) ? limpiarCadena1($_POST["fecha_nacimiento"]) : "";
 $lugar_nacimiento=isset($_POST["lugar_nacimiento"]) ? limpiarCadena1($_POST["lugar_nacimiento"]) : "";
-$ecivil=isset($_POST["ecivil"]) ? limpiarCadena1($_POST["ecivil"]) : "";
-$sexo=isset($_POST["sexo"]) ? limpiarCadena1($_POST["sexo"]) : "";
-$trabajo=isset($_POST["trabajo"]) ? limpiarCadena1($_POST["trabajo"]) : "";
 $ncuenta=isset($_POST["ncuenta"]) ? limpiarCadena1($_POST["ncuenta"]) : "";
 $tipo_estudiante=isset($_POST["tipo_estudiante"]) ? limpiarCadena1($_POST["tipo_estudiante"]) : "";
+$trabajo=isset($_POST["trabajo"]) ? limpiarCadena1($_POST["trabajo"]) : "";
 $idcarrera=isset($_POST["idcarrera"]) ? limpiarCadena1($_POST["idcarrera"]) : "";
 $idcr=isset($_POST["idcr"]) ? limpiarCadena1($_POST["idcr"]) : "";
-
-
 
 $instancia_modelo = new modelo_registro_estudiantes();
 
@@ -23,26 +21,29 @@ $instancia_modelo = new modelo_registro_estudiantes();
 
 
 switch ($_GET["op"]){
-    
-       case 'selectGEN':
-        if (isset($_POST['activar'])) {
-            $data=array();
-            $respuesta=$instancia_modelo->listar_selectGEN();
-           
-              while ($r=$respuesta->fetch_object()) {
-           
-                 
-                   # code...
-                   echo "<option value='". $r->genero."'> ".$r->genero." </option>";
-                   
-               }
-           
-            
-             }
-             else{
-               echo 'No hay informacion';
-             }
-           
+
+
+  case 'registrar':
+    print_r($_POST);
+
+    $respuesta = $instancia_modelo->registrar($nombre, $apellidos, $sexo, $identidad, $nacionalidad, $estado, $fecha_nacimiento, $lugar_nacimiento, $ncuenta, $tipo_estudiante, $trabajo, $idcarrera, $idcr);
+    break;
+
+  case 'selectGEN':
+    if (isset($_POST['activar'])) {
+      $data = array();
+      $respuesta = $instancia_modelo->listar_selectGEN();
+
+      while ($r = $respuesta->fetch_object()) {
+
+
+        # code...
+        echo "<option value='" . $r->genero . "'> " . $r->genero . " </option>";
+      }
+    } else {
+      echo 'No hay informacion';
+    }
+
     break;
       
 
@@ -139,11 +140,6 @@ break;
 case 'ExisteNCuenta':
   $respuesta=$instancia_modelo->ExisteNCuenta($ncuenta);
   echo json_encode($respuesta);  
-break;
-
-case 'registrar':
-      $respuesta=$instancia_modelo->registrar($nombre,$apellidos, $sexo, $identidad, $nacionalidad, $ecivil, $fecha_nacimiento,$lugar_nacimiento,
-      $ncuenta, $tipo_estudiante, $trabajo,$idcarrera, $idcr);
 break;
 
 case 'mayoria_edad':
