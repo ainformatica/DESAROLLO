@@ -201,7 +201,7 @@ if ($visualizacion == 0) {
                                         </div>
                                     </div>
 
-                                    <div class="col-md-3">
+                                    <div class="col-md-5">
                                         <div class="form-group">
                                             <label>Carrera</label>
                                             <select class="form-control" name="cb_carrera_edita" id="cb_carrera_edita">
@@ -209,7 +209,7 @@ if ($visualizacion == 0) {
                                         </div>
                                     </div>
 
-                                    <div class="col-md-3">
+                                    <div class="col-md-4">
                                         <div class="form-group">
                                             <label>Centro Regional</label>
                                             <select class="form-control" name="cb_credita" id="cb_credita">

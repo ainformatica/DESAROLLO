@@ -29,20 +29,6 @@ function llenar_selectGEN() {
     });
 }
 
-function llenar_selectNAC() {
-    var cadena = '&activar=activar';
-    $.ajax({
-        url: '../Controlador/registro_estudiantes_controlador.php?op=selectNAC',
-        type: 'POST',
-        data: cadena,
-        success: function(r) {
-            //  console.log(r);
-
-            $('#cb_nacionalidad').html(r).fadeIn();
-        }
-    });
-}
-
 
 function llenar_selectCAR() {
     var cadena = '&activar=activar';
@@ -147,10 +133,6 @@ if ((document.getElementsByName = 'cb_ecivil')) {
     llenar_selectEST();
 }
 
-if ((document.getElementsByName = 'cb_nacionalidad')) {
-    llenar_selectNAC();
-}
-
 if ((document.getElementsByName = 'cb_genero')) {
     llenar_selectGEN();
 }
@@ -163,195 +145,35 @@ if ((document.getElementsByName = 'cb_cr')) {
     llenar_selectCR();
 }
 
-
-//telefonos
-var sendData = {};
-var list = [];
-var telefono = document.getElementById('tel');
-var table1 = document.getElementById('tbData2');
-
 //FUNCION QUE VALIDA QUE LOS NUMEROS DE TELEFONO SEAN LOCALES
-function valtel(tel) {
+function valtel(telef) {
     var expresion3 = /(9|8|3|2)\d{3}[-]\d{4}/;
     console.log(expresion3.test(tel));
-    if (list.length <= 3 && expresion3.test(tel)) {
-        return 1;
-    } else {
-        return 0;
-    }
-}
-
-var addTask = () => {
-    //var n = telefono.search("_");
-    if ($('#tel').val().length == 0) {
-        swal('Ingrese el telefono!', '', 'warning');
-
-        return false;
-    } else {
-        if (list.length == 0) {
-            if (valtel($('#tel').val()) == 0) {
-                //aqui debo validar que no se agregue a la tabla ...
-                swal('Ingrese un número válido');
-
-                limpiarTEL();
-                return false;
-            }
+    if (telef.value.match(expresion3)){
+        document.miFormulario.tel.length();
+                return true;
         } else {
-            if (valtel($('#tel').val()) == 0) {
-                //aqui debo validar que no se agregue a la tabla ...
-                swal('Ingrese un número válido');
-
-                limpiarTEL();
-                return false;
-            }
-        }
-
-        var item = {
-            telefono: telefono.value
-        };
-        console.log(item);
-
-        list.push(item);
-
-        viewlist();
+        
+        swal('Ingresar un número de teléfono válido');
         limpiarTEL();
-    }
-
-
-};
-
-function limpiarTEL() {
-    document.getElementById('tel').value = '';
-}
-
-
-var viewlist = () => {
-    if (list.length <= 3) {
-        var viewItem = '';
-        list.map((item, index) => {
-            item.id = index + 1;
-            viewItem += `<tr>`;
-            viewItem += `<td >${item.telefono}</td>`;
-            //viewItem += `<td><button class="btn btn-danger btn_remove" type='button' id="remove">X</button></td>`;
-            viewItem += `</tr>`;
-        });
-        table1.innerHTML = viewItem;
-        $('#ModalTask1').modal('hide');
-
-        if (list.length == 3) {
-            desactivarboton1();
-            swal('¡Aviso!', 'límite 3 teléfonos', 'warning');
-
-            $('#ModalTask1').modal('hide');
-        }
-    }
-
-
-};
-
-var saveAll = () => {
-    if (list.length > 0) {
-        sendData.id = 1;
-        sendData.data = list;
-        console.log(sendData);
-
-        fetch('../api/guardar_telefonos.php', {
-                method: 'POST',
-                body: JSON.stringify(sendData)
-            })
-            .then((response) => response.json())
-            .then((response) => console.log(response));
-        //alert("contactos creados!");
-
-        //window.location.href = window.location.href;
-    } else {
-        //alert("No registró telefonos!");
-        // Location.reload()
-    }
-};
-
-function limpiarTEL() {
-    document.getElementById('tel').value = '';
-}
-
-function desactivarboton1() {
-    document.getElementById('gcorreotel').disabled = true;
-}
-
-//correos
-var sendData5 = {};
-var list5 = [];
-var correo = document.getElementById('email');
-var table5 = document.getElementById('tbData5');
-
-const x = 0;
-
-function correoInstDet(correo) {
-    var expresion = /^([a-z0-9_\.-]+)@unah\.hn$/;
-    //console.log(expresion.test(correo));
-    if (list5.length <= 2 && expresion.test(correo)) {
-        return 1;
-    } else {
-        return 0;
-    }
-}
-//FUNCION QUE VERIFICA UN CORREO VALIDO
-function correovalido(correo1) {
-    var expresion1 = /^\w+([\.-]?\w+)*@(?:|hotmail|outlook|yahoo|live|gmail)\.(?:|com|es)+$/;
-
-    //console.log(expresion1.test(correo1));
-    if (list5.length <= 2 && expresion1.test(correo1)) {
-        return 1;
-    } else {
-        return 0;
-    }
-}
-
-var addTask5 = () => {
-    if ($('#email').val().length == 0) {
-        swal('¡Ingrese el correo!', '', 'warning');
-
         return false;
-    } else {
-        //console.clear();
-        if (list5.length == 0) {
-            if (correoInstDet($('#email').val()) == 0) {
-                //aqui debo validar que no se agregue a la tabla ...
-
-                swal('¡Alerta!', 'Primero ingresar correo institucional', 'warning');
-
-                limpiarCOR();
-                return false;
-            } else {
-                //console.log("exitosss xD") ;
-            }
-        } else {
-            if (correovalido($('#email').val()) == 0) {
-                //aqui debo validar que no se agregue a la tabla ...
-                swal('Ingresar un correo válido');
-
-                limpiarCOR();
-                return false;
-            } else {
-                desactivarboton();
-
-                swal('¡Aviso!', 'Límite 2 correos', 'warning');
-
-                $('#ModalTask5').modal('hide');
-            }
         }
-        var item5 = {
-            correo: correo.value
-        };
+}
 
-        list5.push(item5);
+//FUNCION QUE VERIFICA UN CORREO VALIDO
+function validarcorreo(Input) {
 
-        //console.log(correo);
-
-        viewlist5();
+    var expresion1 = /^\w+([\.-]?\w+)*@[a-zA-Z_]+?.[a-zA-Z]{2,3}$/;//ingresa cualquier dominio de correo electronico
+        if (Input.value.match(expresion1)){
+        document.miFormulario.email.length();
+                return true;
+        } else {
+        
+        swal('Ingresar un correo válido');
         limpiarCOR();
-    }
-};
+        return false;
+        }
+}
 
 function limpiarCOR() {
     document.getElementById('email').value = '';
@@ -360,46 +182,6 @@ function limpiarCOR() {
 function limpiarTEL() {
     document.getElementById('tel').value = '';
 }
-
-var viewlist5 = () => {
-    if (list5.length <= 2) {
-        var viewItem5 = '';
-        list5.map((item5, index) => {
-            item5.id = index + 1;
-            viewItem5 += `<tr>`;
-            viewItem5 += `<td>${item5.correo}</td>`;
-            viewItem5 += `</tr>`;
-            console.log(index);
-            console.log(item5);
-        });
-
-        table5.innerHTML = viewItem5;
-
-        $('#ModalTask5').modal('hide');
-    } else {
-        alert('Sólo puede ingresar 2 correos warning');
-        return false;
-    }
-};
-
-function desactivarboton() {
-    document.getElementById('gcorreo').disabled = true;
-}
-
-var saveAll2 = () => {
-    if (list5.length > 0) {
-        sendData5.id = 1;
-        sendData5.data = list5;
-
-        fetch('../api/guardar_correos.php', {
-                method: 'POST',
-                body: JSON.stringify(sendData5)
-            })
-            .then((response) => response.json())
-            .then((response) => console.log(response));
-    } else {
-    }
-};
 
 //FECHA MAXIMA HOY
 let today = new Date();
@@ -417,7 +199,7 @@ today = yyyy + '-' + mm + '-' + dd;
 
 //FUNCIO QUE VALIDA QUE EL NUMERO DE IDENTIDAD ESTÉ CORRECTO
 function ValidarIdentidad(identidad) {
-    //console.log(n);
+    
     var n = identidad.search('_');
     console.log(n);
     var mayor_edad = $('#mayoria_edad').val();
@@ -435,8 +217,6 @@ function ValidarIdentidad(identidad) {
             console.log(data);
             data = JSON.parse(data);
             console.log(data);
-            /*si no tiene datos va copiar  */
-            //$("#contar_depto").val(data.regis);
 
             if (data.regis == 0) {
                 var ver = true;
@@ -459,14 +239,11 @@ function ValidarIdentidad(identidad) {
         var currentTime = new Date();
         var year = currentTime.getFullYear();
         var anio = identidad.substring(5, 9);
-        //console.log(year-anio);
+        
         if (year < anio) {
-            //swal("Aviso", "Debe ser mayor de edad", "warning");
             $('#Textomayor1').removeAttr('hidden');
             $("#identidad").val("");
             $("#identidad").attr("placeholder", "____-____-_____");
-            //$("#identidad").val("");
-            //$("#identidad").attr("placeholder", "____-____-_____");
         } else if (year - anio < mayor_edad)
 
         {
@@ -489,7 +266,7 @@ function ValidarIdentidad(identidad) {
 
     if (n == -1) {
         var ultimo = identidad.substring(10, 15);
-        // console.log(anio);
+        
         if (ultimo == '00000') {
             swal('¡Aviso!', 'No se permiten 5 ceros', 'warning');
             $('#identidad').val('');
@@ -546,7 +323,7 @@ function ExisteNCuenta() {
 function MismaLetra(id_input) {
     var valor = $('#' + id_input).val();
     var longitud = valor.length;
-    //console.log(valor+longitud);
+    
     if (longitud > 2) {
         var str1 = valor.substring(longitud - 3, longitud - 2);
         var str2 = valor.substring(longitud - 2, longitud - 1);
@@ -570,22 +347,6 @@ function pierdeFoco(e) {
     var valor = e.value.replace(/^0*/, '');
     e.value = valor;
 }
-
-
-$(document).ready(function() {
-    $("#tel").keyup(function() {
-        var value = $(this).val();
-        $("#telefonox").val(value);
-    });
-});
-
-
-$(document).ready(function() {
-    $("#email").keyup(function() {
-        var value = $(this).val();
-        $("#correosx").val(value);
-    });
-});
 
 //============================
 //      TAMAÑO DE FOTO       =
@@ -627,30 +388,68 @@ function RegistrarEstudiante(
     lugar_nacimiento,
     ncuenta,
     tipo_estudiante,
-    trabajo
+    trabajo,
+    idcarrera,
+    idcr,
+    telefono,
+    correo
         
 ) {
-
-    var nombre = $('#txt_nombres').val();
-    var apellidos = $('#txt_apellidos').val();
-    var sexo= $('#cb_genero').val();
-    var identidad = $('#identidad').val();
-    var nacionalidad = $('#cb_nacionalidad').val();
-    var estado = $('#cb_ecivil').val();
-    var fecha_nacimiento = $('#txt_fecha_nacimiento').val();
-    var lugar_nacimiento = $('#txt_lugar_nacimiento').val();
-    var ncuenta = $('#txt_n_cuenta').val();
-    var tipo_estudiante = $('#tipo_estudiante').val();
-    var trabajo = $('#trabajo').val();
-
-    var idcarrera = $('#cb_carrera').children('option:selected').val();
-    var idcr = $('#cb_cr').children('option:selected').val();
-    /*var foto = document.getElementById('seleccionararchivo');
+    var foto = document.getElementById('seleccionararchivo');
     var curriculo = document.getElementById('curriculum');
-    var telefonox = $("#telefonox").val();
-    var correosx = $("#correosx").val();*/
-    
-     {
+
+    if(
+        
+        foto.value == 0 ||
+        nombre.length == 0 ||
+        apellidos.length == 0 ||
+        nacionalidad == null ||
+        identidad.length == 0 ||
+        fecha_nacimiento.length == 0 ||
+        lugar_nacimiento.length == 0 ||
+        estado == null ||
+        sexo == null ||
+        curriculo.value == 0   
+
+    ) {
+        swal({
+            title: '¡Alerta!',
+            text: 'Rellene o seleccione los campos vacíos de Datos Personales',
+            type: 'warning',
+            showConfirmButton: true,
+            timer: 15000
+        });
+
+    } else if (
+        telefono.length == 0 ||
+        correo.length == 0 ||
+        trabajo.length == 0
+    ) {
+        swal({
+            title: '¡Alerta!',
+            text: 'Rellene o seleccione los campos vacíos de Información de Contacto',
+            type: 'warning',
+            showConfirmButton: true,
+            timer: 15000
+        });
+
+    } else {
+        if (
+
+            ncuenta.length == 0 ||
+            idcarrera.length == null ||
+            idcr.length == null ||
+            tipo_estudiante.length == 0
+
+        ) {
+            swal({
+                title: '¡Alerta!',
+                text: 'Rellene o seleccione los campos vacíos en Información de Estudiante',
+                type: 'warning',
+                showConfirmButton: true,
+                timer: 15000
+            });
+        } else {
             nombre = nombre.toUpperCase();
             apellidos = apellidos.toUpperCase();
             sexo = sexo.toUpperCase();
@@ -675,7 +474,9 @@ function RegistrarEstudiante(
                     tipo_estudiante: tipo_estudiante, 
                     trabajo: trabajo,
                     idcarrera: idcarrera,
-                    idcr: idcr
+                    idcr: idcr,
+                    telefono: telefono,
+                    correo: correo
                     
                 },
                 
@@ -683,17 +484,12 @@ function RegistrarEstudiante(
                     
                     console.log(data);
                     console.log(status);
-
-                    saveAll();                                        
-                    saveAll2();
                     Registrar();
                     Registrarcurriculum();
 
                 }
 
             );
-
-            //window.location.href = window.location.href;
 
             swal({
                 title: "¡Alerta!",
@@ -709,7 +505,7 @@ function RegistrarEstudiante(
         }
 
     }
-
+}
 
 
 
@@ -750,7 +546,6 @@ function Registrar() {
     var formData = new FormData();
     var foto = $('#seleccionararchivo')[0].files[0];
     formData.append('f', foto);
-    // formData.append('nombrearchivo', nombrearchivo);
 
     $.ajax({
         url: '../Controlador/subirperfil_estudiantes.php',
@@ -771,7 +566,6 @@ function Registrarcurriculum() {
     var formData = new FormData();
     var curriculum = $('#curriculum')[0].files[0];
     formData.append('c', curriculum);
-    //formData.append('nombrearchivo', nombrearchivo);
 
     $.ajax({
         url: '../Controlador/subircurriculum_estudiantes.php',
@@ -792,7 +586,7 @@ var c = document.getElementById("curriculum");
 c.onchange = function() {
     var archivo = $("#curriculum").val();
     var extensiones = archivo.substring(archivo.lastIndexOf("."));
-    // console.log(extensiones);
+    
     if (extensiones != ".pdf") {
         alert("El archivo de tipo " + extensiones + " no es válido");
         document.getElementById("curriculum").value = "";
@@ -805,7 +599,7 @@ var d = document.getElementById("seleccionararchivo");
 d.onchange = function() {
     var archivo = $("#seleccionararchivo").val();
     var extensiones = archivo.substring(archivo.lastIndexOf("."));
-    // console.log(extensiones);
+    
     if (
         extensiones != ".jpg" &&
         extensiones != ".png" &&

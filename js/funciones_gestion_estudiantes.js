@@ -465,8 +465,8 @@ function TablaEstudiante() {
     $("#txt_id_persona").val(data.id_persona);
     $("#ncuenta_edita").val(data.numero_cuenta);
     $("#txt_nombre_estudiante").val(data.nombre);    
-    $("#cb_carrera_edita").val(data.carrera).trigger("change");
-    $("#cb_credita").val(data.cregional).trigger("change");    
+    $("#cb_carrera_edita").val(data.carrera);
+    $("#cb_credita").val(data.cregional);    
     $("#egresado_edita").val(data.egresado).trigger("change");    
     $("#identidad_edita").val(data.identidad);  
     seleccion_persona();

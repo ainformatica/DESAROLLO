@@ -22,14 +22,15 @@ $row_parametro_pregunta = mysqli_fetch_array($resultado_pregunta);
 
 $Contador = $row_preguntas['Contador'];
 
-
+/*
 if ($Contador == $row_parametro_pregunta['valor']) {
   /*  $sql_actualizar_estatus = "UPDATE usuarios SET   Estatus=1 WHERE id_usuario= ".$_SESSION[id_usuario]." ";
-                        $resultado_actualizar_estatus= $mysqli->query($sql_actualizar_estatus);*/
+                        $resultado_actualizar_estatus= $mysqli->query($sql_actualizar_estatus);
 
-  header('location: ../vistas/cambiar_clave_x_usuario_vista.php?estatus=' . $_SESSION["estatus"] . ' ');
+  //header('location: ../vistas/cambiar_clave_x_usuario_vista.php?estatus=' . $_SESSION["estatus"] . ' ');
+  header('location: ../vistas/reg_estudiantes_login_vista.php?estatus=' . $_SESSION["estatus"] . ' ');
 }
-
+*/
 
 
 $estatus_nuevo_pregunta_usuario = $_REQUEST['estatus'];
@@ -79,7 +80,7 @@ if (isset($_REQUEST['msj'])) {
 
 <head>
   <script src="../js/autologout.js"></script>
-  <title>Informática Admistrativa</title>
+  <title>Informática Administrativa</title>
   <!-- Tell the browser to be responsive to screen width -->
 
 </head>

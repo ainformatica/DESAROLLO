@@ -69,14 +69,9 @@ break;
 
   case 'modificar_gestion_estudiante':
     $rspta = $instancia_modelo->modificar_gestion_estudiante($identidad, $ncuenta, $carrera_, $cregional_, $egresado, $id_persona1);
-    //Codificar el resultado utilizando json
+    
     echo json_encode($rspta);
     break;
-
-    case 'import_registro_estudiante':
-      $respuesta=$instancia_modelo->import_registro_estudiante($_nombres, $_apellidos, $_identidad,$_nacionalidad,$_fecha_nacimiento,$_n_cuenta,$_telefono,$_email,$_usuario,$_contrasena)
-      # code...
-      break;
 
  }
 ?>

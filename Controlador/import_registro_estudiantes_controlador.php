@@ -136,12 +136,11 @@ if ($errores==0) {
                     $_usuario = strtoupper($usuario);
     
                     $_contrasena = gtoken(8);
-                    $contrasena2 = $_contrasena;
     
                     if (!empty($_nombres) || !empty($_apellidos) || !empty($sexo) || !empty($_identidad) || !empty($_nacionalidad) || !empty($_fecha_nacimiento) || !empty($_n_cuenta) || !empty($_telefono) || !empty($_email)) {
-                        $contrasena2 = cifrado::encryption(gtoken(8));
+                        $contrasena = cifrado::encryption($_contrasena);
     
-                        $resultados = $instancia_modelo->importar_excel_estudiantes($_nombres, $_apellidos, $_sexo, $_identidad, $_nacionalidad, $_fecha_nacimiento, $_n_cuenta, $_telefono, $_email, $_usuario, $contrasena2);
+                        $resultados = $instancia_modelo->importar_excel_estudiantes($_nombres, $_apellidos, $_sexo, $_identidad, $_nacionalidad, $_fecha_nacimiento, $_n_cuenta, $_telefono, $_email, $_usuario, $contrasena);
     
                         if ($resultados) {
                             enviar_mail($_email, $_usuario, $_contrasena);

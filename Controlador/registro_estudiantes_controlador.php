@@ -1,5 +1,7 @@
 <?php
 require_once "../Modelos/registro_estudiantes_modelo.php";
+require_once('../clases/encriptar_desencriptar.php');
+require_once('../Controlador/import_registro_estudiantes_controlador2.php');
 
 $nombre=isset($_POST["nombre"]) ? limpiarCadena1($_POST["nombre"]) : "";
 $apellidos=isset($_POST["apellidos"]) ? limpiarCadena1($_POST["apellidos"]) : "";
@@ -14,11 +16,20 @@ $tipo_estudiante=isset($_POST["tipo_estudiante"]) ? limpiarCadena1($_POST["tipo_
 $trabajo=isset($_POST["trabajo"]) ? limpiarCadena1($_POST["trabajo"]) : "";
 $idcarrera=isset($_POST["idcarrera"]) ? limpiarCadena1($_POST["idcarrera"]) : "";
 $idcr=isset($_POST["idcr"]) ? limpiarCadena1($_POST["idcr"]) : "";
+$usuario=isset($_POST["usuario"]) ? limpiarCadena1($_POST["usuario"]) : "";
+$contrasena=isset($_POST["contrasena"]) ? limpiarCadena1($_POST["contrasena"]) : "";
+$telefono=isset($_POST["telefono"]) ? limpiarCadena1($_POST["telefono"]) : "";
+$correo=isset($_POST["correo"]) ? limpiarCadena1($_POST["correo"]) : "";
+
+$num_user = token_u(4);
+$letra = substr($nombre, 0, 1);//Tomar la primera letra del string
+$palabra = explode(" ", $apellidos);//Tomar la primera palabra de todo el string usando el indice[0]
+$usuario2 = $letra . $palabra[0] . $num_user;//Concatenación de la primera letra del nombre, primer apellido para crear el usuario y número para que haga único al usuario
+$usuario = strtoupper($usuario2);//Convertir el nombre de usuario en mayuscula
+
+$contrasena2 = gtoken(8);
 
 $instancia_modelo = new modelo_registro_estudiantes();
-
-
-
 
 switch ($_GET["op"]){
 
@@ -26,7 +37,11 @@ switch ($_GET["op"]){
   case 'registrar':
     print_r($_POST);
 
-    $respuesta = $instancia_modelo->registrar($nombre, $apellidos, $sexo, $identidad, $nacionalidad, $estado, $fecha_nacimiento, $lugar_nacimiento, $ncuenta, $tipo_estudiante, $trabajo, $idcarrera, $idcr);
+    $contrasena = cifrado::encryption($contrasena2);
+    $respuesta = $instancia_modelo->registrar($nombre, $apellidos, $sexo, $identidad, $nacionalidad, $estado, $fecha_nacimiento, $lugar_nacimiento, $ncuenta, $tipo_estudiante, $trabajo, $idcarrera, $idcr, $usuario,$contrasena,$telefono, $correo);
+    if ($respuesta) {
+      enviar_mail($correo, $usuario, $contrasena2);      
+    }
     break;
 
   case 'selectGEN':
@@ -67,7 +82,7 @@ switch ($_GET["op"]){
            }
          
   break;
-  
+ /* 
   case 'selectNAC':
     if (isset($_POST['activar'])) {
         $data=array();
@@ -87,7 +102,7 @@ switch ($_GET["op"]){
            echo 'No hay informacion';
          }
        
-break;
+break;*/
 
 case 'selectCAR':
   if (isset($_POST['activar'])) {
