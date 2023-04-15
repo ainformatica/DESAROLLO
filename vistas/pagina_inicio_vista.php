@@ -129,7 +129,7 @@ if(session_status() === PHP_SESSION_ACTIVE){
             <img src="../dist/img/usuario3.png" class="img-circle elevation-2" alt="User Image">
           </div>
           <div class="info">
-            <a href="#" class="d-block"><?php
+            <a href="../vistas/ajustes_usuario_vista.php" class="d-block"><?php
                                         echo ($_SESSION['usuario']); ?></a>
           </div>
         </div>
