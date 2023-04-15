@@ -22,12 +22,12 @@ $instancia_modelo= new modelo_reg_estudiantes2();
 $id_persona2= $_SESSION['id_persona'];
 //echo $id_persona2;
 switch ($_GET["op"]){
-  /*
+  
   case 'traerId_estudiante':
     
     $respuesta= $instancia_modelo-> traerId_estudiante($_SESSION['usuario']) -> fetch_object();
     echo $respuesta->id_persona;
-    break;*/
+    break;
 
 
 case 'ExisteIdentidad':

@@ -7,20 +7,7 @@ require_once('../clases/funcion_permisos.php');
 require_once('../clases/funcion_visualizar.php');
 
 $Id_objeto = 14029;
-bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingreso y', 'Completo sus datos personales');
-
-// $id_usuario=$_SESSION['id_usuario'];
-// $sql_verificar_usuario=" SELECT count(Id_usuario) as Id_usuario from tbl_preguntas_seguridad where Id_usuario='$id_usuario' " ;
-// 		$resultado_verificar_usuario = $mysqli->query($sql_verificar_usuario);
-// 		$row = mysqli_fetch_array($resultado_verificar_usuario); 
-
-// 		/*Aqui valida si el count es 3, el usuario es correcto*/
-// 		if ($row['Id_usuario']==3)
-// 		{
-//    //header('location: ../vistas/cambiar_clave_x_usuario_vista.php?estatus=' . $_SESSION["estatus"] . ' ');
-//    header('location: ../vistas/cambiar_clave_x_usuario_vista.php');
-//    }
-
+bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingreso', 'A completar sus datos personales');
   
 ?>
 

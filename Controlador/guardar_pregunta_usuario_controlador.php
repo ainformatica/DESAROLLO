@@ -7,6 +7,7 @@
 	require_once ('../clases/Conexion.php');
 
 	$id_persona= $_SESSION['id_persona'];
+	$id_usuario= $_SESSION['id_usuario'];
 
 $Respuesta=strtoupper ($_POST['txt_respuestapu']);
 $Pregunta=$_POST['combopregunta'];
@@ -69,13 +70,13 @@ $resultado_pregunta = $mysqli->query($sql_preguntas);
 
 					 if ($Contador==$row_parametro_pregunta['valor']) 
 
-					 
-					 $sql_actualizar_estatus = "UPDATE tbl_usuarios SET   estado=1 WHERE id_usuario= ".$_SESSION['id_usuario']." ";
+					 {
+					 $sql_actualizar_estatus = "UPDATE tbl_usuarios SET   estado=1 WHERE id_usuario= ".$id_usuario." ";
 					 $resultado_actualizar_estatus= $mysqli->query($sql_actualizar_estatus);
-					 
-					 $sql_verificar_usuario= "select Id_rol from tbl_usuarios where Id_usuario=".$_SESSION['id_usuario']." ";
+					 //no me funciona este segundo query
+					 $sql_verificar_usuario= "select Id_rol from tbl_usuarios where Id_usuario=".$id_usuario." ";
 					 $resultado_usuario = $mysqli->query($sql_verificar_usuario);
-//Agregar un select para condicionar que solo los usuarios estudiantes registren los datos personales
+
 							 if ($resultado_usuario=49)
 													{
 												$sql_actualizar_estado = "UPDATE tbl_personas SET Estado='ACTIVO' WHERE id_persona= $id_persona";
@@ -87,7 +88,7 @@ $resultado_pregunta = $mysqli->query($sql_preguntas);
 														header('location: ../vistas/cambiar_clave_x_usuario_vista.php?estatus=' . $_SESSION["estatus"] . ' ');
 													}
 
-											
+												}		
 
 					}
 

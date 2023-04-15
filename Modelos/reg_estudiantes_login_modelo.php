@@ -12,11 +12,11 @@ print_r($id_persona2);*/
 
 class modelo_reg_estudiantes2
 {
- /*   public function traerId_estudiante($usuario){
+   public function traerId_estudiante($usuario){
         global $instancia_conexion;
         $sql = 'select id_persona from tbl_usuarios where Usuario="'.$usuario.'";';
         return $instancia_conexion->ejecutarConsulta($sql);
-    }*/
+    }
 
     
     //Insertar registros
@@ -24,7 +24,7 @@ class modelo_reg_estudiantes2
     $trabajo, $egresado,$carrera,$cregional, $telefono){
         global $instancia_conexion;
         
-        $sql="call proc_update_insert_registro_estudiantes ('$id_persona2', '$identidad', '$nacionalidad', '$ecivil', '$fecha_nacimiento', '$lugar_nacimiento', 'INACTIVO', '$trabajo', '$egresado','$carrera', '$cregional','$telefono')";
+        $sql="call proc_update_insert_registro_estudiantes2 ('$id_persona2', '$identidad', '$nacionalidad', '$ecivil', '$fecha_nacimiento', '$lugar_nacimiento', '$trabajo', '$egresado','$carrera', '$cregional','$telefono')";
         return $instancia_conexion->ejecutarConsulta($sql);
 
     }
