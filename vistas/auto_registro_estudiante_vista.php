@@ -202,7 +202,7 @@ if (isset($_REQUEST['msj'])) {
                           Swal.fire({
   position: "center",
   icon: "success",
-  title: "Los datos  se almacenaron correctamente",
+  title: "Los datos se almacenaron correctamente, revise su correo",
   showConfirmButton: false,
   timer: 3000
 })   </script>';

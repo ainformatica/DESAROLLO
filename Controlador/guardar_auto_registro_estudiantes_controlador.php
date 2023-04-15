@@ -1,6 +1,7 @@
 <?php
 require_once('../clases/Conexion.php');
 require_once ('../clases/encriptar_desencriptar.php'); 
+require_once('../Controlador/import_registro_estudiantes_controlador2.php');
 
 $numero_cuenta=strtoupper($_POST['txt_cuenta_estudiante']);
 $contrasena=$_POST['txt_clave'];
@@ -9,12 +10,14 @@ $nombre_estudiante=$_POST['txt_nombre_estudiante'];
 $correo=$_POST['txt_correo_estudiante'];
 $apellido_estudiante=$_POST['txt_apellido_estudiante'];
 $sexo=$_POST['sexo'];
+
+$num_user = token_u(4);
 //Tomar la primera letra del string
 $letra=substr($nombre_estudiante, 0, 1);
 //Tomar la primera palabra de todo el string usando el indice[0]
 $palabra = explode (" ", $apellido_estudiante);
 //Concatenación de la primera letra del nombre y primer apellido para crear el usuario
-$usuario=$letra.$palabra[0];
+$usuario=$letra.$palabra[0].$num_user;
 //Convertir el nombre de usuario en mayuscula
 $usuario_final = strtoupper($usuario);
 
@@ -92,6 +95,7 @@ if(strlen($contrasena) < $tamano_min['valor']  )
                         $result = $mysqli->query($sql);
                           if($result === TRUE)
                           {
+                            enviar_mail($correo, $usuario_final, $contrasena);
 
                    $msj=2;
     header("location: ../vistas/auto_registro_estudiante_vista.php?msj=$msj"); 
