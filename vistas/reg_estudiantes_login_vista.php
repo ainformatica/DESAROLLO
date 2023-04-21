@@ -102,7 +102,7 @@ bitacora::evento_bitacora($Id_objeto, $_SESSION['id_usuario'], 'Ingreso', 'A com
                   <div class="col-sm-2">
                     <div class="form-group">
                       <!-- NACIONALIDAD -->
-                      <input  hidden type="text" id="txt_id_persona" readonly>
+                      <input  class="form-control" type="text" id="txt_id_persona" readonly>
                       <label>Nacionalidad</label>
                       <select class="form-control" name="cb_nacionalidad" id="cb_nacionalidad" style="text-transform: uppercase" required>
                       <?php

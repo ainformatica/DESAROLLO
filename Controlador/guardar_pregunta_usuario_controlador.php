@@ -71,20 +71,25 @@ $resultado_pregunta = $mysqli->query($sql_preguntas);
 					 if ($Contador==$row_parametro_pregunta['valor']) 
 
 					 {
-					 $sql_actualizar_estatus = "UPDATE tbl_usuarios SET   estado=1 WHERE id_usuario= ".$id_usuario." ";
-					 $resultado_actualizar_estatus= $mysqli->query($sql_actualizar_estatus);
+					 
 					 //no me funciona este segundo query
 					 $sql_verificar_usuario= "select Id_rol from tbl_usuarios where Id_usuario=".$id_usuario." ";
 					 $resultado_usuario = $mysqli->query($sql_verificar_usuario);
 
-							 if ($resultado_usuario=49)
-													{
+							 if ($resultado_usuario=49){
+								$sql_actualizar_estatus = "UPDATE tbl_usuarios SET   estado=1 WHERE id_usuario= ".$id_usuario." ";
+								$resultado_actualizar_estatus= $mysqli->query($sql_actualizar_estatus);
+									
+								if ($resultado_actualizar_estatus=true){ 
 												$sql_actualizar_estado = "UPDATE tbl_personas SET Estado='ACTIVO' WHERE id_persona= $id_persona";
 												$resultado_actualizar_estado= $mysqli->query($sql_actualizar_estado);
 
 						    					 header('location: ../vistas/reg_estudiantes_login_vista.php?estatus='.$_SESSION["estatus"].' ');
 													}
+							}
 							else{
+								$sql_actualizar_estatus = "UPDATE tbl_usuarios SET   estado=1 WHERE id_usuario= ".$id_usuario." ";
+					 			$resultado_actualizar_estatus= $mysqli->query($sql_actualizar_estatus);
 														header('location: ../vistas/cambiar_clave_x_usuario_vista.php?estatus=' . $_SESSION["estatus"] . ' ');
 													}
 

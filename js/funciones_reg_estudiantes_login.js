@@ -7,7 +7,7 @@ function traerId() {
         },
 
         function(data, status) {
-            $('#txt_id_persona').val(data.id_persona); //data nos trae
+            $('#txt_id_persona').val(data); //data nos trae
             //$('#identidad').val(data.identidad), $('#cb_nacionalidad').val(data.nacionalidad), $('#cb_ecivil').val(data.estado_civil), $('#txt_fecha_nacimiento').val(data.fecha_nacimiento), $('#txt_lugar_nacimiento').val(data.lugar_nacimiento), $('#rb_trabajo').val(data.trabajo), $('#rb_egresado').val(data.egresado), $('#cb_carrera').val(data.carrera), $('#cb_cr').val(data.cregional), $('#tel').val(data.telefonos)
             
         }

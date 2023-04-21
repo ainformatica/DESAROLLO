@@ -87,8 +87,6 @@ ob_end_flush();
 
       <section>
 
-        <input type="text" name="mayoria_edad" id="mayoria_edad" readonly onload="mayoria_edad()" hidden>
-
         <!-- Main content -->
         <section class="content">
           <div class="container-fluid">
@@ -166,11 +164,10 @@ ob_end_flush();
                     <div class="form-group">
                       <div class="input-group-prepend">
 
-                        <input name="identidad" type="text" data-inputmask="'mask': '9999-9999-99999'" data-mask class="form-control" id="identidad" onkeyup="ValidarIdentidad($('#identidad').val());" onblur="ExisteIdentidad();">
+                        <input name="identidad" type="text" data-inputmask="'mask': '9999999999999'" data-mask class="form-control" id="identidad" onkeyup="ValidarIdentidad($('#identidad').val());" onblur="ExisteIdentidad();">
                       </div>
                     </div>
                     <p hidden id="TextoIdentidad" style="color:red;">¡Ya existe un registro con esta identidad! </p>
-                    <p hidden id="Textomayor1" style="color:red;">¡Año incorrecto! </p>
 
                   </div>
 

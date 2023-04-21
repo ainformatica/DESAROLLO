@@ -4,6 +4,7 @@ require_once "../clases/conexion_mantenimientos.php";
 $instancia_conexion = new conexion();
 
 
+
 class modelo_registro_estudiantes
 {
 
@@ -83,22 +84,6 @@ class modelo_registro_estudiantes
         $consulta=$instancia_conexion->ejecutarConsulta('SELECT * FROM `tbl_carrera`;');
         return $consulta;
     }
-
-    function mayoria_edad()
-    {
-        global $instancia_conexion;
-        $sql = 'SELECT valor FROM tbl_parametros WHERE parametro = "mayoria_edad"';
-        return $instancia_conexion->ejecutarConsultaSimpleFila($sql);
-    }
-
-    function validardepto($codigo)
-    {
-        global $instancia_conexion;
-        $sql4 = "call proc_existe_municipio_depto($codigo)";
-        return $instancia_conexion->ejecutarConsultaSimpleFila($sql4);
-    }
-
-
 
 }
 ?>

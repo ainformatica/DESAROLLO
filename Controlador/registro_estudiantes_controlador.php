@@ -156,7 +156,7 @@ case 'ExisteNCuenta':
   $respuesta=$instancia_modelo->ExisteNCuenta($ncuenta);
   echo json_encode($respuesta);  
 break;
-
+/*
 case 'mayoria_edad':
   $rspta = $instancia_modelo->mayoria_edad();
   //Codificar el resultado utilizando json
@@ -168,5 +168,5 @@ case 'validar_depto':
   echo json_encode($respuesta);
 
   break;
-
+*/
 }
