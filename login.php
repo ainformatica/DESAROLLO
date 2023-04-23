@@ -218,7 +218,7 @@ if (isset($_REQUEST['msj'])) {
   </script>
 
 
-
+<div class="copyright">Copyright© 2023 Universidad Nacional Autónoma de Honduras</div>
 
 </body>
 
