@@ -30,15 +30,15 @@
                      $mail = new PHPMailer(TRUE);
                      try {
                          $mail -> isSMTP(); //PARA INDICAR QUE VAMOS A UTILIZAR ESTA TECNOLOGIA
-                         $mail -> Host = 'smtp.gmail.com'; //AQUI VAMOS A INDICAR EL HOST
+                         $mail -> Host = /*'smtp.gmail.com'*/'smtp.mail.yahoo.com'; //AQUI VAMOS A INDICAR EL HOST
                          $mail -> SMTPAuth = true; //INDICAMOS QUE VAMOS A TENER AUTENTICACION DE ESE MTP
-                         $mail -> Username = /*'ainformatica2020@gmail.com'*/'victoria.alejandra.unah@gmail.com'; // AQUI COLOCAREMOS NUESTRO CORREO ELECTRÓNICO
-                         $mail -> Password = /*'zbpjaxyvanzaoyod'*/'flnzbmgkwdzjfzmo'; //CONTRASEÑA DEL CORREO, no es de acceso sino para que una aplicación se pueda conectar al servidor
+                         $mail -> Username = /*'ainformatica2020@gmail.com'*//*'victoria.alejandra.unah@gmail.com'*/'victoria.alejandra_aguilar@yahoo.es'; // AQUI COLOCAREMOS NUESTRO CORREO ELECTRÓNICO
+                         $mail -> Password = /*'zbpjaxyvanzaoyod'*//*'flnzbmgkwdzjfzmo'*/'djvkrsvamrjhoado'; //CONTRASEÑA DEL CORREO, no es de acceso sino para que una aplicación se pueda conectar al servidor
                          $mail -> SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; //INDICAR LA SEGURIDAD CON LA QUE SE VA A TRABAJAR, LO ENCONTRARAS EN LA CONFIGURACIÓN SMTP DE TU CUENTA, POR EJEMPLO EL CIFRADO 465 SSL Y 587 TLS
                          $mail -> Port = 587;
                  
                          //Ahora haremos el envío
-                         $mail -> SetFrom('ainformatica2020@gmail.com', 'Informatica UNAH'); //Dirección desde donde vas a enviar los correos
+                         $mail -> SetFrom('victoria.alejandra_aguilar@yahoo.es', 'Informatica UNAH'); //Dirección desde donde vas a enviar los correos
                          $mail -> AddAddress($destino);//Dirección en la cual va a recibir este correo, también puedes agregar título
                                          
                          //Ahora indicaremos el tipo de corre electrónico que podemos enviar, puede ser uno de texto simple pero, también podemos enviar uno tipo HTML, donde ya podemos agregar imágenes y tags de HTML

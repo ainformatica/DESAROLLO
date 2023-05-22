@@ -24,7 +24,7 @@ class modelo_reg_estudiantes2
     $trabajo, $egresado,$carrera,$cregional, $telefono){
         global $instancia_conexion;
         
-        $sql="call proc_update_insert_registro_estudiantes2 ('$id_persona2', '$identidad', '$nacionalidad', '$ecivil', '$fecha_nacimiento', '$lugar_nacimiento', '$trabajo', '$egresado','$carrera', '$cregional','$telefono')";
+        $sql="call proc_update_insert_registro_estudiantes ('$id_persona2', '$identidad', '$nacionalidad', '$ecivil', '$fecha_nacimiento', '$lugar_nacimiento', '$trabajo', '$egresado','$carrera', '$cregional','$telefono')";
         return $instancia_conexion->ejecutarConsulta($sql);
 
     }
