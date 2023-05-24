@@ -12,12 +12,12 @@ $Clave_nuevaV=cifrado::encryption ($_POST['txt_clavenuevaV']);
 $Confirmar_claveV=cifrado::encryption ($_POST['txt_confirmarclaveV']);
 $msj=0;
 
-
+$instancia= new validar_contra();
 
 
 session_start();
 
- $sqlexiste=("select count(contrasena) as contrasena  from tbl_usuarios where Contrasena='$Clave_actualV'  and Id_usuario=".$_SESSION[id_usuario]." ");
+ $sqlexiste=("select count(contrasena) as contrasena  from tbl_usuarios where Contrasena='$Clave_actualV'  and Id_usuario=".$_SESSION['id_usuario']." ");
  //Obtener la fila del query
 $existe = mysqli_fetch_assoc($mysqli->query($sqlexiste));
 
@@ -25,7 +25,8 @@ $existe = mysqli_fetch_assoc($mysqli->query($sqlexiste));
 if ($_POST)
  {
    $error_encontrado="";
-   if (validar_contra::validar_clave($_POST["txt_clavenuevaV"], $error_encontrado))
+   //if (validar_contra::validar_clave($_POST["txt_clavenuevaV"], $error_encontrado))
+   if ($instancia -> validar_clave($_POST["txt_clavenuevaV"], $error_encontrado))
    {
 
     if ($existe['contrasena']==1)
@@ -38,7 +39,7 @@ if ($_POST)
 					
                                	 	$msj=2;
 								header("location: ../../login.php?msj=$msj");	
-	                            $sql = "UPDATE tbl_usuarios SET    Contrasena='$Clave_nuevaV' , fec_vence_contrasena=sysdate()  WHERE Id_usuario= ".$_SESSION[id_usuario]." ";
+	                            $sql = "UPDATE tbl_usuarios SET    Contrasena='$Clave_nuevaV' , fec_vence_contrasena=sysdate()  WHERE Id_usuario= ".$_SESSION['id_usuario']." ";
 						$resultado = $mysqli->query($sql);
                                	
 
