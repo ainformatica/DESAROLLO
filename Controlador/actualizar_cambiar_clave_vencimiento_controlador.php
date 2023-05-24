@@ -25,7 +25,6 @@ $existe = mysqli_fetch_assoc($mysqli->query($sqlexiste));
 if ($_POST)
  {
    $error_encontrado="";
-   //if (validar_contra::validar_clave($_POST["txt_clavenuevaV"], $error_encontrado))
    if ($instancia -> validar_clave($_POST["txt_clavenuevaV"], $error_encontrado))
    {
 
